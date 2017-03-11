@@ -18273,14 +18273,14 @@ void SYSTEM_Initialize(void);
 # 80
 void OSCILLATOR_Initialize(void);
 
-# 4 "main.c"
+# 5 "main.c"
 void main(void)
 {
 
 SYSTEM_Initialize();
 
 do { LATAbits.LATA4 = 1; } while(0);
-do { LATAbits.LATA5 = 0; } while(0);
+do { LATAbits.LATA5 = 1; } while(0);
 do { LATAbits.LATA6 = 1; } while(0);
 do { LATAbits.LATA7 = 1; } while(0);
 }

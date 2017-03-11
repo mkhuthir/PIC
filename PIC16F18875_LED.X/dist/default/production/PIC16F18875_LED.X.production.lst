@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.41 build -162212810 
-                                                                                               Sat Mar 11 04:19:31 2017
+                                                                                               Sat Mar 11 04:30:07 2017
 
 Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
      1                           	processor	16F18875
@@ -1766,7 +1766,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1752 ;;
   1753 ;; *************** function _main *****************
   1754 ;; Defined at:
-  1755 ;;		line 4 in file "main.c"
+  1755 ;;		line 5 in file "main.c"
   1756 ;; Parameters:    Size  Location     Type
   1757 ;;		None
   1758 ;; Auto vars:     Size  Location     Type
@@ -1802,23 +1802,23 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1783                           ;psect for function _main
   1784  07CE                     _main:	
   1785                           
-  1786                           ;main.c: 7: SYSTEM_Initialize();
+  1786                           ;main.c: 8: SYSTEM_Initialize();
   1787                           
   1788                           ;incstack = 0
   1789                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
   1790  07CE  3187  27BF         	fcall	_SYSTEM_Initialize
   1791                           
-  1792                           ;main.c: 9: do { LATAbits.LATA4 = 1; } while(0);
+  1792                           ;main.c: 10: do { LATAbits.LATA4 = 1; } while(0);
   1793  07D0  0020               	movlb	0	; select bank0
   1794  07D1  1616               	bsf	22,4	;volatile
   1795                           
-  1796                           ;main.c: 10: do { LATAbits.LATA5 = 0; } while(0);
-  1797  07D2  1296               	bcf	22,5	;volatile
+  1796                           ;main.c: 11: do { LATAbits.LATA5 = 1; } while(0);
+  1797  07D2  1696               	bsf	22,5	;volatile
   1798                           
-  1799                           ;main.c: 11: do { LATAbits.LATA6 = 1; } while(0);
+  1799                           ;main.c: 12: do { LATAbits.LATA6 = 1; } while(0);
   1800  07D3  1716               	bsf	22,6	;volatile
   1801                           
-  1802                           ;main.c: 12: do { LATAbits.LATA7 = 1; } while(0);
+  1802                           ;main.c: 13: do { LATAbits.LATA7 = 1; } while(0);
   1803  07D4  1796               	bsf	22,7	;volatile
   1804  07D5  3180  2802         	ljmp	start
   1805  07D7                     __end_of_main:	
@@ -2289,7 +2289,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.41 build -162212810 
-Symbol Table                                                                                   Sat Mar 11 04:19:31 2017
+Symbol Table                                                                                   Sat Mar 11 04:30:07 2017
 
                     __CFG_CP$OFF 0000                      __CFG_LVP$ON 0000                      __CFG_ZCD$ON 0000  
                    __CFG_CPD$OFF 0000                     __CFG_BORV$LO 0000                             _LATA 0016  

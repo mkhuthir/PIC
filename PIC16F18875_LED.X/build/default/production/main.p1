@@ -13728,46 +13728,46 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;mcc.h: 67: void SYSTEM_Initialize(void);
 [; ;mcc.h: 80: void OSCILLATOR_Initialize(void);
-"4 main.c
+"5 main.c
 [v _main `(v ~T0 @X0 1 ef ]
-"5
+"6
 {
-[; ;main.c: 4: void main(void)
-[; ;main.c: 5: {
+[; ;main.c: 5: void main(void)
+[; ;main.c: 6: {
 [e :U _main ]
 [f ]
-[; ;main.c: 7: SYSTEM_Initialize();
-"7
+[; ;main.c: 8: SYSTEM_Initialize();
+"8
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 9: do { LATAbits.LATA4 = 1; } while(0);
-"9
+[; ;main.c: 10: do { LATAbits.LATA4 = 1; } while(0);
+"10
 [e :U 1623 ]
 {
 [e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 1622 ]
-[; ;main.c: 10: do { LATAbits.LATA5 = 0; } while(0);
-"10
+[; ;main.c: 11: do { LATAbits.LATA5 = 1; } while(0);
+"11
 [e :U 1626 ]
 {
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 1625 ]
-[; ;main.c: 11: do { LATAbits.LATA6 = 1; } while(0);
-"11
+[; ;main.c: 12: do { LATAbits.LATA6 = 1; } while(0);
+"12
 [e :U 1629 ]
 {
 [e = . . _LATAbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 1628 ]
-[; ;main.c: 12: do { LATAbits.LATA7 = 1; } while(0);
-"12
+[; ;main.c: 13: do { LATAbits.LATA7 = 1; } while(0);
+"13
 [e :U 1632 ]
 {
 [e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
 }
 [e :U 1631 ]
-[; ;main.c: 13: }
-"13
+[; ;main.c: 14: }
+"14
 [e :UE 1620 ]
 }

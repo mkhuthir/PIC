@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v1.41/dat/en_msgs.txt -cs \
   -h+dist/default/production/PIC16F18875_LED.X.production.sym \
   --cmf=dist/default/production/PIC16F18875_LED.X.production.cmf -z \
-  -Q16F18875 -o/tmp/xcXxuXbg4 \
+  -Q16F18875 -o/tmp/xcX2kuyD6 \
   -Mdist/default/production/PIC16F18875_LED.X.production.map -E1 -ver=XC8 \
   -ASTACK=02000h-023efh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -31,7 +31,7 @@ Linker command line:
   -pcinit=CODE -pfunctab=CODE -ACONFIG=08007h-0800Bh -pconfig=CONFIG \
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
-  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcXfpSyRH.obj \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcXwJarlf.obj \
   dist/default/production/PIC16F18875_LED.X.production.obj 
 
 Object code version is 3.11
@@ -41,7 +41,7 @@ Machine type is 16F18875
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXfpSyRH.obj
+/tmp/xcXwJarlf.obj
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        5    1000E       0
@@ -585,7 +585,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 4 in file "main.c"
+		line 5 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

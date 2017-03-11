@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcXfpSyRH.obj
+$/tmp/xcXwJarlf.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 5 2
@@ -114,11 +114,11 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/PIC16F18875_LED.X.production.obj
-7FD cinit CODE >3410:/tmp/xcXpcbwEM
-7FD cinit CODE >3413:/tmp/xcXpcbwEM
-7FD cinit CODE >3419:/tmp/xcXpcbwEM
-7FD cinit CODE >3421:/tmp/xcXpcbwEM
-7FE cinit CODE >3422:/tmp/xcXpcbwEM
+7FD cinit CODE >3410:/tmp/xcXiGNLty
+7FD cinit CODE >3413:/tmp/xcXiGNLty
+7FD cinit CODE >3419:/tmp/xcXiGNLty
+7FD cinit CODE >3421:/tmp/xcXiGNLty
+7FE cinit CODE >3422:/tmp/xcXiGNLty
 7C5 text3 CODE >93:/home/mkhuthir/microchip/PIC16F18875_LED.X/mcc_generated_files/mcc.c
 7C5 text3 CODE >96:/home/mkhuthir/microchip/PIC16F18875_LED.X/mcc_generated_files/mcc.c
 7C8 text3 CODE >98:/home/mkhuthir/microchip/PIC16F18875_LED.X/mcc_generated_files/mcc.c
@@ -157,13 +157,13 @@ $dist/default/production/PIC16F18875_LED.X.production.obj
 7BF text1 CODE >89:/home/mkhuthir/microchip/PIC16F18875_LED.X/mcc_generated_files/mcc.c
 7C2 text1 CODE >90:/home/mkhuthir/microchip/PIC16F18875_LED.X/mcc_generated_files/mcc.c
 7C4 text1 CODE >91:/home/mkhuthir/microchip/PIC16F18875_LED.X/mcc_generated_files/mcc.c
-7CE maintext CODE >4:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
-7CE maintext CODE >7:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
-7D0 maintext CODE >9:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
-7D2 maintext CODE >10:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
-7D3 maintext CODE >11:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
-7D4 maintext CODE >12:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
-7D5 maintext CODE >13:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
+7CE maintext CODE >5:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
+7CE maintext CODE >8:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
+7D0 maintext CODE >10:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
+7D2 maintext CODE >11:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
+7D3 maintext CODE >12:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
+7D4 maintext CODE >13:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
+7D5 maintext CODE >14:/home/mkhuthir/microchip/PIC16F18875_LED.X/main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -195,20 +195,20 @@ _WPUB F44 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 _WPUC F4F 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 _WPUD F5A 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 _WPUE F65 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXfpSyRH.obj
+___sp 0 0 STACK 2 stack /tmp/xcXwJarlf.obj
 _main F9C 0 CODE 0 maintext dist/default/production/PIC16F18875_LED.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
-start 4 0 CODE 0 init /tmp/xcXfpSyRH.obj
+start 4 0 CODE 0 init /tmp/xcXwJarlf.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 __CFG_SCANE$available 0 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
-intlevel0 0 0 CODE 0 functab /tmp/xcXfpSyRH.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcXfpSyRH.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcXfpSyRH.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcXfpSyRH.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcXfpSyRH.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcXfpSyRH.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXwJarlf.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXwJarlf.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXwJarlf.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXwJarlf.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXwJarlf.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXwJarlf.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
@@ -229,7 +229,7 @@ _ODCONE F66 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 _OSCFRQ 893 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 __CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 __end_of_SYSTEM_Initialize F8A 0 CODE 0 text1 dist/default/production/PIC16F18875_LED.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXfpSyRH.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXwJarlf.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -364,7 +364,7 @@ __S3 0 0 ABS 0 - -
 _SYSTEM_Initialize F7E 0 CODE 0 text1 dist/default/production/PIC16F18875_LED.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXfpSyRH.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXwJarlf.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 __end_of_PIN_MANAGER_Initialize FFA 0 CODE 0 text2 dist/default/production/PIC16F18875_LED.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
@@ -398,8 +398,8 @@ __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 _LATAbits 16 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
-stackhi 23EF 0 ABS 0 - /tmp/xcXfpSyRH.obj
-stacklo 2000 0 ABS 0 - /tmp/xcXfpSyRH.obj
+stackhi 23EF 0 ABS 0 - /tmp/xcXwJarlf.obj
+stacklo 2000 0 ABS 0 - /tmp/xcXwJarlf.obj
 _OSCCON1 88D 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 _OSCCON3 88F 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
 _OSCTUNE 892 0 ABS 0 - dist/default/production/PIC16F18875_LED.X.production.obj
