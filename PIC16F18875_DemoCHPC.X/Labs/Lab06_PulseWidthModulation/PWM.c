@@ -1,0 +1,117 @@
+/**
+  Pulse Width Modulation Lab Source File
+
+  Company:
+    Microchip Technology Inc.
+
+  File Name:
+    PWM.c
+
+  Summary:
+    This is the source file for the PWM lab
+
+  Description:
+    This source file contains the code on how the PWM lab works.
+   
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v1.38
+        MPLAB             :  MPLAB X v3.45
+        Device            :  PIC16F18875
+ */
+
+/*
+Copyright (c) 2013 - 2015 released Microchip Technology Inc.  All rights reserved.
+
+Microchip licenses to you the right to use, modify, copy and distribute
+Software only when embedded on a Microchip microcontroller or digital signal
+controller that is integrated into your product or third party product
+(pursuant to the sublicense terms in the accompanying license agreement).
+
+You should refer to the license agreement accompanying this Software for
+additional information regarding your rights and obligations.
+
+SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF
+MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+IN NO EVENT SHALL MICROCHIP OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER
+CONTRACT, NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR
+OTHER LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR
+CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT OF
+SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+(INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+ */
+
+/**
+  Section: Included Files
+ */
+
+#include "../../mcc_generated_files/pin_manager.h"
+#include "../../mcc_generated_files/adcc.h"
+#include "../../mcc_generated_files/pwm6.h"
+#include "../../mcc_generated_files/tmr2.h"
+#include "../../labHeader.h"
+
+/*
+                             Application    
+ */
+
+ uint16_t adcResult;
+
+void PWM(void) {
+
+    if (labState != RUNNING) {
+        LED_D2_LAT = LED_D3_LAT = LED_D4_LAT = LED_D5_LAT = OFF;
+
+        //Enable the PWM module
+        PWM6CONbits.EN = 1;
+
+        //Assign the LED_D5 LED as PWM output
+        PPSLOCK = 0x55;
+        PPSLOCK = 0xAA;
+        PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
+        
+        RA7PPS = 0x0E;
+        
+        PPSLOCK = 0x55;
+        PPSLOCK = 0xAA;
+        PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
+
+        TMR2_StartTimer();
+
+        labState = RUNNING;
+    }
+
+    if (labState == RUNNING) {
+        //Start ADC conversion
+        adcResult = ADCC_GetSingleConversion(POT1) >> 6;
+
+        //Make the adcResult the PWM duty cycle
+        PWM6_LoadDutyValue(adcResult);
+        
+    }
+
+    //Check if a switch event occurs
+    if (switchEvent) {
+        TMR2_StopTimer();
+
+        //Disable the PWM module
+        PWM6CONbits.EN = 0;
+        
+        //Disable use of the LED_D7 LED as PWM output
+        PPSLOCK = 0x55;
+        PPSLOCK = 0xAA;
+        PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
+        
+        RA7PPS = 0x00;
+        
+        PPSLOCK = 0x55;
+        PPSLOCK = 0xAA;
+        PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
+        
+        labState = NOT_RUNNING;
+    }
+}
+/**
+ End of File
+ */
