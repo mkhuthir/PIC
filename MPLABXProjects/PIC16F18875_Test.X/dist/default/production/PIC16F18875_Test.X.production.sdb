@@ -1,0 +1,113 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18875 ]
+[d frameptr 6 ]
+"62 /opt/microchip/xc8/v1.41/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.41/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.41/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"4 /home/mkhuthir/MPLABXProjects/PIC16F18875_Test.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"86 /home/mkhuthir/MPLABXProjects/PIC16F18875_Test.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"93
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"51 /home/mkhuthir/MPLABXProjects/PIC16F18875_Test.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"648 /opt/microchip/xc8/v1.41/include/pic16f18875.h
+[v _TRISA TRISA `VEuc  1 e 1 @17 ]
+"709
+[v _TRISB TRISB `VEuc  1 e 1 @18 ]
+"770
+[v _TRISC TRISC `VEuc  1 e 1 @19 ]
+"831
+[v _TRISD TRISD `VEuc  1 e 1 @20 ]
+"892
+[v _TRISE TRISE `VEuc  1 e 1 @21 ]
+"923
+[v _LATA LATA `VEuc  1 e 1 @22 ]
+[s S62 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"940
+[u S71 . 1 `S62 1 . 1 0 ]
+[v _LATAbits LATAbits `VES71  1 e 1 @22 ]
+"984
+[v _LATB LATB `VEuc  1 e 1 @23 ]
+"1045
+[v _LATC LATC `VEuc  1 e 1 @24 ]
+"1106
+[v _LATD LATD `VEuc  1 e 1 @25 ]
+"1167
+[v _LATE LATE `VEuc  1 e 1 @26 ]
+"23284
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"23422
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"23517
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"23567
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"23624
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"33372
+[v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
+"33433
+[v _WPUA WPUA `VEuc  1 e 1 @3897 ]
+"33494
+[v _ODCONA ODCONA `VEuc  1 e 1 @3898 ]
+"33982
+[v _ANSELB ANSELB `VEuc  1 e 1 @3907 ]
+"34043
+[v _WPUB WPUB `VEuc  1 e 1 @3908 ]
+"34104
+[v _ODCONB ODCONB `VEuc  1 e 1 @3909 ]
+"34592
+[v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
+"34653
+[v _WPUC WPUC `VEuc  1 e 1 @3919 ]
+"34714
+[v _ODCONC ODCONC `VEuc  1 e 1 @3920 ]
+"35202
+[v _ANSELD ANSELD `VEuc  1 e 1 @3929 ]
+"35263
+[v _WPUD WPUD `VEuc  1 e 1 @3930 ]
+"35324
+[v _ODCOND ODCOND `VEuc  1 e 1 @3931 ]
+"35629
+[v _ANSELE ANSELE `VEuc  1 e 1 @3940 ]
+"35660
+[v _WPUE WPUE `VEuc  1 e 1 @3941 ]
+"35697
+[v _ODCONE ODCONE `VEuc  1 e 1 @3942 ]
+"4 /home/mkhuthir/MPLABXProjects/PIC16F18875_Test.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"13
+} 0
+"86 /home/mkhuthir/MPLABXProjects/PIC16F18875_Test.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"91
+} 0
+"51 /home/mkhuthir/MPLABXProjects/PIC16F18875_Test.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"102
+} 0
+"93 /home/mkhuthir/MPLABXProjects/PIC16F18875_Test.X/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"107
+} 0
