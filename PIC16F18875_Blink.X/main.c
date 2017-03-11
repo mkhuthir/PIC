@@ -8,7 +8,7 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-    
+                 
     IO_RA4_SetLow();
     IO_RA5_SetHigh();
     IO_RA6_SetLow();
