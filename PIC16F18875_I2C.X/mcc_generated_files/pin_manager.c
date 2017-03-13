@@ -65,17 +65,17 @@ void PIN_MANAGER_Initialize(void)
     TRISE = 0x07;
     TRISA = 0x0F;
     TRISB = 0xFF;
-    TRISC = 0xFF;
+    TRISC = 0xFE;
     TRISD = 0xFF;
 
     /**
     ANSELx registers
     */   
-    ANSELC = 0xE7;
+    ANSELC = 0xE4;
     ANSELB = 0xFF;
     ANSELD = 0xFF;
     ANSELE = 0x07;
-    ANSELA = 0xFF;
+    ANSELA = 0x0F;
 
     /**
     WPUx registers
@@ -106,6 +106,8 @@ void PIN_MANAGER_Initialize(void)
     PPSLOCK = 0xAA;
     PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
 
+    RC0PPS = 0x10;   //RC0->EUSART:TX;
+    RXPPS = 0x11;   //RC1->EUSART:RX;
     SSP1CLKPPS = 0x13;   //RC3->MSSP1:SCL1;
     RC3PPS = 0x14;   //RC3->MSSP1:SCL1;
     RC4PPS = 0x15;   //RC4->MSSP1:SDA1;

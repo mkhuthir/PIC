@@ -4,49 +4,68 @@
 
 #include "mcc_generated_files/mcc.h"
 
-static	uint16_t    address = (0xC0);
-
-static	uint8_t     State = 0,
-                    length = 1,
-                    command = 0,
-                    data = 0,
-                    result[8];
-
-static	I2C1_MESSAGE_STATUS I2C_Wflag, //Write Status Flag
-                            I2C_Rflag; //Read Status Flag
-
-
 void main(void)
 {
     
     SYSTEM_Initialize();
     
-   
-    INTERRUPT_GlobalInterruptEnable();      // Enable Global Interrupts
-    INTERRUPT_PeripheralInterruptEnable();  // Enable Peripheral Interrupts
-    LED_D4_SetLow();                        // Turn off error LED
-  
-    // Start a I2C Write operation.
-    I2C1_MasterWrite( &command, length, address, &I2C_Wflag);
-    
-    if (I2C_Wflag == I2C1_MESSAGE_FAIL)
-        while (1) LED_D4_SetHigh(); // Error !!
-    
-    while (I2C_Wflag != I2C1_MESSAGE_COMPLETE); // Wait for communication.
-    
-    
-    // Start a Read operation.
-    I2C1_MasterRead(  &data, 1, address, &I2C_Rflag);
-    
-    if (I2C_Rflag == I2C1_MESSAGE_FAIL)
-       while (1) LED_D4_SetHigh(); // Error !!
-    
-    while (I2C_Rflag != I2C1_MESSAGE_COMPLETE); // Wait for communication.
+     #define SLAVE_I2C_GENERIC_RETRY_MAX     100
  
-   
+        // initialize the module
+        I2C1_Initialize();
+        INTERRUPT_GlobalInterruptEnable();
+        INTERRUPT_PeripheralInterruptEnable();
+        
+        // 
+        uint8_t         slaveDeviceAddress = 0x09;
+        uint8_t         writeBuffer[4];
+        uint16_t        timeOut;
+
+        I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;
+
+            writeBuffer[0] = 0x6E;
+            writeBuffer[1] = 0xFF;
+            writeBuffer[2] = 0x00;
+            writeBuffer[3] = 0x00;
+            
+            // Now it is possible that the slave device will be slow.
+            // As a work around on these slaves, the application can
+            // retry sending the transaction
+            timeOut = 0;
+            while(status != I2C1_MESSAGE_FAIL)
+            {
+                // write one byte to EEPROM (3 is the number of bytes to write)
+                I2C1_MasterWrite(  writeBuffer,
+                                        4,
+                                        slaveDeviceAddress,
+                                        &status);
+
+                // wait for the message to be sent or status has changed.
+                while(status == I2C1_MESSAGE_PENDING);
+
+                if (status == I2C1_MESSAGE_COMPLETE)
+                    break;
+
+                // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK,
+                //               or I2C1_DATA_NO_ACK,
+                // The device may be busy and needs more time for the last
+                // write so we can retry writing the data, this is why we
+                // use a while loop here
+
+                // check for max retry and skip this byte
+                if (timeOut == SLAVE_I2C_GENERIC_RETRY_MAX)
+                    break;
+                else
+                    timeOut++;
+            }
+
+            if (status == I2C1_MESSAGE_FAIL)
+            {
+                LED_D4_SetHigh();
+            }
+           
+
+        }
     
-    while (1)
-    {
- 
-    }
-}
+    
+
