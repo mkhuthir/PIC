@@ -53,11 +53,11 @@ void interrupt INTERRUPT_InterruptManager (void)
     // interrupt handler
     if(INTCONbits.PEIE == 1 && PIE3bits.BCL1IE == 1 && PIR3bits.BCL1IF == 1)
     {
-        I2C1_BusCollisionISR();
+        i2c1_driver_busCollisionISR();
     }
     else if(INTCONbits.PEIE == 1 && PIE3bits.SSP1IE == 1 && PIR3bits.SSP1IF == 1)
     {
-        I2C1_ISR();
+        i2c1_driver_i2cISR();
     }
     else
     {

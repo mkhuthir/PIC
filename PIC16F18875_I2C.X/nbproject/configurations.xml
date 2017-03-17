@@ -9,9 +9,13 @@
                      projectFiles="true">
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
-        <itemPath>mcc_generated_files/eusart.h</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
-        <itemPath>mcc_generated_files/i2c1.h</itemPath>
+        <itemPath>mcc_generated_files/drivers/i2c_types.h</itemPath>
+        <itemPath>mcc_generated_files/i2c1_driver.h</itemPath>
+        <itemPath>mcc_generated_files/drivers/i2c_master.h</itemPath>
+        <itemPath>mcc_generated_files/ACCEL3_example.h</itemPath>
+        <itemPath>mcc_generated_files/drivers/i2c_simple_master.h</itemPath>
+        <itemPath>mcc_generated_files/ACCEL3.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -26,9 +30,13 @@
                      projectFiles="true">
         <itemPath>mcc_generated_files/mcc.c</itemPath>
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
-        <itemPath>mcc_generated_files/eusart.c</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
-        <itemPath>mcc_generated_files/i2c1.c</itemPath>
+        <itemPath>mcc_generated_files/ACCEL3_example.c</itemPath>
+        <itemPath>mcc_generated_files/drivers/i2c_master.c</itemPath>
+        <itemPath>mcc_generated_files/drivers/i2c_simple_master.c</itemPath>
+        <itemPath>mcc_generated_files/drivers/i2c_types.c</itemPath>
+        <itemPath>mcc_generated_files/ACCEL3.c</itemPath>
+        <itemPath>mcc_generated_files/i2c1_driver.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -47,7 +55,7 @@
         <targetDevice>PIC16F18875</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PKOBSKDEPlatformTool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>1.41</languageToolchainVersion>
         <platform>2</platform>

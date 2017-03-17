@@ -88,8 +88,7 @@ void SYSTEM_Initialize(void)
 
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
-    I2C1_Initialize();
-    EUSART_Initialize();
+    ACCEL3_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
