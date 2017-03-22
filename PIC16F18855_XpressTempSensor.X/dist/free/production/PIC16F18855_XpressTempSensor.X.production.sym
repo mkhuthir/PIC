@@ -448,8 +448,8 @@ text10 9BE D09 CODE 9BE 0
 swtext1 D0A D39 CONST D0A 0
 text20 D3A E41 CODE D3A 0
 %locals
-dist/free/production/Temperature_Sensor.X.production.obj
-/tmp/xcXnITaa3
+dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+/tmp/xcXh85fcn
 6725 1D 0 CODE 0
 6728 1D 0 CODE 0
 6791 1D 0 CODE 0

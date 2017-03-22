@@ -1,0 +1,1002 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$/tmp/xcXctUQqO.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 1B 1B 2 2
+config CONFIG 0 8007 8007 5 2
+$dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+cinit CODE 0 1D 1D 11 2
+text1 CODE 0 6DE 6DE C 2
+text2 CODE 0 6B5 6B5 17 2
+text3 CODE 0 2E 2E 161 2
+text4 CODE 0 71A 71A 6 2
+text5 CODE 0 701 701 A 2
+text6 CODE 0 5DC 5DC 2D 2
+text7 CODE 0 5A7 5A7 35 2
+text8 CODE 0 651 651 1C 2
+text9 CODE 0 6EA 6EA C 2
+text10 CODE 0 4DF 4DF 46 2
+text11 CODE 0 70B 70B 9 2
+text12 CODE 0 66D 66D 18 2
+text13 CODE 0 6F6 6F6 B 2
+text14 CODE 0 56B 56B 3C 2
+text15 CODE 0 631 631 20 2
+text16 CODE 0 525 525 46 2
+text17 CODE 0 609 609 28 2
+text19 CODE 0 18F 18F 13A 2
+text20 CODE 0 69D 69D 18 2
+text21 CODE 0 6CC 6CC 12 2
+text22 CODE 0 720 720 1 2
+maintext CODE 0 2C9 2C9 114 2
+cstackCOMMON COMMON 1 70 70 7 1
+cstackBANK0 BANK0 1 20 20 2A 1
+intentry CODE 0 4 4 17 2
+bssBANK0 BANK0 1 4A 4A 1B 1
+stringtext STRCODE 0 3DD 3DD 102 2
+swtext1 CONST 0 685 685 18 2
+clrtext CODE 0 714 714 6 2
+bssCOMMON COMMON 1 77 77 6 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 65-6F 1
+RAM A0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-64F 1
+BANK0 65-6F 1
+BANK1 A0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 2-3 2
+CONST 721-1FFF 2
+ENTRY 2-3 2
+ENTRY 721-1FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+STACK 2045-23EF 1
+CODE 2-3 2
+CODE 721-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-64F 1
+BIGRAM 2000-23EF 1
+COMMON 7D-7D 1
+EEDATA F000-F0FF 2
+STRCODE 2-3 2
+STRCODE 721-1FFF 2
+STRING 2-3 2
+STRING 721-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+1D cinit CODE >6725:/tmp/xcXh85fcn
+1D cinit CODE >6728:/tmp/xcXh85fcn
+1D cinit CODE >6791:/tmp/xcXh85fcn
+1E cinit CODE >6792:/tmp/xcXh85fcn
+1F cinit CODE >6793:/tmp/xcXh85fcn
+20 cinit CODE >6794:/tmp/xcXh85fcn
+21 cinit CODE >6795:/tmp/xcXh85fcn
+22 cinit CODE >6796:/tmp/xcXh85fcn
+23 cinit CODE >6800:/tmp/xcXh85fcn
+24 cinit CODE >6801:/tmp/xcXh85fcn
+25 cinit CODE >6802:/tmp/xcXh85fcn
+26 cinit CODE >6803:/tmp/xcXh85fcn
+27 cinit CODE >6804:/tmp/xcXh85fcn
+28 cinit CODE >6805:/tmp/xcXh85fcn
+2A cinit CODE >6811:/tmp/xcXh85fcn
+2A cinit CODE >6813:/tmp/xcXh85fcn
+2B cinit CODE >6814:/tmp/xcXh85fcn
+2C cinit CODE >6815:/tmp/xcXh85fcn
+4 intentry CODE >51:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/interrupt_manager.c
+9 intentry CODE >54:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/interrupt_manager.c
+D intentry CODE >56:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/interrupt_manager.c
+10 intentry CODE >57:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/interrupt_manager.c
+11 intentry CODE >58:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/interrupt_manager.c
+14 intentry CODE >60:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/interrupt_manager.c
+16 intentry CODE >66:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/interrupt_manager.c
+720 text22 CODE >728:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+720 text22 CODE >731:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6CC text21 CODE >563:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6CC text21 CODE >567:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6D0 text21 CODE >570:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6D4 text21 CODE >572:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6D9 text21 CODE >573:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6DA text21 CODE >574:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6DA text21 CODE >576:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+69D text20 CODE >581:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+69E text20 CODE >584:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6A0 text20 CODE >587:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6A7 text20 CODE >590:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6B2 text20 CODE >594:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+6B4 text20 CODE >596:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+685 swtext1 CONST >259:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+18F text19 CODE >233:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+18F text19 CODE >241:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+191 text19 CODE >245:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+194 text19 CODE >248:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+195 text19 CODE >249:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+197 text19 CODE >250:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1A0 text19 CODE >253:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1A1 text19 CODE >255:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1A2 text19 CODE >261:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1A2 text19 CODE >263:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1A4 text19 CODE >266:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1A8 text19 CODE >267:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1AF text19 CODE >268:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1B4 text19 CODE >270:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1B8 text19 CODE >273:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1BC text19 CODE >276:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1C0 text19 CODE >281:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1C1 text19 CODE >284:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1C4 text19 CODE >287:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1C5 text19 CODE >291:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1C7 text19 CODE >294:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1CC text19 CODE >297:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1CD text19 CODE >299:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1CD text19 CODE >304:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1CF text19 CODE >307:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1D4 text19 CODE >309:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1D5 text19 CODE >311:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1D5 text19 CODE >313:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1D8 text19 CODE >315:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1DD text19 CODE >316:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1E0 text19 CODE >317:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1E1 text19 CODE >321:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1EB text19 CODE >324:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1EE text19 CODE >328:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1F2 text19 CODE >329:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1F3 text19 CODE >333:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1F7 text19 CODE >337:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1F8 text19 CODE >339:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1F8 text19 CODE >341:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+1FB text19 CODE >343:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+200 text19 CODE >344:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+203 text19 CODE >345:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+204 text19 CODE >346:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+204 text19 CODE >350:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+205 text19 CODE >354:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+219 text19 CODE >357:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+21A text19 CODE >360:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+21C text19 CODE >363:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+220 text19 CODE >366:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+221 text19 CODE >381:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+224 text19 CODE >384:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+22B text19 CODE >385:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+230 text19 CODE >386:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+235 text19 CODE >412:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+238 text19 CODE >413:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+23B text19 CODE >416:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+23F text19 CODE >417:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+240 text19 CODE >421:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+244 text19 CODE >424:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+245 text19 CODE >426:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+245 text19 CODE >429:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+248 text19 CODE >432:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+24D text19 CODE >435:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+24F text19 CODE >438:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+252 text19 CODE >440:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+253 text19 CODE >444:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+258 text19 CODE >449:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+25C text19 CODE >452:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+260 text19 CODE >454:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+263 text19 CODE >455:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+264 text19 CODE >456:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+264 text19 CODE >464:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+266 text19 CODE >467:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+26B text19 CODE >470:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+26C text19 CODE >474:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+276 text19 CODE >477:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+277 text19 CODE >479:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+277 text19 CODE >482:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+27A text19 CODE >486:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+27F text19 CODE >489:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+282 text19 CODE >492:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+284 text19 CODE >493:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+285 text19 CODE >494:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+285 text19 CODE >496:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+286 text19 CODE >497:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+28B text19 CODE >499:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+28C text19 CODE >506:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+290 text19 CODE >509:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+292 text19 CODE >511:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+293 text19 CODE >516:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+29F text19 CODE >519:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2A3 text19 CODE >526:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2A4 text19 CODE >529:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2A9 text19 CODE >530:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2AA text19 CODE >531:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2AA text19 CODE >536:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2AB text19 CODE >538:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2AD text19 CODE >542:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2AF text19 CODE >543:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2B0 text19 CODE >549:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2B3 text19 CODE >550:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2B4 text19 CODE >556:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2B9 text19 CODE >557:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2BC text19 CODE >560:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2BD text19 CODE >259:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+2C8 text19 CODE >561:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+609 text17 CODE >694:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+609 text17 CODE >695:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+60B text17 CODE >700:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+618 text17 CODE >702:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+620 text17 CODE >703:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+628 text17 CODE >704:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+630 text17 CODE >705:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+525 text16 CODE >641:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+525 text16 CODE >642:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+527 text16 CODE >648:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+529 text16 CODE >650:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+530 text16 CODE >652:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+537 text16 CODE >653:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+53E text16 CODE >654:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+546 text16 CODE >655:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+54A text16 CODE >658:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+54E text16 CODE >661:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+552 text16 CODE >666:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+553 text16 CODE >669:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+557 text16 CODE >672:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+558 text16 CODE >675:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+559 text16 CODE >678:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+55E text16 CODE >682:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+565 text16 CODE >684:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+568 text16 CODE >688:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+631 text15 CODE >707:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+631 text15 CODE >708:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+633 text15 CODE >713:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+640 text15 CODE >714:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+648 text15 CODE >715:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+650 text15 CODE >716:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+56B text14 CODE >51:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+56D text14 CODE >53:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+571 text14 CODE >56:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+57F text14 CODE >57:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+58E text14 CODE >58:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+59B text14 CODE >60:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+5A0 text14 CODE >62:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+6F6 text13 CODE >55:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+6F6 text13 CODE >60:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+6F9 text13 CODE >63:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+6FB text13 CODE >66:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+6FD text13 CODE >69:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+6FF text13 CODE >72:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+700 text13 CODE >74:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+66D text12 CODE >198:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+66D text12 CODE >200:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+672 text12 CODE >201:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+676 text12 CODE >202:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+677 text12 CODE >203:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+678 text12 CODE >205:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+679 text12 CODE >208:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+67C text12 CODE >210:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+67E text12 CODE >212:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+67F text12 CODE >214:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+681 text12 CODE >218:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+683 text12 CODE >220:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+684 text12 CODE >222:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+70B text11 CODE >91:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+70B text11 CODE >94:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+70E text11 CODE >96:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+70F text11 CODE >98:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+710 text11 CODE >100:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+712 text11 CODE >102:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+713 text11 CODE >105:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+4DF text10 CODE >50:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4DF text10 CODE >52:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4E1 text10 CODE >53:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4E4 text10 CODE >54:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4E6 text10 CODE >55:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4E8 text10 CODE >56:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4EB text10 CODE >57:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4ED text10 CODE >58:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4EF text10 CODE >59:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4F1 text10 CODE >60:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4F3 text10 CODE >61:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4F5 text10 CODE >62:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4F8 text10 CODE >63:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4FA text10 CODE >64:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+4FC text10 CODE >69:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+500 text10 CODE >70:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+501 text10 CODE >71:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+504 text10 CODE >72:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+506 text10 CODE >73:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+507 text10 CODE >75:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+50A text10 CODE >76:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+50C text10 CODE >77:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+511 text10 CODE >78:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+515 text10 CODE >79:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+518 text10 CODE >81:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+51B text10 CODE >82:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+51D text10 CODE >83:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+51E text10 CODE >85:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+524 text10 CODE >87:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+6EA text9 CODE >82:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+6EA text9 CODE >85:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+6ED text9 CODE >86:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+6F0 text9 CODE >87:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+6F3 text9 CODE >88:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+6F5 text9 CODE >89:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+651 text8 CODE >15:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
+651 text8 CODE >43:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
+654 text8 CODE >45:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
+656 text8 CODE >46:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
+65A text8 CODE >47:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
+65F text8 CODE >48:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
+664 text8 CODE >49:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
+668 text8 CODE >52:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
+5A7 text7 CODE >6:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5A7 text7 CODE >14:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5AA text7 CODE >15:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5AE text7 CODE >16:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5B0 text7 CODE >17:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5B2 text7 CODE >18:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5B7 text7 CODE >19:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5BB text7 CODE >17:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5BC text7 CODE >22:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5C1 text7 CODE >23:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5C9 text7 CODE >24:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5CD text7 CODE >25:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5CE text7 CODE >27:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5D3 text7 CODE >28:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5D7 text7 CODE >30:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
+5DC text6 CODE >6:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+5DC text6 CODE >13:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+5E1 text6 CODE >14:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+5E3 text6 CODE >15:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+5E5 text6 CODE >16:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+5EA text6 CODE >17:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+5EE text6 CODE >15:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+5EF text6 CODE >20:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+5F7 text6 CODE >21:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+5FB text6 CODE >22:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+600 text6 CODE >23:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+604 text6 CODE >25:/opt/microchip/xc8/v1.41/sources/common/lwmod.c
+701 text5 CODE >97:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+703 text5 CODE >99:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+703 text5 CODE >101:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+706 text5 CODE >103:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+70A text5 CODE >104:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+71A text4 CODE >111:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+71C text4 CODE >113:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+71F text4 CODE >114:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+2E text3 CODE >464:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+2E text3 CODE >533:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+33 text3 CODE >536:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+46 text3 CODE >538:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4A text3 CODE >541:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4E text3 CODE >542:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4F text3 CODE >548:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+51 text3 CODE >635:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+52 text3 CODE >712:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+52 text3 CODE >714:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+53 text3 CODE >718:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+53 text3 CODE >721:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+54 text3 CODE >723:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+55 text3 CODE >734:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+60 text3 CODE >740:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+64 text3 CODE >741:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+68 text3 CODE >777:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+6F text3 CODE >778:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+7C text3 CODE >777:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+7D text3 CODE >635:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+9D text3 CODE >822:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+9D text3 CODE >1251:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+9F text3 CODE >1259:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+AA text3 CODE >1261:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+AC text3 CODE >1262:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+B0 text3 CODE >1263:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+B5 text3 CODE >1266:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+B6 text3 CODE >1286:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+C1 text3 CODE >1294:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+C2 text3 CODE >1299:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+C2 text3 CODE >1305:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+C8 text3 CODE >1306:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+DF text3 CODE >1305:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+E4 text3 CODE >1314:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+E4 text3 CODE >1316:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+EA text3 CODE >1317:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+101 text3 CODE >1316:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+106 text3 CODE >1294:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+10F text3 CODE >1438:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+113 text3 CODE >1439:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+117 text3 CODE >1472:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+11C text3 CODE >1474:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+11D text3 CODE >1489:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+143 text3 CODE >1500:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+15F text3 CODE >1502:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+178 text3 CODE >1524:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+17C text3 CODE >1474:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+184 text3 CODE >1476:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+18D text3 CODE >1474:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+18E text3 CODE >1541:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+6B5 text2 CODE >4:/opt/microchip/xc8/v1.41/sources/common/cputs.c
+6B5 text2 CODE >6:/opt/microchip/xc8/v1.41/sources/common/cputs.c
+6BD text2 CODE >7:/opt/microchip/xc8/v1.41/sources/common/cputs.c
+6CB text2 CODE >6:/opt/microchip/xc8/v1.41/sources/common/cputs.c
+6DE text1 CODE >8:/opt/microchip/xc8/v1.41/sources/common/puts.c
+6DE text1 CODE >10:/opt/microchip/xc8/v1.41/sources/common/puts.c
+6E6 text1 CODE >11:/opt/microchip/xc8/v1.41/sources/common/puts.c
+6E9 text1 CODE >12:/opt/microchip/xc8/v1.41/sources/common/puts.c
+2C9 maintext CODE >69:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+2C9 maintext CODE >75:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+2CC maintext CODE >76:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+2CD maintext CODE >77:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+2CE maintext CODE >81:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+2D6 maintext CODE >82:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+2DE maintext CODE >83:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+301 maintext CODE >84:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+31C maintext CODE >85:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+337 maintext CODE >87:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+343 maintext CODE >88:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+34C maintext CODE >89:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+357 maintext CODE >90:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+35F maintext CODE >91:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+37E maintext CODE >94:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+399 maintext CODE >95:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+3B4 maintext CODE >96:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+3CF maintext CODE >98:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+3DC maintext CODE >79:/home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+714 clrtext CODE >6780:/tmp/xcXh85fcn
+714 clrtext CODE >6781:/tmp/xcXh85fcn
+715 clrtext CODE >6782:/tmp/xcXh85fcn
+715 clrtext CODE >6783:/tmp/xcXh85fcn
+716 clrtext CODE >6784:/tmp/xcXh85fcn
+717 clrtext CODE >6785:/tmp/xcXh85fcn
+718 clrtext CODE >6786:/tmp/xcXh85fcn
+719 clrtext CODE >6787:/tmp/xcXh85fcn
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___lwmod@counter 2D 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hspace_0 800C 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+I2C2_MasterWrite@trBlock 5C 0 BANK0 1 bssBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_I2C2_BusCollisionISR 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lstringtext 0 0 ABS 0 stringtext -
+__Hstrings 0 0 ABS 0 strings -
+__CFG_WDTCCS$SC 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_LATA 16 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_LATB 17 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_LATC 18 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_WPUA F39 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_WPUB F44 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_WPUC F4F 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_WPUE F65 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/xcXctUQqO.obj
+_main 592 0 CODE 0 maintext dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_puts DBC 0 CODE 0 text1 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+btemp 7E 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+start 36 0 CODE 0 init /tmp/xcXctUQqO.obj
+_EUSART_Write E02 0 CODE 0 text5 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_puts 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_ISR@pi2c_buf_ptr 79 0 COMMON 1 bssCOMMON dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__CFG_SCANE$available 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_I2C2_ISR 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+?___wmul 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_I2C2_Initialize D0A 0 CODE 0 text12 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+puts@s 25 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_I2C2_BusCollisionISR E42 0 CODE 0 text22 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_EUSART_Initialize E02 0 CODE 0 text13 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+_I2C2_MasterWriteTRBBuild C62 0 CODE 0 text15 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+printf@c 42 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+printf@f 2E 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_printf$645 39 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_I2C2_FunctionComplete DBC 0 CODE 0 text21 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_i2c2_state 4F 0 BANK0 1 bssBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterReadTRBBuild@length 21 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXctUQqO.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXctUQqO.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXctUQqO.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXctUQqO.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXctUQqO.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXctUQqO.obj
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+_SSP2CLKPPSbits EC8 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+wtemp0 7E 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+_RC1STAbits 11D 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_EUSART_Write 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_I2C2_FunctionComplete D98 0 CODE 0 text21 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+I2C2_MasterRead@trBlock 58 0 BANK0 1 bssBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___wmul@multiplicand 22 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+printf@flag 3F 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+printf@prec 3B 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterReadTRBBuild@ptrb 26 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_ANSELA F38 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_ANSELB F43 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_ANSELC F4E 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_I2C2_Initialize CDA 0 CODE 0 text12 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_I2C2_ISR 31E 0 CODE 0 text19 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_INTERRUPT_InterruptManager 36 0 CODE 0 intentry dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of___wmul CDA 0 CODE 0 text8 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_EUSART_Write E16 0 CODE 0 text5 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_I2C2_ISR 592 0 CODE 0 text19 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+?_printf 2E 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___lwmod@divisor 28 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of___lwdiv BB8 0 CODE 0 text7 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of___lwmod C12 0 CODE 0 text6 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+PIN_MANAGER_Initialize@state 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_dpowers 7BA 0 STRCODE 0 stringtext dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_EUSART_Initialize DEC 0 CODE 0 text13 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___lwdiv@quotient 25 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_cputs 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_putch 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___lwmod@dividend 2A 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_PIN_MANAGER_Initialize 9BE 0 CODE 0 text10 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterWriteTRBBuild@ptrb 26 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_SSP2CON1bits 19A 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+start_initialization 3A 0 CODE 0 cinit dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_SSP2CON2bits 19B 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_hexpowers 7DE 0 STRCODE 0 stringtext dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_OSCFRQ 893 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_p_i2c2_trb_current 7B 0 COMMON 1 bssCOMMON dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_I2C2_MasterWriteTRBBuild 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterWriteTRBBuild@pdata 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_RC0PPS F20 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_RC1REG 119 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_RC1STA 11D 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_RC3PPS F23 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_RC4PPS F24 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_SYSTEM_Initialize DEC 0 CODE 0 text9 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+clear_ram0 E28 0 CODE 0 clrtext dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterTRBInsert@count 23 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterTRBInsert@ptrb_list 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterTRBInsert@pflag 21 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_TX1REG 11A 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_TX1STA 11E 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_hexpowers 7CE 0 STRCODE 0 stringtext dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_printf 31E 0 CODE 0 text3 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterWriteTRBBuild@length 21 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_I2C2_Initialize 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+EMC1001_Read@status 2B 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterReadTRBBuild@pdata 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXctUQqO.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 5C 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__size_of_I2C2_MasterReadTRBBuild 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+___lwdiv@counter 27 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+_BAUD1CON 11F 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10018 0 CONFIG 0 config -
+I2C2_MasterWriteTRBBuild@address 22 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit 3A 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+_SSP2DATPPSbits EC9 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_INTCONbits B 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+EMC1001_Read@pData 27 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 36 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 36 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+_SSP2CON1 19A 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_SSP2CON3 19C 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_SSP2STAT 199 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___wmul CA2 0 CODE 0 text8 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+int$flags 7E 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_GIE 5F 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__S0 800C 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__size_of_I2C2_MasterTRBInsert 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_I2C2_BusCollisionISR E40 0 CODE 0 text22 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_I2C2_MasterWriteTRBBuild CA2 0 CODE 0 text15 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_SYSTEM_Initialize DD4 0 CODE 0 text9 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_MasterReadTRBBuild@address 22 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_p_i2c2_current 7A 0 COMMON 1 bssCOMMON dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+__end_of_I2C2_MasterTRBInsert AD6 0 CODE 0 text16 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXctUQqO.obj
+__size_of___wmul 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__size_of_I2C2_FunctionComplete 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_PIE3bits 719 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext10 9BE 0 CODE 0 text10 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext11 E16 0 CODE 0 text11 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext12 CDA 0 CODE 0 text12 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext13 DEC 0 CODE 0 text13 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext14 AD6 0 CODE 0 text14 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext15 C62 0 CODE 0 text15 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext16 A4A 0 CODE 0 text16 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext17 C12 0 CODE 0 text17 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext19 31E 0 CODE 0 text19 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext20 D3A 0 CODE 0 text20 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext21 D98 0 CODE 0 text21 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext22 E40 0 CODE 0 text22 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_PIN_MANAGER_Initialize A4A 0 CODE 0 text10 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___lwdiv B4E 0 CODE 0 text7 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___lwmod BB8 0 CODE 0 text6 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 592 0 CODE 0 maintext dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lbigram 0 0 ABS 0 bigram -
+__CFG_BORV$LO 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_RSTOSC$HFINT1 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 1000E 0 CONFIG 0 config -
+_printf 5C 0 CODE 0 text3 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_CP$OFF 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___wmul@multiplier 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_I2C2_Stop D6A 0 CODE 0 text20 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_I2C2_Stop 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+main@data 49 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+main@temp 47 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___lwdiv@divisor 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_ISR@i2c_address 63 0 BANK0 1 bssBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+stackhi 23EF 0 ABS 0 - /tmp/xcXctUQqO.obj
+stacklo 2045 0 ABS 0 - /tmp/xcXctUQqO.obj
+_OSCCON1 88D 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_OSCCON3 88F 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_OSCTUNE 892 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_I2C2_Stop D3A 0 CODE 0 text20 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__pbssCOMMON 77 0 COMMON 1 bssCOMMON dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_LPBOREN$OFF 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR3bits 70F 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lend_init 36 0 CODE 0 end_init -
+__CFG_LVP$ON 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_CSWEN$ON 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+printf@ap 3E 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+printf@cp 3C 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+end_of_initialization 54 0 CODE 0 cinit dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hintentry 36 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_printf 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_PPSLOCKbits E8F 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lstrings 0 0 ABS 0 strings -
+_EMC1001_Read AD6 0 CODE 0 text14 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___lwdiv@dividend 22 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+?___lwdiv 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+?___lwmod 28 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 DBC 0 CODE 0 text1 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext2 D6A 0 CODE 0 text2 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext3 5C 0 CODE 0 text3 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext4 E34 0 CODE 0 text4 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext5 E02 0 CODE 0 text5 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext6 BB8 0 CODE 0 text6 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext7 B4E 0 CODE 0 text7 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext8 CA2 0 CODE 0 text8 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__ptext9 DD4 0 CODE 0 text9 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_i2c2_object 4A 0 BANK0 1 bssBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__pstringtext 7BA 0 STRCODE 0 stringtext dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec -
+_i2c2_trb_count 7C 0 COMMON 1 bssCOMMON dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+cputs@s 22 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+EUSART_Write@txData 20 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of__initialization 54 0 CODE 0 cinit dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_ZCD$ON 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_EMC1001_Read 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+_SP1BRGH 11C 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_SP1BRGL 11B 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+main@templo 48 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+__size_of_EUSART_Initialize 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_ISR@i2c_10bit_address_restart 77 0 COMMON 1 bssCOMMON dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_SSP2ADD 197 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_SSP2BUF 196 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hend_init 3A 0 CODE 0 end_init -
+__end_of_EMC1001_Read B4E 0 CODE 0 text14 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+putch@txData 21 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_main 7BA 0 CODE 0 maintext dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_puts DD4 0 CODE 0 text1 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+printf@idx 38 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+printf@val 40 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_dpowers 7CE 0 STRCODE 0 stringtext dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_cputs D98 0 CODE 0 text2 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_I2C2_MasterReadTRBBuild C12 0 CODE 0 text17 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_OSCEN 891 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_TRISA 11 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_TRISB 12 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_TRISC 13 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_putch E40 0 CODE 0 text4 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_main$603 45 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_cputs D6A 0 CODE 0 text2 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_putch E34 0 CODE 0 text4 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_I2C2_MasterReadTRBBuild C62 0 CODE 0 text17 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__end_of_OSCILLATOR_Initialize E28 0 CODE 0 text11 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_PPS1WAY$ON 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__initialization 3A 0 CODE 0 cinit dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_ISR@i2c_bytes_left 78 0 COMMON 1 bssCOMMON dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__pbssBANK0 4A 0 BANK0 1 bssBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__Hstringtext 0 0 ABS 0 stringtext -
+_PPSLOCK E8F 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+___wmul@product 24 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_i2c2_tr_queue 60 0 BANK0 1 bssBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+I2C2_Stop@completion_code 71 0 COMMON 1 cstackCOMMON dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_I2C2_MasterTRBInsert A4A 0 CODE 0 text16 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+EMC1001_Read@reg 2A 0 BANK0 1 cstackBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+EMC1001_Read@trb 50 0 BANK0 1 bssBANK0 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+__pswtext1 D0A 0 CONST 0 swtext1 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+_OSCILLATOR_Initialize E16 0 CODE 0 text11 dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text10 0 4DF 9BE 1A6 2
+text20 0 69D D3A 84 2
+cstackCOMMON 1 70 70 D 1
+cstackBANK0 1 20 20 45 1
+intentry 0 4 8 3D9 2
+reset_vec 0 0 0 2 2
+stringtext 0 3DD 7BA 102 2
+swtext1 0 685 D0A 18 2
+config 0 8007 1000E 5 2

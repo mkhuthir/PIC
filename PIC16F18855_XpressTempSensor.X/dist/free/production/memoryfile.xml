@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/free/production/Temperature_Sensor.X.production.hex">
+  <executable name="dist/free/production/PIC16F18855_XpressTempSensor.X.production.hex">
     <memory name="program">
       <units>words</units>
       <length>8192</length>
