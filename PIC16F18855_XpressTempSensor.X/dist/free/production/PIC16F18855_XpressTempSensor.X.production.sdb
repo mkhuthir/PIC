@@ -28,7 +28,7 @@ S_MASTER_NOACK_STOP 9
 S_MASTER_SEND_ADDR_10BIT_LSB 10
 S_MASTER_10BIT_RESTART 11
 ]
-"53 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+"28 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
 [e E14334 . `uc
 I2C2_MESSAGE_COMPLETE 0
 I2C2_MESSAGE_FAIL 1
@@ -58,9 +58,13 @@ I2C2_LOST_STATE 6
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"51 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+"26 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
 [v _EMC1001_Read EMC1001_Read `(uc  1 e 1 0 ]
-"69
+"41
+[v _EMC1001_PrintInfo EMC1001_PrintInfo `(v  1 e 1 0 ]
+"56
+[v _EMC1001_PrintTemp EMC1001_PrintTemp `(v  1 e 1 0 ]
+"71
 [v _main main `(v  1 e 1 0 ]
 "55 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
@@ -94,14 +98,14 @@ I2C2_LOST_STATE 6
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "50 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-[s S553 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S563 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "348 /opt/microchip/xc8/v1.41/include/pic16f18855.h
-[u S558 . 1 `S553 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES558  1 e 1 @11 ]
+[u S568 . 1 `S563 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES568  1 e 1 @11 ]
 "570
 [v _TRISA TRISA `VEuc  1 e 1 @17 ]
 "631
@@ -317,16 +321,63 @@ I2C2_LOST_STATE 6
 [v _p_i2c2_trb_current p_i2c2_trb_current `*.4S87  1 s 1 p_i2c2_trb_current ]
 "190
 [v _p_i2c2_current p_i2c2_current `*.4S99  1 s 1 p_i2c2_current ]
-"69 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+"71 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"71
-[v main@data data `uc  1 a 1 41 ]
-"73
-[v main@templo templo `uc  1 a 1 40 ]
-"72
-[v main@temp temp `c  1 a 1 39 ]
-"100
+"85
+} 0
+"82 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"89
+} 0
+"50 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"69
+[v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
+"87
+} 0
+"91 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"105
+} 0
+"198 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
+[v _I2C2_Initialize I2C2_Initialize `(v  1 e 1 0 ]
+{
+"222
+} 0
+"55 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"74
+} 0
+"56 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+[v _EMC1001_PrintTemp EMC1001_PrintTemp `(v  1 e 1 0 ]
+{
+"59
+[v EMC1001_PrintTemp@templo templo `uc  1 a 1 38 ]
+"58
+[v EMC1001_PrintTemp@temp temp `c  1 a 1 37 ]
+"68
+} 0
+"15 /opt/microchip/xc8/v1.41/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"41 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+[v _EMC1001_PrintInfo EMC1001_PrintInfo `(v  1 e 1 0 ]
+{
+"43
+[v EMC1001_PrintInfo@data data `uc  1 a 1 39 ]
+"53
 } 0
 "8 /opt/microchip/xc8/v1.41/sources/common/puts.c
 [v _puts puts `(i  1 e 2 0 ]
@@ -400,58 +451,21 @@ I2C2_LOST_STATE 6
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "31
 } 0
-"15 /opt/microchip/xc8/v1.41/sources/common/Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
-} 0
-"82 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
-[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-{
-"89
-} 0
-"50 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/pin_manager.c
-[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-{
-"69
-[v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
-"87
-} 0
-"91 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
-[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-{
-"105
-} 0
-"198 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
-[v _I2C2_Initialize I2C2_Initialize `(v  1 e 1 0 ]
-{
-"222
-} 0
-"55 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
-[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
-{
-"74
-} 0
-"51 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+"26 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
 [v _EMC1001_Read EMC1001_Read `(uc  1 e 1 0 ]
 {
 [v EMC1001_Read@reg reg `uc  1 a 1 wreg ]
-"53
+"28
 [v EMC1001_Read@status status `E14334  1 a 1 11 ]
-"51
+"26
 [v EMC1001_Read@reg reg `uc  1 a 1 wreg ]
 [v EMC1001_Read@pData pData `*.4uc  1 p 1 7 ]
 [s S87 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
-"54
+"29
 [v EMC1001_Read@trb trb `[2]S87  1 s 8 trb ]
-"53
+"28
 [v EMC1001_Read@reg reg `uc  1 a 1 10 ]
-"63
+"38
 } 0
 "707 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/i2c2.c
 [v _I2C2_MasterWriteTRBBuild I2C2_MasterWriteTRBBuild `(v  1 e 1 0 ]

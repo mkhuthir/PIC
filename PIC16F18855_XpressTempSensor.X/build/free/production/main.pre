@@ -17551,7 +17551,7 @@ void SYSTEM_Initialize(void);
 # 82
 void OSCILLATOR_Initialize(void);
 
-# 51 "main.c"
+# 26 "main.c"
 uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
 {
 I2C2_MESSAGE_STATUS status = I2C2_MESSAGE_PENDING;
@@ -17566,12 +17566,39 @@ while(status == I2C2_MESSAGE_PENDING);
 return (status == I2C2_MESSAGE_COMPLETE);
 }
 
-# 69
-void main(void)
+
+void EMC1001_PrintInfo(void)
 {
 uint8_t data;
+
+puts("Microchip EMC1001 Temperature Sensor Demo\n");
+if (EMC1001_Read(0xfd,&data)) printf("Product ID: EMC1001%s\n", data ? "-1" : "");
+if (EMC1001_Read(0xfe,&data)) printf("Manufacturer ID: 0x%X\n", data);
+if (EMC1001_Read(0xff,&data)) printf("Revision : %d\n", data);
+if (EMC1001_Read(0x04, &data)) printf("The Conversion rate is: %x\n", data);
+if (EMC1001_Read(0x05, &data)) printf("The high limit is: %d C\n", data);
+if (EMC1001_Read(0x07, &data)) printf("The low limit is: %d C\n", data);
+puts("\n");
+}
+
+
+void EMC1001_PrintTemp(void)
+{
 int8_t temp;
 uint8_t templo;
+
+if (EMC1001_Read(0x00, (uint8_t*)&temp)) {
+EMC1001_Read(0x02, &templo);
+templo = templo >> 6;
+if (temp < 0) templo = 3-templo;
+printf("\nThe temperature is: %d.%d C\n", temp, templo*25);
+}
+
+}
+
+
+void main(void)
+{
 
 SYSTEM_Initialize();
 (INTCONbits.GIE = 1);
@@ -17580,22 +17607,8 @@ SYSTEM_Initialize();
 while (1)
 {
 printf("\x0C");
-puts("Temperature Sensor Demo\n");
-if (EMC1001_Read(0xfd, &data)) printf("Product ID: EMC1001%s\n", data ? "-1" : "");
-if (EMC1001_Read(0xfe, &data)) printf("Manufacturer ID: 0x%X\n", data);
-if (EMC1001_Read(0xff, &data)) printf("Revision : %d\n", data);
-
-if (EMC1001_Read(0, (uint8_t*)&temp)) {
-EMC1001_Read(2, &templo);
-templo = templo >> 6;
-if (temp < 0) templo = 3-templo;
-printf("\nThe temperature is: %d.%d C\n", temp, templo*25);
-}
-
-if (EMC1001_Read(4, &data)) printf("\nThe Conversion rate is: %x\n", data);
-if (EMC1001_Read(5, &data)) printf("The high limit is: %d C\n", data);
-if (EMC1001_Read(7, &data)) printf("The low limit is: %d C\n", data);
-
+EMC1001_PrintInfo();
+EMC1001_PrintTemp();
 _delay((unsigned long)((1000)*(1000000/4000.0)));
 }
 }

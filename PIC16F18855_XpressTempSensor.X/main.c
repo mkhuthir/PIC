@@ -1,53 +1,28 @@
-/**
-  Generated Main Source File
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    main.c
-
-  Summary:
-    This is the main file generated using MPLAB(c) Code Configurator
-
-  Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
-    Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - v3.00
-        Device            :  PIC16F18855
-        Driver Version    :  2.00
-    The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.20
-*/
-
-/*
-Copyright (c) 2013 - 2015 released Microchip Technology Inc.  All rights reserved.
-
-Microchip licenses to you the right to use, modify, copy and distribute
-Software only when embedded on a Microchip microcontroller or digital signal
-controller that is integrated into your product or third party product
-(pursuant to the sublicense terms in the accompanying license agreement).
-
-You should refer to the license agreement accompanying this Software for
-additional information regarding your rights and obligations.
-
-SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
-EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF
-MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
-IN NO EVENT SHALL MICROCHIP OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER
-CONTRACT, NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR
-OTHER LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
-INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR
-CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT OF
-SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
-(INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
- */
 
 #include "mcc_generated_files/mcc.h"
 
+// EMC1001 Address
 #define EMC1001_ADDRESS     0x38   // slave device address
 
+// EMC1001 registers
+#define Reg_TMP_HB      0x00    // temperature value high byte 
+#define Reg_STATUS      0x01    // Status    
+#define Reg_TMP_LB      0x02    // low byte containing 1/4 deg fraction
+#define Reg_Config      0x03    // Configuration
+#define Reg_Cnv_Rate    0x04    // Conversion Rate 
+#define Reg_THL_HB      0x05    // Temperature High Limit High Byte
+#define Reg_THL_LB      0x06    // Temperature High Limit Low Byte
+#define Reg_TLL_HB      0x07    // Temperature Low Limit High Byte
+#define Reg_TLL_LB      0x08    // Temperature Low Limit Low Byte
+#define Reg_One_Sht     0x0f    // One-Shot
+#define Reg_THM_LMT     0x20    // THERM Limit
+#define Reg_THM_HYS     0x21    // THERM Hysteresis
+#define Reg_SMB_TO      0x22    // SMBus Timeout Enable
+#define Reg_Prd_ID      0xfd    // Product ID Register
+#define Reg_Mnf_ID      0xfe    // Manufacture ID
+#define Reg_Rev_No      0xff    // Revision Number
+
+//Reads 1 byte from EMC1001 using SMBus protocol
 uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
 {
     I2C2_MESSAGE_STATUS status = I2C2_MESSAGE_PENDING;
@@ -62,15 +37,39 @@ uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
     return (status == I2C2_MESSAGE_COMPLETE); 
 } 
 
-// EMC1001 registers
-#define TEMP_HI     0       // temperature value high byte 
-#define TEMP_LO     2       // low byte containing 1/4 deg fraction
-
-void main(void)
+//Prints EMC1001 information read from its registers
+void EMC1001_PrintInfo(void)
 {
     uint8_t data;
+
+    puts("Microchip EMC1001 Temperature Sensor Demo\n");
+    if (EMC1001_Read(Reg_Prd_ID,&data)) printf("Product ID: EMC1001%s\n", data ? "-1" : "");
+    if (EMC1001_Read(Reg_Mnf_ID,&data)) printf("Manufacturer ID: 0x%X\n", data);
+    if (EMC1001_Read(Reg_Rev_No,&data)) printf("Revision : %d\n", data);
+    if (EMC1001_Read(Reg_Cnv_Rate, &data)) printf("The Conversion rate is: %x\n", data);
+    if (EMC1001_Read(Reg_THL_HB, &data)) printf("The high limit is: %d C\n", data);
+    if (EMC1001_Read(Reg_TLL_HB, &data)) printf("The low limit is: %d C\n", data);
+    puts("\n");
+}
+
+//Prints current temprture value read from EMC1001
+void EMC1001_PrintTemp(void)
+{
     int8_t  temp;
     uint8_t templo;
+
+    if (EMC1001_Read(Reg_TMP_HB, (uint8_t*)&temp)) {    // get msb
+        EMC1001_Read(Reg_TMP_LB, &templo);              // get lsb 
+        templo = templo >> 6;                           // only 3 msb bits used 0.25C increments
+        if (temp < 0) templo = 3-templo;                // complement to 1 if temp is negative
+        printf("\nThe temperature is: %d.%d C\n", temp, templo*25);
+    }
+
+}
+
+//Main code
+void main(void)
+{
 
     SYSTEM_Initialize();
     INTERRUPT_GlobalInterruptEnable();
@@ -79,22 +78,8 @@ void main(void)
     while (1)
     {
         printf("\x0C");   // comment out if terminal does not support Form Feed
-        puts("Temperature Sensor Demo\n");
-        if (EMC1001_Read(0xfd, &data)) printf("Product ID: EMC1001%s\n", data ? "-1" : "");
-        if (EMC1001_Read(0xfe, &data)) printf("Manufacturer ID: 0x%X\n", data);
-        if (EMC1001_Read(0xff, &data)) printf("Revision : %d\n", data);
-        
-        if (EMC1001_Read(TEMP_HI, (uint8_t*)&temp)) {
-            EMC1001_Read(TEMP_LO, &templo);     // get lsb 
-            templo = templo >> 6;                   
-            if (temp < 0) templo = 3-templo;    // complement to 1 if T negative
-            printf("\nThe temperature is: %d.%d C\n", temp, templo*25);
-        }
-
-        if (EMC1001_Read(4, &data)) printf("\nThe Conversion rate is: %x\n", data);
-        if (EMC1001_Read(5, &data)) printf("The high limit is: %d C\n", data);
-        if (EMC1001_Read(7, &data)) printf("The low limit is: %d C\n", data);
-            
+        EMC1001_PrintInfo();
+        EMC1001_PrintTemp();
         __delay_ms(1000);
     }
 }
