@@ -41,14 +41,37 @@ uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
 void EMC1001_PrintInfo(void)
 {
     uint8_t data;
+    int8_t  temp;
+    uint8_t templo;
 
     puts("Microchip EMC1001 Temperature Sensor Demo\n");
-    if (EMC1001_Read(Reg_Prd_ID,&data)) printf("Product ID: EMC1001%s\n", data ? "-1" : "");
-    if (EMC1001_Read(Reg_Mnf_ID,&data)) printf("Manufacturer ID: 0x%X\n", data);
-    if (EMC1001_Read(Reg_Rev_No,&data)) printf("Revision : %d\n", data);
-    if (EMC1001_Read(Reg_Cnv_Rate, &data)) printf("The Conversion rate is: %x\n", data);
-    if (EMC1001_Read(Reg_THL_HB, &data)) printf("The high limit is: %d C\n", data);
-    if (EMC1001_Read(Reg_TLL_HB, &data)) printf("The low limit is: %d C\n", data);
+   
+    if (EMC1001_Read(Reg_Prd_ID,&data)) printf("Product ID:\t\tEMC1001%s\n", data ? "-1" : "");
+    if (EMC1001_Read(Reg_Mnf_ID,&data)) printf("Manufacturer ID:\t0x%X\n", data);
+    if (EMC1001_Read(Reg_Rev_No,&data)) printf("Revision :\t\t%d\n", data);
+
+    puts("\n");
+
+    if (EMC1001_Read(Reg_Cnv_Rate, &data)) printf("Conversion rate:\t%x\n", data);
+
+    if (EMC1001_Read(Reg_THL_HB, (uint8_t*)&temp)) {    // get msb
+        EMC1001_Read(Reg_THL_LB, &templo);              // get lsb 
+        templo = templo >> 6;                           // only 2 msb bits used 0.25C increments
+        if (temp < 0) templo = 3-templo;                // complement to 1 if temp is negative
+        printf("Temperature high limit:\t%d.%d C\n", temp, templo*25);
+    }
+
+    if (EMC1001_Read(Reg_TLL_HB, (uint8_t*)&temp)) {    // get msb
+        EMC1001_Read(Reg_TLL_LB, &templo);              // get lsb 
+        templo = templo >> 6;                           // only 2 msb bits used 0.25C increments
+        if (temp < 0) templo = 3-templo;                // complement to 1 if temp is negative
+        printf("Temperature low limit:\t%d.%d C\n", temp, templo*25);
+    }
+
+
+    if (EMC1001_Read(Reg_THM_LMT, &data)) printf("Thermal limit:\t\t%d C\n", data);
+    if (EMC1001_Read(Reg_THM_HYS, &data)) printf("Thermal hysteresis:\t%d C\n", data);
+   
     puts("\n");
 }
 
@@ -60,9 +83,9 @@ void EMC1001_PrintTemp(void)
 
     if (EMC1001_Read(Reg_TMP_HB, (uint8_t*)&temp)) {    // get msb
         EMC1001_Read(Reg_TMP_LB, &templo);              // get lsb 
-        templo = templo >> 6;                           // only 3 msb bits used 0.25C increments
+        templo = templo >> 6;                           // only 2 msb bits used 0.25C increments
         if (temp < 0) templo = 3-templo;                // complement to 1 if temp is negative
-        printf("\nThe temperature is: %d.%d C\n", temp, templo*25);
+        printf("Current Temperature:\t%d.%d C\n", temp, templo*25);
     }
 
 }
@@ -77,7 +100,7 @@ void main(void)
         
     while (1)
     {
-        printf("\x0C");   // comment out if terminal does not support Form Feed
+        printf("\x0C");   //Form Feed
         EMC1001_PrintInfo();
         EMC1001_PrintTemp();
         __delay_ms(1000);

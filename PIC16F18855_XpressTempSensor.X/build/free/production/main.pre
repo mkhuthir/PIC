@@ -17570,14 +17570,37 @@ return (status == I2C2_MESSAGE_COMPLETE);
 void EMC1001_PrintInfo(void)
 {
 uint8_t data;
+int8_t temp;
+uint8_t templo;
 
 puts("Microchip EMC1001 Temperature Sensor Demo\n");
-if (EMC1001_Read(0xfd,&data)) printf("Product ID: EMC1001%s\n", data ? "-1" : "");
-if (EMC1001_Read(0xfe,&data)) printf("Manufacturer ID: 0x%X\n", data);
-if (EMC1001_Read(0xff,&data)) printf("Revision : %d\n", data);
-if (EMC1001_Read(0x04, &data)) printf("The Conversion rate is: %x\n", data);
-if (EMC1001_Read(0x05, &data)) printf("The high limit is: %d C\n", data);
-if (EMC1001_Read(0x07, &data)) printf("The low limit is: %d C\n", data);
+
+if (EMC1001_Read(0xfd,&data)) printf("Product ID:\t\tEMC1001%s\n", data ? "-1" : "");
+if (EMC1001_Read(0xfe,&data)) printf("Manufacturer ID:\t0x%X\n", data);
+if (EMC1001_Read(0xff,&data)) printf("Revision :\t\t%d\n", data);
+
+puts("\n");
+
+if (EMC1001_Read(0x04, &data)) printf("Conversion rate:\t%x\n", data);
+
+if (EMC1001_Read(0x05, (uint8_t*)&temp)) {
+EMC1001_Read(0x06, &templo);
+templo = templo >> 6;
+if (temp < 0) templo = 3-templo;
+printf("Temperature high limit:\t%d.%d C\n", temp, templo*25);
+}
+
+if (EMC1001_Read(0x07, (uint8_t*)&temp)) {
+EMC1001_Read(0x08, &templo);
+templo = templo >> 6;
+if (temp < 0) templo = 3-templo;
+printf("Temperature low limit:\t%d.%d C\n", temp, templo*25);
+}
+
+
+if (EMC1001_Read(0x20, &data)) printf("Thermal limit:\t\t%d C\n", data);
+if (EMC1001_Read(0x21, &data)) printf("Thermal hysteresis:\t%d C\n", data);
+
 puts("\n");
 }
 
@@ -17591,7 +17614,7 @@ if (EMC1001_Read(0x00, (uint8_t*)&temp)) {
 EMC1001_Read(0x02, &templo);
 templo = templo >> 6;
 if (temp < 0) templo = 3-templo;
-printf("\nThe temperature is: %d.%d C\n", temp, templo*25);
+printf("Current Temperature:\t%d.%d C\n", temp, templo*25);
 }
 
 }

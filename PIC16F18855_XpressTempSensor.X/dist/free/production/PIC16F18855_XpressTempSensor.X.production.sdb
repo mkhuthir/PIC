@@ -62,9 +62,9 @@ I2C2_LOST_STATE 6
 [v _EMC1001_Read EMC1001_Read `(uc  1 e 1 0 ]
 "41
 [v _EMC1001_PrintInfo EMC1001_PrintInfo `(v  1 e 1 0 ]
-"56
+"79
 [v _EMC1001_PrintTemp EMC1001_PrintTemp `(v  1 e 1 0 ]
-"71
+"94
 [v _main main `(v  1 e 1 0 ]
 "55 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
@@ -321,10 +321,10 @@ I2C2_LOST_STATE 6
 [v _p_i2c2_trb_current p_i2c2_trb_current `*.4S87  1 s 1 p_i2c2_trb_current ]
 "190
 [v _p_i2c2_current p_i2c2_current `*.4S99  1 s 1 p_i2c2_current ]
-"71 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+"94 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"85
+"108
 } 0
 "82 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -353,31 +353,25 @@ I2C2_LOST_STATE 6
 {
 "74
 } 0
-"56 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+"79 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
 [v _EMC1001_PrintTemp EMC1001_PrintTemp `(v  1 e 1 0 ]
 {
-"59
+"82
 [v EMC1001_PrintTemp@templo templo `uc  1 a 1 38 ]
-"58
+"81
 [v EMC1001_PrintTemp@temp temp `c  1 a 1 37 ]
-"68
+"91
 } 0
-"15 /opt/microchip/xc8/v1.41/sources/common/Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
-} 0
-"41 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
+"41
 [v _EMC1001_PrintInfo EMC1001_PrintInfo `(v  1 e 1 0 ]
 {
 "43
-[v EMC1001_PrintInfo@data data `uc  1 a 1 39 ]
-"53
+[v EMC1001_PrintInfo@data data `uc  1 a 1 41 ]
+"45
+[v EMC1001_PrintInfo@templo templo `uc  1 a 1 40 ]
+"44
+[v EMC1001_PrintInfo@temp temp `c  1 a 1 39 ]
+"76
 } 0
 "8 /opt/microchip/xc8/v1.41/sources/common/puts.c
 [v _puts puts `(i  1 e 2 0 ]
@@ -450,6 +444,16 @@ I2C2_LOST_STATE 6
 [v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "31
+} 0
+"15 /opt/microchip/xc8/v1.41/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
 } 0
 "26 /home/mkhuthir/microchip/PIC16F18855_XpressTempSensor.X/main.c
 [v _EMC1001_Read EMC1001_Read `(uc  1 e 1 0 ]

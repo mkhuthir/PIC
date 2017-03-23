@@ -13275,143 +13275,199 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "43
 [v _data `uc ~T0 @X0 1 a ]
-[; ;main.c: 43: uint8_t data;
-[; ;main.c: 45: puts("Microchip EMC1001 Temperature Sensor Demo\n");
+"44
+[v _temp `c ~T0 @X0 1 a ]
 "45
+[v _templo `uc ~T0 @X0 1 a ]
+[; ;main.c: 43: uint8_t data;
+[; ;main.c: 44: int8_t temp;
+[; ;main.c: 45: uint8_t templo;
+[; ;main.c: 47: puts("Microchip EMC1001 Temperature Sensor Demo\n");
+"47
 [e ( _puts (1 :s 1C ]
-[; ;main.c: 46: if (EMC1001_Read(0xfd,&data)) printf("Product ID: EMC1001%s\n", data ? "-1" : "");
-"46
+[; ;main.c: 49: if (EMC1001_Read(0xfd,&data)) printf("Product ID:\t\tEMC1001%s\n", data ? "-1" : "");
+"49
 [e $ ! != -> ( _EMC1001_Read (2 , -> -> 253 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1570  ]
 [e ( _printf , (. :s 2C ? != -> _data `i -> -> -> 0 `i `uc `i : :s 3C :s 4C ]
 [e :U 1570 ]
-[; ;main.c: 47: if (EMC1001_Read(0xfe,&data)) printf("Manufacturer ID: 0x%X\n", data);
-"47
+[; ;main.c: 50: if (EMC1001_Read(0xfe,&data)) printf("Manufacturer ID:\t0x%X\n", data);
+"50
 [e $ ! != -> ( _EMC1001_Read (2 , -> -> 254 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1571  ]
 [e ( _printf , (. :s 5C -> _data `i ]
 [e :U 1571 ]
-[; ;main.c: 48: if (EMC1001_Read(0xff,&data)) printf("Revision : %d\n", data);
-"48
+[; ;main.c: 51: if (EMC1001_Read(0xff,&data)) printf("Revision :\t\t%d\n", data);
+"51
 [e $ ! != -> ( _EMC1001_Read (2 , -> -> 255 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1572  ]
 [e ( _printf , (. :s 6C -> _data `i ]
 [e :U 1572 ]
-[; ;main.c: 49: if (EMC1001_Read(0x04, &data)) printf("The Conversion rate is: %x\n", data);
-"49
-[e $ ! != -> ( _EMC1001_Read (2 , -> -> 4 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1573  ]
-[e ( _printf , (. :s 7C -> _data `i ]
-[e :U 1573 ]
-[; ;main.c: 50: if (EMC1001_Read(0x05, &data)) printf("The high limit is: %d C\n", data);
-"50
-[e $ ! != -> ( _EMC1001_Read (2 , -> -> 5 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1574  ]
-[e ( _printf , (. :s 8C -> _data `i ]
-[e :U 1574 ]
-[; ;main.c: 51: if (EMC1001_Read(0x07, &data)) printf("The low limit is: %d C\n", data);
-"51
-[e $ ! != -> ( _EMC1001_Read (2 , -> -> 7 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1575  ]
-[e ( _printf , (. :s 9C -> _data `i ]
-[e :U 1575 ]
-[; ;main.c: 52: puts("\n");
-"52
-[e ( _puts (1 :s 10C ]
-[; ;main.c: 53: }
+[; ;main.c: 53: puts("\n");
 "53
+[e ( _puts (1 :s 7C ]
+[; ;main.c: 55: if (EMC1001_Read(0x04, &data)) printf("Conversion rate:\t%x\n", data);
+"55
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 4 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1573  ]
+[e ( _printf , (. :s 8C -> _data `i ]
+[e :U 1573 ]
+[; ;main.c: 57: if (EMC1001_Read(0x05, (uint8_t*)&temp)) {
+"57
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 5 `i `uc -> &U _temp `*uc `i -> -> -> 0 `i `uc `i 1574  ]
+{
+[; ;main.c: 58: EMC1001_Read(0x06, &templo);
+"58
+[e ( _EMC1001_Read (2 , -> -> 6 `i `uc &U _templo ]
+[; ;main.c: 59: templo = templo >> 6;
+"59
+[e = _templo -> >> -> _templo `i -> 6 `i `uc ]
+[; ;main.c: 60: if (temp < 0) templo = 3-templo;
+"60
+[e $ ! < -> _temp `i -> 0 `i 1575  ]
+[e = _templo -> - -> 3 `i -> _templo `i `uc ]
+[e :U 1575 ]
+[; ;main.c: 61: printf("Temperature high limit:\t%d.%d C\n", temp, templo*25);
+"61
+[e ( _printf , , (. :s 9C -> _temp `i * -> _templo `i -> 25 `i ]
+"62
+}
+[e :U 1574 ]
+[; ;main.c: 62: }
+[; ;main.c: 64: if (EMC1001_Read(0x07, (uint8_t*)&temp)) {
+"64
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 7 `i `uc -> &U _temp `*uc `i -> -> -> 0 `i `uc `i 1576  ]
+{
+[; ;main.c: 65: EMC1001_Read(0x08, &templo);
+"65
+[e ( _EMC1001_Read (2 , -> -> 8 `i `uc &U _templo ]
+[; ;main.c: 66: templo = templo >> 6;
+"66
+[e = _templo -> >> -> _templo `i -> 6 `i `uc ]
+[; ;main.c: 67: if (temp < 0) templo = 3-templo;
+"67
+[e $ ! < -> _temp `i -> 0 `i 1577  ]
+[e = _templo -> - -> 3 `i -> _templo `i `uc ]
+[e :U 1577 ]
+[; ;main.c: 68: printf("Temperature low limit:\t%d.%d C\n", temp, templo*25);
+"68
+[e ( _printf , , (. :s 10C -> _temp `i * -> _templo `i -> 25 `i ]
+"69
+}
+[e :U 1576 ]
+[; ;main.c: 69: }
+[; ;main.c: 72: if (EMC1001_Read(0x20, &data)) printf("Thermal limit:\t\t%d C\n", data);
+"72
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 32 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1578  ]
+[e ( _printf , (. :s 11C -> _data `i ]
+[e :U 1578 ]
+[; ;main.c: 73: if (EMC1001_Read(0x21, &data)) printf("Thermal hysteresis:\t%d C\n", data);
+"73
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 33 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1579  ]
+[e ( _printf , (. :s 12C -> _data `i ]
+[e :U 1579 ]
+[; ;main.c: 75: puts("\n");
+"75
+[e ( _puts (1 :s 13C ]
+[; ;main.c: 76: }
+"76
 [e :UE 1569 ]
 }
-"56
+"79
 [v _EMC1001_PrintTemp `(v ~T0 @X0 1 ef ]
-"57
+"80
 {
-[; ;main.c: 56: void EMC1001_PrintTemp(void)
-[; ;main.c: 57: {
+[; ;main.c: 79: void EMC1001_PrintTemp(void)
+[; ;main.c: 80: {
 [e :U _EMC1001_PrintTemp ]
 [f ]
-"58
+"81
 [v _temp `c ~T0 @X0 1 a ]
-"59
+"82
 [v _templo `uc ~T0 @X0 1 a ]
-[; ;main.c: 58: int8_t temp;
-[; ;main.c: 59: uint8_t templo;
-[; ;main.c: 61: if (EMC1001_Read(0x00, (uint8_t*)&temp)) {
-"61
-[e $ ! != -> ( _EMC1001_Read (2 , -> -> 0 `i `uc -> &U _temp `*uc `i -> -> -> 0 `i `uc `i 1577  ]
+[; ;main.c: 81: int8_t temp;
+[; ;main.c: 82: uint8_t templo;
+[; ;main.c: 84: if (EMC1001_Read(0x00, (uint8_t*)&temp)) {
+"84
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 0 `i `uc -> &U _temp `*uc `i -> -> -> 0 `i `uc `i 1581  ]
 {
-[; ;main.c: 62: EMC1001_Read(0x02, &templo);
-"62
+[; ;main.c: 85: EMC1001_Read(0x02, &templo);
+"85
 [e ( _EMC1001_Read (2 , -> -> 2 `i `uc &U _templo ]
-[; ;main.c: 63: templo = templo >> 6;
-"63
+[; ;main.c: 86: templo = templo >> 6;
+"86
 [e = _templo -> >> -> _templo `i -> 6 `i `uc ]
-[; ;main.c: 64: if (temp < 0) templo = 3-templo;
-"64
-[e $ ! < -> _temp `i -> 0 `i 1578  ]
+[; ;main.c: 87: if (temp < 0) templo = 3-templo;
+"87
+[e $ ! < -> _temp `i -> 0 `i 1582  ]
 [e = _templo -> - -> 3 `i -> _templo `i `uc ]
-[e :U 1578 ]
-[; ;main.c: 65: printf("\nThe temperature is: %d.%d C\n", temp, templo*25);
-"65
-[e ( _printf , , (. :s 11C -> _temp `i * -> _templo `i -> 25 `i ]
-"66
+[e :U 1582 ]
+[; ;main.c: 88: printf("Current Temperature:\t%d.%d C\n", temp, templo*25);
+"88
+[e ( _printf , , (. :s 14C -> _temp `i * -> _templo `i -> 25 `i ]
+"89
 }
-[e :U 1577 ]
-[; ;main.c: 66: }
-[; ;main.c: 68: }
-"68
-[e :UE 1576 ]
+[e :U 1581 ]
+[; ;main.c: 89: }
+[; ;main.c: 91: }
+"91
+[e :UE 1580 ]
 }
-"71
+"94
 [v _main `(v ~T0 @X0 1 ef ]
-"72
+"95
 {
-[; ;main.c: 71: void main(void)
-[; ;main.c: 72: {
+[; ;main.c: 94: void main(void)
+[; ;main.c: 95: {
 [e :U _main ]
 [f ]
-[; ;main.c: 74: SYSTEM_Initialize();
-"74
+[; ;main.c: 97: SYSTEM_Initialize();
+"97
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 75: (INTCONbits.GIE = 1);
-"75
+[; ;main.c: 98: (INTCONbits.GIE = 1);
+"98
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 76: (INTCONbits.PEIE = 1);
-"76
+[; ;main.c: 99: (INTCONbits.PEIE = 1);
+"99
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 78: while (1)
-"78
-[e :U 1581 ]
-[; ;main.c: 79: {
-"79
+[; ;main.c: 101: while (1)
+"101
+[e :U 1585 ]
+[; ;main.c: 102: {
+"102
 {
-[; ;main.c: 80: printf("\x0C");
-"80
-[e ( _printf :s 12C ]
-[; ;main.c: 81: EMC1001_PrintInfo();
-"81
+[; ;main.c: 103: printf("\x0C");
+"103
+[e ( _printf :s 15C ]
+[; ;main.c: 104: EMC1001_PrintInfo();
+"104
 [e ( _EMC1001_PrintInfo ..  ]
-[; ;main.c: 82: EMC1001_PrintTemp();
-"82
+[; ;main.c: 105: EMC1001_PrintTemp();
+"105
 [e ( _EMC1001_PrintTemp ..  ]
-[; ;main.c: 83: _delay((unsigned long)((1000)*(1000000/4000.0)));
-"83
+[; ;main.c: 106: _delay((unsigned long)((1000)*(1000000/4000.0)));
+"106
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"84
+"107
 }
-[e :U 1580 ]
-"78
-[e $U 1581  ]
-[e :U 1582 ]
-[; ;main.c: 84: }
-[; ;main.c: 85: }
-"85
-[e :UE 1579 ]
+[e :U 1584 ]
+"101
+[e $U 1585  ]
+[e :U 1586 ]
+[; ;main.c: 107: }
+[; ;main.c: 108: }
+"108
+[e :UE 1583 ]
 }
 [p f _printf 14942336 ]
 [a 3C 45 49 0 ]
-[a 12C 12 0 ]
-[a 7C 84 104 101 32 67 111 110 118 101 114 115 105 111 110 32 114 97 116 101 32 105 115 58 32 37 120 10 0 ]
-[a 2C 80 114 111 100 117 99 116 32 73 68 58 32 69 77 67 49 48 48 49 37 115 10 0 ]
+[a 15C 12 0 ]
+[a 8C 67 111 110 118 101 114 115 105 111 110 32 114 97 116 101 58 9 37 120 10 0 ]
+[a 2C 80 114 111 100 117 99 116 32 73 68 58 9 9 69 77 67 49 48 48 49 37 115 10 0 ]
 [a 1C 77 105 99 114 111 99 104 105 112 32 69 77 67 49 48 48 49 32 84 101 109 112 101 114 97 116 117 114 101 32 83 101 110 115 111 114 32 68 101 109 111 10 0 ]
-[a 6C 82 101 118 105 115 105 111 110 32 58 32 37 100 10 0 ]
-[a 5C 77 97 110 117 102 97 99 116 117 114 101 114 32 73 68 58 32 48 120 37 88 10 0 ]
-[a 11C 10 84 104 101 32 116 101 109 112 101 114 97 116 117 114 101 32 105 115 58 32 37 100 46 37 100 32 67 10 0 ]
-[a 9C 84 104 101 32 108 111 119 32 108 105 109 105 116 32 105 115 58 32 37 100 32 67 10 0 ]
-[a 8C 84 104 101 32 104 105 103 104 32 108 105 109 105 116 32 105 115 58 32 37 100 32 67 10 0 ]
-[a 10C 10 0 ]
+[a 6C 82 101 118 105 115 105 111 110 32 58 9 9 37 100 10 0 ]
+[a 5C 77 97 110 117 102 97 99 116 117 114 101 114 32 73 68 58 9 48 120 37 88 10 0 ]
+[a 10C 84 101 109 112 101 114 97 116 117 114 101 32 108 111 119 32 108 105 109 105 116 58 9 37 100 46 37 100 32 67 10 0 ]
+[a 9C 84 101 109 112 101 114 97 116 117 114 101 32 104 105 103 104 32 108 105 109 105 116 58 9 37 100 46 37 100 32 67 10 0 ]
+[a 14C 67 117 114 114 101 110 116 32 84 101 109 112 101 114 97 116 117 114 101 58 9 37 100 46 37 100 32 67 10 0 ]
+[a 12C 84 104 101 114 109 97 108 32 104 121 115 116 101 114 101 115 105 115 58 9 37 100 32 67 10 0 ]
+[a 11C 84 104 101 114 109 97 108 32 108 105 109 105 116 58 9 9 37 100 32 67 10 0 ]
+[a 7C 10 0 ]
+[a 13C 10 0 ]
 [a 4C 0 ]
