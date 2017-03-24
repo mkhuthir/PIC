@@ -1,25 +1,20 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"69 mcc_generated_files/mcc.h
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"341 /opt/microchip/xc8/v1.41/include/pic16f18855.h
-[s S26 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S26 . INTEDG . PEIE GIE ]
-"340
-[u S25 `S26 1 ]
-[n S25 . . ]
-"348
-[v _INTCONbits `VS25 ~T0 @X0 0 e@11 ]
-"195 /opt/microchip/xc8/v1.41/include/stdio.h
+"8 EMC1001.c
+[c E14334 0 1 2 3 4 5 6 .. ]
+[n E14334 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
+"109 mcc_generated_files/i2c2.h
+[s S1564 `ui 1 `uc 1 `*uc 1 ]
+[n S1564 . address length pbuffer ]
+"605
+[v _I2C2_MasterWriteTRBBuild `(v ~T0 @X0 0 ef4`*S1564`*uc`uc`ui ]
+"560
+[v _I2C2_MasterReadTRBBuild `(v ~T0 @X0 0 ef4`*S1564`*uc`uc`ui ]
+"516
+[v _I2C2_MasterTRBInsert `(v ~T0 @X0 0 ef3`uc`*S1564`*E14334 ]
+"184 /opt/microchip/xc8/v1.41/include/stdio.h
+[v _puts `(i ~T0 @X0 0 ef1`*Cuc ]
+"195
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"26 EMC1001.h
-[v _EMC1001_PrintInfo `(v ~T0 @X0 0 ef ]
-"29
-[v _EMC1001_PrintTemp `(v ~T0 @X0 0 ef ]
-[v F14219 `(v ~T0 @X0 1 tf1`ul ]
-"152 /opt/microchip/xc8/v1.41/include/pic.h
-[v __delay `JF14219 ~T0 @X0 0 e ]
-[p i __delay ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -13215,52 +13210,205 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;EMC1001.h: 23: uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData);
 [; ;EMC1001.h: 26: void EMC1001_PrintInfo(void);
 [; ;EMC1001.h: 29: void EMC1001_PrintTemp(void);
-"6 main.c
-[v _main `(v ~T0 @X0 1 ef ]
+"6 EMC1001.c
+[v _EMC1001_Read `(uc ~T0 @X0 1 ef2`uc`*uc ]
 "7
 {
-[; ;main.c: 6: void main(void)
-[; ;main.c: 7: {
-[e :U _main ]
+[; ;EMC1001.c: 6: uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
+[; ;EMC1001.c: 7: {
+[e :U _EMC1001_Read ]
+"6
+[v _reg `uc ~T0 @X0 1 r1 ]
+[v _pData `*uc ~T0 @X0 1 r2 ]
+"7
 [f ]
-[; ;main.c: 9: SYSTEM_Initialize();
+"8
+[v _status `E14334 ~T0 @X0 1 a ]
+[; ;EMC1001.c: 8: I2C2_MESSAGE_STATUS status = I2C2_MESSAGE_PENDING;
+[e = _status . `E14334 2 ]
 "9
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 10: (INTCONbits.GIE = 1);
-"10
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 11: (INTCONbits.PEIE = 1);
+[v F14396 `S1564 ~T0 @X0 -> 2 `i s trb ]
+[; ;EMC1001.c: 9: static I2C2_TRANSACTION_REQUEST_BLOCK trb[2];
+[; ;EMC1001.c: 11: I2C2_MasterWriteTRBBuild(&trb[0], &reg, 1, 0x38);
 "11
-[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 13: while (1)
+[e ( _I2C2_MasterWriteTRBBuild (4 , , , &U *U + &U F14396 * -> -> -> 0 `i `ui `ux -> -> # *U &U F14396 `ui `ux &U _reg -> -> 1 `i `uc -> -> 56 `i `ui ]
+[; ;EMC1001.c: 12: I2C2_MasterReadTRBBuild(&trb[1], pData, 1, 0x38);
+"12
+[e ( _I2C2_MasterReadTRBBuild (4 , , , &U *U + &U F14396 * -> -> -> 1 `i `ui `ux -> -> # *U &U F14396 `ui `ux _pData -> -> 1 `i `uc -> -> 56 `i `ui ]
+[; ;EMC1001.c: 13: I2C2_MasterTRBInsert(2, &trb[0], &status);
 "13
-[e :U 1567 ]
-[; ;main.c: 14: {
-"14
-{
-[; ;main.c: 15: printf("\x0C");
+[e ( _I2C2_MasterTRBInsert (3 , , -> -> 2 `i `uc &U *U + &U F14396 * -> -> -> 0 `i `ui `ux -> -> # *U &U F14396 `ui `ux &U _status ]
+[; ;EMC1001.c: 15: while(status == I2C2_MESSAGE_PENDING);
 "15
-[e ( _printf :s 1C ]
-[; ;main.c: 16: EMC1001_PrintInfo();
-"16
-[e ( _EMC1001_PrintInfo ..  ]
-[; ;main.c: 17: EMC1001_PrintTemp();
-"17
-[e ( _EMC1001_PrintTemp ..  ]
-[; ;main.c: 18: _delay((unsigned long)((1000)*(1000000/4000.0)));
-"18
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"19
-}
+[e $U 1566  ]
+[e :U 1567 ]
 [e :U 1566 ]
-"13
-[e $U 1567  ]
+[e $ == -> _status `i -> . `E14334 2 `i 1567  ]
 [e :U 1568 ]
-[; ;main.c: 19: }
-[; ;main.c: 20: }
-"20
+[; ;EMC1001.c: 17: return (status == I2C2_MESSAGE_COMPLETE);
+"17
+[e ) -> -> == -> _status `i -> . `E14334 0 `i `i `uc ]
+[e $UE 1565  ]
+[; ;EMC1001.c: 18: }
+"18
 [e :UE 1565 ]
 }
-[p f _printf 8388608 ]
-[a 1C 12 0 ]
-
+"21
+[v _EMC1001_PrintInfo `(v ~T0 @X0 1 ef ]
+"22
+{
+[; ;EMC1001.c: 21: void EMC1001_PrintInfo(void)
+[; ;EMC1001.c: 22: {
+[e :U _EMC1001_PrintInfo ]
+[f ]
+"23
+[v _data `uc ~T0 @X0 1 a ]
+"24
+[v _temp `c ~T0 @X0 1 a ]
+"25
+[v _templo `uc ~T0 @X0 1 a ]
+[; ;EMC1001.c: 23: uint8_t data;
+[; ;EMC1001.c: 24: int8_t temp;
+[; ;EMC1001.c: 25: uint8_t templo;
+[; ;EMC1001.c: 27: puts("Microchip EMC1001 Temperature Sensor Demo\n");
+"27
+[e ( _puts (1 :s 1C ]
+[; ;EMC1001.c: 29: if (EMC1001_Read(0xfd,&data)) printf("Product ID:\t\tEMC1001%s\n", data ? "-1" : "");
+"29
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 253 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1570  ]
+[e ( _printf , (. :s 2C ? != -> _data `i -> -> -> 0 `i `uc `i : :s 3C :s 4C ]
+[e :U 1570 ]
+[; ;EMC1001.c: 30: if (EMC1001_Read(0xfe,&data)) printf("Manufacturer ID:\t0x%X\n", data);
+"30
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 254 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1571  ]
+[e ( _printf , (. :s 5C -> _data `i ]
+[e :U 1571 ]
+[; ;EMC1001.c: 31: if (EMC1001_Read(0xff,&data)) printf("Revision :\t\t%d\n", data);
+"31
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 255 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1572  ]
+[e ( _printf , (. :s 6C -> _data `i ]
+[e :U 1572 ]
+[; ;EMC1001.c: 33: puts("\n");
+"33
+[e ( _puts (1 :s 7C ]
+[; ;EMC1001.c: 35: if (EMC1001_Read(0x04, &data)) printf("Conversion rate:\t%x\n", data);
+"35
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 4 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1573  ]
+[e ( _printf , (. :s 8C -> _data `i ]
+[e :U 1573 ]
+[; ;EMC1001.c: 37: if (EMC1001_Read(0x05, (uint8_t*)&temp)) {
+"37
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 5 `i `uc -> &U _temp `*uc `i -> -> -> 0 `i `uc `i 1574  ]
+{
+[; ;EMC1001.c: 38: EMC1001_Read(0x06, &templo);
+"38
+[e ( _EMC1001_Read (2 , -> -> 6 `i `uc &U _templo ]
+[; ;EMC1001.c: 39: templo = templo >> 6;
+"39
+[e = _templo -> >> -> _templo `i -> 6 `i `uc ]
+[; ;EMC1001.c: 40: if (temp < 0) templo = 3-templo;
+"40
+[e $ ! < -> _temp `i -> 0 `i 1575  ]
+[e = _templo -> - -> 3 `i -> _templo `i `uc ]
+[e :U 1575 ]
+[; ;EMC1001.c: 41: printf("Temperature high limit:\t%d.%d C\n", temp, templo*25);
+"41
+[e ( _printf , , (. :s 9C -> _temp `i * -> _templo `i -> 25 `i ]
+"42
+}
+[e :U 1574 ]
+[; ;EMC1001.c: 42: }
+[; ;EMC1001.c: 44: if (EMC1001_Read(0x07, (uint8_t*)&temp)) {
+"44
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 7 `i `uc -> &U _temp `*uc `i -> -> -> 0 `i `uc `i 1576  ]
+{
+[; ;EMC1001.c: 45: EMC1001_Read(0x08, &templo);
+"45
+[e ( _EMC1001_Read (2 , -> -> 8 `i `uc &U _templo ]
+[; ;EMC1001.c: 46: templo = templo >> 6;
+"46
+[e = _templo -> >> -> _templo `i -> 6 `i `uc ]
+[; ;EMC1001.c: 47: if (temp < 0) templo = 3-templo;
+"47
+[e $ ! < -> _temp `i -> 0 `i 1577  ]
+[e = _templo -> - -> 3 `i -> _templo `i `uc ]
+[e :U 1577 ]
+[; ;EMC1001.c: 48: printf("Temperature low limit:\t%d.%d C\n", temp, templo*25);
+"48
+[e ( _printf , , (. :s 10C -> _temp `i * -> _templo `i -> 25 `i ]
+"49
+}
+[e :U 1576 ]
+[; ;EMC1001.c: 49: }
+[; ;EMC1001.c: 52: if (EMC1001_Read(0x20, &data)) printf("Thermal limit:\t\t%d C\n", data);
+"52
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 32 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1578  ]
+[e ( _printf , (. :s 11C -> _data `i ]
+[e :U 1578 ]
+[; ;EMC1001.c: 53: if (EMC1001_Read(0x21, &data)) printf("Thermal hysteresis:\t%d C\n", data);
+"53
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 33 `i `uc &U _data `i -> -> -> 0 `i `uc `i 1579  ]
+[e ( _printf , (. :s 12C -> _data `i ]
+[e :U 1579 ]
+[; ;EMC1001.c: 55: puts("\n");
+"55
+[e ( _puts (1 :s 13C ]
+[; ;EMC1001.c: 56: }
+"56
+[e :UE 1569 ]
+}
+"59
+[v _EMC1001_PrintTemp `(v ~T0 @X0 1 ef ]
+"60
+{
+[; ;EMC1001.c: 59: void EMC1001_PrintTemp(void)
+[; ;EMC1001.c: 60: {
+[e :U _EMC1001_PrintTemp ]
+[f ]
+"61
+[v _temp `c ~T0 @X0 1 a ]
+"62
+[v _templo `uc ~T0 @X0 1 a ]
+[; ;EMC1001.c: 61: int8_t temp;
+[; ;EMC1001.c: 62: uint8_t templo;
+[; ;EMC1001.c: 64: if (EMC1001_Read(0x00, (uint8_t*)&temp)) {
+"64
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 0 `i `uc -> &U _temp `*uc `i -> -> -> 0 `i `uc `i 1581  ]
+{
+[; ;EMC1001.c: 65: EMC1001_Read(0x02, &templo);
+"65
+[e ( _EMC1001_Read (2 , -> -> 2 `i `uc &U _templo ]
+[; ;EMC1001.c: 66: templo = templo >> 6;
+"66
+[e = _templo -> >> -> _templo `i -> 6 `i `uc ]
+[; ;EMC1001.c: 67: if (temp < 0) templo = 3-templo;
+"67
+[e $ ! < -> _temp `i -> 0 `i 1582  ]
+[e = _templo -> - -> 3 `i -> _templo `i `uc ]
+[e :U 1582 ]
+[; ;EMC1001.c: 68: printf("Current Temperature:\t%d.%d C\n", temp, templo*25);
+"68
+[e ( _printf , , (. :s 14C -> _temp `i * -> _templo `i -> 25 `i ]
+"69
+}
+[e :U 1581 ]
+[; ;EMC1001.c: 69: }
+[; ;EMC1001.c: 71: }
+"71
+[e :UE 1580 ]
+}
+[p f _printf 14942336 ]
+[a 3C 45 49 0 ]
+[a 8C 67 111 110 118 101 114 115 105 111 110 32 114 97 116 101 58 9 37 120 10 0 ]
+[a 2C 80 114 111 100 117 99 116 32 73 68 58 9 9 69 77 67 49 48 48 49 37 115 10 0 ]
+[a 1C 77 105 99 114 111 99 104 105 112 32 69 77 67 49 48 48 49 32 84 101 109 112 101 114 97 116 117 114 101 32 83 101 110 115 111 114 32 68 101 109 111 10 0 ]
+[a 6C 82 101 118 105 115 105 111 110 32 58 9 9 37 100 10 0 ]
+[a 5C 77 97 110 117 102 97 99 116 117 114 101 114 32 73 68 58 9 48 120 37 88 10 0 ]
+[a 10C 84 101 109 112 101 114 97 116 117 114 101 32 108 111 119 32 108 105 109 105 116 58 9 37 100 46 37 100 32 67 10 0 ]
+[a 9C 84 101 109 112 101 114 97 116 117 114 101 32 104 105 103 104 32 108 105 109 105 116 58 9 37 100 46 37 100 32 67 10 0 ]
+[a 14C 67 117 114 114 101 110 116 32 84 101 109 112 101 114 97 116 117 114 101 58 9 37 100 46 37 100 32 67 10 0 ]
+[a 12C 84 104 101 114 109 97 108 32 104 121 115 116 101 114 101 115 105 115 58 9 37 100 32 67 10 0 ]
+[a 11C 84 104 101 114 109 97 108 32 108 105 109 105 116 58 9 9 37 100 32 67 10 0 ]
+[a 7C 10 0 ]
+[a 13C 10 0 ]
+[a 4C 0 ]

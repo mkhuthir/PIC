@@ -31,6 +31,8 @@
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
+      <itemPath>EMC1001.h</itemPath>
+      <itemPath>EMC1001.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

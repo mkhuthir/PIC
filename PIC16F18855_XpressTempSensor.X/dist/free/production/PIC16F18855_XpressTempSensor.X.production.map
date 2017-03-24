@@ -5,7 +5,7 @@ Linker command line:
 --edf=/opt/microchip/xc8/v1.41/dat/en_msgs.txt -cs \
   -h+dist/free/production/PIC16F18855_XpressTempSensor.X.production.sym \
   --cmf=dist/free/production/PIC16F18855_XpressTempSensor.X.production.cmf \
-  -z -Q16F18855 -o/tmp/xcX0qGjg9 \
+  -z -Q16F18855 -o/tmp/xcX0NCZ8w \
   -Mdist/free/production/PIC16F18855_XpressTempSensor.X.production.map -E1 \
   -ver=XC8 -ASTACK=02047h-023efh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -31,7 +31,7 @@ Linker command line:
   -ppowerup=CODE -pcinit=CODE -pfunctab=CODE -ACONFIG=08007h-0800Bh \
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
-  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcXDo0WVB.obj \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcX1CTV41.obj \
   dist/free/production/PIC16F18855_XpressTempSensor.X.production.obj 
 
 Object code version is 3.11
@@ -41,7 +41,7 @@ Machine type is 16F18855
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXDo0WVB.obj
+/tmp/xcX1CTV41.obj
                 end_init                             1B       1B        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        5    1000E       0
@@ -412,7 +412,7 @@ _ANSELB                              (abs)        00F43
 _ANSELC                              (abs)        00F4E
 _BAUD1CON                            (abs)        0011F
 _EMC1001_PrintInfo                   text7        0018F
-_EMC1001_PrintInfo$597               cstackBANK0  00045
+_EMC1001_PrintInfo$613               cstackBANK0  00045
 _EMC1001_PrintTemp                   text6        00567
 _EMC1001_Read                        text16       0063A
 _EUSART_Initialize                   text5        007E6
@@ -793,7 +793,7 @@ _main                                maintext     00700
 _p_i2c2_current                      bssCOMMON    0007A
 _p_i2c2_trb_current                  bssCOMMON    0007B
 _printf                              text10       0002E
-_printf$655                          cstackBANK0  00039
+_printf$662                          cstackBANK0  00039
 _putch                               text11       00FEB
 _puts                                text8        007DA
 btemp                                (abs)        0007E
@@ -829,7 +829,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 94 in file "main.c"
+		line 6 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1014,7 +1014,7 @@ Total ram usage:        0 bytes
 
  *************** function _EMC1001_PrintTemp *****************
  Defined at:
-		line 79 in file "main.c"
+		line 59 in file "EMC1001.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1047,7 +1047,7 @@ Total ram usage:        4 bytes
 
  *************** function _EMC1001_PrintInfo *****************
  Defined at:
-		line 41 in file "main.c"
+		line 21 in file "EMC1001.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1085,7 +1085,7 @@ Total ram usage:        7 bytes
 		line 8 in file "/opt/microchip/xc8/v1.41/sources/common/puts.c"
  Parameters:    Size  Location     Type
   s               2    5[BANK0 ] PTR const unsigned char 
-		 -> STR_13(2), STR_7(2), STR_1(43), 
+		 -> STR_14(2), STR_8(2), STR_2(43), 
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
@@ -1117,7 +1117,7 @@ Total ram usage:        2 bytes
 		line 4 in file "/opt/microchip/xc8/v1.41/sources/common/cputs.c"
  Parameters:    Size  Location     Type
   s               2    2[BANK0 ] PTR const unsigned char 
-		 -> STR_13(2), STR_7(2), STR_1(43), 
+		 -> STR_14(2), STR_8(2), STR_2(43), 
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
@@ -1148,15 +1148,15 @@ Total ram usage:        3 bytes
 		line 464 in file "/opt/microchip/xc8/v1.41/sources/common/doprnt.c"
  Parameters:    Size  Location     Type
   f               2   14[BANK0 ] PTR const unsigned char 
-		 -> STR_15(2), STR_14(30), STR_12(26), STR_11(22), 
-		 -> STR_10(32), STR_9(33), STR_8(21), STR_6(16), 
-		 -> STR_5(23), STR_2(24), 
+		 -> STR_15(30), STR_13(26), STR_12(22), STR_11(32), 
+		 -> STR_10(33), STR_9(21), STR_7(16), STR_6(23), 
+		 -> STR_3(24), STR_1(2), 
  Auto vars:     Size  Location     Type
   idx             1   24[BANK0 ] unsigned char 
   tmpval          4    0        struct .
   val             2   32[BANK0 ] unsigned int 
   cp              2   28[BANK0 ] PTR const unsigned char 
-		 -> STR_16(7), STR_4(1), STR_3(3), I2C2_ISR@i2c_address(2), 
+		 -> STR_16(7), STR_5(1), STR_4(3), I2C2_ISR@i2c_address(2), 
   len             2    0        unsigned int 
   c               1   34[BANK0 ] char 
   flag            1   31[BANK0 ] unsigned char 
@@ -1184,9 +1184,9 @@ Total ram usage:       21 bytes
 		___lwmod
 		_putch
  This function is called by:
+		_main
 		_EMC1001_PrintInfo
 		_EMC1001_PrintTemp
-		_main
  This function uses a non-reentrant model
 
 
@@ -1349,7 +1349,7 @@ Total ram usage:        6 bytes
 
  *************** function _EMC1001_Read *****************
  Defined at:
-		line 26 in file "main.c"
+		line 6 in file "EMC1001.c"
  Parameters:    Size  Location     Type
   reg             1    wreg     unsigned char 
   pData           1    7[BANK0 ] PTR unsigned char 
@@ -1653,6 +1653,13 @@ Module		Function		Class		Link	Load	Size
 
 /opt/microchip/xc8/v1.41/sources/common/lwdiv.c estimated size: 54
 
+EMC1001.c
+		_EMC1001_Read  		CODE           	063A	0000	61
+		_EMC1001_PrintInfo		CODE           	018F	0000	337
+		_EMC1001_PrintTemp		CODE           	0567	0000	72
+
+EMC1001.c estimated size: 470
+
 mcc_generated_files/interrupt_manager.c
 		_INTERRUPT_InterruptManager		CODE           	0004	0000	24
 
@@ -1721,10 +1728,7 @@ mcc_generated_files/eusart.c estimated size: 30
 /opt/microchip/xc8/v1.41/sources/common/Umul16.c estimated size: 29
 
 main.c
-		_EMC1001_Read  		CODE           	063A	0000	61
 		_main          		CODE           	0700	0000	34
-		_EMC1001_PrintInfo		CODE           	018F	0000	337
-		_EMC1001_PrintTemp		CODE           	0567	0000	72
 
-main.c estimated size: 504
+main.c estimated size: 34
 
