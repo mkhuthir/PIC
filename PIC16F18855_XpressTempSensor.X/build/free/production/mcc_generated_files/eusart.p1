@@ -13205,9 +13205,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart.c: 78: {
 [e :U _EUSART_Read ]
 [f ]
-[; ;eusart.c: 80: RC1STAbits.SREN = 1;
+[; ;eusart.c: 80: RC1STAbits.CREN = 1;
 "80
-[e = . . _RC1STAbits 0 5 -> -> 1 `i `uc ]
+[e = . . _RC1STAbits 0 4 -> -> 1 `i `uc ]
 [; ;eusart.c: 81: while(!PIR3bits.RCIF)
 "81
 [e $U 1566  ]
@@ -13228,12 +13228,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart.c: 87: {
 "87
 {
-[; ;eusart.c: 90: RC1STAbits.SPEN = 0;
+[; ;eusart.c: 90: RC1STAbits.CREN = 0;
 "90
-[e = . . _RC1STAbits 0 7 -> -> 0 `i `uc ]
-[; ;eusart.c: 91: RC1STAbits.SPEN = 1;
+[e = . . _RC1STAbits 0 4 -> -> 0 `i `uc ]
+[; ;eusart.c: 91: RC1STAbits.CREN = 1;
 "91
-[e = . . _RC1STAbits 0 7 -> -> 1 `i `uc ]
+[e = . . _RC1STAbits 0 4 -> -> 1 `i `uc ]
 "92
 }
 [e :U 1569 ]

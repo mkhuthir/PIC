@@ -1,30 +1,36 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"814 /opt/microchip/xc8/v1.41/include/pic16f18855.h
-[v _LATB `Vuc ~T0 @X0 0 e@23 ]
-"34387
-[v _WPUE `Vuc ~T0 @X0 0 e@3941 ]
-"753
+"753 /opt/microchip/xc8/v1.41/include/pic16f18855.h
 [v _LATA `Vuc ~T0 @X0 0 e@22 ]
+"814
+[v _LATB `Vuc ~T0 @X0 0 e@23 ]
 "875
 [v _LATC `Vuc ~T0 @X0 0 e@24 ]
-"32618
-[v _WPUA `Vuc ~T0 @X0 0 e@3897 ]
-"33228
-[v _WPUB `Vuc ~T0 @X0 0 e@3908 ]
-"33838
-[v _WPUC `Vuc ~T0 @X0 0 e@3919 ]
-"32557
-[v _ANSELA `Vuc ~T0 @X0 0 e@3896 ]
-"33167
-[v _ANSELB `Vuc ~T0 @X0 0 e@3907 ]
-"33777
-[v _ANSELC `Vuc ~T0 @X0 0 e@3918 ]
+"570
+[v _TRISA `Vuc ~T0 @X0 0 e@17 ]
 "631
 [v _TRISB `Vuc ~T0 @X0 0 e@18 ]
 "692
 [v _TRISC `Vuc ~T0 @X0 0 e@19 ]
-"570
-[v _TRISA `Vuc ~T0 @X0 0 e@17 ]
+"33777
+[v _ANSELC `Vuc ~T0 @X0 0 e@3918 ]
+"33167
+[v _ANSELB `Vuc ~T0 @X0 0 e@3907 ]
+"32557
+[v _ANSELA `Vuc ~T0 @X0 0 e@3896 ]
+"34387
+[v _WPUE `Vuc ~T0 @X0 0 e@3941 ]
+"33228
+[v _WPUB `Vuc ~T0 @X0 0 e@3908 ]
+"32618
+[v _WPUA `Vuc ~T0 @X0 0 e@3897 ]
+"33838
+[v _WPUC `Vuc ~T0 @X0 0 e@3919 ]
+"32679
+[v _ODCONA `Vuc ~T0 @X0 0 e@3898 ]
+"33289
+[v _ODCONB `Vuc ~T0 @X0 0 e@3909 ]
+"33899
+[v _ODCONC `Vuc ~T0 @X0 0 e@3920 ]
 "36278
 [v _GIE `Vb ~T0 @X0 0 e@95 ]
 "29393
@@ -13144,112 +13150,121 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 192: extern unsigned char __resetbits;
 [; ;pic.h: 193: extern __bit __powerdown;
 [; ;pic.h: 194: extern __bit __timeout;
-[; ;pin_manager.h: 206: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 218: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 228: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 240: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
-"50 mcc_generated_files/pin_manager.c
+"51 mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-"51
+"52
 {
-[; ;pin_manager.c: 50: void PIN_MANAGER_Initialize(void)
-[; ;pin_manager.c: 51: {
+[; ;pin_manager.c: 51: void PIN_MANAGER_Initialize(void)
+[; ;pin_manager.c: 52: {
 [e :U _PIN_MANAGER_Initialize ]
 [f ]
-[; ;pin_manager.c: 52: LATB = 0x0;
-"52
-[e = _LATB -> -> 0 `i `uc ]
-[; ;pin_manager.c: 53: WPUE = 0x8;
-"53
-[e = _WPUE -> -> 8 `i `uc ]
-[; ;pin_manager.c: 54: LATA = 0x0;
-"54
-[e = _LATA -> -> 0 `i `uc ]
-[; ;pin_manager.c: 55: LATC = 0x1;
-"55
-[e = _LATC -> -> 1 `i `uc ]
-[; ;pin_manager.c: 56: WPUA = 0xF0;
+[; ;pin_manager.c: 56: LATA = 0x00;
 "56
-[e = _WPUA -> -> 240 `i `uc ]
-[; ;pin_manager.c: 57: WPUB = 0xFF;
+[e = _LATA -> -> 0 `i `uc ]
+[; ;pin_manager.c: 57: LATB = 0x00;
 "57
-[e = _WPUB -> -> 255 `i `uc ]
-[; ;pin_manager.c: 58: WPUC = 0xE7;
+[e = _LATB -> -> 0 `i `uc ]
+[; ;pin_manager.c: 58: LATC = 0x01;
 "58
-[e = _WPUC -> -> 231 `i `uc ]
-[; ;pin_manager.c: 59: ANSELA = 0xFF;
-"59
-[e = _ANSELA -> -> 255 `i `uc ]
-[; ;pin_manager.c: 60: ANSELB = 0xFF;
-"60
-[e = _ANSELB -> -> 255 `i `uc ]
-[; ;pin_manager.c: 61: ANSELC = 0xE7;
-"61
-[e = _ANSELC -> -> 231 `i `uc ]
-[; ;pin_manager.c: 62: TRISB = 0xFF;
-"62
-[e = _TRISB -> -> 255 `i `uc ]
-[; ;pin_manager.c: 63: TRISC = 0xFE;
+[e = _LATC -> -> 1 `i `uc ]
+[; ;pin_manager.c: 63: TRISA = 0xF0;
 "63
-[e = _TRISC -> -> 254 `i `uc ]
-[; ;pin_manager.c: 64: TRISA = 0xF0;
-"64
 [e = _TRISA -> -> 240 `i `uc ]
-"69
-[v _state `uc ~T0 @X0 1 a ]
-[; ;pin_manager.c: 69: bool state = GIE;
-[e = _state -> -> _GIE `i `uc ]
-[; ;pin_manager.c: 70: GIE = 0;
+[; ;pin_manager.c: 64: TRISB = 0xFF;
+"64
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;pin_manager.c: 65: TRISC = 0xFE;
+"65
+[e = _TRISC -> -> 254 `i `uc ]
+[; ;pin_manager.c: 70: ANSELC = 0xE7;
 "70
-[e = _GIE -> -> 0 `i `b ]
-[; ;pin_manager.c: 71: PPSLOCK = 0x55;
+[e = _ANSELC -> -> 231 `i `uc ]
+[; ;pin_manager.c: 71: ANSELB = 0xFF;
 "71
-[e = _PPSLOCK -> -> 85 `i `uc ]
-[; ;pin_manager.c: 72: PPSLOCK = 0xAA;
+[e = _ANSELB -> -> 255 `i `uc ]
+[; ;pin_manager.c: 72: ANSELA = 0x30;
 "72
-[e = _PPSLOCK -> -> 170 `i `uc ]
-[; ;pin_manager.c: 73: PPSLOCKbits.PPSLOCKED = 0x00;
-"73
-[e = . . _PPSLOCKbits 0 0 -> -> 0 `i `uc ]
-[; ;pin_manager.c: 75: RC0PPS = 0x10;
-"75
-[e = _RC0PPS -> -> 16 `i `uc ]
-[; ;pin_manager.c: 76: RC3PPS = 0x17;
-"76
-[e = _RC3PPS -> -> 23 `i `uc ]
-[; ;pin_manager.c: 77: SSP2DATPPSbits.SSP2DATPPS = 0x13;
+[e = _ANSELA -> -> 48 `i `uc ]
+[; ;pin_manager.c: 77: WPUE = 0x08;
 "77
-[e = . . _SSP2DATPPSbits 1 0 -> -> 19 `i `uc ]
-[; ;pin_manager.c: 78: SSP2CLKPPSbits.SSP2CLKPPS = 0x14;
+[e = _WPUE -> -> 8 `i `uc ]
+[; ;pin_manager.c: 78: WPUB = 0xFF;
 "78
-[e = . . _SSP2CLKPPSbits 1 0 -> -> 20 `i `uc ]
-[; ;pin_manager.c: 79: RC4PPS = 0x16;
+[e = _WPUB -> -> 255 `i `uc ]
+[; ;pin_manager.c: 79: WPUA = 0xF0;
 "79
-[e = _RC4PPS -> -> 22 `i `uc ]
-[; ;pin_manager.c: 81: PPSLOCK = 0x55;
-"81
-[e = _PPSLOCK -> -> 85 `i `uc ]
-[; ;pin_manager.c: 82: PPSLOCK = 0xAA;
-"82
-[e = _PPSLOCK -> -> 170 `i `uc ]
-[; ;pin_manager.c: 83: PPSLOCKbits.PPSLOCKED = 0x01;
-"83
-[e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
-[; ;pin_manager.c: 85: GIE = state;
+[e = _WPUA -> -> 240 `i `uc ]
+[; ;pin_manager.c: 80: WPUC = 0xE7;
+"80
+[e = _WPUC -> -> 231 `i `uc ]
+[; ;pin_manager.c: 85: ODCONA = 0x00;
 "85
-[e = _GIE -> _state `b ]
-[; ;pin_manager.c: 87: }
+[e = _ODCONA -> -> 0 `i `uc ]
+[; ;pin_manager.c: 86: ODCONB = 0x00;
+"86
+[e = _ODCONB -> -> 0 `i `uc ]
+[; ;pin_manager.c: 87: ODCONC = 0x00;
 "87
+[e = _ODCONC -> -> 0 `i `uc ]
+"94
+[v _state `uc ~T0 @X0 1 a ]
+[; ;pin_manager.c: 94: bool state = GIE;
+[e = _state -> -> _GIE `i `uc ]
+[; ;pin_manager.c: 95: GIE = 0;
+"95
+[e = _GIE -> -> 0 `i `b ]
+[; ;pin_manager.c: 96: PPSLOCK = 0x55;
+"96
+[e = _PPSLOCK -> -> 85 `i `uc ]
+[; ;pin_manager.c: 97: PPSLOCK = 0xAA;
+"97
+[e = _PPSLOCK -> -> 170 `i `uc ]
+[; ;pin_manager.c: 98: PPSLOCKbits.PPSLOCKED = 0x00;
+"98
+[e = . . _PPSLOCKbits 0 0 -> -> 0 `i `uc ]
+[; ;pin_manager.c: 100: RC0PPS = 0x10;
+"100
+[e = _RC0PPS -> -> 16 `i `uc ]
+[; ;pin_manager.c: 101: RC3PPS = 0x17;
+"101
+[e = _RC3PPS -> -> 23 `i `uc ]
+[; ;pin_manager.c: 102: SSP2DATPPSbits.SSP2DATPPS = 0x13;
+"102
+[e = . . _SSP2DATPPSbits 1 0 -> -> 19 `i `uc ]
+[; ;pin_manager.c: 103: SSP2CLKPPSbits.SSP2CLKPPS = 0x14;
+"103
+[e = . . _SSP2CLKPPSbits 1 0 -> -> 20 `i `uc ]
+[; ;pin_manager.c: 104: RC4PPS = 0x16;
+"104
+[e = _RC4PPS -> -> 22 `i `uc ]
+[; ;pin_manager.c: 106: PPSLOCK = 0x55;
+"106
+[e = _PPSLOCK -> -> 85 `i `uc ]
+[; ;pin_manager.c: 107: PPSLOCK = 0xAA;
+"107
+[e = _PPSLOCK -> -> 170 `i `uc ]
+[; ;pin_manager.c: 108: PPSLOCKbits.PPSLOCKED = 0x01;
+"108
+[e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
+[; ;pin_manager.c: 110: GIE = state;
+"110
+[e = _GIE -> _state `b ]
+[; ;pin_manager.c: 111: }
+"111
 [e :UE 1563 ]
 }
-"90
+"113
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"91
+"114
 {
-[; ;pin_manager.c: 90: void PIN_MANAGER_IOC(void)
-[; ;pin_manager.c: 91: {
+[; ;pin_manager.c: 113: void PIN_MANAGER_IOC(void)
+[; ;pin_manager.c: 114: {
 [e :U _PIN_MANAGER_IOC ]
 [f ]
-[; ;pin_manager.c: 92: }
-"92
+[; ;pin_manager.c: 116: }
+"116
 [e :UE 1564 ]
 }

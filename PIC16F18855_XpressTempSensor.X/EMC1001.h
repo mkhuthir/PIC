@@ -1,3 +1,11 @@
+#ifndef EMC1001_H
+#define EMC1001_H
+
+#ifndef MCC_H
+#include "mcc_generated_files/mcc.h"
+#endif
+
+//-------------------------------------------------------------------------------------
 // EMC1001 Address
 #define EMC1001_ADDRESS     0x38   // slave device address  (EMC1001 ADDR/THERM Pull-up Resistor = 20KOhm+/-5%)
 
@@ -19,13 +27,13 @@
 #define Reg_Mnf_ID      0xfe    // Manufacture ID
 #define Reg_Rev_No      0xff    // Revision Number
 
-//Reads 1 byte from EMC1001 using SMBus protocol
-uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData);
-
-//Prints EMC1001 information read from its registers
-void EMC1001_PrintInfo(void);
-
-//Prints current temprture value read from EMC1001
-void EMC1001_PrintTemp(void);
 
 
+//-------------------------------------------------------------------------------------
+// functions
+
+uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData);  //Reads 1 byte from EMC1001 using SMBus protocol
+void    EMC1001_PrintInfo(void);                    //Prints EMC1001 information read from its registers
+void    EMC1001_PrintTemp(void);                    //Prints current temprture value read from EMC1001
+
+#endif

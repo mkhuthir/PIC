@@ -1,8 +1,12 @@
 // EMC1001 Library
-#include "mcc_generated_files/mcc.h"
-#include "EMC1001.h"
 
+#ifndef EMC1001_H
+#include "EMC1001.h"
+#endif
+
+//-------------------------------------------------------------------------------------
 //Reads 1 byte from EMC1001 using SMBus protocol
+//-------------------------------------------------------------------------------------
 uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
 {
     I2C2_MESSAGE_STATUS status = I2C2_MESSAGE_PENDING;
@@ -17,7 +21,9 @@ uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
     return (status == I2C2_MESSAGE_COMPLETE); 
 } 
 
+//-------------------------------------------------------------------------------------
 //Prints EMC1001 information read from its registers
+//-------------------------------------------------------------------------------------
 void EMC1001_PrintInfo(void)
 {
     uint8_t data;
@@ -55,7 +61,9 @@ void EMC1001_PrintInfo(void)
     puts("\n");
 }
 
+//-------------------------------------------------------------------------------------
 //Prints current temprture value read from EMC1001
+//-------------------------------------------------------------------------------------
 void EMC1001_PrintTemp(void)
 {
     int8_t  temp;

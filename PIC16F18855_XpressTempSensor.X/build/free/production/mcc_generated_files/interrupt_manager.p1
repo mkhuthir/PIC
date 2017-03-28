@@ -1,5 +1,13 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"21388 /opt/microchip/xc8/v1.41/include/pic16f18855.h
+"341 /opt/microchip/xc8/v1.41/include/pic16f18855.h
+[s S26 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S26 . INTEDG . PEIE GIE ]
+"340
+[u S25 `S26 1 ]
+[n S25 . . ]
+"348
+[v _INTCONbits `VS25 ~T0 @X0 0 e@11 ]
+"21388
 [s S981 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S981 . SSP1IE BCL1IE SSP2IE BCL2IE TXIE RCIE ]
 "21387
@@ -13099,8 +13107,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 192: extern unsigned char __resetbits;
 [; ;pic.h: 193: extern __bit __powerdown;
 [; ;pic.h: 194: extern __bit __timeout;
-[; ;pin_manager.h: 206: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 218: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 228: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 240: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -13209,8 +13217,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 685: bool I2C2_MasterQueueIsFull(void);
 [; ;i2c2.h: 686: void I2C2_BusCollisionISR( void );
 [; ;i2c2.h: 687: void I2C2_ISR ( void );
-[; ;mcc.h: 69: void SYSTEM_Initialize(void);
-[; ;mcc.h: 82: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 70: void SYSTEM_Initialize(void);
+[; ;mcc.h: 83: void OSCILLATOR_Initialize(void);
 [v F3 `(v ~T0 @X0 1 tf ]
 "51 mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager `IF3 ~T0 @X0 1 e ]
@@ -13220,9 +13228,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interrupt_manager.c: 52: {
 [e :U _INTERRUPT_InterruptManager ]
 [f ]
-[; ;interrupt_manager.c: 54: if(PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
+[; ;interrupt_manager.c: 54: if(INTCONbits.PEIE == 1 && PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
 "54
-[e $ ! && == -> . . _PIE3bits 0 3 `i -> 1 `i == -> . . _PIR3bits 0 3 `i -> 1 `i 1566  ]
+[e $ ! && && == -> . . _INTCONbits 0 2 `i -> 1 `i == -> . . _PIE3bits 0 3 `i -> 1 `i == -> . . _PIR3bits 0 3 `i -> 1 `i 1566  ]
 [; ;interrupt_manager.c: 55: {
 "55
 {
@@ -13235,8 +13243,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1567  ]
 "58
 [e :U 1566 ]
-[; ;interrupt_manager.c: 58: else if(PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
-[e $ ! && == -> . . _PIE3bits 0 2 `i -> 1 `i == -> . . _PIR3bits 0 2 `i -> 1 `i 1568  ]
+[; ;interrupt_manager.c: 58: else if(INTCONbits.PEIE == 1 && PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
+[e $ ! && && == -> . . _INTCONbits 0 2 `i -> 1 `i == -> . . _PIE3bits 0 2 `i -> 1 `i == -> . . _PIR3bits 0 2 `i -> 1 `i 1568  ]
 [; ;interrupt_manager.c: 59: {
 "59
 {

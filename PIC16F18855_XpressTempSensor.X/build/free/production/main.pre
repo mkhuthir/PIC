@@ -17301,10 +17301,10 @@ extern unsigned char __resetbits;
 extern __bit __powerdown;
 extern __bit __timeout;
 
-# 206 "mcc_generated_files/pin_manager.h"
+# 228 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 218
+# 240
 void PIN_MANAGER_IOC(void);
 
 # 13 "/opt/microchip/xc8/v1.41/include/stdint.h"
@@ -17545,19 +17545,15 @@ bool I2C2_MasterQueueIsFull(void);
 void I2C2_BusCollisionISR( void );
 void I2C2_ISR ( void );
 
-# 69 "mcc_generated_files/mcc.h"
+# 70 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 82
+# 83
 void OSCILLATOR_Initialize(void);
 
-# 23 "EMC1001.h"
+# 35 "EMC1001.h"
 uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData);
-
-
 void EMC1001_PrintInfo(void);
-
-
 void EMC1001_PrintTemp(void);
 
 # 6 "main.c"
@@ -17568,11 +17564,23 @@ SYSTEM_Initialize();
 (INTCONbits.GIE = 1);
 (INTCONbits.PEIE = 1);
 
+do { LATAbits.LATA0 = 0; } while(0);
+do { LATAbits.LATA1 = 0; } while(0);
+do { LATAbits.LATA2 = 0; } while(0);
+do { LATAbits.LATA3 = 0; } while(0);
+
 while (1)
 {
+do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0);
 printf("\x0C");
 EMC1001_PrintInfo();
 EMC1001_PrintTemp();
-_delay((unsigned long)((1000)*(1000000/4000.0)));
+
+LATAbits.LATA1=PORTAbits.RA7;
+LATAbits.LATA2=PORTAbits.RA6;
+
+do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0);
+
+_delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }

@@ -13,12 +13,12 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 3.15.0
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15
         Device            :  PIC16F18855
         Driver Version    :  1.02
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.20
+        MPLAB             :  MPLAB X 3.40
 */
 
 /*
@@ -103,6 +103,7 @@ void OSCILLATOR_Initialize(void)
     // Set the secondary oscillator
     
 }
+
 
 /**
  End of File

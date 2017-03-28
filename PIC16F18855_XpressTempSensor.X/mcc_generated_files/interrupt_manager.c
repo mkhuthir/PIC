@@ -15,12 +15,12 @@
     For individual peripheral handlers please see the peripheral driver for
     all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 3.15.0
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15
         Device            :  PIC16F18855
         Driver Version    :  1.02
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.20
+        MPLAB             :  MPLAB X 3.40
 */
 
 /*
@@ -50,12 +50,12 @@
 
 void interrupt INTERRUPT_InterruptManager (void)
 {
-   // interrupt handler
-    if(PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
+    // interrupt handler
+    if(INTCONbits.PEIE == 1 && PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
     {
         I2C2_BusCollisionISR();
     }
-    else if(PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
+    else if(INTCONbits.PEIE == 1 && PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
     {
         I2C2_ISR();
     }

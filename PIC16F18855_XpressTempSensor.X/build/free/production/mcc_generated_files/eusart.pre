@@ -17492,7 +17492,7 @@ SP1BRGH = 0x00;
 uint8_t EUSART_Read(void)
 {
 
-RC1STAbits.SREN = 1;
+RC1STAbits.CREN = 1;
 while(!PIR3bits.RCIF)
 {
 }
@@ -17502,8 +17502,8 @@ if(1 == RC1STAbits.OERR)
 {
 
 
-RC1STAbits.SPEN = 0;
-RC1STAbits.SPEN = 1;
+RC1STAbits.CREN = 0;
+RC1STAbits.CREN = 1;
 }
 
 return RC1REG;
