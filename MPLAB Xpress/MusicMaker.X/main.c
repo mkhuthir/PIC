@@ -3,8 +3,6 @@
 #include "mcc_generated_files/mcc.h"
 #include "notes.h"
 
-
-
 /*
  * We want to be able to access the Upper/High/Low bytes in the 24-bit integer
  * when we set our NCO. So we define this union to simplify that process

@@ -1,4 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
+[v F14273 `(v ~T0 @X0 0 tf ]
 "1326 /opt/microchip/xc8/v1.41/include/pic16f18855.h
 [v _T0CON0 `Vuc ~T0 @X0 0 e@30 ]
 "1390
@@ -13143,137 +13144,140 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 234: void TMR0_Write8bitTimer(uint8_t timerVal);
 [; ;tmr0.h: 271: void TMR0_Load8bitPeriod(uint8_t periodVal);
 [; ;tmr0.h: 307: bool TMR0_HasOverflowOccured(void);
-"59 mcc_generated_files/tmr0.c
-[v _TMR0_Initialize `(v ~T0 @X0 1 ef ]
+"58 mcc_generated_files/tmr0.c
+[v _TMR0_InterruptHandler `*F14273 ~T0 @X0 1 e ]
+[; ;tmr0.c: 58: void (*TMR0_InterruptHandler)(void);
 "60
+[v _TMR0_Initialize `(v ~T0 @X0 1 ef ]
+"61
 {
-[; ;tmr0.c: 59: void TMR0_Initialize(void)
-[; ;tmr0.c: 60: {
+[; ;tmr0.c: 60: void TMR0_Initialize(void)
+[; ;tmr0.c: 61: {
 [e :U _TMR0_Initialize ]
 [f ]
-[; ;tmr0.c: 64: T0CON0 = 0x00;
-"64
+[; ;tmr0.c: 65: T0CON0 = 0x00;
+"65
 [e = _T0CON0 -> -> 0 `i `uc ]
-[; ;tmr0.c: 67: T0CON1 = 0x48;
-"67
+[; ;tmr0.c: 68: T0CON1 = 0x48;
+"68
 [e = _T0CON1 -> -> 72 `i `uc ]
-[; ;tmr0.c: 70: TMR0H = 0xF4;
-"70
+[; ;tmr0.c: 71: TMR0H = 0xF4;
+"71
 [e = _TMR0H -> -> 244 `i `uc ]
-[; ;tmr0.c: 73: TMR0L = 0x00;
-"73
+[; ;tmr0.c: 74: TMR0L = 0x00;
+"74
 [e = _TMR0L -> -> 0 `i `uc ]
-[; ;tmr0.c: 76: PIR0bits.TMR0IF = 0;
-"76
+[; ;tmr0.c: 78: PIR0bits.TMR0IF = 0;
+"78
 [e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
-[; ;tmr0.c: 79: TMR0_StartTimer();
-"79
+[; ;tmr0.c: 81: TMR0_StartTimer();
+"81
 [e ( _TMR0_StartTimer ..  ]
-[; ;tmr0.c: 80: }
-"80
+[; ;tmr0.c: 82: }
+"82
 [e :UE 1563 ]
 }
-"82
+"84
 [v _TMR0_StartTimer `(v ~T0 @X0 1 ef ]
-"83
+"85
 {
-[; ;tmr0.c: 82: void TMR0_StartTimer(void)
-[; ;tmr0.c: 83: {
+[; ;tmr0.c: 84: void TMR0_StartTimer(void)
+[; ;tmr0.c: 85: {
 [e :U _TMR0_StartTimer ]
 [f ]
-[; ;tmr0.c: 85: T0CON0bits.T0EN = 1;
-"85
+[; ;tmr0.c: 87: T0CON0bits.T0EN = 1;
+"87
 [e = . . _T0CON0bits 0 4 -> -> 1 `i `uc ]
-[; ;tmr0.c: 86: }
-"86
+[; ;tmr0.c: 88: }
+"88
 [e :UE 1564 ]
 }
-"88
+"90
 [v _TMR0_StopTimer `(v ~T0 @X0 1 ef ]
-"89
+"91
 {
-[; ;tmr0.c: 88: void TMR0_StopTimer(void)
-[; ;tmr0.c: 89: {
+[; ;tmr0.c: 90: void TMR0_StopTimer(void)
+[; ;tmr0.c: 91: {
 [e :U _TMR0_StopTimer ]
 [f ]
-[; ;tmr0.c: 91: T0CON0bits.T0EN = 0;
-"91
+[; ;tmr0.c: 93: T0CON0bits.T0EN = 0;
+"93
 [e = . . _T0CON0bits 0 4 -> -> 0 `i `uc ]
-[; ;tmr0.c: 92: }
-"92
+[; ;tmr0.c: 94: }
+"94
 [e :UE 1565 ]
 }
-"94
+"96
 [v _TMR0_Read8bitTimer `(uc ~T0 @X0 1 ef ]
-"95
+"97
 {
-[; ;tmr0.c: 94: uint8_t TMR0_Read8bitTimer(void)
-[; ;tmr0.c: 95: {
+[; ;tmr0.c: 96: uint8_t TMR0_Read8bitTimer(void)
+[; ;tmr0.c: 97: {
 [e :U _TMR0_Read8bitTimer ]
 [f ]
-"96
+"98
 [v _readVal `uc ~T0 @X0 1 a ]
-[; ;tmr0.c: 96: uint8_t readVal;
-[; ;tmr0.c: 99: readVal = TMR0L;
-"99
-[e = _readVal _TMR0L ]
-[; ;tmr0.c: 101: return readVal;
+[; ;tmr0.c: 98: uint8_t readVal;
+[; ;tmr0.c: 101: readVal = TMR0L;
 "101
+[e = _readVal _TMR0L ]
+[; ;tmr0.c: 103: return readVal;
+"103
 [e ) _readVal ]
 [e $UE 1566  ]
-[; ;tmr0.c: 102: }
-"102
+[; ;tmr0.c: 104: }
+"104
 [e :UE 1566 ]
 }
-"104
+"106
 [v _TMR0_Write8bitTimer `(v ~T0 @X0 1 ef1`uc ]
-"105
-{
-[; ;tmr0.c: 104: void TMR0_Write8bitTimer(uint8_t timerVal)
-[; ;tmr0.c: 105: {
-[e :U _TMR0_Write8bitTimer ]
-"104
-[v _timerVal `uc ~T0 @X0 1 r1 ]
-"105
-[f ]
-[; ;tmr0.c: 107: TMR0L = timerVal;
 "107
+{
+[; ;tmr0.c: 106: void TMR0_Write8bitTimer(uint8_t timerVal)
+[; ;tmr0.c: 107: {
+[e :U _TMR0_Write8bitTimer ]
+"106
+[v _timerVal `uc ~T0 @X0 1 r1 ]
+"107
+[f ]
+[; ;tmr0.c: 109: TMR0L = timerVal;
+"109
 [e = _TMR0L _timerVal ]
-[; ;tmr0.c: 108: }
-"108
+[; ;tmr0.c: 110: }
+"110
 [e :UE 1567 ]
 }
-"110
+"112
 [v _TMR0_Load8bitPeriod `(v ~T0 @X0 1 ef1`uc ]
-"111
-{
-[; ;tmr0.c: 110: void TMR0_Load8bitPeriod(uint8_t periodVal)
-[; ;tmr0.c: 111: {
-[e :U _TMR0_Load8bitPeriod ]
-"110
-[v _periodVal `uc ~T0 @X0 1 r1 ]
-"111
-[f ]
-[; ;tmr0.c: 113: TMR0H = periodVal;
 "113
+{
+[; ;tmr0.c: 112: void TMR0_Load8bitPeriod(uint8_t periodVal)
+[; ;tmr0.c: 113: {
+[e :U _TMR0_Load8bitPeriod ]
+"112
+[v _periodVal `uc ~T0 @X0 1 r1 ]
+"113
+[f ]
+[; ;tmr0.c: 115: TMR0H = periodVal;
+"115
 [e = _TMR0H _periodVal ]
-[; ;tmr0.c: 114: }
-"114
+[; ;tmr0.c: 116: }
+"116
 [e :UE 1568 ]
 }
-"116
-[v _TMR0_HasOverflowOccured `(uc ~T0 @X0 1 ef ]
 "117
+[v _TMR0_HasOverflowOccured `(uc ~T0 @X0 1 ef ]
+"118
 {
-[; ;tmr0.c: 116: bool TMR0_HasOverflowOccured(void)
-[; ;tmr0.c: 117: {
+[; ;tmr0.c: 117: bool TMR0_HasOverflowOccured(void)
+[; ;tmr0.c: 118: {
 [e :U _TMR0_HasOverflowOccured ]
 [f ]
-[; ;tmr0.c: 119: return(PIR0bits.TMR0IF);
-"119
+[; ;tmr0.c: 120: return(PIR0bits.TMR0IF);
+"120
 [e ) . . _PIR0bits 0 3 ]
 [e $UE 1569  ]
-[; ;tmr0.c: 120: }
-"120
+[; ;tmr0.c: 121: }
+"121
 [e :UE 1569 ]
 }

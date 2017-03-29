@@ -13,12 +13,12 @@
   @Description
     This source file provides APIs for TMR0.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 3.15.0
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15
         Device            :  PIC16F18855
         Driver Version    :  2.00
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.20
+        MPLAB             :  MPLAB X 3.40
 */
 
 /*
@@ -55,6 +55,7 @@
   Section: TMR0 APIs
 */
 
+void (*TMR0_InterruptHandler)(void);
 
 void TMR0_Initialize(void)
 {
@@ -72,7 +73,8 @@ void TMR0_Initialize(void)
     // TMR0L 0; 
     TMR0L = 0x00;
 
-    // Clearing IF flag.
+
+    // Clearing IF flag
     PIR0bits.TMR0IF = 0;
 
     // Start TMR0
@@ -112,7 +114,6 @@ void TMR0_Load8bitPeriod(uint8_t periodVal)
    // Write to Timer0 registers, high register only
    TMR0H = periodVal;
 }
-
 bool TMR0_HasOverflowOccured(void)
 {
     // check if  overflow has occurred by checking the TMRIF bit

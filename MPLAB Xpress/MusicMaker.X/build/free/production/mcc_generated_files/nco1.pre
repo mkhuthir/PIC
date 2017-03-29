@@ -17405,28 +17405,20 @@ void NCO1_Initialize (void)
 {
 
 
-NCO1CON = 0x80;
-
+NCO1CON = 0x00;
 
 NCO1CLK = 0x00;
 
-
 NCO1ACCU = 0x00;
-
 
 NCO1ACCH = 0x00;
 
-# 76
-NCO1INCU = 0;
-
-
-NCO1INCH = 3;
-
-
-NCO1INCL = 155;
-
+NCO1INCU = 0x00;
+NCO1INCH = 0x03;
+NCO1INCL = 0x9B;
 
 NCO1CONbits.N1EN = 1;
+
 }
 
 bool NCO1_GetOutputStatus(void)

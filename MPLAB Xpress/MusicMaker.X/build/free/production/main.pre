@@ -17301,10 +17301,10 @@ extern unsigned char __resetbits;
 extern __bit __powerdown;
 extern __bit __timeout;
 
-# 282 "mcc_generated_files/pin_manager.h"
+# 240 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 294
+# 252
 void PIN_MANAGER_IOC(void);
 
 # 13 "/opt/microchip/xc8/v1.41/include/stdint.h"
@@ -17400,27 +17400,6 @@ typedef uint16_t uintptr_t;
 # 12 "/opt/microchip/xc8/v1.41/include/stdbool.h"
 typedef unsigned char bool;
 
-# 99 "mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
-
-# 128
-void TMR0_StartTimer(void);
-
-# 160
-void TMR0_StopTimer(void);
-
-# 195
-uint8_t TMR0_Read8bitTimer(void);
-
-# 234
-void TMR0_Write8bitTimer(uint8_t timerVal);
-
-# 271
-void TMR0_Load8bitPeriod(uint8_t periodVal);
-
-# 307
-bool TMR0_HasOverflowOccured(void);
-
 # 4 "/opt/microchip/xc8/v1.41/include/__size_t.h"
 typedef unsigned size_t;
 
@@ -17498,6 +17477,27 @@ void NCO1_Initialize(void);
 
 # 128
 bool NCO1_GetOutputStatus(void);
+
+# 99 "mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
+
+# 128
+void TMR0_StartTimer(void);
+
+# 160
+void TMR0_StopTimer(void);
+
+# 195
+uint8_t TMR0_Read8bitTimer(void);
+
+# 234
+void TMR0_Write8bitTimer(uint8_t timerVal);
+
+# 271
+void TMR0_Load8bitPeriod(uint8_t periodVal);
+
+# 307
+bool TMR0_HasOverflowOccured(void);
 
 # 71 "mcc_generated_files/adcc.h"
 typedef uint16_t adc_result_t;
@@ -17593,13 +17593,13 @@ bool ADCC_HasErrorCrossedLowerThreshold(void);
 # 768
 uint8_t ADCC_GetConversionStageStatus(void);
 
-# 70 "mcc_generated_files/mcc.h"
+# 71 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 83
+# 84
 void OSCILLATOR_Initialize(void);
 
-# 57 "main.c"
+# 12 "main.c"
 typedef union {
 uint24_t word;
 struct {
@@ -17609,13 +17609,13 @@ uint8_t u_byte;
 };
 } ncoinc_t;
 
-# 70
+# 25
 typedef struct {
 ncoinc_t pitch;
 uint8_t length;
 } note_t;
 
-# 79
+# 34
 typedef struct {
 uint8_t* name;
 note_t* melody;
@@ -17640,7 +17640,7 @@ while(!TMR0_HasOverflowOccured()) {};
 } while(--noteLength > 0);
 }
 
-# 106
+# 61
 note_t jingle_jangle[] = {
 {659, 4}, {659, 4}, {659, 8},
 {659, 4}, {659, 4}, {659, 8},
@@ -17720,7 +17720,7 @@ song_t songs[] = {
 {(uint8_t *)"A. Foley", bhpc, sizeof(bhpc)/sizeof(note_t), 120}
 };
 
-# 191
+# 146
 void playNote(note_t note){
 SetNCOFreq(note.pitch);
 delay(note.length);
@@ -17728,7 +17728,7 @@ SetNCOFreq(rest);
 _delay((unsigned long)((10)*(1000000/4000.0)));
 }
 
-# 203
+# 158
 void setTempo(int tempo){
 uint24_t tempo_ms = ((60*100/tempo)*10)/4;
 uint8_t tempo_period = (uint8_t) (tempo_ms / 1.024);
@@ -17769,10 +17769,10 @@ uint8_t songNum = result/(songResultConv+1);
 currSong = &songs[songNum];
 
 songNum++;
-if(songNum & 0x01){ do { LATA0 = 1; } while(0); } else {do { LATA0 = 0; } while(0);}
-if(songNum & 0x02){ do { LATA1 = 1; } while(0); } else {do { LATA1 = 0; } while(0);}
-if(songNum & 0x04){ do { LATA2 = 1; } while(0); } else {do { LATA2 = 0; } while(0);}
-if(songNum & 0x08){ do { LATA3 = 1; } while(0); } else {do { LATA3 = 0; } while(0);}
+if(songNum & 0x01){ do { LATAbits.LATA0 = 1; } while(0); } else {do { LATAbits.LATA0 = 0; } while(0);}
+if(songNum & 0x02){ do { LATAbits.LATA1 = 1; } while(0); } else {do { LATAbits.LATA1 = 0; } while(0);}
+if(songNum & 0x04){ do { LATAbits.LATA2 = 1; } while(0); } else {do { LATAbits.LATA2 = 0; } while(0);}
+if(songNum & 0x08){ do { LATAbits.LATA3 = 1; } while(0); } else {do { LATAbits.LATA3 = 0; } while(0);}
 }
 }
 }

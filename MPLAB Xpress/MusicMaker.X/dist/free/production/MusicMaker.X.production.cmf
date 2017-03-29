@@ -12,48 +12,48 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/free/production/MusicMaker.X.production.obj
-cinit CODE 0 7C3 7C3 3D 2
-text1 CODE 0 17D 17D 5C 2
+cinit CODE 0 7C1 7C1 3F 2
+text1 CODE 0 17B 17B 5C 2
 text2 CODE 0 F40 F40 14 2
-text3 CODE 0 23D 23D 87 2
-text4 CODE 0 2C4 2C4 A9 2
-text5 CODE 0 1D9 1D9 64 2
-text6 CODE 0 12C 12C 51 2
+text3 CODE 0 23B 23B 87 2
+text4 CODE 0 2C2 2C2 A9 2
+text5 CODE 0 1D7 1D7 64 2
+text6 CODE 0 12A 12A 51 2
 text7 CODE 0 6 6 5 2
 text8 CODE 0 B B 23 2
 text9 CODE 0 F6C F6C 1A 2
-text10 CODE 0 447 447 190 2
-text11 CODE 0 EC4 EC4 5 2
-text12 CODE 0 ED1 ED1 8 2
-text13 CODE 0 F20 F20 E 2
+text10 CODE 0 445 445 190 2
+text11 CODE 0 EC3 EC3 5 2
+text12 CODE 0 ED0 ED0 8 2
+text13 CODE 0 F10 F10 E 2
 text14 CODE 0 F86 F86 1E 2
 text15 CODE 0 FA4 FA4 2C 2
 text16 CODE 0 2E 2E 34 2
-text17 CODE 0 EBF EBF 5 2
-text18 CODE 0 EC9 EC9 8 2
+text17 CODE 0 EBE EBE 5 2
+text18 CODE 0 EC8 EC8 8 2
 text19 CODE 0 F2E F2E 12 2
-text20 CODE 0 EED EED C 2
-text21 CODE 0 EBC EBC 3 2
-text22 CODE 0 62 62 3E 2
-text23 CODE 0 ED9 ED9 9 2
-text24 CODE 0 F05 F05 D 2
-text25 CODE 0 EE2 EE2 B 2
+text20 CODE 0 EF8 EF8 C 2
+text21 CODE 0 EBB EBB 3 2
+text22 CODE 0 62 62 3C 2
+text23 CODE 0 ED8 ED8 9 2
+text24 CODE 0 EEC EEC C 2
+text25 CODE 0 EE1 EE1 B 2
 text26 CODE 0 F54 F54 18 2
-text27 CODE 0 F12 F12 E 2
-idataBIGRAM CODE 0 5D7 5D7 1EC 2
-maintext CODE 0 36D 36D DA 2
+text27 CODE 0 F1E F1E 10 2
+idataBIGRAM CODE 0 5D5 5D5 1EC 2
+maintext CODE 0 36B 36B DA 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 31 1
-inittext CODE 0 EF9 EF9 C 2
-bssBANK0 BANK0 1 51 51 3 1
+inittext CODE 0 F04 F04 C 2
+bssBANK0 BANK0 1 51 51 5 1
 stringtext STRCODE 0 800 800 5B 2
 idataBANK1 CODE 0 FD0 FD0 30 2
-idataBANK2 CODE 0 A0 A0 40 2
-idataBANK3 CODE 0 E0 E0 4C 2
+idataBANK2 CODE 0 9E 9E 40 2
+idataBANK3 CODE 0 DE DE 4C 2
 dataBANK1 BANK1 1 A0 A0 30 1
 dataBANK2 BANK2 1 120 120 40 1
 dataBANK3 BANK3 1 1A0 1A0 4C 1
-$/tmp/xcXJrKXlV.obj
+$/tmp/xcXd2nBpl.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 5 2
@@ -63,14 +63,14 @@ config CONFIG 0 8007 8007 5 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 54-6F 1
+RAM 56-6F 1
 RAM D0-EF 1
 RAM 160-16F 1
 RAM 1EC-1EF 1
 RAM 220-26F 1
 RAM 2A0-2EF 1
 RAM 320-343 1
-BANK0 54-6F 1
+BANK0 56-6F 1
 BANK1 D0-EF 1
 BANK2 160-16F 1
 BANK3 1EC-1EF 1
@@ -78,10 +78,10 @@ BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-343 1
 CONST 4-5 2
-CONST 85B-EBB 2
+CONST 85B-EBA 2
 CONST 1000-1FFF 2
 ENTRY 4-5 2
-ENTRY 85B-EBB 2
+ENTRY 85B-EBA 2
 ENTRY 1000-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -108,7 +108,7 @@ SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 213C-2203 1
 CODE 4-5 2
-CODE 85B-EBB 2
+CODE 85B-EBA 2
 CODE 1000-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -123,10 +123,10 @@ SFR9 480-49F 1
 BIGRAM 2000-23EF 1
 EEDATA F000-F0FF 2
 STRCODE 4-5 2
-STRCODE 85B-EBB 2
+STRCODE 85B-EBA 2
 STRCODE 1000-1FFF 2
 STRING 4-5 2
-STRING 85B-EBB 2
+STRING 85B-EBA 2
 STRING 1000-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -142,170 +142,175 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/free/production/MusicMaker.X.production.obj
-7C3 cinit CODE >8561:/tmp/xcXacVJiL
-7C3 cinit CODE >8564:/tmp/xcXacVJiL
-7C3 cinit CODE >8627:/tmp/xcXacVJiL
-7C4 cinit CODE >8628:/tmp/xcXacVJiL
-7C5 cinit CODE >8629:/tmp/xcXacVJiL
-7C6 cinit CODE >8630:/tmp/xcXacVJiL
-7C7 cinit CODE >8631:/tmp/xcXacVJiL
-7C8 cinit CODE >8632:/tmp/xcXacVJiL
-7C9 cinit CODE >8633:/tmp/xcXacVJiL
-7CA cinit CODE >8634:/tmp/xcXacVJiL
-7CB cinit CODE >8635:/tmp/xcXacVJiL
-7CC cinit CODE >8636:/tmp/xcXacVJiL
-7CD cinit CODE >8637:/tmp/xcXacVJiL
-7CE cinit CODE >8638:/tmp/xcXacVJiL
-7D1 cinit CODE >8642:/tmp/xcXacVJiL
-7D2 cinit CODE >8643:/tmp/xcXacVJiL
-7D3 cinit CODE >8644:/tmp/xcXacVJiL
-7D4 cinit CODE >8645:/tmp/xcXacVJiL
-7D5 cinit CODE >8646:/tmp/xcXacVJiL
-7D6 cinit CODE >8647:/tmp/xcXacVJiL
-7D7 cinit CODE >8648:/tmp/xcXacVJiL
-7D8 cinit CODE >8649:/tmp/xcXacVJiL
-7D9 cinit CODE >8650:/tmp/xcXacVJiL
-7DA cinit CODE >8651:/tmp/xcXacVJiL
-7DB cinit CODE >8652:/tmp/xcXacVJiL
-7DC cinit CODE >8653:/tmp/xcXacVJiL
-7DF cinit CODE >8657:/tmp/xcXacVJiL
-7E0 cinit CODE >8658:/tmp/xcXacVJiL
-7E1 cinit CODE >8659:/tmp/xcXacVJiL
-7E2 cinit CODE >8660:/tmp/xcXacVJiL
-7E3 cinit CODE >8661:/tmp/xcXacVJiL
-7E4 cinit CODE >8662:/tmp/xcXacVJiL
-7E5 cinit CODE >8663:/tmp/xcXacVJiL
-7E6 cinit CODE >8664:/tmp/xcXacVJiL
-7E7 cinit CODE >8665:/tmp/xcXacVJiL
-7E8 cinit CODE >8666:/tmp/xcXacVJiL
-7E9 cinit CODE >8667:/tmp/xcXacVJiL
-7EA cinit CODE >8668:/tmp/xcXacVJiL
-7ED cinit CODE >8672:/tmp/xcXacVJiL
-7EE cinit CODE >8673:/tmp/xcXacVJiL
-7EF cinit CODE >8674:/tmp/xcXacVJiL
-7F0 cinit CODE >8675:/tmp/xcXacVJiL
-7F1 cinit CODE >8676:/tmp/xcXacVJiL
-7F2 cinit CODE >8677:/tmp/xcXacVJiL
-7F3 cinit CODE >8678:/tmp/xcXacVJiL
-7F4 cinit CODE >8679:/tmp/xcXacVJiL
-7F5 cinit CODE >8680:/tmp/xcXacVJiL
-7F6 cinit CODE >8681:/tmp/xcXacVJiL
-7F7 cinit CODE >8682:/tmp/xcXacVJiL
-7F8 cinit CODE >8683:/tmp/xcXacVJiL
-7FA cinit CODE >8688:/tmp/xcXacVJiL
-7FB cinit CODE >8689:/tmp/xcXacVJiL
-7FC cinit CODE >8690:/tmp/xcXacVJiL
-7FD cinit CODE >8696:/tmp/xcXacVJiL
-7FD cinit CODE >8698:/tmp/xcXacVJiL
-7FE cinit CODE >8699:/tmp/xcXacVJiL
-F12 text27 CODE >128:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F13 text27 CODE >131:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F16 text27 CODE >134:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F17 text27 CODE >137:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F18 text27 CODE >140:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F19 text27 CODE >143:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F19 text27 CODE >145:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F1B text27 CODE >148:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F54 text26 CODE >58:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F54 text26 CODE >62:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F56 text26 CODE >64:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F57 text26 CODE >66:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F58 text26 CODE >68:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F59 text26 CODE >70:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F5A text26 CODE >72:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F5B text26 CODE >74:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F5C text26 CODE >76:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F5D text26 CODE >78:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F5E text26 CODE >80:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F5F text26 CODE >82:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F60 text26 CODE >84:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F62 text26 CODE >86:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F63 text26 CODE >88:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F64 text26 CODE >90:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F65 text26 CODE >92:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F66 text26 CODE >94:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F67 text26 CODE >96:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F68 text26 CODE >99:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-F6B text26 CODE >102:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/adcc.c
-EE2 text25 CODE >55:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-EE2 text25 CODE >60:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-EE5 text25 CODE >63:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-EE7 text25 CODE >66:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-EE9 text25 CODE >69:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-EEB text25 CODE >72:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-EEC text25 CODE >74:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-F05 text24 CODE >57:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-F05 text24 CODE >61:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-F08 text24 CODE >64:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-F09 text24 CODE >67:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-F0A text24 CODE >70:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-F0B text24 CODE >76:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-F0C text24 CODE >79:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-F0E text24 CODE >82:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-F10 text24 CODE >85:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-F11 text24 CODE >86:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/nco1.c
-ED9 text23 CODE >93:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-ED9 text23 CODE >96:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-EDC text23 CODE >98:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-EDD text23 CODE >100:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-EDE text23 CODE >102:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-EE0 text23 CODE >104:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-EE1 text23 CODE >107:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-62 text22 CODE >50:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-62 text22 CODE >52:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-64 text22 CODE >53:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-66 text22 CODE >54:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-68 text22 CODE >55:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-69 text22 CODE >56:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-6B text22 CODE >57:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-6C text22 CODE >58:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-6D text22 CODE >59:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-6F text22 CODE >60:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-71 text22 CODE >61:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-73 text22 CODE >62:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-76 text22 CODE >63:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-78 text22 CODE >64:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-7A text22 CODE >69:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-7E text22 CODE >70:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-7F text22 CODE >71:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-82 text22 CODE >72:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-84 text22 CODE >73:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-85 text22 CODE >75:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-88 text22 CODE >76:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-8A text22 CODE >77:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-8F text22 CODE >78:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-91 text22 CODE >79:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-94 text22 CODE >81:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-97 text22 CODE >82:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-99 text22 CODE >83:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-9A text22 CODE >85:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-9F text22 CODE >87:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/pin_manager.c
-EBC text21 CODE >82:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EBC text21 CODE >85:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EBE text21 CODE >86:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EED text20 CODE >59:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EED text20 CODE >64:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EEF text20 CODE >67:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EF1 text20 CODE >70:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EF3 text20 CODE >73:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EF4 text20 CODE >76:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EF6 text20 CODE >79:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EF8 text20 CODE >80:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-F2E text19 CODE >82:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-F2E text19 CODE >85:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-F31 text19 CODE >86:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-F34 text19 CODE >87:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-F37 text19 CODE >88:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-F3A text19 CODE >89:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-F3D text19 CODE >90:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-F3F text19 CODE >91:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/mcc.c
-EC9 text18 CODE >88:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-EC9 text18 CODE >89:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-ECC text18 CODE >90:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-ECE text18 CODE >91:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-ED0 text18 CODE >92:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-EBF text17 CODE >116:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-EBF text17 CODE >119:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
+7C1 cinit CODE >8559:/tmp/xcXt4bPb9
+7C1 cinit CODE >8562:/tmp/xcXt4bPb9
+7C1 cinit CODE >8628:/tmp/xcXt4bPb9
+7C2 cinit CODE >8629:/tmp/xcXt4bPb9
+7C3 cinit CODE >8630:/tmp/xcXt4bPb9
+7C4 cinit CODE >8631:/tmp/xcXt4bPb9
+7C5 cinit CODE >8632:/tmp/xcXt4bPb9
+7C6 cinit CODE >8633:/tmp/xcXt4bPb9
+7C7 cinit CODE >8634:/tmp/xcXt4bPb9
+7C8 cinit CODE >8635:/tmp/xcXt4bPb9
+7C9 cinit CODE >8636:/tmp/xcXt4bPb9
+7CA cinit CODE >8637:/tmp/xcXt4bPb9
+7CB cinit CODE >8638:/tmp/xcXt4bPb9
+7CC cinit CODE >8639:/tmp/xcXt4bPb9
+7CF cinit CODE >8643:/tmp/xcXt4bPb9
+7D0 cinit CODE >8644:/tmp/xcXt4bPb9
+7D1 cinit CODE >8645:/tmp/xcXt4bPb9
+7D2 cinit CODE >8646:/tmp/xcXt4bPb9
+7D3 cinit CODE >8647:/tmp/xcXt4bPb9
+7D4 cinit CODE >8648:/tmp/xcXt4bPb9
+7D5 cinit CODE >8649:/tmp/xcXt4bPb9
+7D6 cinit CODE >8650:/tmp/xcXt4bPb9
+7D7 cinit CODE >8651:/tmp/xcXt4bPb9
+7D8 cinit CODE >8652:/tmp/xcXt4bPb9
+7D9 cinit CODE >8653:/tmp/xcXt4bPb9
+7DA cinit CODE >8654:/tmp/xcXt4bPb9
+7DD cinit CODE >8658:/tmp/xcXt4bPb9
+7DE cinit CODE >8659:/tmp/xcXt4bPb9
+7DF cinit CODE >8660:/tmp/xcXt4bPb9
+7E0 cinit CODE >8661:/tmp/xcXt4bPb9
+7E1 cinit CODE >8662:/tmp/xcXt4bPb9
+7E2 cinit CODE >8663:/tmp/xcXt4bPb9
+7E3 cinit CODE >8664:/tmp/xcXt4bPb9
+7E4 cinit CODE >8665:/tmp/xcXt4bPb9
+7E5 cinit CODE >8666:/tmp/xcXt4bPb9
+7E6 cinit CODE >8667:/tmp/xcXt4bPb9
+7E7 cinit CODE >8668:/tmp/xcXt4bPb9
+7E8 cinit CODE >8669:/tmp/xcXt4bPb9
+7EB cinit CODE >8673:/tmp/xcXt4bPb9
+7EC cinit CODE >8674:/tmp/xcXt4bPb9
+7ED cinit CODE >8675:/tmp/xcXt4bPb9
+7EE cinit CODE >8676:/tmp/xcXt4bPb9
+7EF cinit CODE >8677:/tmp/xcXt4bPb9
+7F0 cinit CODE >8678:/tmp/xcXt4bPb9
+7F1 cinit CODE >8679:/tmp/xcXt4bPb9
+7F2 cinit CODE >8680:/tmp/xcXt4bPb9
+7F3 cinit CODE >8681:/tmp/xcXt4bPb9
+7F4 cinit CODE >8682:/tmp/xcXt4bPb9
+7F5 cinit CODE >8683:/tmp/xcXt4bPb9
+7F6 cinit CODE >8684:/tmp/xcXt4bPb9
+7F8 cinit CODE >8689:/tmp/xcXt4bPb9
+7F9 cinit CODE >8690:/tmp/xcXt4bPb9
+7FA cinit CODE >8691:/tmp/xcXt4bPb9
+7FB cinit CODE >8692:/tmp/xcXt4bPb9
+7FC cinit CODE >8693:/tmp/xcXt4bPb9
+7FD cinit CODE >8699:/tmp/xcXt4bPb9
+7FD cinit CODE >8701:/tmp/xcXt4bPb9
+7FE cinit CODE >8702:/tmp/xcXt4bPb9
+F1E text27 CODE >128:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F1F text27 CODE >131:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F22 text27 CODE >134:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F23 text27 CODE >137:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F24 text27 CODE >140:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F25 text27 CODE >143:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F25 text27 CODE >145:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F27 text27 CODE >148:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F28 text27 CODE >151:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F54 text26 CODE >58:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F54 text26 CODE >62:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F56 text26 CODE >64:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F57 text26 CODE >66:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F58 text26 CODE >68:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F59 text26 CODE >70:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5A text26 CODE >72:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5B text26 CODE >74:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5C text26 CODE >76:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5D text26 CODE >78:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5E text26 CODE >80:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5F text26 CODE >82:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F60 text26 CODE >84:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F62 text26 CODE >86:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F63 text26 CODE >88:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F64 text26 CODE >90:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F65 text26 CODE >92:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F66 text26 CODE >94:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F67 text26 CODE >96:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F68 text26 CODE >99:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F6B text26 CODE >102:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+EE1 text25 CODE >55:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EE1 text25 CODE >60:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EE4 text25 CODE >63:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EE6 text25 CODE >66:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EE8 text25 CODE >69:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EEA text25 CODE >72:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EEB text25 CODE >74:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EEC text24 CODE >57:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EEC text24 CODE >61:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EEE text24 CODE >63:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EEF text24 CODE >65:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF0 text24 CODE >67:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF1 text24 CODE >69:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF2 text24 CODE >70:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF4 text24 CODE >71:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF6 text24 CODE >73:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF7 text24 CODE >75:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+ED8 text23 CODE >93:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+ED8 text23 CODE >96:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EDB text23 CODE >98:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EDC text23 CODE >100:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EDD text23 CODE >102:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EDF text23 CODE >104:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EE0 text23 CODE >107:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+62 text22 CODE >51:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+62 text22 CODE >56:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+64 text22 CODE >57:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+65 text22 CODE >58:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+66 text22 CODE >63:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+68 text22 CODE >64:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+6A text22 CODE >65:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+6C text22 CODE >70:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+6F text22 CODE >71:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+71 text22 CODE >72:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+73 text22 CODE >77:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+74 text22 CODE >78:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+75 text22 CODE >79:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+76 text22 CODE >80:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+77 text22 CODE >85:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+78 text22 CODE >86:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+79 text22 CODE >87:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+7A text22 CODE >94:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+7E text22 CODE >95:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+7F text22 CODE >96:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+82 text22 CODE >97:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+84 text22 CODE >98:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+85 text22 CODE >100:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+88 text22 CODE >101:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+8A text22 CODE >102:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+8F text22 CODE >103:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+92 text22 CODE >105:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+95 text22 CODE >106:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+97 text22 CODE >107:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+98 text22 CODE >109:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+9D text22 CODE >110:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+EBB text21 CODE >84:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EBB text21 CODE >87:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EBD text21 CODE >88:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EF8 text20 CODE >60:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EF8 text20 CODE >65:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EFA text20 CODE >68:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EFC text20 CODE >71:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EFE text20 CODE >74:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EFF text20 CODE >78:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+F01 text20 CODE >81:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+F03 text20 CODE >82:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+F2E text19 CODE >82:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F2E text19 CODE >85:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F31 text19 CODE >86:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F34 text19 CODE >87:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F37 text19 CODE >88:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F3A text19 CODE >89:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F3D text19 CODE >90:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F3F text19 CODE >91:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EC8 text18 CODE >43:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+EC8 text18 CODE >44:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+ECB text18 CODE >45:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+ECD text18 CODE >46:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+ECF text18 CODE >47:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+EBE text17 CODE >117:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EBE text17 CODE >120:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
 2E text16 CODE >6:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
 2E text16 CODE >14:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
 30 text16 CODE >15:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
@@ -341,216 +346,216 @@ F90 text14 CODE >47:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
 F95 text14 CODE >48:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
 F9A text14 CODE >49:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
 F9E text14 CODE >52:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
-F20 text13 CODE >8:/opt/microchip/xc8/v1.41/sources/common/isdigit.c
-F21 text13 CODE >14:/opt/microchip/xc8/v1.41/sources/common/isdigit.c
-ED1 text12 CODE >97:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-ED2 text12 CODE >99:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-ED2 text12 CODE >101:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-ED5 text12 CODE >103:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-ED8 text12 CODE >104:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-EC4 text11 CODE >111:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-EC5 text11 CODE >113:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-EC8 text11 CODE >114:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/eusart.c
-447 text10 CODE >464:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-447 text10 CODE >533:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-44C text10 CODE >536:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-45F text10 CODE >538:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-463 text10 CODE >541:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-467 text10 CODE >542:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-468 text10 CODE >546:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-46B text10 CODE >548:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-46C text10 CODE >597:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-476 text10 CODE >598:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-479 text10 CODE >600:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-48A text10 CODE >601:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-49D text10 CODE >602:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4A8 text10 CODE >734:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4B4 text10 CODE >740:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4B8 text10 CODE >741:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4BC text10 CODE >745:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4BE text10 CODE >746:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4C7 text10 CODE >747:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4CB text10 CODE >746:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4CC text10 CODE >757:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4D4 text10 CODE >758:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4D9 text10 CODE >760:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4DB text10 CODE >764:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4E5 text10 CODE >765:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4E9 text10 CODE >764:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4EA text10 CODE >768:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-4F7 text10 CODE >767:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-502 text10 CODE >635:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-51D text10 CODE >1259:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-529 text10 CODE >1261:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-52B text10 CODE >1262:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-52F text10 CODE >1263:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-534 text10 CODE >1305:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-53A text10 CODE >1306:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-551 text10 CODE >1305:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-559 text10 CODE >1345:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-561 text10 CODE >1346:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-565 text10 CODE >1381:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-576 text10 CODE >1382:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-581 text10 CODE >1384:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-584 text10 CODE >1428:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-588 text10 CODE >1430:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-58C text10 CODE >1431:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-595 text10 CODE >1438:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-599 text10 CODE >1439:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-59D text10 CODE >1472:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-5A2 text10 CODE >1474:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-5AA text10 CODE >1489:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-5D1 text10 CODE >1524:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-5D5 text10 CODE >1474:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-5D6 text10 CODE >1541:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-F6C text9 CODE >94:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-F6E text9 CODE >95:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-F6E text9 CODE >96:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-F75 text9 CODE >97:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-F77 text9 CODE >98:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-F7A text9 CODE >99:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-F80 text9 CODE >100:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-B text8 CODE >191:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-B text8 CODE >192:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-15 text8 CODE >193:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-1A text8 CODE >194:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-24 text8 CODE >195:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-2D text8 CODE >196:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-6 text7 CODE >110:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-7 text7 CODE >113:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-A text7 CODE >114:/home/mkhuthir/Downloads/MusicMaker.X/mcc_generated_files/tmr0.c
-12C text6 CODE >6:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-12C text6 CODE >14:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-12D text6 CODE >15:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-12F text6 CODE >16:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-134 text6 CODE >17:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-136 text6 CODE >19:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-138 text6 CODE >20:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-13D text6 CODE >21:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-141 text6 CODE >23:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-143 text6 CODE >24:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-147 text6 CODE >25:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-149 text6 CODE >26:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-14B text6 CODE >27:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-150 text6 CODE >28:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-154 text6 CODE >26:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-155 text6 CODE >31:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-15A text6 CODE >32:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-162 text6 CODE >33:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-166 text6 CODE >34:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-167 text6 CODE >36:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-16C text6 CODE >37:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-170 text6 CODE >39:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-173 text6 CODE >40:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-178 text6 CODE >41:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
-1D9 text5 CODE >62:/opt/microchip/xc8/v1.41/sources/common/float.c
-1D9 text5 CODE >64:/opt/microchip/xc8/v1.41/sources/common/float.c
-1E1 text5 CODE >65:/opt/microchip/xc8/v1.41/sources/common/float.c
-1E8 text5 CODE >67:/opt/microchip/xc8/v1.41/sources/common/float.c
-1EC text5 CODE >68:/opt/microchip/xc8/v1.41/sources/common/float.c
-1F2 text5 CODE >66:/opt/microchip/xc8/v1.41/sources/common/float.c
-1F7 text5 CODE >71:/opt/microchip/xc8/v1.41/sources/common/float.c
-1FB text5 CODE >72:/opt/microchip/xc8/v1.41/sources/common/float.c
-205 text5 CODE >73:/opt/microchip/xc8/v1.41/sources/common/float.c
-20B text5 CODE >70:/opt/microchip/xc8/v1.41/sources/common/float.c
-20B text5 CODE >74:/opt/microchip/xc8/v1.41/sources/common/float.c
-210 text5 CODE >76:/opt/microchip/xc8/v1.41/sources/common/float.c
-212 text5 CODE >77:/opt/microchip/xc8/v1.41/sources/common/float.c
-218 text5 CODE >75:/opt/microchip/xc8/v1.41/sources/common/float.c
-21E text5 CODE >79:/opt/microchip/xc8/v1.41/sources/common/float.c
-220 text5 CODE >80:/opt/microchip/xc8/v1.41/sources/common/float.c
-226 text5 CODE >81:/opt/microchip/xc8/v1.41/sources/common/float.c
-228 text5 CODE >82:/opt/microchip/xc8/v1.41/sources/common/float.c
-238 text5 CODE >83:/opt/microchip/xc8/v1.41/sources/common/float.c
-23B text5 CODE >84:/opt/microchip/xc8/v1.41/sources/common/float.c
-23C text5 CODE >86:/opt/microchip/xc8/v1.41/sources/common/float.c
-2C4 text4 CODE >56:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-2C4 text4 CODE >63:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-2D4 text4 CODE >64:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-2DB text4 CODE >65:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-2EA text4 CODE >66:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-2F1 text4 CODE >67:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-2F7 text4 CODE >68:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-2FC text4 CODE >69:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-30C text4 CODE >70:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-31C text4 CODE >71:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-320 text4 CODE >72:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-321 text4 CODE >73:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-327 text4 CODE >74:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-328 text4 CODE >75:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-32E text4 CODE >76:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-332 text4 CODE >78:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-338 text4 CODE >79:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-344 text4 CODE >80:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-34A text4 CODE >81:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-34B text4 CODE >83:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-351 text4 CODE >84:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-355 text4 CODE >85:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
-23D text3 CODE >44:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-23D text3 CODE >49:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-24D text3 CODE >50:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-256 text3 CODE >51:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-266 text3 CODE >52:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-267 text3 CODE >53:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-26D text3 CODE >54:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-274 text3 CODE >55:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-276 text3 CODE >56:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-278 text3 CODE >57:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-27D text3 CODE >58:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-286 text3 CODE >60:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-28D text3 CODE >61:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-294 text3 CODE >63:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-298 text3 CODE >64:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-2A1 text3 CODE >66:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-2A8 text3 CODE >67:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-2AA text3 CODE >65:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-2AA text3 CODE >68:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-2AD text3 CODE >70:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-2B0 text3 CODE >71:/opt/microchip/xc8/v1.41/sources/common/fttol.c
-2BB text3 CODE >72:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+F10 text13 CODE >8:/opt/microchip/xc8/v1.41/sources/common/isdigit.c
+F11 text13 CODE >14:/opt/microchip/xc8/v1.41/sources/common/isdigit.c
+ED0 text12 CODE >96:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+ED1 text12 CODE >98:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+ED1 text12 CODE >100:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+ED4 text12 CODE >102:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+ED7 text12 CODE >103:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EC3 text11 CODE >110:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EC4 text11 CODE >112:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EC7 text11 CODE >113:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+445 text10 CODE >464:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+445 text10 CODE >533:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+44A text10 CODE >536:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+45D text10 CODE >538:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+461 text10 CODE >541:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+465 text10 CODE >542:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+466 text10 CODE >546:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+469 text10 CODE >548:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+46A text10 CODE >597:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+474 text10 CODE >598:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+477 text10 CODE >600:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+488 text10 CODE >601:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+49B text10 CODE >602:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4A6 text10 CODE >734:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4B2 text10 CODE >740:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4B6 text10 CODE >741:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4BA text10 CODE >745:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4BC text10 CODE >746:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4C5 text10 CODE >747:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4C9 text10 CODE >746:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4CA text10 CODE >757:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4D2 text10 CODE >758:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4D7 text10 CODE >760:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4D9 text10 CODE >764:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4E3 text10 CODE >765:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4E7 text10 CODE >764:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4E8 text10 CODE >768:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+4F5 text10 CODE >767:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+500 text10 CODE >635:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+51B text10 CODE >1259:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+527 text10 CODE >1261:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+529 text10 CODE >1262:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+52D text10 CODE >1263:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+532 text10 CODE >1305:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+538 text10 CODE >1306:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+54F text10 CODE >1305:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+557 text10 CODE >1345:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+55F text10 CODE >1346:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+563 text10 CODE >1381:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+574 text10 CODE >1382:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+57F text10 CODE >1384:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+582 text10 CODE >1428:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+586 text10 CODE >1430:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+58A text10 CODE >1431:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+593 text10 CODE >1438:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+597 text10 CODE >1439:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+59B text10 CODE >1472:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+5A0 text10 CODE >1474:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+5A8 text10 CODE >1489:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+5CF text10 CODE >1524:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+5D3 text10 CODE >1474:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+5D4 text10 CODE >1541:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
+F6C text9 CODE >49:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+F6E text9 CODE >50:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+F6E text9 CODE >51:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+F75 text9 CODE >52:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+F77 text9 CODE >53:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+F7A text9 CODE >54:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+F80 text9 CODE >55:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+B text8 CODE >146:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+B text8 CODE >147:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+15 text8 CODE >148:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+1A text8 CODE >149:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+24 text8 CODE >150:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+2D text8 CODE >151:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+6 text7 CODE >112:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+7 text7 CODE >115:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+A text7 CODE >116:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+12A text6 CODE >6:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+12A text6 CODE >14:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+12B text6 CODE >15:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+12D text6 CODE >16:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+132 text6 CODE >17:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+134 text6 CODE >19:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+136 text6 CODE >20:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+13B text6 CODE >21:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+13F text6 CODE >23:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+141 text6 CODE >24:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+145 text6 CODE >25:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+147 text6 CODE >26:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+149 text6 CODE >27:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+14E text6 CODE >28:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+152 text6 CODE >26:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+153 text6 CODE >31:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+158 text6 CODE >32:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+160 text6 CODE >33:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+164 text6 CODE >34:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+165 text6 CODE >36:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+16A text6 CODE >37:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+16E text6 CODE >39:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+171 text6 CODE >40:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+176 text6 CODE >41:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
+1D7 text5 CODE >62:/opt/microchip/xc8/v1.41/sources/common/float.c
+1D7 text5 CODE >64:/opt/microchip/xc8/v1.41/sources/common/float.c
+1DF text5 CODE >65:/opt/microchip/xc8/v1.41/sources/common/float.c
+1E6 text5 CODE >67:/opt/microchip/xc8/v1.41/sources/common/float.c
+1EA text5 CODE >68:/opt/microchip/xc8/v1.41/sources/common/float.c
+1F0 text5 CODE >66:/opt/microchip/xc8/v1.41/sources/common/float.c
+1F5 text5 CODE >71:/opt/microchip/xc8/v1.41/sources/common/float.c
+1F9 text5 CODE >72:/opt/microchip/xc8/v1.41/sources/common/float.c
+203 text5 CODE >73:/opt/microchip/xc8/v1.41/sources/common/float.c
+209 text5 CODE >70:/opt/microchip/xc8/v1.41/sources/common/float.c
+209 text5 CODE >74:/opt/microchip/xc8/v1.41/sources/common/float.c
+20E text5 CODE >76:/opt/microchip/xc8/v1.41/sources/common/float.c
+210 text5 CODE >77:/opt/microchip/xc8/v1.41/sources/common/float.c
+216 text5 CODE >75:/opt/microchip/xc8/v1.41/sources/common/float.c
+21C text5 CODE >79:/opt/microchip/xc8/v1.41/sources/common/float.c
+21E text5 CODE >80:/opt/microchip/xc8/v1.41/sources/common/float.c
+224 text5 CODE >81:/opt/microchip/xc8/v1.41/sources/common/float.c
+226 text5 CODE >82:/opt/microchip/xc8/v1.41/sources/common/float.c
+236 text5 CODE >83:/opt/microchip/xc8/v1.41/sources/common/float.c
+239 text5 CODE >84:/opt/microchip/xc8/v1.41/sources/common/float.c
+23A text5 CODE >86:/opt/microchip/xc8/v1.41/sources/common/float.c
+2C2 text4 CODE >56:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+2C2 text4 CODE >63:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+2D2 text4 CODE >64:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+2D9 text4 CODE >65:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+2E8 text4 CODE >66:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+2EF text4 CODE >67:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+2F5 text4 CODE >68:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+2FA text4 CODE >69:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+30A text4 CODE >70:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+31A text4 CODE >71:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+31E text4 CODE >72:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+31F text4 CODE >73:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+325 text4 CODE >74:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+326 text4 CODE >75:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+32C text4 CODE >76:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+330 text4 CODE >78:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+336 text4 CODE >79:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+342 text4 CODE >80:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+348 text4 CODE >81:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+349 text4 CODE >83:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+34F text4 CODE >84:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+353 text4 CODE >85:/opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+23B text3 CODE >44:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+23B text3 CODE >49:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+24B text3 CODE >50:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+254 text3 CODE >51:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+264 text3 CODE >52:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+265 text3 CODE >53:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+26B text3 CODE >54:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+272 text3 CODE >55:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+274 text3 CODE >56:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+276 text3 CODE >57:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+27B text3 CODE >58:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+284 text3 CODE >60:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+28B text3 CODE >61:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+292 text3 CODE >63:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+296 text3 CODE >64:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+29F text3 CODE >66:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+2A6 text3 CODE >67:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+2A8 text3 CODE >65:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+2A8 text3 CODE >68:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+2AB text3 CODE >70:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+2AE text3 CODE >71:/opt/microchip/xc8/v1.41/sources/common/fttol.c
+2B9 text3 CODE >72:/opt/microchip/xc8/v1.41/sources/common/fttol.c
 F40 text2 CODE >30:/opt/microchip/xc8/v1.41/sources/common/lttoft.c
 F40 text2 CODE >32:/opt/microchip/xc8/v1.41/sources/common/lttoft.c
-17D text1 CODE >203:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-17D text1 CODE >204:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-1AD text1 CODE >205:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-1D5 text1 CODE >206:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-1D8 text1 CODE >207:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-36D maintext CODE >209:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-36D maintext CODE >211:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-372 maintext CODE >214:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-375 maintext CODE >217:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-37F maintext CODE >221:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-380 maintext CODE >226:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-38B maintext CODE >228:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-3A2 maintext CODE >230:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-3B7 maintext CODE >232:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-3D9 maintext CODE >233:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-3FA maintext CODE >230:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-400 maintext CODE >221:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-403 maintext CODE >237:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-40C maintext CODE >238:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-410 maintext CODE >239:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-422 maintext CODE >240:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-42E maintext CODE >242:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-432 maintext CODE >243:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-437 maintext CODE >244:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-43C maintext CODE >245:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-441 maintext CODE >246:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-446 maintext CODE >219:/home/mkhuthir/Downloads/MusicMaker.X/main.c
-EF9 inittext CODE >8610:/tmp/xcXacVJiL
-EF9 inittext CODE >8611:/tmp/xcXacVJiL
-EFA inittext CODE >8612:/tmp/xcXacVJiL
-EFA inittext CODE >8613:/tmp/xcXacVJiL
-EFB inittext CODE >8614:/tmp/xcXacVJiL
-EFC inittext CODE >8615:/tmp/xcXacVJiL
-EFD inittext CODE >8616:/tmp/xcXacVJiL
-EFE inittext CODE >8617:/tmp/xcXacVJiL
-EFF inittext CODE >8618:/tmp/xcXacVJiL
-F00 inittext CODE >8619:/tmp/xcXacVJiL
-F01 inittext CODE >8620:/tmp/xcXacVJiL
-F02 inittext CODE >8621:/tmp/xcXacVJiL
-F03 inittext CODE >8623:/tmp/xcXacVJiL
-F04 inittext CODE >8622:/tmp/xcXacVJiL
+17B text1 CODE >158:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+17B text1 CODE >159:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+1AB text1 CODE >160:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+1D3 text1 CODE >161:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+1D6 text1 CODE >162:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+36B maintext CODE >164:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+36B maintext CODE >166:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+370 maintext CODE >169:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+373 maintext CODE >172:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+37D maintext CODE >176:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+37E maintext CODE >181:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+389 maintext CODE >183:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+3A0 maintext CODE >185:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+3B5 maintext CODE >187:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+3D7 maintext CODE >188:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+3F8 maintext CODE >185:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+3FE maintext CODE >176:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+401 maintext CODE >192:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+40A maintext CODE >193:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+40E maintext CODE >194:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+420 maintext CODE >195:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+42C maintext CODE >197:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+430 maintext CODE >198:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+435 maintext CODE >199:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+43A maintext CODE >200:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+43F maintext CODE >201:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+444 maintext CODE >174:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
+F04 inittext CODE >8611:/tmp/xcXt4bPb9
+F04 inittext CODE >8612:/tmp/xcXt4bPb9
+F05 inittext CODE >8613:/tmp/xcXt4bPb9
+F05 inittext CODE >8614:/tmp/xcXt4bPb9
+F06 inittext CODE >8615:/tmp/xcXt4bPb9
+F07 inittext CODE >8616:/tmp/xcXt4bPb9
+F08 inittext CODE >8617:/tmp/xcXt4bPb9
+F09 inittext CODE >8618:/tmp/xcXt4bPb9
+F0A inittext CODE >8619:/tmp/xcXt4bPb9
+F0B inittext CODE >8620:/tmp/xcXt4bPb9
+F0C inittext CODE >8621:/tmp/xcXt4bPb9
+F0D inittext CODE >8622:/tmp/xcXt4bPb9
+F0E inittext CODE >8624:/tmp/xcXt4bPb9
+F0F inittext CODE >8623:/tmp/xcXt4bPb9
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -569,7 +574,7 @@ ___lwmod@counter 7D 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.pr
 __LdataBANK1 0 0 ABS 0 dataBANK1 -
 __LdataBANK2 0 0 ABS 0 dataBANK2 -
 __LdataBANK3 0 0 ABS 0 dataBANK3 -
-_setTempo$1307 43 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
+_setTempo$1344 43 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 __Hspace_0 800C 0 ABS 0 - -
 __Hspace_1 1EC 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
@@ -598,13 +603,13 @@ _WPUA F39 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _WPUB F44 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _WPUC F4F 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _WPUE F65 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXJrKXlV.obj
+___sp 0 0 STACK 2 stack /tmp/xcXd2nBpl.obj
 _bhpc 238C 0 ABS 1 - dist/free/production/MusicMaker.X.production.obj
-_main 6DA 0 CODE 0 maintext dist/free/production/MusicMaker.X.production.obj
+_main 6D6 0 CODE 0 maintext dist/free/production/MusicMaker.X.production.obj
 _rest 51 0 BANK0 1 bssBANK0 dist/free/production/MusicMaker.X.production.obj
 btemp 7E 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-start 4 0 CODE 0 init /tmp/xcXJrKXlV.obj
-_EUSART_Write 1DA2 0 CODE 0 text12 dist/free/production/MusicMaker.X.production.obj
+start 4 0 CODE 0 init /tmp/xcXd2nBpl.obj
+_EUSART_Write 1DA0 0 CODE 0 text12 dist/free/production/MusicMaker.X.production.obj
 __size_of___awdiv 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __size_of___ftdiv 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __size_of___fttol 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -619,7 +624,7 @@ ___ftdiv@f3 2B 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.productio
 __LidataBANK1 0 0 ABS 0 idataBANK1 -
 __LidataBANK2 0 0 ABS 0 idataBANK2 -
 __LidataBANK3 0 0 ABS 0 idataBANK3 -
-__end_of_EUSART_Initialize 1DDA 0 CODE 0 text25 dist/free/production/MusicMaker.X.production.obj
+__end_of_EUSART_Initialize 1DD8 0 CODE 0 text25 dist/free/production/MusicMaker.X.production.obj
 ?_ADCC_GetSingleConversion 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __HdataBIGRAM 0 0 ABS 0 dataBIGRAM -
@@ -627,17 +632,17 @@ printf@c 37 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.o
 printf@f 22 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 main@songNum 4F 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-intlevel0 0 0 CODE 0 functab /tmp/xcXJrKXlV.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcXJrKXlV.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcXJrKXlV.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcXJrKXlV.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcXJrKXlV.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcXJrKXlV.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
 wtemp0 7E 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 _RC1STAbits 11D 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __size_of_EUSART_Write 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-__pidataBIGRAM BAE 0 CODE 0 idataBIGRAM dist/free/production/MusicMaker.X.production.obj
+__pidataBIGRAM BAA 0 CODE 0 idataBIGRAM dist/free/production/MusicMaker.X.production.obj
 ___awdiv@sign 76 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 ___wmul@multiplicand 7B 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
@@ -667,7 +672,7 @@ ___awdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.p
 printf@width 35 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 __end_of___wmul 1F48 0 CODE 0 text14 dist/free/production/MusicMaker.X.production.obj
 setTempo@tempo_period 45 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
-__end_of_EUSART_Write 1DB2 0 CODE 0 text12 dist/free/production/MusicMaker.X.production.obj
+__end_of_EUSART_Write 1DB0 0 CODE 0 text12 dist/free/production/MusicMaker.X.production.obj
 ADCC_GetSingleConversion@channel 73 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 ___fttol@f1 30 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
@@ -677,10 +682,10 @@ _NCO1CON 592 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 ___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 ___lwmod@divisor 78 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 __size_of___ftpack 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-__end_of___awdiv 2FA 0 CODE 0 text6 dist/free/production/MusicMaker.X.production.obj
+__end_of___awdiv 2F6 0 CODE 0 text6 dist/free/production/MusicMaker.X.production.obj
 __CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-__end_of___ftdiv 6DA 0 CODE 0 text4 dist/free/production/MusicMaker.X.production.obj
-__end_of___fttol 588 0 CODE 0 text3 dist/free/production/MusicMaker.X.production.obj
+__end_of___ftdiv 6D6 0 CODE 0 text4 dist/free/production/MusicMaker.X.production.obj
+__end_of___fttol 584 0 CODE 0 text3 dist/free/production/MusicMaker.X.production.obj
 __end_of___lwdiv C4 0 CODE 0 text16 dist/free/production/MusicMaker.X.production.obj
 __end_of___lwmod 1FA0 0 CODE 0 text15 dist/free/production/MusicMaker.X.production.obj
 __size_of_isdigit 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -689,7 +694,7 @@ __size_of_SetNCOFreq 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.ob
 PIN_MANAGER_Initialize@state 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 _dpowers 1000 0 STRCODE 0 stringtext dist/free/production/MusicMaker.X.production.obj
 __LidataBIGRAM 0 0 ABS 0 idataBIGRAM -
-_EUSART_Initialize 1DC4 0 CODE 0 text25 dist/free/production/MusicMaker.X.production.obj
+_EUSART_Initialize 1DC2 0 CODE 0 text25 dist/free/production/MusicMaker.X.production.obj
 ___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 __size_of_delay 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __size_of_putch 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -697,7 +702,10 @@ __size_of___lttoft 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 ___lwmod@dividend 7A 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 _PIN_MANAGER_Initialize C4 0 CODE 0 text22 dist/free/production/MusicMaker.X.production.obj
 main@songResultConv 4C 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
-start_initialization F86 0 CODE 0 cinit dist/free/production/MusicMaker.X.production.obj
+start_initialization F82 0 CODE 0 cinit dist/free/production/MusicMaker.X.production.obj
+_ODCONA F3A 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
+_ODCONB F45 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
+_ODCONC F50 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _OSCFRQ 893 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _sleepy_zelda 120 0 BANK2 1 dataBANK2 dist/free/production/MusicMaker.X.production.obj
@@ -720,15 +728,14 @@ ___fttol@exp1 3D 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.product
 ___fttol@lval 39 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 _TX1REG 11A 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _TX1STA 11E 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-__end_of_ADCC_GetSingleConversion 1E40 0 CODE 0 text27 dist/free/production/MusicMaker.X.production.obj
-___ftpack 3B2 0 CODE 0 text5 dist/free/production/MusicMaker.X.production.obj
-__end_of_printf BAE 0 CODE 0 text10 dist/free/production/MusicMaker.X.production.obj
+__end_of_ADCC_GetSingleConversion 1E5C 0 CODE 0 text27 dist/free/production/MusicMaker.X.production.obj
+___ftpack 3AE 0 CODE 0 text5 dist/free/production/MusicMaker.X.production.obj
+__end_of_printf BAA 0 CODE 0 text10 dist/free/production/MusicMaker.X.production.obj
 ___ftpack@arg 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 ___ftpack@exp 73 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
-_isdigit$994 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 __end_of_ADCC_Initialize 1ED8 0 CODE 0 text26 dist/free/production/MusicMaker.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXJrKXlV.obj
-__end_of___ftpack 47A 0 CODE 0 text5 dist/free/production/MusicMaker.X.production.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXd2nBpl.obj
+__end_of___ftpack 476 0 CODE 0 text5 dist/free/production/MusicMaker.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -805,8 +812,8 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__end_of_isdigit 1E5C 0 CODE 0 text13 dist/free/production/MusicMaker.X.production.obj
-__Lcinit F86 0 CODE 0 cinit -
+__end_of_isdigit 1E3C 0 CODE 0 text13 dist/free/production/MusicMaker.X.production.obj
+__Lcinit F82 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -831,7 +838,7 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-init_ram 1DF2 0 CODE 0 inittext dist/free/production/MusicMaker.X.production.obj
+init_ram 1E08 0 CODE 0 inittext dist/free/production/MusicMaker.X.production.obj
 __end_of___lttoft 1EA8 0 CODE 0 text2 dist/free/production/MusicMaker.X.production.obj
 __Linittext 0 0 ABS 0 inittext -
 _PORTAbits C 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -880,37 +887,37 @@ __size_of_TMR0_Load8bitPeriod 0 0 ABS 0 - dist/free/production/MusicMaker.X.prod
 _SYSTEM_Initialize 1E5C 0 CODE 0 text19 dist/free/production/MusicMaker.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXJrKXlV.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXd2nBpl.obj
 __pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/free/production/MusicMaker.X.production.obj
 __pdataBANK2 120 0 BANK2 1 dataBANK2 dist/free/production/MusicMaker.X.production.obj
 __pdataBANK3 1A0 0 BANK3 1 dataBANK3 dist/free/production/MusicMaker.X.production.obj
 __size_of___wmul 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-__ptext10 88E 0 CODE 0 text10 dist/free/production/MusicMaker.X.production.obj
-__ptext11 1D88 0 CODE 0 text11 dist/free/production/MusicMaker.X.production.obj
-__ptext12 1DA2 0 CODE 0 text12 dist/free/production/MusicMaker.X.production.obj
-__ptext13 1E40 0 CODE 0 text13 dist/free/production/MusicMaker.X.production.obj
+__ptext10 88A 0 CODE 0 text10 dist/free/production/MusicMaker.X.production.obj
+__ptext11 1D86 0 CODE 0 text11 dist/free/production/MusicMaker.X.production.obj
+__ptext12 1DA0 0 CODE 0 text12 dist/free/production/MusicMaker.X.production.obj
+__ptext13 1E20 0 CODE 0 text13 dist/free/production/MusicMaker.X.production.obj
 __ptext14 1F0C 0 CODE 0 text14 dist/free/production/MusicMaker.X.production.obj
 __ptext15 1F48 0 CODE 0 text15 dist/free/production/MusicMaker.X.production.obj
 __ptext16 5C 0 CODE 0 text16 dist/free/production/MusicMaker.X.production.obj
-__ptext17 1D7E 0 CODE 0 text17 dist/free/production/MusicMaker.X.production.obj
-__ptext18 1D92 0 CODE 0 text18 dist/free/production/MusicMaker.X.production.obj
+__ptext17 1D7C 0 CODE 0 text17 dist/free/production/MusicMaker.X.production.obj
+__ptext18 1D90 0 CODE 0 text18 dist/free/production/MusicMaker.X.production.obj
 __ptext19 1E5C 0 CODE 0 text19 dist/free/production/MusicMaker.X.production.obj
-__ptext20 1DDA 0 CODE 0 text20 dist/free/production/MusicMaker.X.production.obj
-__ptext21 1D78 0 CODE 0 text21 dist/free/production/MusicMaker.X.production.obj
+__ptext20 1DF0 0 CODE 0 text20 dist/free/production/MusicMaker.X.production.obj
+__ptext21 1D76 0 CODE 0 text21 dist/free/production/MusicMaker.X.production.obj
 __ptext22 C4 0 CODE 0 text22 dist/free/production/MusicMaker.X.production.obj
-__ptext23 1DB2 0 CODE 0 text23 dist/free/production/MusicMaker.X.production.obj
-__ptext24 1E0A 0 CODE 0 text24 dist/free/production/MusicMaker.X.production.obj
-__ptext25 1DC4 0 CODE 0 text25 dist/free/production/MusicMaker.X.production.obj
+__ptext23 1DB0 0 CODE 0 text23 dist/free/production/MusicMaker.X.production.obj
+__ptext24 1DD8 0 CODE 0 text24 dist/free/production/MusicMaker.X.production.obj
+__ptext25 1DC2 0 CODE 0 text25 dist/free/production/MusicMaker.X.production.obj
 __ptext26 1EA8 0 CODE 0 text26 dist/free/production/MusicMaker.X.production.obj
-__ptext27 1E24 0 CODE 0 text27 dist/free/production/MusicMaker.X.production.obj
-__end_of_PIN_MANAGER_Initialize 140 0 CODE 0 text22 dist/free/production/MusicMaker.X.production.obj
-___awdiv 258 0 CODE 0 text6 dist/free/production/MusicMaker.X.production.obj
-__end_of_TMR0_Initialize 1DF2 0 CODE 0 text20 dist/free/production/MusicMaker.X.production.obj
-__end_of_TMR0_StartTimer 1D7E 0 CODE 0 text21 dist/free/production/MusicMaker.X.production.obj
-___ftdiv 588 0 CODE 0 text4 dist/free/production/MusicMaker.X.production.obj
-___fttol 47A 0 CODE 0 text3 dist/free/production/MusicMaker.X.production.obj
+__ptext27 1E3C 0 CODE 0 text27 dist/free/production/MusicMaker.X.production.obj
+__end_of_PIN_MANAGER_Initialize 13C 0 CODE 0 text22 dist/free/production/MusicMaker.X.production.obj
+___awdiv 254 0 CODE 0 text6 dist/free/production/MusicMaker.X.production.obj
+__end_of_TMR0_Initialize 1E08 0 CODE 0 text20 dist/free/production/MusicMaker.X.production.obj
+__end_of_TMR0_StartTimer 1D7C 0 CODE 0 text21 dist/free/production/MusicMaker.X.production.obj
+___ftdiv 584 0 CODE 0 text4 dist/free/production/MusicMaker.X.production.obj
+___fttol 476 0 CODE 0 text3 dist/free/production/MusicMaker.X.production.obj
 ___lwdiv 5C 0 CODE 0 text16 dist/free/production/MusicMaker.X.production.obj
 ___lwmod 1F48 0 CODE 0 text15 dist/free/production/MusicMaker.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
@@ -935,7 +942,7 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 6DA 0 CODE 0 maintext dist/free/production/MusicMaker.X.production.obj
+__pmaintext 6D6 0 CODE 0 maintext dist/free/production/MusicMaker.X.production.obj
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __CFG_RSTOSC$HFINT1 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -944,15 +951,16 @@ _TMR0_Load8bitPeriod C 0 CODE 0 text7 dist/free/production/MusicMaker.X.producti
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 ?___ftpack 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
-_printf 88E 0 CODE 0 text10 dist/free/production/MusicMaker.X.production.obj
+_printf 88A 0 CODE 0 text10 dist/free/production/MusicMaker.X.production.obj
 __CFG_CP$OFF 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _winter_is_coming 1A0 0 BANK3 1 dataBANK3 dist/free/production/MusicMaker.X.production.obj
 __Hinittext 0 0 ABS 0 inittext -
 ___wmul@multiplier 79 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
+_LATAbits 16 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 ___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
-stackhi 2203 0 ABS 0 - /tmp/xcXJrKXlV.obj
-stacklo 213C 0 ABS 0 - /tmp/xcXJrKXlV.obj
+stackhi 2203 0 ABS 0 - /tmp/xcXd2nBpl.obj
+stacklo 213C 0 ABS 0 - /tmp/xcXd2nBpl.obj
 _OSCCON1 88D 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _OSCCON3 88F 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _OSCTUNE 892 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -977,10 +985,10 @@ __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 printf@ap 2E 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 printf@cp 2F 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 end_of_initialization FFA 0 CODE 0 cinit dist/free/production/MusicMaker.X.production.obj
-_TMR0_Initialize 1DDA 0 CODE 0 text20 dist/free/production/MusicMaker.X.production.obj
-_TMR0_StartTimer 1D78 0 CODE 0 text21 dist/free/production/MusicMaker.X.production.obj
+_TMR0_Initialize 1DF0 0 CODE 0 text20 dist/free/production/MusicMaker.X.production.obj
+_TMR0_StartTimer 1D76 0 CODE 0 text21 dist/free/production/MusicMaker.X.production.obj
 __Hintentry 4 0 CODE 0 intentry -
-__end_of_NCO1_Initialize 1E24 0 CODE 0 text24 dist/free/production/MusicMaker.X.production.obj
+__end_of_NCO1_Initialize 1DF0 0 CODE 0 text24 dist/free/production/MusicMaker.X.production.obj
 __CFG_STVREN$ON 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __size_of_printf 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _PPSLOCKbits E8F 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -993,27 +1001,26 @@ ___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.p
 ?___lwdiv 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 ?___lwmod 78 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec -
-_setTempo 2FA 0 CODE 0 text1 dist/free/production/MusicMaker.X.production.obj
+_setTempo 2F6 0 CODE 0 text1 dist/free/production/MusicMaker.X.production.obj
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 2FA 0 CODE 0 text1 dist/free/production/MusicMaker.X.production.obj
+__ptext1 2F6 0 CODE 0 text1 dist/free/production/MusicMaker.X.production.obj
 __ptext2 1E80 0 CODE 0 text2 dist/free/production/MusicMaker.X.production.obj
-__ptext3 47A 0 CODE 0 text3 dist/free/production/MusicMaker.X.production.obj
-__ptext4 588 0 CODE 0 text4 dist/free/production/MusicMaker.X.production.obj
-__ptext5 3B2 0 CODE 0 text5 dist/free/production/MusicMaker.X.production.obj
-__ptext6 258 0 CODE 0 text6 dist/free/production/MusicMaker.X.production.obj
+__ptext3 476 0 CODE 0 text3 dist/free/production/MusicMaker.X.production.obj
+__ptext4 584 0 CODE 0 text4 dist/free/production/MusicMaker.X.production.obj
+__ptext5 3AE 0 CODE 0 text5 dist/free/production/MusicMaker.X.production.obj
+__ptext6 254 0 CODE 0 text6 dist/free/production/MusicMaker.X.production.obj
 __ptext7 C 0 CODE 0 text7 dist/free/production/MusicMaker.X.production.obj
 __ptext8 16 0 CODE 0 text8 dist/free/production/MusicMaker.X.production.obj
 __ptext9 1ED8 0 CODE 0 text9 dist/free/production/MusicMaker.X.production.obj
 ___lttoft@c 78 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
-__end_of_setTempo 3B2 0 CODE 0 text1 dist/free/production/MusicMaker.X.production.obj
+__end_of_setTempo 3AE 0 CODE 0 text1 dist/free/production/MusicMaker.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
-_ADCACTPPS EC3 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __pstringtext 1000 0 STRCODE 0 stringtext dist/free/production/MusicMaker.X.production.obj
 __size_of_playNote 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-_isdigit 1E40 0 CODE 0 text13 dist/free/production/MusicMaker.X.production.obj
+_isdigit 1E20 0 CODE 0 text13 dist/free/production/MusicMaker.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_SetNCOFreq 1D92 0 CODE 0 text18 dist/free/production/MusicMaker.X.production.obj
+_SetNCOFreq 1D90 0 CODE 0 text18 dist/free/production/MusicMaker.X.production.obj
 _jingle_jangle 2204 0 ABS 1 - dist/free/production/MusicMaker.X.production.obj
 __end_of_TMR0_Load8bitPeriod 16 0 CODE 0 text7 dist/free/production/MusicMaker.X.production.obj
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -1023,10 +1030,10 @@ __CFG_ZCD$ON 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 main@result 4A 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 __Lfunctab 0 0 CODE 0 functab -
 _ADSTATbits 97 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-_NCO1_Initialize 1E0A 0 CODE 0 text24 dist/free/production/MusicMaker.X.production.obj
+_NCO1_Initialize 1DD8 0 CODE 0 text24 dist/free/production/MusicMaker.X.production.obj
 __pidataBANK1 1FA0 0 CODE 0 idataBANK1 dist/free/production/MusicMaker.X.production.obj
-__pidataBANK2 140 0 CODE 0 idataBANK2 dist/free/production/MusicMaker.X.production.obj
-__pidataBANK3 1C0 0 CODE 0 idataBANK3 dist/free/production/MusicMaker.X.production.obj
+__pidataBANK2 13C 0 CODE 0 idataBANK2 dist/free/production/MusicMaker.X.production.obj
+__pidataBANK3 1BC 0 CODE 0 idataBANK3 dist/free/production/MusicMaker.X.production.obj
 _SP1BRGH 11C 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _SP1BRGL 11B 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -1042,7 +1049,7 @@ __Hend_init 8 0 CODE 0 end_init -
 SetNCOFreq@value 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 TMR0_Load8bitPeriod@periodVal 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 putch@txData 71 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
-__end_of_main 88E 0 CODE 0 maintext dist/free/production/MusicMaker.X.production.obj
+__end_of_main 88A 0 CODE 0 maintext dist/free/production/MusicMaker.X.production.obj
 isdigit@c 71 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 printf@len 33 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 printf@val 31 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
@@ -1057,23 +1064,20 @@ _ADREF 9A 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _ADRPT 10D 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __end_of_dpowers 1014 0 STRCODE 0 stringtext dist/free/production/MusicMaker.X.production.obj
 __end_of_delay 1F0C 0 CODE 0 text9 dist/free/production/MusicMaker.X.production.obj
-_LATA0 B0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-_LATA1 B1 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-_LATA2 B2 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-_LATA3 B3 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _OSCEN 891 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
+_isdigit$1027 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 _TMR0H 1D 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _TMR0L 1C 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _TRISA 11 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _TRISB 12 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _TRISC 13 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-__end_of_putch 1D92 0 CODE 0 text11 dist/free/production/MusicMaker.X.production.obj
+__end_of_putch 1D90 0 CODE 0 text11 dist/free/production/MusicMaker.X.production.obj
 __size_of_TMR0_Initialize 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __size_of_TMR0_StartTimer 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 _delay 1ED8 0 CODE 0 text9 dist/free/production/MusicMaker.X.production.obj
-_putch 1D88 0 CODE 0 text11 dist/free/production/MusicMaker.X.production.obj
+_putch 1D86 0 CODE 0 text11 dist/free/production/MusicMaker.X.production.obj
 __CFG_CPD$OFF 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _playNote 16 0 CODE 0 text8 dist/free/production/MusicMaker.X.production.obj
 _songs A0 0 BANK1 1 dataBANK1 dist/free/production/MusicMaker.X.production.obj
@@ -1083,23 +1087,23 @@ main@currSong 50 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.product
 __HdataBANK1 0 0 ABS 0 dataBANK1 -
 __HdataBANK2 0 0 ABS 0 dataBANK2 -
 __HdataBANK3 0 0 ABS 0 dataBANK3 -
-__end_of_OSCILLATOR_Initialize 1DC4 0 CODE 0 text23 dist/free/production/MusicMaker.X.production.obj
+__end_of_OSCILLATOR_Initialize 1DC2 0 CODE 0 text23 dist/free/production/MusicMaker.X.production.obj
 __CFG_PPS1WAY$ON 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __pdataBIGRAM 2204 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-_TMR0_HasOverflowOccured 1D7E 0 CODE 0 text17 dist/free/production/MusicMaker.X.production.obj
-__end_of_SetNCOFreq 1DA2 0 CODE 0 text18 dist/free/production/MusicMaker.X.production.obj
-__initialization F86 0 CODE 0 cinit dist/free/production/MusicMaker.X.production.obj
+_TMR0_HasOverflowOccured 1D7C 0 CODE 0 text17 dist/free/production/MusicMaker.X.production.obj
+__end_of_SetNCOFreq 1DA0 0 CODE 0 text18 dist/free/production/MusicMaker.X.production.obj
+__initialization F82 0 CODE 0 cinit dist/free/production/MusicMaker.X.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __end_of_playNote 5C 0 CODE 0 text8 dist/free/production/MusicMaker.X.production.obj
-_ADCC_GetSingleConversion 1E24 0 CODE 0 text27 dist/free/production/MusicMaker.X.production.obj
+_ADCC_GetSingleConversion 1E3C 0 CODE 0 text27 dist/free/production/MusicMaker.X.production.obj
 __pbssBANK0 51 0 BANK0 1 bssBANK0 dist/free/production/MusicMaker.X.production.obj
-__end_of_TMR0_HasOverflowOccured 1D88 0 CODE 0 text17 dist/free/production/MusicMaker.X.production.obj
+__end_of_TMR0_HasOverflowOccured 1D86 0 CODE 0 text17 dist/free/production/MusicMaker.X.production.obj
 __Hstringtext 0 0 ABS 0 stringtext -
 _PPSLOCK E8F 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 ___wmul@product 20 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 playNote@note 39 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
-_OSCILLATOR_Initialize 1DB2 0 CODE 0 text23 dist/free/production/MusicMaker.X.production.obj
+_OSCILLATOR_Initialize 1DB0 0 CODE 0 text23 dist/free/production/MusicMaker.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1137,44 +1141,44 @@ _plumber_down 1 22C8 0
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7C3 F86 3D 2
-text1 0 17D 2FA 5C 2
+cinit 0 7C1 F82 3F 2
+text1 0 17B 2F6 5C 2
 text2 0 F40 1E80 14 2
-text3 0 23D 47A 87 2
-text4 0 2C4 588 A9 2
-text5 0 1D9 3B2 64 2
-text6 0 12C 258 51 2
+text3 0 23B 476 87 2
+text4 0 2C2 584 A9 2
+text5 0 1D7 3AE 64 2
+text6 0 12A 254 51 2
 text7 0 6 C 5 2
 text8 0 B 16 23 2
 text9 0 F6C 1ED8 1A 2
-text10 0 447 88E 190 2
-text11 0 EC4 1D88 5 2
-text12 0 ED1 1DA2 8 2
-text13 0 F20 1E40 E 2
+text10 0 445 88A 190 2
+text11 0 EC3 1D86 5 2
+text12 0 ED0 1DA0 8 2
+text13 0 F10 1E20 E 2
 text14 0 F86 1F0C 1E 2
 text15 0 FA4 1F48 2C 2
 text16 0 2E 5C 34 2
-text17 0 EBF 1D7E 5 2
-text18 0 EC9 1D92 8 2
+text17 0 EBE 1D7C 5 2
+text18 0 EC8 1D90 8 2
 text19 0 F2E 1E5C 12 2
-text20 0 EED 1DDA C 2
-text21 0 EBC 1D78 3 2
-text22 0 62 C4 3E 2
-text23 0 ED9 1DB2 9 2
-text24 0 F05 1E0A D 2
-text25 0 EE2 1DC4 B 2
+text20 0 EF8 1DF0 C 2
+text21 0 EBB 1D76 3 2
+text22 0 62 C4 3C 2
+text23 0 ED8 1DB0 9 2
+text24 0 EEC 1DD8 C 2
+text25 0 EE1 1DC2 B 2
 text26 0 F54 1EA8 18 2
-text27 0 F12 1E24 E 2
-idataBIGRAM 0 5D7 BAE 1EC 2
-maintext 0 36D 6DA DA 2
+text27 0 F1E 1E3C 10 2
+idataBIGRAM 0 5D5 BAA 1EC 2
+maintext 0 36B 6D6 DA 2
 cstackCOMMON 1 70 70 E 1
-cstackBANK0 1 20 20 34 1
-inittext 0 EF9 1DF2 C 2
+cstackBANK0 1 20 20 36 1
+inittext 0 F04 1E08 C 2
 reset_vec 0 0 0 4 2
 stringtext 0 800 1000 5B 2
 idataBANK1 0 FD0 1FA0 30 2
-idataBANK2 0 A0 140 40 2
-idataBANK3 0 E0 1C0 4C 2
+idataBANK2 0 9E 13C 40 2
+idataBANK3 0 DE 1BC 4C 2
 dataBANK1 1 A0 A0 30 1
 dataBANK2 1 120 120 40 1
 dataBANK3 1 1A0 1A0 4C 1

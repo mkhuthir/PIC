@@ -13,12 +13,12 @@
   @Description
     This source file provides implementations for driver APIs for ADCC.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 3.15.0
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15
         Device            :  PIC16F18855
         Driver Version    :  2.00
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.20
+        MPLAB             :  MPLAB X 3.40
 */
 
 /*
@@ -143,6 +143,9 @@ adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel)
     while (ADCON0bits.ADGO)
     {
     }
+
+    // Extra NOP() instruction required; See rev. A2 errata:  http://ww1.microchip.com/downloads/en/DeviceDoc/80000669C.pdf 
+    NOP();
     
     // Conversion finished, return the result
     return ((ADRESH << 8) + ADRESL);

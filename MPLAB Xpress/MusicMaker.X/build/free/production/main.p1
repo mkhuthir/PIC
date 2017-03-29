@@ -1,8 +1,8 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"59 main.c
+"14 main.c
 [s S1565 `uc 1 `uc 1 `uc 1 ]
 [n S1565 . l_byte h_byte u_byte ]
-"57
+"12
 [u S1564 `um 1 `S1565 1 ]
 [n S1564 . word . ]
 "18498 /opt/microchip/xc8/v1.41/include/pic16f18855.h
@@ -25,10 +25,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR0_StartTimer `(v ~T0 @X0 0 ef ]
 "307
 [v _TMR0_HasOverflowOccured `(uc ~T0 @X0 0 ef ]
-"70 main.c
+"25 main.c
 [s S1566 `S1564 1 `uc 1 ]
 [n S1566 . pitch length ]
-"79
+"34
 [s S1567 `*uc 1 `*S1566 1 `ui 1 `ui 1 ]
 [n S1567 . name melody length tempo ]
 [v F14219 `(v ~T0 @X0 1 tf1`ul ]
@@ -38,7 +38,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "271 mcc_generated_files/tmr0.h
 [v _TMR0_Load8bitPeriod `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
-"70 mcc_generated_files/mcc.h
+"71 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "373 /opt/microchip/xc8/v1.41/include/pic16f18855.h
 [s S28 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -48,19 +48,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S27 . . ]
 "384
 [v _PORTAbits `VS27 ~T0 @X0 0 e@12 ]
-"237 main.c
+"192 main.c
 [c E14349 4 60 61 62 63 .. ]
 [n E14349 . POT channel_VSS channel_Temp channel_DAC1 channel_FVR  ]
 "252 mcc_generated_files/adcc.h
 [v _ADCC_GetSingleConversion `(ui ~T0 @X0 0 ef1`E14349 ]
-"36606 /opt/microchip/xc8/v1.41/include/pic16f18855.h
-[v _LATA0 `Vb ~T0 @X0 0 e@176 ]
-"36608
-[v _LATA1 `Vb ~T0 @X0 0 e@177 ]
-"36610
-[v _LATA2 `Vb ~T0 @X0 0 e@178 ]
-"36612
-[v _LATA3 `Vb ~T0 @X0 0 e@179 ]
+"759 /opt/microchip/xc8/v1.41/include/pic16f18855.h
+[s S42 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S42 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"758
+[u S41 `S42 1 ]
+[n S41 . . ]
+"770
+[v _LATAbits `VS41 ~T0 @X0 0 e@22 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -13140,8 +13140,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 192: extern unsigned char __resetbits;
 [; ;pic.h: 193: extern __bit __powerdown;
 [; ;pic.h: 194: extern __bit __timeout;
-[; ;pin_manager.h: 282: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 294: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 240: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 252: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -13171,13 +13171,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;tmr0.h: 99: void TMR0_Initialize(void);
-[; ;tmr0.h: 128: void TMR0_StartTimer(void);
-[; ;tmr0.h: 160: void TMR0_StopTimer(void);
-[; ;tmr0.h: 195: uint8_t TMR0_Read8bitTimer(void);
-[; ;tmr0.h: 234: void TMR0_Write8bitTimer(uint8_t timerVal);
-[; ;tmr0.h: 271: void TMR0_Load8bitPeriod(uint8_t periodVal);
-[; ;tmr0.h: 307: bool TMR0_HasOverflowOccured(void);
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -13213,6 +13206,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart.h: 135: void EUSART_Write(uint8_t txData);
 [; ;nco1.h: 93: void NCO1_Initialize(void);
 [; ;nco1.h: 128: bool NCO1_GetOutputStatus(void);
+[; ;tmr0.h: 99: void TMR0_Initialize(void);
+[; ;tmr0.h: 128: void TMR0_StartTimer(void);
+[; ;tmr0.h: 160: void TMR0_StopTimer(void);
+[; ;tmr0.h: 195: uint8_t TMR0_Read8bitTimer(void);
+[; ;tmr0.h: 234: void TMR0_Write8bitTimer(uint8_t timerVal);
+[; ;tmr0.h: 271: void TMR0_Load8bitPeriod(uint8_t periodVal);
+[; ;tmr0.h: 307: bool TMR0_HasOverflowOccured(void);
 [; ;adcc.h: 71: typedef uint16_t adc_result_t;
 [; ;adcc.h: 85: typedef enum
 [; ;adcc.h: 86: {
@@ -13249,27 +13249,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adcc.h: 724: bool ADCC_HasErrorCrossedUpperThreshold(void);
 [; ;adcc.h: 746: bool ADCC_HasErrorCrossedLowerThreshold(void);
 [; ;adcc.h: 768: uint8_t ADCC_GetConversionStageStatus(void);
-[; ;mcc.h: 70: void SYSTEM_Initialize(void);
-[; ;mcc.h: 83: void OSCILLATOR_Initialize(void);
-[; ;main.c: 57: typedef union {
-[; ;main.c: 58: uint24_t word;
-[; ;main.c: 59: struct {
-[; ;main.c: 60: uint8_t l_byte;
-[; ;main.c: 61: uint8_t h_byte;
-[; ;main.c: 62: uint8_t u_byte;
-[; ;main.c: 63: };
-[; ;main.c: 64: } ncoinc_t;
-[; ;main.c: 70: typedef struct {
-[; ;main.c: 71: ncoinc_t pitch;
-[; ;main.c: 72: uint8_t length;
-[; ;main.c: 73: } note_t;
-[; ;main.c: 79: typedef struct {
-[; ;main.c: 80: uint8_t* name;
-[; ;main.c: 81: note_t* melody;
-[; ;main.c: 82: uint16_t length;
-[; ;main.c: 83: uint16_t tempo;
-[; ;main.c: 84: } song_t;
-"86 main.c
+[; ;mcc.h: 71: void SYSTEM_Initialize(void);
+[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
+[; ;main.c: 12: typedef union {
+[; ;main.c: 13: uint24_t word;
+[; ;main.c: 14: struct {
+[; ;main.c: 15: uint8_t l_byte;
+[; ;main.c: 16: uint8_t h_byte;
+[; ;main.c: 17: uint8_t u_byte;
+[; ;main.c: 18: };
+[; ;main.c: 19: } ncoinc_t;
+[; ;main.c: 25: typedef struct {
+[; ;main.c: 26: ncoinc_t pitch;
+[; ;main.c: 27: uint8_t length;
+[; ;main.c: 28: } note_t;
+[; ;main.c: 34: typedef struct {
+[; ;main.c: 35: uint8_t* name;
+[; ;main.c: 36: note_t* melody;
+[; ;main.c: 37: uint16_t length;
+[; ;main.c: 38: uint16_t tempo;
+[; ;main.c: 39: } song_t;
+"41 main.c
 [v _rest `S1564 ~T0 @X0 1 e ]
 [i _rest
 :U ..
@@ -13278,49 +13278,49 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[; ;main.c: 86: ncoinc_t rest = 0x000000;
-"88
+[; ;main.c: 41: ncoinc_t rest = 0x000000;
+"43
 [v _SetNCOFreq `(v ~T0 @X0 1 ef1`S1564 ]
 {
-[; ;main.c: 88: void SetNCOFreq(ncoinc_t value){
+[; ;main.c: 43: void SetNCOFreq(ncoinc_t value){
 [e :U _SetNCOFreq ]
 [v _value `S1564 ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 89: NCO1INCU = value.u_byte;
-"89
+[; ;main.c: 44: NCO1INCU = value.u_byte;
+"44
 [e = _NCO1INCU . . _value 1 2 ]
-[; ;main.c: 90: NCO1INCH = value.h_byte;
-"90
+[; ;main.c: 45: NCO1INCH = value.h_byte;
+"45
 [e = _NCO1INCH . . _value 1 1 ]
-[; ;main.c: 91: NCO1INCL = value.l_byte;
-"91
+[; ;main.c: 46: NCO1INCL = value.l_byte;
+"46
 [e = _NCO1INCL . . _value 1 0 ]
-[; ;main.c: 92: }
-"92
+[; ;main.c: 47: }
+"47
 [e :UE 1568 ]
 }
-"94
+"49
 [v _delay `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 94: void delay(uint8_t noteLength){
+[; ;main.c: 49: void delay(uint8_t noteLength){
 [e :U _delay ]
 [v _noteLength `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 95: do {
-"95
+[; ;main.c: 50: do {
+"50
 [e :U 1572 ]
 {
-[; ;main.c: 96: printf(".");
-"96
+[; ;main.c: 51: printf(".");
+"51
 [e ( _printf :s 1C ]
-[; ;main.c: 97: PIR0bits.TMR0IF = 0;
-"97
+[; ;main.c: 52: PIR0bits.TMR0IF = 0;
+"52
 [e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 98: TMR0_StartTimer();
-"98
+[; ;main.c: 53: TMR0_StartTimer();
+"53
 [e ( _TMR0_StartTimer ..  ]
-[; ;main.c: 99: while(!TMR0_HasOverflowOccured()) {};
-"99
+[; ;main.c: 54: while(!TMR0_HasOverflowOccured()) {};
+"54
 [e $U 1573  ]
 [e :U 1574 ]
 {
@@ -13328,23 +13328,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 1573 ]
 [e $ ! != -> ( _TMR0_HasOverflowOccured ..  `i -> -> -> 0 `i `uc `i 1574  ]
 [e :U 1575 ]
-"100
+"55
 }
-[; ;main.c: 100: } while(--noteLength > 0);
+[; ;main.c: 55: } while(--noteLength > 0);
 [e $ > -> =- _noteLength -> -> 1 `i `uc `i -> 0 `i 1572  ]
 [e :U 1571 ]
-[; ;main.c: 101: }
-"101
+[; ;main.c: 56: }
+"56
 [e :UE 1569 ]
 }
-"106
+"61
 [v _jingle_jangle `S1566 ~T0 @X0 -> 0 `x e ]
 [i _jingle_jangle
 :U ..
 :U ..
 :U ..
 :U ..
-"107
+"62
 -> -> -> 659 `i `m `um
 ..
 ..
@@ -13369,7 +13369,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"108
+"63
 -> -> -> 659 `i `m `um
 ..
 ..
@@ -13394,7 +13394,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"109
+"64
 -> -> -> 659 `i `m `um
 ..
 ..
@@ -13435,7 +13435,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"111
+"66
 -> -> -> 698 `i `m `um
 ..
 ..
@@ -13460,7 +13460,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"112
+"67
 -> -> -> 698 `i `m `um
 ..
 ..
@@ -13501,7 +13501,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"113
+"68
 -> -> -> 587 `i `m `um
 ..
 ..
@@ -13550,7 +13550,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"115
+"70
 -> -> -> 659 `i `m `um
 ..
 ..
@@ -13575,7 +13575,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"116
+"71
 -> -> -> 659 `i `m `um
 ..
 ..
@@ -13600,7 +13600,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"117
+"72
 -> -> -> 659 `i `m `um
 ..
 ..
@@ -13641,7 +13641,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"119
+"74
 -> -> -> 698 `i `m `um
 ..
 ..
@@ -13666,7 +13666,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"120
+"75
 -> -> -> 698 `i `m `um
 ..
 ..
@@ -13707,7 +13707,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"121
+"76
 -> -> -> 784 `i `m `um
 ..
 ..
@@ -13747,28 +13747,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[; ;main.c: 106: note_t jingle_jangle[] = {
-[; ;main.c: 107: {659, 4}, {659, 4}, {659, 8},
-[; ;main.c: 108: {659, 4}, {659, 4}, {659, 8},
-[; ;main.c: 109: {659, 4}, {784, 4}, {523, 6},{587, 2},{659, 16},
-[; ;main.c: 111: {698, 4}, {698, 4}, {698, 4},
-[; ;main.c: 112: {698, 4},{698, 4},{659, 4},{659, 4},{659, 4},
-[; ;main.c: 113: {587, 4},{587, 4},{659, 4},{659, 4},{587, 8},{784, 8},
-[; ;main.c: 115: {659, 4}, {659, 4}, {659, 8},
-[; ;main.c: 116: {659, 4}, {659, 4}, {659, 8},
-[; ;main.c: 117: {659, 4}, {784, 4}, {523, 6},{587, 2},{659, 16},
-[; ;main.c: 119: {698, 4}, {698, 4}, {698, 4},
-[; ;main.c: 120: {698, 4},{698, 4},{659, 4},{659, 4},{659, 4},
-[; ;main.c: 121: {784, 4},{784, 4},{698, 4},{587, 4},{523, 16}
-[; ;main.c: 122: };
-"123
+[; ;main.c: 61: note_t jingle_jangle[] = {
+[; ;main.c: 62: {659, 4}, {659, 4}, {659, 8},
+[; ;main.c: 63: {659, 4}, {659, 4}, {659, 8},
+[; ;main.c: 64: {659, 4}, {784, 4}, {523, 6},{587, 2},{659, 16},
+[; ;main.c: 66: {698, 4}, {698, 4}, {698, 4},
+[; ;main.c: 67: {698, 4},{698, 4},{659, 4},{659, 4},{659, 4},
+[; ;main.c: 68: {587, 4},{587, 4},{659, 4},{659, 4},{587, 8},{784, 8},
+[; ;main.c: 70: {659, 4}, {659, 4}, {659, 8},
+[; ;main.c: 71: {659, 4}, {659, 4}, {659, 8},
+[; ;main.c: 72: {659, 4}, {784, 4}, {523, 6},{587, 2},{659, 16},
+[; ;main.c: 74: {698, 4}, {698, 4}, {698, 4},
+[; ;main.c: 75: {698, 4},{698, 4},{659, 4},{659, 4},{659, 4},
+[; ;main.c: 76: {784, 4},{784, 4},{698, 4},{587, 4},{523, 16}
+[; ;main.c: 77: };
+"78
 [v _winter_is_coming `S1566 ~T0 @X0 -> 0 `x e ]
 [i _winter_is_coming
 :U ..
 :U ..
 :U ..
 :U ..
-"124
+"79
 -> -> -> 784 `i `m `um
 ..
 ..
@@ -13785,7 +13785,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"125
+"80
 -> -> -> 622 `i `m `um
 ..
 ..
@@ -13818,7 +13818,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"126
+"81
 -> -> -> 622 `i `m `um
 ..
 ..
@@ -13843,7 +13843,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"127
+"82
 -> -> -> 0 `i `m `um
 ..
 ..
@@ -13852,7 +13852,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"129
+"84
 -> -> -> 698 `i `m `um
 ..
 ..
@@ -13869,7 +13869,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"130
+"85
 -> -> -> 587 `i `m `um
 ..
 ..
@@ -13902,7 +13902,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"131
+"86
 -> -> -> 622 `i `m `um
 ..
 ..
@@ -13926,23 +13926,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[; ;main.c: 123: note_t winter_is_coming[] = {
-[; ;main.c: 124: {784, 12}, {523, 12},
-[; ;main.c: 125: {622, 2},{698, 2},{784, 8},{523, 8},
-[; ;main.c: 126: {622, 2},{698, 2},{587, 12},
-[; ;main.c: 127: {0, 12},
-[; ;main.c: 129: {698, 12}, {466, 12},
-[; ;main.c: 130: {587, 2},{622, 2},{698, 8},{466, 8},
-[; ;main.c: 131: {622, 2},{587, 2},{523, 12}
-[; ;main.c: 133: };
-"134
+[; ;main.c: 78: note_t winter_is_coming[] = {
+[; ;main.c: 79: {784, 12}, {523, 12},
+[; ;main.c: 80: {622, 2},{698, 2},{784, 8},{523, 8},
+[; ;main.c: 81: {622, 2},{698, 2},{587, 12},
+[; ;main.c: 82: {0, 12},
+[; ;main.c: 84: {698, 12}, {466, 12},
+[; ;main.c: 85: {587, 2},{622, 2},{698, 8},{466, 8},
+[; ;main.c: 86: {622, 2},{587, 2},{523, 12}
+[; ;main.c: 88: };
+"89
 [v _sleepy_zelda `S1566 ~T0 @X0 -> 0 `x e ]
 [i _sleepy_zelda
 :U ..
 :U ..
 :U ..
 :U ..
-"135
+"90
 -> -> -> 988 `i `m `um
 ..
 ..
@@ -13983,7 +13983,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"136
+"91
 -> -> -> 988 `i `m `um
 ..
 ..
@@ -14008,7 +14008,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"137
+"92
 -> -> -> 988 `i `m `um
 ..
 ..
@@ -14041,7 +14041,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"138
+"93
 -> -> -> 1175 `i `m `um
 ..
 ..
@@ -14073,20 +14073,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[; ;main.c: 134: note_t sleepy_zelda[] = {
-[; ;main.c: 135: {988, 8}, {1175, 4}, {880, 8},{784, 2}, {880, 2},
-[; ;main.c: 136: {988, 8}, {1175, 4}, {880, 12},
-[; ;main.c: 137: {988, 8}, {1175, 4}, {1760, 8}, {1568, 4},
-[; ;main.c: 138: {1175, 8}, {1047, 2}, {988, 2}, {880, 12}
-[; ;main.c: 139: };
-"140
+[; ;main.c: 89: note_t sleepy_zelda[] = {
+[; ;main.c: 90: {988, 8}, {1175, 4}, {880, 8},{784, 2}, {880, 2},
+[; ;main.c: 91: {988, 8}, {1175, 4}, {880, 12},
+[; ;main.c: 92: {988, 8}, {1175, 4}, {1760, 8}, {1568, 4},
+[; ;main.c: 93: {1175, 8}, {1047, 2}, {988, 2}, {880, 12}
+[; ;main.c: 94: };
+"95
 [v _plumber_down `S1566 ~T0 @X0 -> 0 `x e ]
 [i _plumber_down
 :U ..
 :U ..
 :U ..
 :U ..
-"141
+"96
 -> -> -> 262 `i `m `um
 ..
 ..
@@ -14119,7 +14119,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"142
+"97
 -> -> -> 233 `i `m `um
 ..
 ..
@@ -14136,7 +14136,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"143
+"98
 -> -> -> 0 `i `m `um
 ..
 ..
@@ -14145,7 +14145,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"145
+"100
 -> -> -> 262 `i `m `um
 ..
 ..
@@ -14178,7 +14178,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"146
+"101
 -> -> -> 233 `i `m `um
 ..
 ..
@@ -14195,7 +14195,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"147
+"102
 -> -> -> 0 `i `m `um
 ..
 ..
@@ -14204,7 +14204,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"149
+"104
 -> -> -> 175 `i `m `um
 ..
 ..
@@ -14237,7 +14237,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"150
+"105
 -> -> -> 156 `i `m `um
 ..
 ..
@@ -14254,7 +14254,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"151
+"106
 -> -> -> 0 `i `m `um
 ..
 ..
@@ -14263,7 +14263,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"153
+"108
 -> -> -> 175 `i `m `um
 ..
 ..
@@ -14296,7 +14296,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"154
+"109
 -> -> -> 156 `i `m `um
 ..
 ..
@@ -14313,7 +14313,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"155
+"110
 -> -> -> 0 `i `m `um
 ..
 ..
@@ -14322,7 +14322,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"157
+"112
 -> -> -> 311 `i `m `um
 ..
 ..
@@ -14347,7 +14347,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"158
+"113
 -> -> -> 277 `i `m `um
 ..
 ..
@@ -14364,7 +14364,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"159
+"114
 -> -> -> 311 `i `m `um
 ..
 ..
@@ -14381,7 +14381,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"160
+"115
 -> -> -> 196 `i `m `um
 ..
 ..
@@ -14398,7 +14398,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"161
+"116
 -> -> -> 262 `i `m `um
 ..
 ..
@@ -14447,7 +14447,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"162
+"117
 -> -> -> 415 `i `m `um
 ..
 ..
@@ -14472,7 +14472,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"163
+"118
 -> -> -> 233 `i `m `um
 ..
 ..
@@ -14496,35 +14496,35 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[; ;main.c: 140: note_t plumber_down[] = {
-[; ;main.c: 141: {262, 2}, {523, 2}, {220, 2}, {440, 2},
-[; ;main.c: 142: {233, 2}, {466, 2},
-[; ;main.c: 143: {0, 12},
-[; ;main.c: 145: {262, 2}, {523, 2}, {220, 2}, {440, 2},
-[; ;main.c: 146: {233, 2}, {466, 2},
-[; ;main.c: 147: {0, 12},
-[; ;main.c: 149: {175, 2}, {349, 2}, {147, 2}, {294, 2},
-[; ;main.c: 150: {156, 2}, {311, 2},
-[; ;main.c: 151: {0, 12},
-[; ;main.c: 153: {175, 2}, {349, 2}, {147, 2}, {294, 2},
-[; ;main.c: 154: {156, 2}, {311, 2},
-[; ;main.c: 155: {0, 6},
-[; ;main.c: 157: {311, 1}, {277, 2}, {294, 4},
-[; ;main.c: 158: {277, 4}, {311, 4},
-[; ;main.c: 159: {311, 4}, {208, 4},
-[; ;main.c: 160: {196, 4}, {277, 4},
-[; ;main.c: 161: {262, 2}, {370, 2}, {349, 2}, {165, 2}, {466, 2}, {440, 2},
-[; ;main.c: 162: {415, 2}, {311, 2}, {247, 2},
-[; ;main.c: 163: {233, 2}, {220, 2}, {208, 2},
-[; ;main.c: 165: };
-"166
+[; ;main.c: 95: note_t plumber_down[] = {
+[; ;main.c: 96: {262, 2}, {523, 2}, {220, 2}, {440, 2},
+[; ;main.c: 97: {233, 2}, {466, 2},
+[; ;main.c: 98: {0, 12},
+[; ;main.c: 100: {262, 2}, {523, 2}, {220, 2}, {440, 2},
+[; ;main.c: 101: {233, 2}, {466, 2},
+[; ;main.c: 102: {0, 12},
+[; ;main.c: 104: {175, 2}, {349, 2}, {147, 2}, {294, 2},
+[; ;main.c: 105: {156, 2}, {311, 2},
+[; ;main.c: 106: {0, 12},
+[; ;main.c: 108: {175, 2}, {349, 2}, {147, 2}, {294, 2},
+[; ;main.c: 109: {156, 2}, {311, 2},
+[; ;main.c: 110: {0, 6},
+[; ;main.c: 112: {311, 1}, {277, 2}, {294, 4},
+[; ;main.c: 113: {277, 4}, {311, 4},
+[; ;main.c: 114: {311, 4}, {208, 4},
+[; ;main.c: 115: {196, 4}, {277, 4},
+[; ;main.c: 116: {262, 2}, {370, 2}, {349, 2}, {165, 2}, {466, 2}, {440, 2},
+[; ;main.c: 117: {415, 2}, {311, 2}, {247, 2},
+[; ;main.c: 118: {233, 2}, {220, 2}, {208, 2},
+[; ;main.c: 120: };
+"121
 [v _bhpc `S1566 ~T0 @X0 -> 0 `x e ]
 [i _bhpc
 :U ..
 :U ..
 :U ..
 :U ..
-"167
+"122
 -> -> -> 880 `i `m `um
 ..
 ..
@@ -14549,7 +14549,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"168
+"123
 -> -> -> 880 `i `m `um
 ..
 ..
@@ -14590,7 +14590,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"169
+"124
 -> -> -> 880 `i `m `um
 ..
 ..
@@ -14615,7 +14615,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"170
+"125
 -> -> -> 880 `i `m `um
 ..
 ..
@@ -14656,7 +14656,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"171
+"126
 -> -> -> 880 `i `m `um
 ..
 ..
@@ -14697,7 +14697,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :U ..
-"172
+"127
 -> -> -> 784 `i `m `um
 ..
 ..
@@ -14729,55 +14729,55 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[; ;main.c: 166: note_t bhpc[] = {
-[; ;main.c: 167: {880, 2}, {0, 2},{1047, 3},
-[; ;main.c: 168: {880, 2}, {880, 1}, {1175, 2}, {880, 2}, {784, 2},
-[; ;main.c: 169: {880, 2}, {0, 2},{1319, 3},
-[; ;main.c: 170: {880, 2}, {880, 1}, {1397, 2}, {1319, 2}, {1047, 2},
-[; ;main.c: 171: {880, 2}, {1319, 2}, {1760, 2}, {880, 1}, {784, 2},
-[; ;main.c: 172: {784, 1}, {659, 2}, {988, 2}, {880, 6}
-[; ;main.c: 173: };
-"176
+[; ;main.c: 121: note_t bhpc[] = {
+[; ;main.c: 122: {880, 2}, {0, 2},{1047, 3},
+[; ;main.c: 123: {880, 2}, {880, 1}, {1175, 2}, {880, 2}, {784, 2},
+[; ;main.c: 124: {880, 2}, {0, 2},{1319, 3},
+[; ;main.c: 125: {880, 2}, {880, 1}, {1397, 2}, {1319, 2}, {1047, 2},
+[; ;main.c: 126: {880, 2}, {1319, 2}, {1760, 2}, {880, 1}, {784, 2},
+[; ;main.c: 127: {784, 1}, {659, 2}, {988, 2}, {880, 6}
+[; ;main.c: 128: };
+"131
 [v _songs `S1567 ~T0 @X0 -> 0 `x e ]
 [i _songs
 :U ..
 :U ..
-"177
+"132
 -> :s 2C `*uc
 &U _winter_is_coming
 / -> # _winter_is_coming `ui -> # `S1566 `ui
 -> -> 180 `i `ui
 ..
 :U ..
-"178
+"133
 -> :s 3C `*uc
 &U _jingle_jangle
 / -> # _jingle_jangle `ui -> # `S1566 `ui
 -> -> 120 `i `ui
 ..
 :U ..
-"179
+"134
 -> :s 4C `*uc
 &U _sleepy_zelda
 / -> # _sleepy_zelda `ui -> # `S1566 `ui
 -> -> 90 `i `ui
 ..
 :U ..
-"180
+"135
 -> :s 5C `*uc
 &U _plumber_down
 / -> # _plumber_down `ui -> # `S1566 `ui
 -> -> 240 `i `ui
 ..
 :U ..
-"181
+"136
 -> :s 6C `*uc
 &U _plumber_down
 / -> # _plumber_down `ui -> # `S1566 `ui
 -> -> 120 `i `ui
 ..
 :U ..
-"182
+"137
 -> :s 7C `*uc
 &U _bhpc
 / -> # _bhpc `ui -> # `S1566 `ui
@@ -14785,150 +14785,150 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[; ;main.c: 176: song_t songs[] = {
-[; ;main.c: 177: {(uint8_t *)"ASOIAF", winter_is_coming, sizeof(winter_is_coming)/sizeof(note_t), 180},
-[; ;main.c: 178: {(uint8_t *)"Bells", jingle_jangle, sizeof(jingle_jangle)/sizeof(note_t), 120},
-[; ;main.c: 179: {(uint8_t *)"Lullaby", sleepy_zelda, sizeof(sleepy_zelda)/sizeof(note_t), 90},
-[; ;main.c: 180: {(uint8_t *)"SMB", plumber_down, sizeof(plumber_down)/sizeof(note_t), 240},
-[; ;main.c: 181: {(uint8_t *)"SMB2", plumber_down, sizeof(plumber_down)/sizeof(note_t), 120},
-[; ;main.c: 182: {(uint8_t *)"A. Foley", bhpc, sizeof(bhpc)/sizeof(note_t), 120}
-[; ;main.c: 183: };
-"191
+[; ;main.c: 131: song_t songs[] = {
+[; ;main.c: 132: {(uint8_t *)"ASOIAF", winter_is_coming, sizeof(winter_is_coming)/sizeof(note_t), 180},
+[; ;main.c: 133: {(uint8_t *)"Bells", jingle_jangle, sizeof(jingle_jangle)/sizeof(note_t), 120},
+[; ;main.c: 134: {(uint8_t *)"Lullaby", sleepy_zelda, sizeof(sleepy_zelda)/sizeof(note_t), 90},
+[; ;main.c: 135: {(uint8_t *)"SMB", plumber_down, sizeof(plumber_down)/sizeof(note_t), 240},
+[; ;main.c: 136: {(uint8_t *)"SMB2", plumber_down, sizeof(plumber_down)/sizeof(note_t), 120},
+[; ;main.c: 137: {(uint8_t *)"A. Foley", bhpc, sizeof(bhpc)/sizeof(note_t), 120}
+[; ;main.c: 138: };
+"146
 [v _playNote `(v ~T0 @X0 1 ef1`S1566 ]
 {
-[; ;main.c: 191: void playNote(note_t note){
+[; ;main.c: 146: void playNote(note_t note){
 [e :U _playNote ]
 [v _note `S1566 ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 192: SetNCOFreq(note.pitch);
-"192
+[; ;main.c: 147: SetNCOFreq(note.pitch);
+"147
 [e ( _SetNCOFreq (1 . _note 0 ]
-[; ;main.c: 193: delay(note.length);
-"193
+[; ;main.c: 148: delay(note.length);
+"148
 [e ( _delay (1 . _note 1 ]
-[; ;main.c: 194: SetNCOFreq(rest);
-"194
+[; ;main.c: 149: SetNCOFreq(rest);
+"149
 [e ( _SetNCOFreq (1 _rest ]
-[; ;main.c: 195: _delay((unsigned long)((10)*(1000000/4000.0)));
-"195
+[; ;main.c: 150: _delay((unsigned long)((10)*(1000000/4000.0)));
+"150
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[; ;main.c: 196: }
-"196
+[; ;main.c: 151: }
+"151
 [e :UE 1576 ]
 }
-"203
+"158
 [v _setTempo `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;main.c: 203: void setTempo(int tempo){
+[; ;main.c: 158: void setTempo(int tempo){
 [e :U _setTempo ]
 [v _tempo `i ~T0 @X0 1 r1 ]
 [f ]
-"204
+"159
 [v _tempo_ms `um ~T0 @X0 1 a ]
-[; ;main.c: 204: uint24_t tempo_ms = ((60*100/tempo)*10)/4;
+[; ;main.c: 159: uint24_t tempo_ms = ((60*100/tempo)*10)/4;
 [e = _tempo_ms -> -> / * / * -> 60 `i -> 100 `i _tempo -> 10 `i -> 4 `i `m `um ]
-"205
+"160
 [v _tempo_period `uc ~T0 @X0 1 a ]
-[; ;main.c: 205: uint8_t tempo_period = (uint8_t) (tempo_ms / 1.024);
+[; ;main.c: 160: uint8_t tempo_period = (uint8_t) (tempo_ms / 1.024);
 [e = _tempo_period -> / -> _tempo_ms `d .1.024 `uc ]
-[; ;main.c: 206: TMR0_Load8bitPeriod(tempo_period);
-"206
+[; ;main.c: 161: TMR0_Load8bitPeriod(tempo_period);
+"161
 [e ( _TMR0_Load8bitPeriod (1 _tempo_period ]
-[; ;main.c: 207: }
-"207
+[; ;main.c: 162: }
+"162
 [e :UE 1577 ]
 }
-"209
+"164
 [v _main `(v ~T0 @X0 1 ef ]
-"210
+"165
 {
-[; ;main.c: 209: void main(void)
-[; ;main.c: 210: {
+[; ;main.c: 164: void main(void)
+[; ;main.c: 165: {
 [e :U _main ]
 [f ]
-"211
+"166
 [v _currSong `*S1567 ~T0 @X0 1 a ]
-[; ;main.c: 211: song_t* currSong = &songs[0];
+[; ;main.c: 166: song_t* currSong = &songs[0];
 [e = _currSong &U *U + &U _songs * -> -> -> 0 `i `ui `ux -> -> # *U &U _songs `ui `ux ]
-[; ;main.c: 214: SYSTEM_Initialize();
-"214
+[; ;main.c: 169: SYSTEM_Initialize();
+"169
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 217: SetNCOFreq(rest);
-"217
+[; ;main.c: 172: SetNCOFreq(rest);
+"172
 [e ( _SetNCOFreq (1 _rest ]
-[; ;main.c: 219: while (1)
-"219
+[; ;main.c: 174: while (1)
+"174
 [e :U 1580 ]
-[; ;main.c: 220: {
-"220
+[; ;main.c: 175: {
+"175
 {
-[; ;main.c: 221: if(PORTAbits.RA5 == 0){
-"221
+[; ;main.c: 176: if(PORTAbits.RA5 == 0){
+"176
 [e $ ! == -> . . _PORTAbits 0 5 `i -> 0 `i 1582  ]
 {
-"222
+"177
 [v _i `uc ~T0 @X0 1 a ]
-[; ;main.c: 222: uint8_t i;
-[; ;main.c: 226: setTempo(currSong->tempo);
-"226
+[; ;main.c: 177: uint8_t i;
+[; ;main.c: 181: setTempo(currSong->tempo);
+"181
 [e ( _setTempo (1 -> . *U _currSong 3 `i ]
-[; ;main.c: 228: printf("\n\rPlaying %s:\n\rTempo = %i", currSong->name, currSong->tempo);
-"228
+[; ;main.c: 183: printf("\n\rPlaying %s:\n\rTempo = %i", currSong->name, currSong->tempo);
+"183
 [e ( _printf , , (. :s 8C -> . *U _currSong 0 `*Cuc . *U _currSong 3 ]
-[; ;main.c: 230: for (i = 0; i < currSong->length; i ++){
-"230
+[; ;main.c: 185: for (i = 0; i < currSong->length; i ++){
+"185
 {
 [e = _i -> -> 0 `i `uc ]
 [e $U 1586  ]
 [e :U 1583 ]
 {
-[; ;main.c: 232: printf("\n\r\t%4i", currSong->melody[i].pitch);
-"232
+[; ;main.c: 187: printf("\n\r\t%4i", currSong->melody[i].pitch);
+"187
 [e ( _printf , (. :s 9C . *U + . *U _currSong 1 * -> _i `ux -> -> # *U . *U _currSong 1 `ui `ux 0 ]
-[; ;main.c: 233: playNote(currSong->melody[i]);
-"233
+[; ;main.c: 188: playNote(currSong->melody[i]);
+"188
 [e ( _playNote (1 *U + . *U _currSong 1 * -> _i `ux -> -> # *U . *U _currSong 1 `ui `ux ]
-"234
+"189
 }
-"230
+"185
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 1586 ]
 [e $ < -> _i `ui . *U _currSong 2 1583  ]
 [e :U 1584 ]
-"234
+"189
 }
-"235
+"190
 }
-[; ;main.c: 234: }
-[; ;main.c: 235: } else{
+[; ;main.c: 189: }
+[; ;main.c: 190: } else{
 [e $U 1587  ]
 [e :U 1582 ]
 {
-"237
+"192
 [v _result `ui ~T0 @X0 1 a ]
-[; ;main.c: 237: uint16_t result = ADCC_GetSingleConversion(POT);
+[; ;main.c: 192: uint16_t result = ADCC_GetSingleConversion(POT);
 [e = _result ( _ADCC_GetSingleConversion (1 . `E14349 0 ]
-"238
+"193
 [v _songResultConv `ui ~T0 @X0 1 a ]
-[; ;main.c: 238: uint16_t songResultConv = 1024 / (sizeof(songs)/sizeof(song_t));
+[; ;main.c: 193: uint16_t songResultConv = 1024 / (sizeof(songs)/sizeof(song_t));
 [e = _songResultConv / -> -> 1024 `i `ui / -> # _songs `ui -> # `S1567 `ui ]
-"239
+"194
 [v _songNum `uc ~T0 @X0 1 a ]
-[; ;main.c: 239: uint8_t songNum = result/(songResultConv+1);
+[; ;main.c: 194: uint8_t songNum = result/(songResultConv+1);
 [e = _songNum -> / _result + _songResultConv -> -> 1 `i `ui `uc ]
-[; ;main.c: 240: currSong = &songs[songNum];
-"240
+[; ;main.c: 195: currSong = &songs[songNum];
+"195
 [e = _currSong &U *U + &U _songs * -> _songNum `ux -> -> # *U &U _songs `ui `ux ]
-[; ;main.c: 242: songNum++;
-"242
+[; ;main.c: 197: songNum++;
+"197
 [e ++ _songNum -> -> 1 `i `uc ]
-[; ;main.c: 243: if(songNum & 0x01){ do { LATA0 = 1; } while(0); } else {do { LATA0 = 0; } while(0);}
-"243
+[; ;main.c: 198: if(songNum & 0x01){ do { LATAbits.LATA0 = 1; } while(0); } else {do { LATAbits.LATA0 = 0; } while(0);}
+"198
 [e $ ! != & -> _songNum `i -> 1 `i -> 0 `i 1588  ]
 {
 [e :U 1591 ]
 {
-[e = _LATA0 -> -> 1 `i `b ]
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
 }
 [e :U 1590 ]
 }
@@ -14937,18 +14937,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [e :U 1595 ]
 {
-[e = _LATA0 -> -> 0 `i `b ]
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 1594 ]
 }
 [e :U 1592 ]
-[; ;main.c: 244: if(songNum & 0x02){ do { LATA1 = 1; } while(0); } else {do { LATA1 = 0; } while(0);}
-"244
+[; ;main.c: 199: if(songNum & 0x02){ do { LATAbits.LATA1 = 1; } while(0); } else {do { LATAbits.LATA1 = 0; } while(0);}
+"199
 [e $ ! != & -> _songNum `i -> 2 `i -> 0 `i 1596  ]
 {
 [e :U 1599 ]
 {
-[e = _LATA1 -> -> 1 `i `b ]
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
 }
 [e :U 1598 ]
 }
@@ -14957,18 +14957,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [e :U 1603 ]
 {
-[e = _LATA1 -> -> 0 `i `b ]
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
 }
 [e :U 1602 ]
 }
 [e :U 1600 ]
-[; ;main.c: 245: if(songNum & 0x04){ do { LATA2 = 1; } while(0); } else {do { LATA2 = 0; } while(0);}
-"245
+[; ;main.c: 200: if(songNum & 0x04){ do { LATAbits.LATA2 = 1; } while(0); } else {do { LATAbits.LATA2 = 0; } while(0);}
+"200
 [e $ ! != & -> _songNum `i -> 4 `i -> 0 `i 1604  ]
 {
 [e :U 1607 ]
 {
-[e = _LATA2 -> -> 1 `i `b ]
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 1606 ]
 }
@@ -14977,18 +14977,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [e :U 1611 ]
 {
-[e = _LATA2 -> -> 0 `i `b ]
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 1610 ]
 }
 [e :U 1608 ]
-[; ;main.c: 246: if(songNum & 0x08){ do { LATA3 = 1; } while(0); } else {do { LATA3 = 0; } while(0);}
-"246
+[; ;main.c: 201: if(songNum & 0x08){ do { LATAbits.LATA3 = 1; } while(0); } else {do { LATAbits.LATA3 = 0; } while(0);}
+"201
 [e $ ! != & -> _songNum `i -> 8 `i -> 0 `i 1612  ]
 {
 [e :U 1615 ]
 {
-[e = _LATA3 -> -> 1 `i `b ]
+[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
 }
 [e :U 1614 ]
 }
@@ -14997,24 +14997,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [e :U 1619 ]
 {
-[e = _LATA3 -> -> 0 `i `b ]
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
 }
 [e :U 1618 ]
 }
 [e :U 1616 ]
-"247
+"202
 }
 [e :U 1587 ]
-"248
+"203
 }
 [e :U 1579 ]
-"219
+"174
 [e $U 1580  ]
 [e :U 1581 ]
-[; ;main.c: 247: }
-[; ;main.c: 248: }
-[; ;main.c: 249: }
-"249
+[; ;main.c: 202: }
+[; ;main.c: 203: }
+[; ;main.c: 204: }
+"204
 [e :UE 1578 ]
 }
 [p f _printf 8683648 ]

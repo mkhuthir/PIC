@@ -17415,7 +17415,9 @@ void TMR0_Load8bitPeriod(uint8_t periodVal);
 # 307
 bool TMR0_HasOverflowOccured(void);
 
-# 59 "mcc_generated_files/tmr0.c"
+# 58 "mcc_generated_files/tmr0.c"
+void (*TMR0_InterruptHandler)(void);
+
 void TMR0_Initialize(void)
 {
 
@@ -17431,6 +17433,7 @@ TMR0H = 0xF4;
 
 
 TMR0L = 0x00;
+
 
 
 PIR0bits.TMR0IF = 0;
@@ -17472,7 +17475,6 @@ void TMR0_Load8bitPeriod(uint8_t periodVal)
 
 TMR0H = periodVal;
 }
-
 bool TMR0_HasOverflowOccured(void)
 {
 

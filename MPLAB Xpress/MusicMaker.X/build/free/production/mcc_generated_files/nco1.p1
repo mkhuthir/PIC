@@ -13139,47 +13139,47 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;nco1.c: 58: {
 [e :U _NCO1_Initialize ]
 [f ]
-[; ;nco1.c: 61: NCO1CON = 0x80;
+[; ;nco1.c: 61: NCO1CON = 0x00;
 "61
-[e = _NCO1CON -> -> 128 `i `uc ]
-[; ;nco1.c: 64: NCO1CLK = 0x00;
-"64
+[e = _NCO1CON -> -> 0 `i `uc ]
+[; ;nco1.c: 63: NCO1CLK = 0x00;
+"63
 [e = _NCO1CLK -> -> 0 `i `uc ]
-[; ;nco1.c: 67: NCO1ACCU = 0x00;
-"67
+[; ;nco1.c: 65: NCO1ACCU = 0x00;
+"65
 [e = _NCO1ACCU -> -> 0 `i `uc ]
-[; ;nco1.c: 70: NCO1ACCH = 0x00;
-"70
+[; ;nco1.c: 67: NCO1ACCH = 0x00;
+"67
 [e = _NCO1ACCH -> -> 0 `i `uc ]
-[; ;nco1.c: 76: NCO1INCU = 0;
-"76
+[; ;nco1.c: 69: NCO1INCU = 0x00;
+"69
 [e = _NCO1INCU -> -> 0 `i `uc ]
-[; ;nco1.c: 79: NCO1INCH = 3;
-"79
+[; ;nco1.c: 70: NCO1INCH = 0x03;
+"70
 [e = _NCO1INCH -> -> 3 `i `uc ]
-[; ;nco1.c: 82: NCO1INCL = 155;
-"82
+[; ;nco1.c: 71: NCO1INCL = 0x9B;
+"71
 [e = _NCO1INCL -> -> 155 `i `uc ]
-[; ;nco1.c: 85: NCO1CONbits.N1EN = 1;
-"85
+[; ;nco1.c: 73: NCO1CONbits.N1EN = 1;
+"73
 [e = . . _NCO1CONbits 0 5 -> -> 1 `i `uc ]
-[; ;nco1.c: 86: }
-"86
+[; ;nco1.c: 75: }
+"75
 [e :UE 1563 ]
 }
-"88
+"77
 [v _NCO1_GetOutputStatus `(uc ~T0 @X0 1 ef ]
-"89
+"78
 {
-[; ;nco1.c: 88: bool NCO1_GetOutputStatus(void)
-[; ;nco1.c: 89: {
+[; ;nco1.c: 77: bool NCO1_GetOutputStatus(void)
+[; ;nco1.c: 78: {
 [e :U _NCO1_GetOutputStatus ]
 [f ]
-[; ;nco1.c: 91: return (NCO1CONbits.N1OUT);
-"91
+[; ;nco1.c: 80: return (NCO1CONbits.N1OUT);
+"80
 [e ) . . _NCO1CONbits 0 3 ]
 [e $UE 1564  ]
-[; ;nco1.c: 92: }
-"92
+[; ;nco1.c: 81: }
+"81
 [e :UE 1564 ]
 }

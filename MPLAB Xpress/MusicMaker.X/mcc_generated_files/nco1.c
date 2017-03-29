@@ -13,12 +13,12 @@
   @Description
     This header file provides implementations for driver APIs for NCO1.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 3.15.0
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15
         Device            :  PIC16F18855
         Driver Version    :  2.00
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.20
+        MPLAB             :  MPLAB X 3.40
 */
 
 /*
@@ -57,32 +57,21 @@
 void NCO1_Initialize (void)
 {
     // Set the NCO to the options selected in the GUI
-    // N1EN enabled; N1POL active_lo; N1PFM FDC_mode; 
-    NCO1CON = 0x80;
-
+    // N1EN disabled; N1POL active_lo; N1PFM FDC_mode; 
+    NCO1CON = 0x00;
     // N1CKS FOSC; N1PWS 1_clk; 
     NCO1CLK = 0x00;
-
     // 
     NCO1ACCU = 0x00;
-
     // 
     NCO1ACCH = 0x00;
-
-
-
-
-    // NCO1INCU 0
-    NCO1INCU = 0;
-
-    // NCO1INCH 3
-    NCO1INCH = 3;
-
-    // NCO1INCL 155
-    NCO1INCL = 155;
-
+    
+    NCO1INCU = 0x00;
+    NCO1INCH = 0x03;
+    NCO1INCL = 0x9B;
     // Enable the NCO module
     NCO1CONbits.N1EN = 1;
+   
 }
 
 bool NCO1_GetOutputStatus(void)
