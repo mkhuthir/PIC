@@ -1,0 +1,1017 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18875 ]
+[d frameptr 6 ]
+"70 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab04_AnalogToDigitalConversion/ADC.c
+[e E14962 . `uc
+POT1 0
+channel_VSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
+"76 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab05_VariableSpeedRotate/VSR.c
+[e E14962 . `uc
+POT1 0
+channel_VSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
+"87 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab06_PulseWidthModulation/PWM.c
+[e E14962 . `uc
+POT1 0
+channel_VSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
+"74 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab10_EEPROM/EEPROM.c
+[e E14962 . `uc
+POT1 0
+channel_VSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
+"93 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr2.c
+[e E14957 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR2_OS_STARTS_TMRON_ERSHIGH 22
+TMR2_OS_STARTS_TMRON_ERSLOW 23
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"99
+[e E14980 . `uc
+TMR2_T2INPPS 0
+TMR2_RESERVED 1
+TMR2_T4POSTSCALED 2
+TMR2_T6POSTSCALED 3
+TMR2_CCP1_OUT 4
+TMR2_CCP2_OUT 5
+TMR2_CCP3_OUT 6
+TMR2_CCP4_OUT 7
+TMR2_CCP5_OUT 8
+TMR2_PWM6_OUT 9
+TMR2_PWM7_OUT 10
+TMR2_C1_OUT_SYNC 11
+TMR2_C2_OUT_SYNC 12
+TMR2_ZCD_OUTPUT 13
+TMR2_LC1_OUT 14
+TMR2_LC2_OUT 15
+TMR2_LC3_OUT 16
+TMR2_LC4_OUT 17
+]
+"105 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/adcc.c
+[e E14958 . `uc
+POT1 0
+channel_VSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+]
+"62 /opt/microchip/xc8/v1.41/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.41/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.41/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"56 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab01_HelloWorld/HelloWorld.c
+[v _HelloWorld HelloWorld `(v  1 e 1 0 ]
+"59 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab02_Blink/Blink.c
+[v _Blink Blink `(v  1 e 1 0 ]
+"61 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab03_Rotate/Rotate.c
+[v _Rotate Rotate `(v  1 e 1 0 ]
+"97
+[v _Delay500ms Delay500ms `(v  1 e 1 0 ]
+"60 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab04_AnalogToDigitalConversion/ADC.c
+[v _ADC ADC `(v  1 e 1 0 ]
+"63 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab05_VariableSpeedRotate/VSR.c
+[v _VSR VSR `(v  1 e 1 0 ]
+"61 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab06_PulseWidthModulation/PWM.c
+[v _PWM PWM `(v  1 e 1 0 ]
+"62 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab07_Timers/Timer1.c
+[v _Timer1 Timer1 `(v  1 e 1 0 ]
+"67 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab08_Interrupts/Interrupt.c
+[v _Interrupt Interrupt `(v  1 e 1 0 ]
+"98
+[v _LAB_ISR LAB_ISR `(v  1 e 1 0 ]
+"53 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab09_SleepWakeup/SleepWakeUp.c
+[v _SleepWakeUp SleepWakeUp `(v  1 e 1 0 ]
+"62 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab10_EEPROM/EEPROM.c
+[v _EEPROM EEPROM `(v  1 e 1 0 ]
+"60 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"98
+[v _checkButtonS1 checkButtonS1 `(v  1 e 1 0 ]
+"116
+[v _nextLab nextLab `(v  1 e 1 0 ]
+"58 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+"128
+[v _ADCC_GetSingleConversion ADCC_GetSingleConversion `(ui  1 e 2 0 ]
+"51 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"86 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"99
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"116
+[v _WWDT_Initialize WWDT_Initialize `(v  1 e 1 0 ]
+"124
+[v _WWDT_SoftEnable WWDT_SoftEnable `(v  1 e 1 0 ]
+"130
+[v _WWDT_SoftDisable WWDT_SoftDisable `(v  1 e 1 0 ]
+"136
+[v _WWDT_TimeOutStatusGet WWDT_TimeOutStatusGet `(uc  1 e 1 0 ]
+"57 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/memory.c
+[v _FLASH_ReadWord FLASH_ReadWord `(ui  1 e 2 0 ]
+"93
+[v _FLASH_WriteBlock FLASH_WriteBlock `(c  1 e 1 0 ]
+"148
+[v _FLASH_EraseBlock FLASH_EraseBlock `(v  1 e 1 0 ]
+"179
+[v _DATAEE_WriteByte DATAEE_WriteByte `(v  1 e 1 0 ]
+"201
+[v _DATAEE_ReadByte DATAEE_ReadByte `(uc  1 e 1 0 ]
+"51 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"57 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/pwm6.c
+[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
+"74
+[v _PWM6_LoadDutyValue PWM6_LoadDutyValue `(v  1 e 1 0 ]
+"60 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"89
+[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
+"123
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"136
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"140
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"63 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"95
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+"101
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+"138
+[v _TMR1_Reload TMR1_Reload `(v  1 e 1 0 ]
+"63 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"104
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"110
+[v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+"115
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"121
+[v _TMR2_StopTimer TMR2_StopTimer `(v  1 e 1 0 ]
+"126
+[v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
+"140
+[v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
+"151
+[v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
+[s S281 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"348 /opt/microchip/xc8/v1.41/include/pic16f18875.h
+[u S286 . 1 `S281 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES286  1 e 1 @11 ]
+[s S1438 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"445
+[u S1447 . 1 `S1438 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES1447  1 e 1 @13 ]
+"648
+[v _TRISA TRISA `VEuc  1 e 1 @17 ]
+"709
+[v _TRISB TRISB `VEuc  1 e 1 @18 ]
+"770
+[v _TRISC TRISC `VEuc  1 e 1 @19 ]
+"831
+[v _TRISD TRISD `VEuc  1 e 1 @20 ]
+"892
+[v _TRISE TRISE `VEuc  1 e 1 @21 ]
+"923
+[v _LATA LATA `VEuc  1 e 1 @22 ]
+[s S20 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"940
+[u S29 . 1 `S20 1 . 1 0 ]
+[v _LATAbits LATAbits `VES29  1 e 1 @22 ]
+"984
+[v _LATB LATB `VEuc  1 e 1 @23 ]
+"1045
+[v _LATC LATC `VEuc  1 e 1 @24 ]
+"1106
+[v _LATD LATD `VEuc  1 e 1 @25 ]
+"1167
+[v _LATE LATE `VEuc  1 e 1 @26 ]
+"1198
+[v _TMR0L TMR0L `VEuc  1 e 1 @28 ]
+"1335
+[v _TMR0H TMR0H `VEuc  1 e 1 @29 ]
+"1588
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @30 ]
+[s S895 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T016BIT 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+"1608
+[s S901 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S906 . 1 `S895 1 . 1 0 `S901 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES906  1 e 1 @30 ]
+"1652
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @31 ]
+"1768
+[v _ADRESL ADRESL `VEuc  1 e 1 @140 ]
+"1787
+[v _ADRESH ADRESH `VEuc  1 e 1 @141 ]
+"1799
+[v _ADPREVL ADPREVL `VEuc  1 e 1 @142 ]
+"1868
+[v _ADPREVH ADPREVH `VEuc  1 e 1 @143 ]
+"1943
+[v _ADACCL ADACCL `VEuc  1 e 1 @144 ]
+"2012
+[v _ADACCH ADACCH `VEuc  1 e 1 @145 ]
+"2081
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @147 ]
+[s S1035 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :2:2 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+"2117
+[s S1043 . 1 `uc 1 DONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFRM 1 0 :2:2 
+]
+[s S1047 . 1 `uc 1 nDONE 1 0 :1:0 
+]
+[s S1049 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+`uc 1 ADFM1 1 0 :1:3 
+]
+[s S1054 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFRM0 1 0 :1:2 
+`uc 1 ADFRM1 1 0 :1:3 
+]
+[u S1059 . 1 `S1035 1 . 1 0 `S1043 1 . 1 0 `S1047 1 . 1 0 `S1049 1 . 1 0 `S1054 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1059  1 e 1 @147 ]
+"2191
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @148 ]
+[s S1186 . 1 `uc 1 ADDSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 ADGPOL 1 0 :1:5 
+`uc 1 ADIPEN 1 0 :1:6 
+`uc 1 ADPPOL 1 0 :1:7 
+]
+"2205
+[u S1192 . 1 `S1186 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES1192  1 e 1 @148 ]
+"2229
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @149 ]
+[s S1122 . 1 `uc 1 ADMD 1 0 :3:0 
+`uc 1 ADACLR 1 0 :1:3 
+`uc 1 ADCRS 1 0 :3:4 
+`uc 1 ADPSIS 1 0 :1:7 
+]
+"2251
+[s S1127 . 1 `uc 1 ADMD0 1 0 :1:0 
+`uc 1 ADMD1 1 0 :1:1 
+`uc 1 ADMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCRS0 1 0 :1:4 
+`uc 1 ADCRS1 1 0 :1:5 
+`uc 1 ADCRS2 1 0 :1:6 
+]
+[u S1135 . 1 `S1122 1 . 1 0 `S1127 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES1135  1 e 1 @149 ]
+"2305
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @150 ]
+[s S1093 . 1 `uc 1 ADTMD0 1 0 :1:0 
+`uc 1 ADTMD1 1 0 :1:1 
+`uc 1 ADTMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCALC0 1 0 :1:4 
+`uc 1 ADCALC1 1 0 :1:5 
+`uc 1 ADCALC2 1 0 :1:6 
+]
+"2326
+[s S1101 . 1 `uc 1 ADTMD 1 0 :3:0 
+`uc 1 ADSOI 1 0 :1:3 
+`uc 1 ADCALC 1 0 :3:4 
+]
+[u S1105 . 1 `S1093 1 . 1 0 `S1101 1 . 1 0 ]
+[v _ADCON3bits ADCON3bits `VES1105  1 e 1 @150 ]
+"2375
+[v _ADSTAT ADSTAT `VEuc  1 e 1 @151 ]
+[s S1154 . 1 `uc 1 ADSTAT 1 0 :3:0 
+`uc 1 ADMACT 1 0 :1:3 
+`uc 1 ADMATH 1 0 :1:4 
+`uc 1 ADLTHR 1 0 :1:5 
+`uc 1 ADUTHR 1 0 :1:6 
+`uc 1 ADAOV 1 0 :1:7 
+]
+"2395
+[s S1161 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+`uc 1 ADSTAT1 1 0 :1:1 
+`uc 1 ADSTAT2 1 0 :1:2 
+]
+[u S1165 . 1 `S1154 1 . 1 0 `S1161 1 . 1 0 ]
+[v _ADSTATbits ADSTATbits `VES1165  1 e 1 @151 ]
+"2444
+[v _ADCLK ADCLK `VEuc  1 e 1 @152 ]
+"2501
+[v _ADACT ADACT `VEuc  1 e 1 @153 ]
+"2552
+[v _ADREF ADREF `VEuc  1 e 1 @154 ]
+"2592
+[v _ADCAP ADCAP `VEuc  1 e 1 @155 ]
+"2643
+[v _ADPRE ADPRE `VEuc  1 e 1 @156 ]
+"2712
+[v _ADACQ ADACQ `VEuc  1 e 1 @157 ]
+"2781
+[v _ADPCH ADPCH `VEuc  1 e 1 @158 ]
+"2838
+[v _ADCNT ADCNT `VEuc  1 e 1 @268 ]
+"2907
+[v _ADRPT ADRPT `VEuc  1 e 1 @269 ]
+"2982
+[v _ADLTHL ADLTHL `VEuc  1 e 1 @270 ]
+"3051
+[v _ADLTHH ADLTHH `VEuc  1 e 1 @271 ]
+"3126
+[v _ADUTHL ADUTHL `VEuc  1 e 1 @272 ]
+"3195
+[v _ADUTHH ADUTHH `VEuc  1 e 1 @273 ]
+"3270
+[v _ADSTPTL ADSTPTL `VEuc  1 e 1 @274 ]
+"3339
+[v _ADSTPTH ADSTPTH `VEuc  1 e 1 @275 ]
+"3414
+[v _ADFLTRL ADFLTRL `VEuc  1 e 1 @276 ]
+"3483
+[v _ADFLTRH ADFLTRH `VEuc  1 e 1 @277 ]
+"3558
+[v _ADERRL ADERRL `VEuc  1 e 1 @278 ]
+"3627
+[v _ADERRH ADERRH `VEuc  1 e 1 @279 ]
+"6411
+[v _TMR1L TMR1L `VEuc  1 e 1 @524 ]
+"6580
+[v _TMR1H TMR1H `VEuc  1 e 1 @525 ]
+"6699
+[v _T1CON T1CON `VEuc  1 e 1 @526 ]
+[s S738 . 1 `uc 1 ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 nSYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS 1 0 :2:4 
+]
+"6730
+[s S744 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S751 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+]
+[s S755 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD161 1 0 :1:1 
+]
+[u S758 . 1 `S738 1 . 1 0 `S744 1 . 1 0 `S751 1 . 1 0 `S755 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES758  1 e 1 @526 ]
+"6794
+[v _T1GCON T1GCON `VEuc  1 e 1 @527 ]
+[s S784 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GVAL 1 0 :1:2 
+`uc 1 GGO_nDONE 1 0 :1:3 
+`uc 1 GSPM 1 0 :1:4 
+`uc 1 GTM 1 0 :1:5 
+`uc 1 GPOL 1 0 :1:6 
+`uc 1 GE 1 0 :1:7 
+]
+"6828
+[s S792 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 T1GE 1 0 :1:7 
+]
+[s S800 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO 1 0 :1:3 
+]
+[u S803 . 1 `S784 1 . 1 0 `S792 1 . 1 0 `S800 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES803  1 e 1 @527 ]
+"6989
+[v _T1GATE T1GATE `VEuc  1 e 1 @528 ]
+"7154
+[v _T1CLK T1CLK `VEuc  1 e 1 @529 ]
+[s S1264 . 1 `uc 1 C5TSEL 1 0 :2:0 
+`uc 1 P6TSEL 1 0 :2:2 
+`uc 1 P7TSEL 1 0 :2:4 
+]
+"9182
+[s S1268 . 1 `uc 1 C5TSEL0 1 0 :1:0 
+`uc 1 C5TSEL1 1 0 :1:1 
+`uc 1 P6TSEL0 1 0 :1:2 
+`uc 1 P6TSEL1 1 0 :1:3 
+`uc 1 P7TSEL0 1 0 :1:4 
+`uc 1 P7TSEL1 1 0 :1:5 
+]
+[u S1275 . 1 `S1264 1 . 1 0 `S1268 1 . 1 0 ]
+[v _CCPTMRS1bits CCPTMRS1bits `VES1275  1 e 1 @543 ]
+"9231
+[v _T2TMR T2TMR `VEuc  1 e 1 @652 ]
+"9236
+[v _TMR2 TMR2 `VEuc  1 e 1 @652 ]
+"9268
+[v _T2PR T2PR `VEuc  1 e 1 @653 ]
+"9273
+[v _PR2 PR2 `VEuc  1 e 1 @653 ]
+"9305
+[v _T2CON T2CON `VEuc  1 e 1 @654 ]
+[s S616 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"9341
+[s S620 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+[s S624 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+]
+[s S632 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+[u S641 . 1 `S616 1 . 1 0 `S620 1 . 1 0 `S624 1 . 1 0 `S632 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES641  1 e 1 @654 ]
+"9450
+[v _T2HLT T2HLT `VEuc  1 e 1 @655 ]
+[s S509 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"9483
+[s S514 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S520 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+[s S525 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+[u S531 . 1 `S509 1 . 1 0 `S514 1 . 1 0 `S520 1 . 1 0 `S525 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES531  1 e 1 @655 ]
+"9582
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @656 ]
+"9734
+[v _T2RST T2RST `VEuc  1 e 1 @657 ]
+[s S578 . 1 `uc 1 RSEL 1 0 :5:0 
+]
+"9761
+[s S580 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+`uc 1 RSEL4 1 0 :1:4 
+]
+[s S586 . 1 `uc 1 T2RSEL 1 0 :5:0 
+]
+[s S588 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+`uc 1 T2RSEL4 1 0 :1:4 
+]
+[u S594 . 1 `S578 1 . 1 0 `S580 1 . 1 0 `S586 1 . 1 0 `S588 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES594  1 e 1 @657 ]
+"12278
+[v _PWM6DCL PWM6DCL `VEuc  1 e 1 @908 ]
+"12343
+[v _PWM6DCH PWM6DCH `VEuc  1 e 1 @909 ]
+"12512
+[v _PWM6CON PWM6CON `VEuc  1 e 1 @910 ]
+[s S180 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 POL 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 OE 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"12533
+[s S186 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 PWM6POL 1 0 :1:4 
+`uc 1 PWM6OUT 1 0 :1:5 
+`uc 1 PWM6OE 1 0 :1:6 
+`uc 1 PWM6EN 1 0 :1:7 
+]
+[u S192 . 1 `S180 1 . 1 0 `S186 1 . 1 0 ]
+[v _PWM6CONbits PWM6CONbits `VES192  1 e 1 @910 ]
+[s S860 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"21142
+[u S865 . 1 `S860 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES865  1 e 1 @1804 ]
+[s S466 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR3IF 1 0 :1:2 
+`uc 1 TMR4IF 1 0 :1:3 
+`uc 1 TMR5IF 1 0 :1:4 
+`uc 1 TMR6IF 1 0 :1:5 
+]
+"21295
+[u S473 . 1 `S466 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES473  1 e 1 @1808 ]
+[s S873 . 1 `uc 1 INTE 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"21555
+[u S878 . 1 `S873 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES878  1 e 1 @1814 ]
+"22286
+[v _WDTCON0 WDTCON0 `VEuc  1 e 1 @2060 ]
+[s S1317 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 WDTPS 1 0 :5:1 
+]
+"22311
+[s S1320 . 1 `uc 1 SWDTEN 1 0 :1:0 
+]
+[s S1322 . 1 `uc 1 WDTSEN 1 0 :1:0 
+]
+[s S1324 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WDTPS0 1 0 :1:1 
+`uc 1 WDTPS1 1 0 :1:2 
+`uc 1 WDTPS2 1 0 :1:3 
+`uc 1 WDTPS3 1 0 :1:4 
+`uc 1 WDTPS4 1 0 :1:5 
+]
+[u S1331 . 1 `S1317 1 . 1 0 `S1320 1 . 1 0 `S1322 1 . 1 0 `S1324 1 . 1 0 ]
+[v _WDTCON0bits WDTCON0bits `VES1331  1 e 1 @2060 ]
+"22360
+[v _WDTCON1 WDTCON1 `VEuc  1 e 1 @2061 ]
+[s S1351 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nRI 1 0 :1:2 
+`uc 1 nRMCLR 1 0 :1:3 
+`uc 1 nRWDT 1 0 :1:4 
+`uc 1 nWDTWV 1 0 :1:5 
+`uc 1 STKUNF 1 0 :1:6 
+`uc 1 STKOVF 1 0 :1:7 
+]
+"22865
+[u S1360 . 1 `S1351 1 . 1 0 ]
+[v _PCON0bits PCON0bits `VES1360  1 e 1 @2067 ]
+"22941
+[v _NVMADRL NVMADRL `VEuc  1 e 1 @2074 ]
+"23002
+[v _NVMADRH NVMADRH `VEuc  1 e 1 @2075 ]
+"23057
+[v _NVMDATL NVMDATL `VEuc  1 e 1 @2076 ]
+"23118
+[v _NVMDATH NVMDATH `VEuc  1 e 1 @2077 ]
+[s S389 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 NVMREGS 1 0 :1:6 
+]
+"23183
+[u S397 . 1 `S389 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES397  1 e 1 @2078 ]
+"23222
+[v _NVMCON2 NVMCON2 `VEuc  1 e 1 @2079 ]
+"23284
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"23422
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"23517
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"23567
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"23624
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"29655
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3727 ]
+[s S209 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"29665
+[u S211 . 1 `S209 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES211  1 e 1 @3727 ]
+[s S985 . 1 `uc 1 T2AINPPS 1 0 :5:0 
+]
+"30087
+[s S987 . 1 `uc 1 T2AINPPS0 1 0 :1:0 
+`uc 1 T2AINPPS1 1 0 :1:1 
+`uc 1 T2AINPPS2 1 0 :1:2 
+`uc 1 T2AINPPS3 1 0 :1:3 
+`uc 1 T2AINPPS4 1 0 :1:4 
+]
+[u S993 . 1 `S985 1 . 1 0 `S987 1 . 1 0 ]
+[v _T2AINPPSbits T2AINPPSbits `VES993  1 e 1 @3740 ]
+"31198
+[v _ADCACTPPS ADCACTPPS `VEuc  1 e 1 @3779 ]
+"32000
+[v _RA7PPS RA7PPS `VEuc  1 e 1 @3863 ]
+"33372
+[v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
+"33433
+[v _WPUA WPUA `VEuc  1 e 1 @3897 ]
+"33494
+[v _ODCONA ODCONA `VEuc  1 e 1 @3898 ]
+"33982
+[v _ANSELB ANSELB `VEuc  1 e 1 @3907 ]
+"34043
+[v _WPUB WPUB `VEuc  1 e 1 @3908 ]
+"34104
+[v _ODCONB ODCONB `VEuc  1 e 1 @3909 ]
+"34592
+[v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
+"34653
+[v _WPUC WPUC `VEuc  1 e 1 @3919 ]
+"34714
+[v _ODCONC ODCONC `VEuc  1 e 1 @3920 ]
+"35202
+[v _ANSELD ANSELD `VEuc  1 e 1 @3929 ]
+"35263
+[v _WPUD WPUD `VEuc  1 e 1 @3930 ]
+"35324
+[v _ODCOND ODCOND `VEuc  1 e 1 @3931 ]
+"35629
+[v _ANSELE ANSELE `VEuc  1 e 1 @3940 ]
+"35660
+[v _WPUE WPUE `VEuc  1 e 1 @3941 ]
+"35697
+[v _ODCONE ODCONE `VEuc  1 e 1 @3942 ]
+"37777
+"37777
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"41235
+[v _TMR0IE TMR0IE `VEb  1 e 0 @14517 ]
+"41291
+[v _TMR1IF TMR1IF `VEb  1 e 0 @14464 ]
+"58 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab03_Rotate/Rotate.c
+[v _rotateReg rotateReg `uc  1 s 1 rotateReg ]
+"59
+[v _LEDs LEDs `uc  1 s 1 LEDs ]
+"57 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab04_AnalogToDigitalConversion/ADC.c
+[v ADC@adcResult adcResult `uc  1 s 1 adcResult ]
+"58
+[v ADC@LEDs LEDs `uc  1 s 1 LEDs ]
+"59 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab05_VariableSpeedRotate/VSR.c
+[v _delay delay `uc  1 s 1 delay ]
+"60
+[v VSR@rotateReg rotateReg `uc  1 s 1 rotateReg ]
+"61
+[v VSR@LEDs LEDs `uc  1 s 1 LEDs ]
+"59 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab06_PulseWidthModulation/PWM.c
+[v _adcResult adcResult `ui  1 e 2 0 ]
+"59 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab07_Timers/Timer1.c
+[v Timer1@rotateReg rotateReg `uc  1 s 1 rotateReg ]
+"60
+[v Timer1@LEDs LEDs `uc  1 s 1 LEDs ]
+"60 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab08_Interrupts/Interrupt.c
+[v Interrupt@rotateReg rotateReg `uc  1 s 1 rotateReg ]
+"61
+[v Interrupt@LEDs LEDs `uc  1 s 1 LEDs ]
+"58 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab10_EEPROM/EEPROM.c
+[v EEPROM@adcResult adcResult `ui  1 s 2 adcResult ]
+"59
+[v _ledDisplay ledDisplay `uc  1 s 1 ledDisplay ]
+"60
+[v EEPROM@LEDs LEDs `uc  1 s 1 LEDs ]
+"52 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/main.c
+[v _labNumber labNumber `uc  1 e 1 0 ]
+"53
+[v _switchEvent switchEvent `uc  1 e 1 0 ]
+"54
+[v _labState labState `uc  1 e 1 0 ]
+"55
+[v _btnState btnState `uc  1 e 1 0 ]
+"58 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr0.c
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"56 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEui  1 e 2 0 ]
+"60 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"96
+} 0
+"116
+[v _nextLab nextLab `(v  1 e 1 0 ]
+{
+"123
+} 0
+"98
+[v _checkButtonS1 checkButtonS1 `(v  1 e 1 0 ]
+{
+"114
+} 0
+"63 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab05_VariableSpeedRotate/VSR.c
+[v _VSR VSR `(v  1 e 1 0 ]
+{
+"101
+} 0
+"62 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab07_Timers/Timer1.c
+[v _Timer1 Timer1 `(v  1 e 1 0 ]
+{
+"103
+} 0
+"53 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab09_SleepWakeup/SleepWakeUp.c
+[v _SleepWakeUp SleepWakeUp `(v  1 e 1 0 ]
+{
+"83
+} 0
+"136 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/mcc.c
+[v _WWDT_TimeOutStatusGet WWDT_TimeOutStatusGet `(uc  1 e 1 0 ]
+{
+"140
+} 0
+"124
+[v _WWDT_SoftEnable WWDT_SoftEnable `(v  1 e 1 0 ]
+{
+"128
+} 0
+"130
+[v _WWDT_SoftDisable WWDT_SoftDisable `(v  1 e 1 0 ]
+{
+"134
+} 0
+"86
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"97
+} 0
+"116
+[v _WWDT_Initialize WWDT_Initialize `(v  1 e 1 0 ]
+{
+"122
+} 0
+"63 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"90
+} 0
+"63 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"93
+} 0
+"60 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"87
+} 0
+"89
+[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
+{
+"93
+} 0
+"57 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/pwm6.c
+[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"51 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"103
+[v PIN_MANAGER_Initialize@state state `uc  1 a 1 3 ]
+"117
+} 0
+"99 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"113
+} 0
+"58 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+{
+"102
+} 0
+"61 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab03_Rotate/Rotate.c
+[v _Rotate Rotate `(v  1 e 1 0 ]
+{
+"93
+} 0
+"97
+[v _Delay500ms Delay500ms `(v  1 e 1 0 ]
+{
+"98
+[v Delay500ms@i i `uc  1 a 1 4 ]
+"101
+} 0
+"61 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab06_PulseWidthModulation/PWM.c
+[v _PWM PWM `(v  1 e 1 0 ]
+{
+"114
+} 0
+"121 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr2.c
+[v _TMR2_StopTimer TMR2_StopTimer `(v  1 e 1 0 ]
+{
+"124
+} 0
+"115
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+{
+"119
+} 0
+"110
+[v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+{
+"113
+} 0
+"104
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+{
+"108
+} 0
+"74 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/pwm6.c
+[v _PWM6_LoadDutyValue PWM6_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v PWM6_LoadDutyValue@dutyValue dutyValue `ui  1 p 2 3 ]
+"81
+} 0
+"67 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab08_Interrupts/Interrupt.c
+[v _Interrupt Interrupt `(v  1 e 1 0 ]
+{
+"96
+} 0
+"136 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr0.c
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 3 ]
+"138
+} 0
+"56 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab01_HelloWorld/HelloWorld.c
+[v _HelloWorld HelloWorld `(v  1 e 1 0 ]
+{
+"72
+} 0
+"62 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab10_EEPROM/EEPROM.c
+[v _EEPROM EEPROM `(v  1 e 1 0 ]
+{
+"71
+[v EEPROM@eeAddr eeAddr `ui  1 a 2 2 ]
+"89
+} 0
+"179 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/memory.c
+[v _DATAEE_WriteByte DATAEE_WriteByte `(v  1 e 1 0 ]
+{
+"181
+[v DATAEE_WriteByte@GIEBitValue GIEBitValue `uc  1 a 1 6 ]
+"179
+[v DATAEE_WriteByte@bAdd bAdd `ui  1 p 2 3 ]
+[v DATAEE_WriteByte@bData bData `uc  1 p 1 5 ]
+"199
+} 0
+"201
+[v _DATAEE_ReadByte DATAEE_ReadByte `(uc  1 e 1 0 ]
+{
+[v DATAEE_ReadByte@bAdd bAdd `ui  1 p 2 3 ]
+"211
+} 0
+"59 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab02_Blink/Blink.c
+[v _Blink Blink `(v  1 e 1 0 ]
+{
+"61
+[v Blink@counter counter `uc  1 s 1 counter ]
+"95
+} 0
+"101 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr1.c
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+{
+"105
+} 0
+"95
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+{
+"99
+} 0
+"138
+[v _TMR1_Reload TMR1_Reload `(v  1 e 1 0 ]
+{
+"143
+} 0
+"60 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab04_AnalogToDigitalConversion/ADC.c
+[v _ADC ADC `(v  1 e 1 0 ]
+{
+"81
+} 0
+"128 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/adcc.c
+[v _ADCC_GetSingleConversion ADCC_GetSingleConversion `(ui  1 e 2 0 ]
+{
+[v ADCC_GetSingleConversion@channel channel `E14958  1 a 1 wreg ]
+[v ADCC_GetSingleConversion@channel channel `E14958  1 a 1 wreg ]
+"131
+[v ADCC_GetSingleConversion@channel channel `E14958  1 a 1 6 ]
+"152
+} 0
+"51 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"62
+} 0
+"123 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"133
+} 0
+"98 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/Labs/Lab08_Interrupts/Interrupt.c
+[v _LAB_ISR LAB_ISR `(v  1 e 1 0 ]
+{
+"109
+} 0
+"140 /home/mkhuthir/microchip/PIC16F18875_DemoCHPC.X/mcc_generated_files/tmr0.c
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"143
+} 0
