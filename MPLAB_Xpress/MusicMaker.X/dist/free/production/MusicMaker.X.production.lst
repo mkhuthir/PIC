@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.41 build -162212810 
-                                                                                               Wed Mar 29 12:59:57 2017
+                                                                                               Thu Mar 30 07:15:27 2017
 
 Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
      1                           	processor	16F18855
@@ -5125,7 +5125,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5111 ;;
   5112 ;; *************** function _main *****************
   5113 ;; Defined at:
-  5114 ;;		line 164 in file "main.c"
+  5114 ;;		line 162 in file "main.c"
   5115 ;; Parameters:    Size  Location     Type
   5116 ;;		None
   5117 ;; Auto vars:     Size  Location     Type
@@ -5172,7 +5172,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5153                           ;psect for function _main
   5154  036B                     _main:	
   5155                           
-  5156                           ;main.c: 166: song_t* currSong = &songs[0];
+  5156                           ;main.c: 164: song_t* currSong = &songs[0];
   5157                           
   5158                           ;incstack = 0
   5159                           ; Regs used in _main: [wreg-fsr1h+status,2+status,0+pclath+cstack]
@@ -5182,10 +5182,10 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5163  036E  0846               	movf	??_main,w
   5164  036F  00D0               	movwf	main@currSong
   5165                           
-  5166                           ;main.c: 169: SYSTEM_Initialize();
+  5166                           ;main.c: 167: SYSTEM_Initialize();
   5167  0370  318F  272E  3183   	fcall	_SYSTEM_Initialize
   5168                           
-  5169                           ;main.c: 172: SetNCOFreq(rest);
+  5169                           ;main.c: 170: SetNCOFreq(rest);
   5170  0373  0020               	movlb	0	; select bank0
   5171  0374  0851               	movf	_rest,w
   5172  0375  00F0               	movwf	SetNCOFreq@value
@@ -5197,8 +5197,8 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5178  037D  2BFE               	goto	l2012
   5179  037E                     l2014:	
   5180                           
-  5181                           ;main.c: 177: uint8_t i;
-  5182                           ;main.c: 181: setTempo(currSong->tempo);
+  5181                           ;main.c: 175: uint8_t i;
+  5182                           ;main.c: 179: setTempo(currSong->tempo);
   5183  037E  0850               	movf	main@currSong,w
   5184  037F  3E06               	addlw	6
   5185  0380  0086               	movwf	6
@@ -5209,7 +5209,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5190  0385  00BF               	movwf	setTempo@tempo+1
   5191  0386  3181  217B  3183   	fcall	_setTempo
   5192                           
-  5193                           ;main.c: 183: printf("\n\rPlaying %s:\n\rTempo = %i", currSong->name, currSong->tempo);
+  5193                           ;main.c: 181: printf("\n\rPlaying %s:\n\rTempo = %i", currSong->name, currSong->tempo);
   5194  0389  300A               	movlw	low (STR_8| (0+32768))
   5195  038A  0020               	movlb	0	; select bank0
   5196  038B  00A2               	movwf	printf@f
@@ -5232,7 +5232,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5213  039C  00A7               	movwf	?_printf+5
   5214  039D  3184  2445  3183   	fcall	_printf
   5215                           
-  5216                           ;main.c: 185: for (i = 0; i < currSong->length; i ++){
+  5216                           ;main.c: 183: for (i = 0; i < currSong->length; i ++){
   5217  03A0  0020               	movlb	0	; select bank0
   5218  03A1  01CE               	clrf	main@i
   5219  03A2                     l2024:	
@@ -5257,7 +5257,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5238  03B3  1803               	btfsc	3,0
   5239  03B4  2BFE               	goto	l2012
   5240                           
-  5241                           ;main.c: 187: printf("\n\r\t%4i", currSong->melody[i].pitch);
+  5241                           ;main.c: 185: printf("\n\r\t%4i", currSong->melody[i].pitch);
   5242  03B5  3043               	movlw	low (STR_9| (0+32768))
   5243  03B6  00A2               	movwf	printf@f
   5244  03B7  3088               	movlw	high (STR_9| (0+32768))
@@ -5291,7 +5291,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5272  03D3  00A6               	movwf	?_printf+4
   5273  03D4  3184  2445  3183   	fcall	_printf
   5274                           
-  5275                           ;main.c: 188: playNote(currSong->melody[i]);
+  5275                           ;main.c: 186: playNote(currSong->melody[i]);
   5276  03D7  0020               	movlb	0	; select bank0
   5277  03D8  084E               	movf	main@i,w
   5278  03D9  00C6               	movwf	??_main
@@ -5330,19 +5330,19 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5311  03FC  07CE               	addwf	main@i,f
   5312  03FD  2BA2               	goto	l2024
   5313  03FE                     l2012:	
-  5314                           ;main.c: 174: while (1)
+  5314                           ;main.c: 172: while (1)
   5315                           
-  5316                           ;main.c: 189: }
-  5317                           ;main.c: 190: } else{
+  5316                           ;main.c: 187: }
+  5317                           ;main.c: 188: } else{
   5318                           
   5319                           
-  5320                           ;main.c: 175: {
-  5321                           ;main.c: 176: if(PORTAbits.RA5 == 0){
+  5320                           ;main.c: 173: {
+  5321                           ;main.c: 174: if(PORTAbits.RA5 == 0){
   5322  03FE  0020               	movlb	0	; select bank0
   5323  03FF  1E8C               	btfss	12,5	;volatile
   5324  0400  2B7E               	goto	l2014
   5325                           
-  5326                           ;main.c: 192: uint16_t result = ADCC_GetSingleConversion(POT);
+  5326                           ;main.c: 190: uint16_t result = ADCC_GetSingleConversion(POT);
   5327  0401  3004               	movlw	4
   5328  0402  318F  271E  3183   	fcall	_ADCC_GetSingleConversion
   5329  0405  0871               	movf	?_ADCC_GetSingleConversion+1,w
@@ -5351,13 +5351,13 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5332  0408  0870               	movf	?_ADCC_GetSingleConversion,w
   5333  0409  00CA               	movwf	main@result
   5334                           
-  5335                           ;main.c: 193: uint16_t songResultConv = 1024 / (sizeof(songs)/sizeof(song_t));
+  5335                           ;main.c: 191: uint16_t songResultConv = 1024 / (sizeof(songs)/sizeof(song_t));
   5336  040A  30AA               	movlw	170
   5337  040B  00CC               	movwf	main@songResultConv
   5338  040C  3000               	movlw	0
   5339  040D  00CD               	movwf	main@songResultConv+1
   5340                           
-  5341                           ;main.c: 194: uint8_t songNum = result/(songResultConv+1);
+  5341                           ;main.c: 192: uint8_t songNum = result/(songResultConv+1);
   5342  040E  084C               	movf	main@songResultConv,w
   5343  040F  3E01               	addlw	1
   5344  0410  00F0               	movwf	___lwdiv@divisor
@@ -5375,7 +5375,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5356  041E  0846               	movf	??_main,w
   5357  041F  00CF               	movwf	main@songNum
   5358                           
-  5359                           ;main.c: 195: currSong = &songs[songNum];
+  5359                           ;main.c: 193: currSong = &songs[songNum];
   5360  0420  084F               	movf	main@songNum,w
   5361  0421  00C6               	movwf	??_main
   5362  0422  3002               	movlw	2
@@ -5390,13 +5390,13 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5371  042A  0847               	movf	??_main+1,w
   5372  042B  00D0               	movwf	main@currSong
   5373                           
-  5374                           ;main.c: 197: songNum++;
+  5374                           ;main.c: 195: songNum++;
   5375  042C  3001               	movlw	1
   5376  042D  00C6               	movwf	??_main
   5377  042E  0846               	movf	??_main,w
   5378  042F  07CF               	addwf	main@songNum,f
   5379                           
-  5380                           ;main.c: 198: if(songNum & 0x01){ do { LATAbits.LATA0 = 1; } while(0); } else {do { LATA
+  5380                           ;main.c: 196: if(songNum & 0x01){ do { LATAbits.LATA0 = 1; } while(0); } else {do { LATA
       +                          bits.LATA0 = 0; } while(0);}
   5381  0430  1C4F               	btfss	main@songNum,0
   5382  0431  2C34               	goto	l405
@@ -5406,7 +5406,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5386  0434  1016               	bcf	22,0	;volatile
   5387  0435                     l404:	
   5388                           
-  5389                           ;main.c: 199: if(songNum & 0x02){ do { LATAbits.LATA1 = 1; } while(0); } else {do { LATA
+  5389                           ;main.c: 197: if(songNum & 0x02){ do { LATAbits.LATA1 = 1; } while(0); } else {do { LATA
       +                          bits.LATA1 = 0; } while(0);}
   5390  0435  1CCF               	btfss	main@songNum,1
   5391  0436  2C39               	goto	l411
@@ -5416,7 +5416,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5395  0439  1096               	bcf	22,1	;volatile
   5396  043A                     l410:	
   5397                           
-  5398                           ;main.c: 200: if(songNum & 0x04){ do { LATAbits.LATA2 = 1; } while(0); } else {do { LATA
+  5398                           ;main.c: 198: if(songNum & 0x04){ do { LATAbits.LATA2 = 1; } while(0); } else {do { LATA
       +                          bits.LATA2 = 0; } while(0);}
   5399  043A  1D4F               	btfss	main@songNum,2
   5400  043B  2C3E               	goto	l417
@@ -5426,7 +5426,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5404  043E  1116               	bcf	22,2	;volatile
   5405  043F                     l416:	
   5406                           
-  5407                           ;main.c: 201: if(songNum & 0x08){ do { LATAbits.LATA3 = 1; } while(0); } else {do { LATA
+  5407                           ;main.c: 199: if(songNum & 0x08){ do { LATAbits.LATA3 = 1; } while(0); } else {do { LATA
       +                          bits.LATA3 = 0; } while(0);}
   5408  043F  1DCF               	btfss	main@songNum,3
   5409  0440  2C43               	goto	l423
@@ -5441,7 +5441,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5418  017B                     __ptext1:	
   5419 ;; *************** function _setTempo *****************
   5420 ;; Defined at:
-  5421 ;;		line 158 in file "main.c"
+  5421 ;;		line 156 in file "main.c"
   5422 ;; Parameters:    Size  Location     Type
   5423 ;;  tempo           2   30[BANK0 ] int 
   5424 ;; Auto vars:     Size  Location     Type
@@ -5484,7 +5484,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5456                           ;psect for function _setTempo
   5457  017B                     _setTempo:	
   5458                           
-  5459                           ;main.c: 159: uint24_t tempo_ms = ((60*100/tempo)*10)/4;
+  5459                           ;main.c: 157: uint24_t tempo_ms = ((60*100/tempo)*10)/4;
   5460                           
   5461                           ;incstack = 0
   5462                           ; Regs used in _setTempo: [wreg+status,2+status,0+pclath+cstack]
@@ -5513,7 +5513,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5485  0195  0879               	movf	?___wmul,w
   5486  0196  00C3               	movwf	_setTempo$1344
   5487                           
-  5488                           ;main.c: 159: uint24_t tempo_ms = ((60*100/tempo)*10)/4;
+  5488                           ;main.c: 157: uint24_t tempo_ms = ((60*100/tempo)*10)/4;
   5489  0197  3004               	movlw	4
   5490  0198  00F0               	movwf	___awdiv@divisor
   5491  0199  3000               	movlw	0
@@ -5533,7 +5533,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5505  01A9  0989               	comf	9,f
   5506  01AA  00C2               	movwf	setTempo@tempo_ms+2
   5507                           
-  5508                           ;main.c: 160: uint8_t tempo_period = (uint8_t) (tempo_ms / 1.024);
+  5508                           ;main.c: 158: uint8_t tempo_period = (uint8_t) (tempo_ms / 1.024);
   5509  01AB  0840               	movf	setTempo@tempo_ms,w
   5510  01AC  00F8               	movwf	___lttoft@c
   5511  01AD  0841               	movf	setTempo@tempo_ms+1,w
@@ -5569,7 +5569,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5541  01D1  087D               	movf	??_setTempo,w
   5542  01D2  00C5               	movwf	setTempo@tempo_period
   5543                           
-  5544                           ;main.c: 161: TMR0_Load8bitPeriod(tempo_period);
+  5544                           ;main.c: 159: TMR0_Load8bitPeriod(tempo_period);
   5545  01D3  0845               	movf	setTempo@tempo_period,w
   5546  01D4  3180  2006         	fcall	_TMR0_Load8bitPeriod
   5547  01D6  0008               	return
@@ -6411,7 +6411,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   6353  000B                     __ptext8:	
   6354 ;; *************** function _playNote *****************
   6355 ;; Defined at:
-  6356 ;;		line 146 in file "main.c"
+  6356 ;;		line 144 in file "main.c"
   6357 ;; Parameters:    Size  Location     Type
   6358 ;;  note            4   25[BANK0 ] struct .
   6359 ;; Auto vars:     Size  Location     Type
@@ -6449,7 +6449,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   6386                           ;psect for function _playNote
   6387  000B                     _playNote:	
   6388                           
-  6389                           ;main.c: 147: SetNCOFreq(note.pitch);
+  6389                           ;main.c: 145: SetNCOFreq(note.pitch);
   6390                           
   6391                           ;incstack = 0
   6392                           ; Regs used in _playNote: [wreg-fsr1h+status,2+status,0+pclath+cstack]
@@ -6462,12 +6462,12 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   6399  0011  00F2               	movwf	SetNCOFreq@value+2
   6400  0012  318E  26C8  3180   	fcall	_SetNCOFreq
   6401                           
-  6402                           ;main.c: 148: delay(note.length);
+  6402                           ;main.c: 146: delay(note.length);
   6403  0015  0020               	movlb	0	; select bank0
   6404  0016  083C               	movf	playNote@note+3,w
   6405  0017  318F  276C  3180   	fcall	_delay
   6406                           
-  6407                           ;main.c: 149: SetNCOFreq(rest);
+  6407                           ;main.c: 147: SetNCOFreq(rest);
   6408  001A  0020               	movlb	0	; select bank0
   6409  001B  0851               	movf	_rest,w
   6410  001C  00F0               	movwf	SetNCOFreq@value
@@ -6477,7 +6477,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   6414  0020  00F2               	movwf	SetNCOFreq@value+2
   6415  0021  318E  26C8  3180   	fcall	_SetNCOFreq
   6416                           
-  6417                           ;main.c: 150: _delay((unsigned long)((10)*(1000000/4000.0)));
+  6417                           ;main.c: 148: _delay((unsigned long)((10)*(1000000/4000.0)));
   6418  0024  3004               	movlw	4
   6419  0025  0020               	movlb	0	; select bank0
   6420  0026  00BD               	movwf	??_playNote
@@ -6495,7 +6495,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   6432  0F6C                     __ptext9:	
   6433 ;; *************** function _delay *****************
   6434 ;; Defined at:
-  6435 ;;		line 49 in file "main.c"
+  6435 ;;		line 47 in file "main.c"
   6436 ;; Parameters:    Size  Location     Type
   6437 ;;  noteLength      1    wreg     unsigned char 
   6438 ;; Auto vars:     Size  Location     Type
@@ -6540,31 +6540,31 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   6472  0F6C  0020               	movlb	0	; select bank0
   6473  0F6D  00B8               	movwf	delay@noteLength
   6474  0F6E                     l369:	
-  6475                           ;main.c: 50: do {
+  6475                           ;main.c: 48: do {
   6476                           
   6477                           
-  6478                           ;main.c: 51: printf(".");
+  6478                           ;main.c: 49: printf(".");
   6479  0F6E  3059               	movlw	low (STR_1| (0+32768))
   6480  0F6F  00A2               	movwf	printf@f
   6481  0F70  3088               	movlw	high (STR_1| (0+32768))
   6482  0F71  00A3               	movwf	printf@f+1
   6483  0F72  3184  2445  318F   	fcall	_printf
   6484                           
-  6485                           ;main.c: 52: PIR0bits.TMR0IF = 0;
+  6485                           ;main.c: 50: PIR0bits.TMR0IF = 0;
   6486  0F75  002E               	movlb	14	; select bank14
   6487  0F76  128C               	bcf	12,5	;volatile
   6488                           
-  6489                           ;main.c: 53: TMR0_StartTimer();
+  6489                           ;main.c: 51: TMR0_StartTimer();
   6490  0F77  318E  26BB  318F   	fcall	_TMR0_StartTimer
   6491  0F7A                     l1846:	
-  6492                           ;main.c: 54: while(!TMR0_HasOverflowOccured()) {};
+  6492                           ;main.c: 52: while(!TMR0_HasOverflowOccured()) {};
   6493                           
   6494  0F7A  318E  26BE  318F   	fcall	_TMR0_HasOverflowOccured
   6495  0F7D  3A00               	xorlw	0
   6496  0F7E  1903               	skipnz
   6497  0F7F  2F7A               	goto	l1846
   6498                           
-  6499                           ;main.c: 55: } while(--noteLength > 0);
+  6499                           ;main.c: 53: } while(--noteLength > 0);
   6500  0F80  3001               	movlw	1
   6501  0F81  0020               	movlb	0	; select bank0
   6502  0F82  02B8               	subwf	delay@noteLength,f
@@ -7710,7 +7710,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   7601  0EC8                     __ptext18:	
   7602 ;; *************** function _SetNCOFreq *****************
   7603 ;; Defined at:
-  7604 ;;		line 43 in file "main.c"
+  7604 ;;		line 41 in file "main.c"
   7605 ;; Parameters:    Size  Location     Type
   7606 ;;  value           3    0[COMMON] struct .
   7607 ;; Auto vars:     Size  Location     Type
@@ -7747,7 +7747,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   7633                           ;psect for function _SetNCOFreq
   7634  0EC8                     _SetNCOFreq:	
   7635                           
-  7636                           ;main.c: 44: NCO1INCU = value.u_byte;
+  7636                           ;main.c: 42: NCO1INCU = value.u_byte;
   7637                           
   7638                           ;incstack = 0
   7639                           ; Regs used in _SetNCOFreq: [wreg]
@@ -7755,11 +7755,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   7641  0EC9  002B               	movlb	11	; select bank11
   7642  0ECA  0091               	movwf	17	;volatile
   7643                           
-  7644                           ;main.c: 45: NCO1INCH = value.h_byte;
+  7644                           ;main.c: 43: NCO1INCH = value.h_byte;
   7645  0ECB  0871               	movf	SetNCOFreq@value+1,w
   7646  0ECC  0090               	movwf	16	;volatile
   7647                           
-  7648                           ;main.c: 46: NCO1INCL = value.l_byte;
+  7648                           ;main.c: 44: NCO1INCL = value.l_byte;
   7649  0ECD  0870               	movf	SetNCOFreq@value,w
   7650  0ECE  008F               	movwf	15	;volatile
   7651  0ECF  0008               	return
@@ -8925,7 +8925,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.41 build -162212810 
-Symbol Table                                                                                   Wed Mar 29 12:59:57 2017
+Symbol Table                                                                                   Thu Mar 30 07:15:27 2017
 
   __end_of_TMR0_HasOverflowOccured 0EC3                        __CFG_CP$OFF 0000  
                      ___awdiv@sign 0076                ___wmul@multiplicand 007B  

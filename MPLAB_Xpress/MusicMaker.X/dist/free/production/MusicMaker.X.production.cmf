@@ -11,6 +11,10 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$/tmp/xcXWDPFQl.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 2 2 2 2
+config CONFIG 0 8007 8007 5 2
 $dist/free/production/MusicMaker.X.production.obj
 cinit CODE 0 7C1 7C1 3F 2
 text1 CODE 0 17B 17B 5C 2
@@ -53,10 +57,6 @@ idataBANK3 CODE 0 DE DE 4C 2
 dataBANK1 BANK1 1 A0 A0 30 1
 dataBANK2 BANK2 1 120 120 40 1
 dataBANK3 BANK3 1 1A0 1A0 4C 1
-$/tmp/xcXd2nBpl.obj
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 2 2 2 2
-config CONFIG 0 8007 8007 5 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -142,175 +142,175 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/free/production/MusicMaker.X.production.obj
-7C1 cinit CODE >8559:/tmp/xcXt4bPb9
-7C1 cinit CODE >8562:/tmp/xcXt4bPb9
-7C1 cinit CODE >8628:/tmp/xcXt4bPb9
-7C2 cinit CODE >8629:/tmp/xcXt4bPb9
-7C3 cinit CODE >8630:/tmp/xcXt4bPb9
-7C4 cinit CODE >8631:/tmp/xcXt4bPb9
-7C5 cinit CODE >8632:/tmp/xcXt4bPb9
-7C6 cinit CODE >8633:/tmp/xcXt4bPb9
-7C7 cinit CODE >8634:/tmp/xcXt4bPb9
-7C8 cinit CODE >8635:/tmp/xcXt4bPb9
-7C9 cinit CODE >8636:/tmp/xcXt4bPb9
-7CA cinit CODE >8637:/tmp/xcXt4bPb9
-7CB cinit CODE >8638:/tmp/xcXt4bPb9
-7CC cinit CODE >8639:/tmp/xcXt4bPb9
-7CF cinit CODE >8643:/tmp/xcXt4bPb9
-7D0 cinit CODE >8644:/tmp/xcXt4bPb9
-7D1 cinit CODE >8645:/tmp/xcXt4bPb9
-7D2 cinit CODE >8646:/tmp/xcXt4bPb9
-7D3 cinit CODE >8647:/tmp/xcXt4bPb9
-7D4 cinit CODE >8648:/tmp/xcXt4bPb9
-7D5 cinit CODE >8649:/tmp/xcXt4bPb9
-7D6 cinit CODE >8650:/tmp/xcXt4bPb9
-7D7 cinit CODE >8651:/tmp/xcXt4bPb9
-7D8 cinit CODE >8652:/tmp/xcXt4bPb9
-7D9 cinit CODE >8653:/tmp/xcXt4bPb9
-7DA cinit CODE >8654:/tmp/xcXt4bPb9
-7DD cinit CODE >8658:/tmp/xcXt4bPb9
-7DE cinit CODE >8659:/tmp/xcXt4bPb9
-7DF cinit CODE >8660:/tmp/xcXt4bPb9
-7E0 cinit CODE >8661:/tmp/xcXt4bPb9
-7E1 cinit CODE >8662:/tmp/xcXt4bPb9
-7E2 cinit CODE >8663:/tmp/xcXt4bPb9
-7E3 cinit CODE >8664:/tmp/xcXt4bPb9
-7E4 cinit CODE >8665:/tmp/xcXt4bPb9
-7E5 cinit CODE >8666:/tmp/xcXt4bPb9
-7E6 cinit CODE >8667:/tmp/xcXt4bPb9
-7E7 cinit CODE >8668:/tmp/xcXt4bPb9
-7E8 cinit CODE >8669:/tmp/xcXt4bPb9
-7EB cinit CODE >8673:/tmp/xcXt4bPb9
-7EC cinit CODE >8674:/tmp/xcXt4bPb9
-7ED cinit CODE >8675:/tmp/xcXt4bPb9
-7EE cinit CODE >8676:/tmp/xcXt4bPb9
-7EF cinit CODE >8677:/tmp/xcXt4bPb9
-7F0 cinit CODE >8678:/tmp/xcXt4bPb9
-7F1 cinit CODE >8679:/tmp/xcXt4bPb9
-7F2 cinit CODE >8680:/tmp/xcXt4bPb9
-7F3 cinit CODE >8681:/tmp/xcXt4bPb9
-7F4 cinit CODE >8682:/tmp/xcXt4bPb9
-7F5 cinit CODE >8683:/tmp/xcXt4bPb9
-7F6 cinit CODE >8684:/tmp/xcXt4bPb9
-7F8 cinit CODE >8689:/tmp/xcXt4bPb9
-7F9 cinit CODE >8690:/tmp/xcXt4bPb9
-7FA cinit CODE >8691:/tmp/xcXt4bPb9
-7FB cinit CODE >8692:/tmp/xcXt4bPb9
-7FC cinit CODE >8693:/tmp/xcXt4bPb9
-7FD cinit CODE >8699:/tmp/xcXt4bPb9
-7FD cinit CODE >8701:/tmp/xcXt4bPb9
-7FE cinit CODE >8702:/tmp/xcXt4bPb9
-F1E text27 CODE >128:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F1F text27 CODE >131:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F22 text27 CODE >134:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F23 text27 CODE >137:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F24 text27 CODE >140:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F25 text27 CODE >143:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F25 text27 CODE >145:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F27 text27 CODE >148:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F28 text27 CODE >151:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F54 text26 CODE >58:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F54 text26 CODE >62:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F56 text26 CODE >64:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F57 text26 CODE >66:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F58 text26 CODE >68:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F59 text26 CODE >70:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F5A text26 CODE >72:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F5B text26 CODE >74:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F5C text26 CODE >76:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F5D text26 CODE >78:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F5E text26 CODE >80:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F5F text26 CODE >82:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F60 text26 CODE >84:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F62 text26 CODE >86:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F63 text26 CODE >88:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F64 text26 CODE >90:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F65 text26 CODE >92:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F66 text26 CODE >94:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F67 text26 CODE >96:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F68 text26 CODE >99:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-F6B text26 CODE >102:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/adcc.c
-EE1 text25 CODE >55:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EE1 text25 CODE >60:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EE4 text25 CODE >63:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EE6 text25 CODE >66:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EE8 text25 CODE >69:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EEA text25 CODE >72:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EEB text25 CODE >74:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EEC text24 CODE >57:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-EEC text24 CODE >61:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-EEE text24 CODE >63:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-EEF text24 CODE >65:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-EF0 text24 CODE >67:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-EF1 text24 CODE >69:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-EF2 text24 CODE >70:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-EF4 text24 CODE >71:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-EF6 text24 CODE >73:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-EF7 text24 CODE >75:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/nco1.c
-ED8 text23 CODE >93:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-ED8 text23 CODE >96:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-EDB text23 CODE >98:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-EDC text23 CODE >100:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-EDD text23 CODE >102:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-EDF text23 CODE >104:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-EE0 text23 CODE >107:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-62 text22 CODE >51:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-62 text22 CODE >56:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-64 text22 CODE >57:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-65 text22 CODE >58:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-66 text22 CODE >63:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-68 text22 CODE >64:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-6A text22 CODE >65:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-6C text22 CODE >70:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-6F text22 CODE >71:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-71 text22 CODE >72:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-73 text22 CODE >77:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-74 text22 CODE >78:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-75 text22 CODE >79:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-76 text22 CODE >80:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-77 text22 CODE >85:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-78 text22 CODE >86:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-79 text22 CODE >87:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-7A text22 CODE >94:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-7E text22 CODE >95:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-7F text22 CODE >96:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-82 text22 CODE >97:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-84 text22 CODE >98:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-85 text22 CODE >100:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-88 text22 CODE >101:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-8A text22 CODE >102:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-8F text22 CODE >103:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-92 text22 CODE >105:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-95 text22 CODE >106:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-97 text22 CODE >107:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-98 text22 CODE >109:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-9D text22 CODE >110:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
-EBB text21 CODE >84:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-EBB text21 CODE >87:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-EBD text21 CODE >88:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-EF8 text20 CODE >60:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-EF8 text20 CODE >65:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-EFA text20 CODE >68:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-EFC text20 CODE >71:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-EFE text20 CODE >74:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-EFF text20 CODE >78:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-F01 text20 CODE >81:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-F03 text20 CODE >82:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-F2E text19 CODE >82:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-F2E text19 CODE >85:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-F31 text19 CODE >86:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-F34 text19 CODE >87:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-F37 text19 CODE >88:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-F3A text19 CODE >89:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-F3D text19 CODE >90:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-F3F text19 CODE >91:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/mcc.c
-EC8 text18 CODE >43:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-EC8 text18 CODE >44:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-ECB text18 CODE >45:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-ECD text18 CODE >46:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-ECF text18 CODE >47:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-EBE text17 CODE >117:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-EBE text17 CODE >120:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+7C1 cinit CODE >8559:/tmp/xcX2Kx0Go
+7C1 cinit CODE >8562:/tmp/xcX2Kx0Go
+7C1 cinit CODE >8628:/tmp/xcX2Kx0Go
+7C2 cinit CODE >8629:/tmp/xcX2Kx0Go
+7C3 cinit CODE >8630:/tmp/xcX2Kx0Go
+7C4 cinit CODE >8631:/tmp/xcX2Kx0Go
+7C5 cinit CODE >8632:/tmp/xcX2Kx0Go
+7C6 cinit CODE >8633:/tmp/xcX2Kx0Go
+7C7 cinit CODE >8634:/tmp/xcX2Kx0Go
+7C8 cinit CODE >8635:/tmp/xcX2Kx0Go
+7C9 cinit CODE >8636:/tmp/xcX2Kx0Go
+7CA cinit CODE >8637:/tmp/xcX2Kx0Go
+7CB cinit CODE >8638:/tmp/xcX2Kx0Go
+7CC cinit CODE >8639:/tmp/xcX2Kx0Go
+7CF cinit CODE >8643:/tmp/xcX2Kx0Go
+7D0 cinit CODE >8644:/tmp/xcX2Kx0Go
+7D1 cinit CODE >8645:/tmp/xcX2Kx0Go
+7D2 cinit CODE >8646:/tmp/xcX2Kx0Go
+7D3 cinit CODE >8647:/tmp/xcX2Kx0Go
+7D4 cinit CODE >8648:/tmp/xcX2Kx0Go
+7D5 cinit CODE >8649:/tmp/xcX2Kx0Go
+7D6 cinit CODE >8650:/tmp/xcX2Kx0Go
+7D7 cinit CODE >8651:/tmp/xcX2Kx0Go
+7D8 cinit CODE >8652:/tmp/xcX2Kx0Go
+7D9 cinit CODE >8653:/tmp/xcX2Kx0Go
+7DA cinit CODE >8654:/tmp/xcX2Kx0Go
+7DD cinit CODE >8658:/tmp/xcX2Kx0Go
+7DE cinit CODE >8659:/tmp/xcX2Kx0Go
+7DF cinit CODE >8660:/tmp/xcX2Kx0Go
+7E0 cinit CODE >8661:/tmp/xcX2Kx0Go
+7E1 cinit CODE >8662:/tmp/xcX2Kx0Go
+7E2 cinit CODE >8663:/tmp/xcX2Kx0Go
+7E3 cinit CODE >8664:/tmp/xcX2Kx0Go
+7E4 cinit CODE >8665:/tmp/xcX2Kx0Go
+7E5 cinit CODE >8666:/tmp/xcX2Kx0Go
+7E6 cinit CODE >8667:/tmp/xcX2Kx0Go
+7E7 cinit CODE >8668:/tmp/xcX2Kx0Go
+7E8 cinit CODE >8669:/tmp/xcX2Kx0Go
+7EB cinit CODE >8673:/tmp/xcX2Kx0Go
+7EC cinit CODE >8674:/tmp/xcX2Kx0Go
+7ED cinit CODE >8675:/tmp/xcX2Kx0Go
+7EE cinit CODE >8676:/tmp/xcX2Kx0Go
+7EF cinit CODE >8677:/tmp/xcX2Kx0Go
+7F0 cinit CODE >8678:/tmp/xcX2Kx0Go
+7F1 cinit CODE >8679:/tmp/xcX2Kx0Go
+7F2 cinit CODE >8680:/tmp/xcX2Kx0Go
+7F3 cinit CODE >8681:/tmp/xcX2Kx0Go
+7F4 cinit CODE >8682:/tmp/xcX2Kx0Go
+7F5 cinit CODE >8683:/tmp/xcX2Kx0Go
+7F6 cinit CODE >8684:/tmp/xcX2Kx0Go
+7F8 cinit CODE >8689:/tmp/xcX2Kx0Go
+7F9 cinit CODE >8690:/tmp/xcX2Kx0Go
+7FA cinit CODE >8691:/tmp/xcX2Kx0Go
+7FB cinit CODE >8692:/tmp/xcX2Kx0Go
+7FC cinit CODE >8693:/tmp/xcX2Kx0Go
+7FD cinit CODE >8699:/tmp/xcX2Kx0Go
+7FD cinit CODE >8701:/tmp/xcX2Kx0Go
+7FE cinit CODE >8702:/tmp/xcX2Kx0Go
+F1E text27 CODE >128:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F1F text27 CODE >131:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F22 text27 CODE >134:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F23 text27 CODE >137:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F24 text27 CODE >140:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F25 text27 CODE >143:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F25 text27 CODE >145:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F27 text27 CODE >148:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F28 text27 CODE >151:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F54 text26 CODE >58:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F54 text26 CODE >62:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F56 text26 CODE >64:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F57 text26 CODE >66:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F58 text26 CODE >68:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F59 text26 CODE >70:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5A text26 CODE >72:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5B text26 CODE >74:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5C text26 CODE >76:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5D text26 CODE >78:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5E text26 CODE >80:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F5F text26 CODE >82:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F60 text26 CODE >84:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F62 text26 CODE >86:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F63 text26 CODE >88:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F64 text26 CODE >90:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F65 text26 CODE >92:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F66 text26 CODE >94:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F67 text26 CODE >96:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F68 text26 CODE >99:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+F6B text26 CODE >102:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/adcc.c
+EE1 text25 CODE >55:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EE1 text25 CODE >60:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EE4 text25 CODE >63:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EE6 text25 CODE >66:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EE8 text25 CODE >69:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EEA text25 CODE >72:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EEB text25 CODE >74:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EEC text24 CODE >57:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EEC text24 CODE >61:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EEE text24 CODE >63:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EEF text24 CODE >65:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF0 text24 CODE >67:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF1 text24 CODE >69:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF2 text24 CODE >70:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF4 text24 CODE >71:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF6 text24 CODE >73:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+EF7 text24 CODE >75:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/nco1.c
+ED8 text23 CODE >93:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+ED8 text23 CODE >96:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EDB text23 CODE >98:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EDC text23 CODE >100:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EDD text23 CODE >102:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EDF text23 CODE >104:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EE0 text23 CODE >107:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+62 text22 CODE >51:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+62 text22 CODE >56:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+64 text22 CODE >57:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+65 text22 CODE >58:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+66 text22 CODE >63:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+68 text22 CODE >64:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+6A text22 CODE >65:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+6C text22 CODE >70:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+6F text22 CODE >71:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+71 text22 CODE >72:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+73 text22 CODE >77:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+74 text22 CODE >78:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+75 text22 CODE >79:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+76 text22 CODE >80:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+77 text22 CODE >85:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+78 text22 CODE >86:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+79 text22 CODE >87:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+7A text22 CODE >94:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+7E text22 CODE >95:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+7F text22 CODE >96:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+82 text22 CODE >97:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+84 text22 CODE >98:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+85 text22 CODE >100:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+88 text22 CODE >101:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+8A text22 CODE >102:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+8F text22 CODE >103:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+92 text22 CODE >105:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+95 text22 CODE >106:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+97 text22 CODE >107:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+98 text22 CODE >109:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+9D text22 CODE >110:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/pin_manager.c
+EBB text21 CODE >84:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EBB text21 CODE >87:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EBD text21 CODE >88:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EF8 text20 CODE >60:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EF8 text20 CODE >65:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EFA text20 CODE >68:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EFC text20 CODE >71:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EFE text20 CODE >74:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EFF text20 CODE >78:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+F01 text20 CODE >81:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+F03 text20 CODE >82:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+F2E text19 CODE >82:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F2E text19 CODE >85:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F31 text19 CODE >86:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F34 text19 CODE >87:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F37 text19 CODE >88:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F3A text19 CODE >89:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F3D text19 CODE >90:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+F3F text19 CODE >91:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/mcc.c
+EC8 text18 CODE >41:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+EC8 text18 CODE >42:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+ECB text18 CODE >43:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+ECD text18 CODE >44:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+ECF text18 CODE >45:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+EBE text17 CODE >117:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+EBE text17 CODE >120:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
 2E text16 CODE >6:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
 2E text16 CODE >14:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
 30 text16 CODE >15:/opt/microchip/xc8/v1.41/sources/common/lwdiv.c
@@ -348,14 +348,14 @@ F9A text14 CODE >49:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
 F9E text14 CODE >52:/opt/microchip/xc8/v1.41/sources/common/Umul16.c
 F10 text13 CODE >8:/opt/microchip/xc8/v1.41/sources/common/isdigit.c
 F11 text13 CODE >14:/opt/microchip/xc8/v1.41/sources/common/isdigit.c
-ED0 text12 CODE >96:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-ED1 text12 CODE >98:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-ED1 text12 CODE >100:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-ED4 text12 CODE >102:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-ED7 text12 CODE >103:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EC3 text11 CODE >110:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EC4 text11 CODE >112:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
-EC7 text11 CODE >113:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+ED0 text12 CODE >96:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+ED1 text12 CODE >98:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+ED1 text12 CODE >100:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+ED4 text12 CODE >102:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+ED7 text12 CODE >103:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EC3 text11 CODE >110:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EC4 text11 CODE >112:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
+EC7 text11 CODE >113:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/eusart.c
 445 text10 CODE >464:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
 445 text10 CODE >533:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
 44A text10 CODE >536:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
@@ -408,22 +408,22 @@ EC7 text11 CODE >113:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_gene
 5CF text10 CODE >1524:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
 5D3 text10 CODE >1474:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
 5D4 text10 CODE >1541:/opt/microchip/xc8/v1.41/sources/common/doprnt.c
-F6C text9 CODE >49:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-F6E text9 CODE >50:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-F6E text9 CODE >51:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-F75 text9 CODE >52:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-F77 text9 CODE >53:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-F7A text9 CODE >54:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-F80 text9 CODE >55:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-B text8 CODE >146:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-B text8 CODE >147:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-15 text8 CODE >148:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-1A text8 CODE >149:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-24 text8 CODE >150:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-2D text8 CODE >151:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-6 text7 CODE >112:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-7 text7 CODE >115:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
-A text7 CODE >116:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+F6C text9 CODE >47:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+F6E text9 CODE >48:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+F6E text9 CODE >49:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+F75 text9 CODE >50:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+F77 text9 CODE >51:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+F7A text9 CODE >52:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+F80 text9 CODE >53:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+B text8 CODE >144:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+B text8 CODE >145:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+15 text8 CODE >146:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+1A text8 CODE >147:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+24 text8 CODE >148:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+2D text8 CODE >149:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+6 text7 CODE >112:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+7 text7 CODE >115:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
+A text7 CODE >116:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/mcc_generated_files/tmr0.c
 12A text6 CODE >6:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
 12A text6 CODE >14:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
 12B text6 CODE >15:/opt/microchip/xc8/v1.41/sources/common/awdiv.c
@@ -515,47 +515,47 @@ A text7 CODE >116:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/mcc_generat
 2B9 text3 CODE >72:/opt/microchip/xc8/v1.41/sources/common/fttol.c
 F40 text2 CODE >30:/opt/microchip/xc8/v1.41/sources/common/lttoft.c
 F40 text2 CODE >32:/opt/microchip/xc8/v1.41/sources/common/lttoft.c
-17B text1 CODE >158:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-17B text1 CODE >159:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-1AB text1 CODE >160:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-1D3 text1 CODE >161:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-1D6 text1 CODE >162:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-36B maintext CODE >164:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-36B maintext CODE >166:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-370 maintext CODE >169:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-373 maintext CODE >172:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-37D maintext CODE >176:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-37E maintext CODE >181:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-389 maintext CODE >183:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-3A0 maintext CODE >185:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-3B5 maintext CODE >187:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-3D7 maintext CODE >188:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-3F8 maintext CODE >185:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-3FE maintext CODE >176:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-401 maintext CODE >192:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-40A maintext CODE >193:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-40E maintext CODE >194:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-420 maintext CODE >195:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-42C maintext CODE >197:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-430 maintext CODE >198:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-435 maintext CODE >199:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-43A maintext CODE >200:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-43F maintext CODE >201:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-444 maintext CODE >174:/home/mkhuthir/microchip/MPLAB Xpress/MusicMaker.X/main.c
-F04 inittext CODE >8611:/tmp/xcXt4bPb9
-F04 inittext CODE >8612:/tmp/xcXt4bPb9
-F05 inittext CODE >8613:/tmp/xcXt4bPb9
-F05 inittext CODE >8614:/tmp/xcXt4bPb9
-F06 inittext CODE >8615:/tmp/xcXt4bPb9
-F07 inittext CODE >8616:/tmp/xcXt4bPb9
-F08 inittext CODE >8617:/tmp/xcXt4bPb9
-F09 inittext CODE >8618:/tmp/xcXt4bPb9
-F0A inittext CODE >8619:/tmp/xcXt4bPb9
-F0B inittext CODE >8620:/tmp/xcXt4bPb9
-F0C inittext CODE >8621:/tmp/xcXt4bPb9
-F0D inittext CODE >8622:/tmp/xcXt4bPb9
-F0E inittext CODE >8624:/tmp/xcXt4bPb9
-F0F inittext CODE >8623:/tmp/xcXt4bPb9
+17B text1 CODE >156:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+17B text1 CODE >157:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+1AB text1 CODE >158:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+1D3 text1 CODE >159:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+1D6 text1 CODE >160:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+36B maintext CODE >162:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+36B maintext CODE >164:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+370 maintext CODE >167:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+373 maintext CODE >170:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+37D maintext CODE >174:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+37E maintext CODE >179:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+389 maintext CODE >181:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+3A0 maintext CODE >183:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+3B5 maintext CODE >185:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+3D7 maintext CODE >186:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+3F8 maintext CODE >183:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+3FE maintext CODE >174:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+401 maintext CODE >190:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+40A maintext CODE >191:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+40E maintext CODE >192:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+420 maintext CODE >193:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+42C maintext CODE >195:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+430 maintext CODE >196:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+435 maintext CODE >197:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+43A maintext CODE >198:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+43F maintext CODE >199:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+444 maintext CODE >172:/home/mkhuthir/microchip/MPLAB_Xpress/MusicMaker.X/main.c
+F04 inittext CODE >8611:/tmp/xcX2Kx0Go
+F04 inittext CODE >8612:/tmp/xcX2Kx0Go
+F05 inittext CODE >8613:/tmp/xcX2Kx0Go
+F05 inittext CODE >8614:/tmp/xcX2Kx0Go
+F06 inittext CODE >8615:/tmp/xcX2Kx0Go
+F07 inittext CODE >8616:/tmp/xcX2Kx0Go
+F08 inittext CODE >8617:/tmp/xcX2Kx0Go
+F09 inittext CODE >8618:/tmp/xcX2Kx0Go
+F0A inittext CODE >8619:/tmp/xcX2Kx0Go
+F0B inittext CODE >8620:/tmp/xcX2Kx0Go
+F0C inittext CODE >8621:/tmp/xcX2Kx0Go
+F0D inittext CODE >8622:/tmp/xcX2Kx0Go
+F0E inittext CODE >8624:/tmp/xcX2Kx0Go
+F0F inittext CODE >8623:/tmp/xcX2Kx0Go
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -603,12 +603,12 @@ _WPUA F39 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _WPUB F44 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _WPUC F4F 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _WPUE F65 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXd2nBpl.obj
+___sp 0 0 STACK 2 stack /tmp/xcXWDPFQl.obj
 _bhpc 238C 0 ABS 1 - dist/free/production/MusicMaker.X.production.obj
 _main 6D6 0 CODE 0 maintext dist/free/production/MusicMaker.X.production.obj
 _rest 51 0 BANK0 1 bssBANK0 dist/free/production/MusicMaker.X.production.obj
 btemp 7E 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-start 4 0 CODE 0 init /tmp/xcXd2nBpl.obj
+start 4 0 CODE 0 init /tmp/xcXWDPFQl.obj
 _EUSART_Write 1DA0 0 CODE 0 text12 dist/free/production/MusicMaker.X.production.obj
 __size_of___awdiv 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __size_of___ftdiv 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -632,12 +632,12 @@ printf@c 37 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.o
 printf@f 22 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 main@songNum 4F 0 BANK0 1 cstackBANK0 dist/free/production/MusicMaker.X.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
-intlevel0 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcXd2nBpl.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXWDPFQl.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXWDPFQl.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXWDPFQl.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXWDPFQl.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXWDPFQl.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXWDPFQl.obj
 wtemp0 7E 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 _RC1STAbits 11D 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
@@ -734,7 +734,7 @@ __end_of_printf BAA 0 CODE 0 text10 dist/free/production/MusicMaker.X.production
 ___ftpack@arg 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 ___ftpack@exp 73 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 __end_of_ADCC_Initialize 1ED8 0 CODE 0 text26 dist/free/production/MusicMaker.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXd2nBpl.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXWDPFQl.obj
 __end_of___ftpack 476 0 CODE 0 text5 dist/free/production/MusicMaker.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -887,7 +887,7 @@ __size_of_TMR0_Load8bitPeriod 0 0 ABS 0 - dist/free/production/MusicMaker.X.prod
 _SYSTEM_Initialize 1E5C 0 CODE 0 text19 dist/free/production/MusicMaker.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXd2nBpl.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXWDPFQl.obj
 __pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/free/production/MusicMaker.X.production.obj
 __pdataBANK2 120 0 BANK2 1 dataBANK2 dist/free/production/MusicMaker.X.production.obj
 __pdataBANK3 1A0 0 BANK3 1 dataBANK3 dist/free/production/MusicMaker.X.production.obj
@@ -959,8 +959,8 @@ __Hinittext 0 0 ABS 0 inittext -
 ___wmul@multiplier 79 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
 _LATAbits 16 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 ___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/free/production/MusicMaker.X.production.obj
-stackhi 2203 0 ABS 0 - /tmp/xcXd2nBpl.obj
-stacklo 213C 0 ABS 0 - /tmp/xcXd2nBpl.obj
+stackhi 2203 0 ABS 0 - /tmp/xcXWDPFQl.obj
+stacklo 213C 0 ABS 0 - /tmp/xcXWDPFQl.obj
 _OSCCON1 88D 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _OSCCON3 88F 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj
 _OSCTUNE 892 0 ABS 0 - dist/free/production/MusicMaker.X.production.obj

@@ -5,7 +5,7 @@ Linker command line:
 --edf=/opt/microchip/xc8/v1.41/dat/en_msgs.txt -cs \
   -h+dist/free/production/MusicMaker.X.production.sym \
   --cmf=dist/free/production/MusicMaker.X.production.cmf -z -Q16F18855 \
-  -o/tmp/xcX3pFyby -Mdist/free/production/MusicMaker.X.production.map -E1 \
+  -o/tmp/xcXwqN1xl -Mdist/free/production/MusicMaker.X.production.map -E1 \
   -ver=XC8 -ASTACK=0213Ch-02203h -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
@@ -30,7 +30,7 @@ Linker command line:
   -pcinit=CODE -pfunctab=CODE -ACONFIG=08007h-0800Bh -pconfig=CONFIG \
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
-  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcXd2nBpl.obj \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcXWDPFQl.obj \
   dist/free/production/MusicMaker.X.production.obj 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Machine type is 16F18855
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXd2nBpl.obj
+/tmp/xcXWDPFQl.obj
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        5    1000E       0
@@ -958,7 +958,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 164 in file "main.c"
+		line 162 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -998,7 +998,7 @@ Total ram usage:       11 bytes
 
  *************** function _setTempo *****************
  Defined at:
-		line 158 in file "main.c"
+		line 156 in file "main.c"
  Parameters:    Size  Location     Type
   tempo           2   30[BANK0 ] int 
  Auto vars:     Size  Location     Type
@@ -1222,7 +1222,7 @@ Total ram usage:        1 bytes
 
  *************** function _playNote *****************
  Defined at:
-		line 146 in file "main.c"
+		line 144 in file "main.c"
  Parameters:    Size  Location     Type
   note            4   25[BANK0 ] struct .
  Auto vars:     Size  Location     Type
@@ -1253,7 +1253,7 @@ Total ram usage:        5 bytes
 
  *************** function _delay *****************
  Defined at:
-		line 49 in file "main.c"
+		line 47 in file "main.c"
  Parameters:    Size  Location     Type
   noteLength      1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1542,7 +1542,7 @@ Total ram usage:        0 bytes
 
  *************** function _SetNCOFreq *****************
  Defined at:
-		line 43 in file "main.c"
+		line 41 in file "main.c"
  Parameters:    Size  Location     Type
   value           3    0[COMMON] struct .
  Auto vars:     Size  Location     Type

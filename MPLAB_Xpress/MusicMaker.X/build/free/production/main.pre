@@ -17599,7 +17599,7 @@ void SYSTEM_Initialize(void);
 # 84
 void OSCILLATOR_Initialize(void);
 
-# 12 "main.c"
+# 10 "main.c"
 typedef union {
 uint24_t word;
 struct {
@@ -17609,13 +17609,13 @@ uint8_t u_byte;
 };
 } ncoinc_t;
 
-# 25
+# 23
 typedef struct {
 ncoinc_t pitch;
 uint8_t length;
 } note_t;
 
-# 34
+# 32
 typedef struct {
 uint8_t* name;
 note_t* melody;
@@ -17640,7 +17640,7 @@ while(!TMR0_HasOverflowOccured()) {};
 } while(--noteLength > 0);
 }
 
-# 61
+# 59
 note_t jingle_jangle[] = {
 {659, 4}, {659, 4}, {659, 8},
 {659, 4}, {659, 4}, {659, 8},
@@ -17720,7 +17720,7 @@ song_t songs[] = {
 {(uint8_t *)"A. Foley", bhpc, sizeof(bhpc)/sizeof(note_t), 120}
 };
 
-# 146
+# 144
 void playNote(note_t note){
 SetNCOFreq(note.pitch);
 delay(note.length);
@@ -17728,7 +17728,7 @@ SetNCOFreq(rest);
 _delay((unsigned long)((10)*(1000000/4000.0)));
 }
 
-# 158
+# 156
 void setTempo(int tempo){
 uint24_t tempo_ms = ((60*100/tempo)*10)/4;
 uint8_t tempo_period = (uint8_t) (tempo_ms / 1.024);
