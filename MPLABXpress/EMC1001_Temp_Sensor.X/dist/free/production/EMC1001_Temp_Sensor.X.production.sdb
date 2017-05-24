@@ -1,0 +1,927 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18855 ]
+[d frameptr 6 ]
+"184 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/i2c2.c
+[e E14260 . `uc
+I2C2_MESSAGE_COMPLETE 0
+I2C2_MESSAGE_FAIL 1
+I2C2_MESSAGE_PENDING 2
+I2C2_STUCK_START 3
+I2C2_MESSAGE_ADDRESS_NO_ACK 4
+I2C2_DATA_NO_ACK 5
+I2C2_LOST_STATE 6
+]
+"186
+[e E14328 . `uc
+S_MASTER_IDLE 0
+S_MASTER_RESTART 1
+S_MASTER_SEND_ADDR 2
+S_MASTER_SEND_DATA 3
+S_MASTER_SEND_STOP 4
+S_MASTER_ACK_ADDR 5
+S_MASTER_RCV_DATA 6
+S_MASTER_RCV_STOP 7
+S_MASTER_ACK_RCV_DATA 8
+S_MASTER_NOACK_STOP 9
+S_MASTER_SEND_ADDR_10BIT_LSB 10
+S_MASTER_10BIT_RESTART 11
+]
+"17 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/EMC1001.c
+[e E14267 . `uc
+I2C2_MESSAGE_COMPLETE 0
+I2C2_MESSAGE_FAIL 1
+I2C2_MESSAGE_PENDING 2
+I2C2_STUCK_START 3
+I2C2_MESSAGE_ADDRESS_NO_ACK 4
+I2C2_DATA_NO_ACK 5
+I2C2_LOST_STATE 6
+]
+"6 /opt/microchip/xc8/v1.41/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 /opt/microchip/xc8/v1.41/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 /opt/microchip/xc8/v1.41/sources/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"4 /opt/microchip/xc8/v1.41/sources/common/cputs.c
+[v _cputs cputs `(v  1 e 1 0 ]
+"409 /opt/microchip/xc8/v1.41/sources/common/doprnt.c
+[v _fround fround `(d  1 s 3 fround ]
+"425
+[v _scale scale `(d  1 s 3 scale ]
+"464
+[v _printf printf `(i  1 e 2 0 ]
+"60 /opt/microchip/xc8/v1.41/sources/common/fldivl.c
+[v __div_to_l_ _div_to_l_ `(ul  1 e 4 0 ]
+"62 /opt/microchip/xc8/v1.41/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.41/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"60 /opt/microchip/xc8/v1.41/sources/common/ftdivl.c
+[v __tdiv_to_l_ _tdiv_to_l_ `(ul  1 e 4 0 ]
+"4 /opt/microchip/xc8/v1.41/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v1.41/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.41/sources/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 /opt/microchip/xc8/v1.41/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 /opt/microchip/xc8/v1.41/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 /opt/microchip/xc8/v1.41/sources/common/isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"6 /opt/microchip/xc8/v1.41/sources/common/lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 /opt/microchip/xc8/v1.41/sources/common/llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 /opt/microchip/xc8/v1.41/sources/common/lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.41/sources/common/puts.c
+[v _puts puts `(i  1 e 2 0 ]
+"15 /opt/microchip/xc8/v1.41/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v1.41/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"13 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/EMC1001.c
+[v _EMC1001_Read EMC1001_Read `(uc  1 e 1 0 ]
+"46
+[v _EMC1001_Write EMC1001_Write `(uc  1 e 1 0 ]
+"81
+[v _EMC1001_SetConversionRate EMC1001_SetConversionRate `(uc  1 e 1 0 ]
+"93
+[v _EMC1001_SetTempHighLimit EMC1001_SetTempHighLimit `(uc  1 e 1 0 ]
+"105
+[v _EMC1001_SetTempLowLimit EMC1001_SetTempLowLimit `(uc  1 e 1 0 ]
+"117
+[v _EMC1001_SetThermLimit EMC1001_SetThermLimit `(uc  1 e 1 0 ]
+"126
+[v _EMC1001_SetThermHysteresis EMC1001_SetThermHysteresis `(uc  1 e 1 0 ]
+"144
+[v _EMC1001_SMBusTimeout EMC1001_SMBusTimeout `(uc  1 e 1 0 ]
+"155
+[v _EMC1001_MASK1 EMC1001_MASK1 `(uc  1 e 1 0 ]
+"170
+[v _EMC1001_StandbyMode EMC1001_StandbyMode `(uc  1 e 1 0 ]
+"185
+[v _EMC1001_THERM2 EMC1001_THERM2 `(uc  1 e 1 0 ]
+"199
+[v _EMC1001_PrintInfo EMC1001_PrintInfo `(v  1 e 1 0 ]
+"233
+[v _EMC1001_PrintTemp EMC1001_PrintTemp `(v  1 e 1 0 ]
+"10 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"55 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"77
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"97
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"111
+[v _putch putch `(v  1 e 1 0 ]
+"198 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/i2c2.c
+[v _I2C2_Initialize I2C2_Initialize `(v  1 e 1 0 ]
+"233
+[v _I2C2_ISR I2C2_ISR `(v  1 e 1 0 ]
+"563
+[v _I2C2_FunctionComplete I2C2_FunctionComplete `(v  1 e 1 0 ]
+"581
+[v _I2C2_Stop I2C2_Stop `(v  1 e 1 0 ]
+"641
+[v _I2C2_MasterTRBInsert I2C2_MasterTRBInsert `(v  1 e 1 0 ]
+"694
+[v _I2C2_MasterReadTRBBuild I2C2_MasterReadTRBBuild `(v  1 e 1 0 ]
+"707
+[v _I2C2_MasterWriteTRBBuild I2C2_MasterWriteTRBBuild `(v  1 e 1 0 ]
+"728
+[v _I2C2_BusCollisionISR I2C2_BusCollisionISR `(v  1 e 1 0 ]
+"51 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"82 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"91
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"51 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+[s S421 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"348 /opt/microchip/xc8/v1.41/include/pic16f18855.h
+[u S426 . 1 `S421 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES426  1 e 1 @11 ]
+[s S652 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"384
+[u S661 . 1 `S652 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES661  1 e 1 @12 ]
+"570
+[v _TRISA TRISA `VEuc  1 e 1 @17 ]
+"631
+[v _TRISB TRISB `VEuc  1 e 1 @18 ]
+"692
+[v _TRISC TRISC `VEuc  1 e 1 @19 ]
+"753
+[v _LATA LATA `VEuc  1 e 1 @22 ]
+[s S566 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"770
+[u S575 . 1 `S566 1 . 1 0 ]
+[v _LATAbits LATAbits `VES575  1 e 1 @22 ]
+"814
+[v _LATB LATB `VEuc  1 e 1 @23 ]
+"875
+[v _LATC LATC `VEuc  1 e 1 @24 ]
+"3434
+[v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
+"3487
+[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
+"3546
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
+"3615
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
+"3668
+[v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
+[s S24 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3694
+[u S33 . 1 `S24 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES33  1 e 1 @285 ]
+"3847
+[v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
+"4026
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
+"5207
+[v _SSP2BUF SSP2BUF `VEuc  1 e 1 @406 ]
+"5226
+[v _SSP2ADD SSP2ADD `VEuc  1 e 1 @407 ]
+"5414
+[v _SSP2STAT SSP2STAT `VEuc  1 e 1 @409 ]
+"5777
+[v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @410 ]
+[s S160 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5807
+[s S166 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[s S171 . 1 `uc 1 SSPM02 1 0 :1:0 
+`uc 1 SSPM12 1 0 :1:1 
+`uc 1 SSPM22 1 0 :1:2 
+`uc 1 SSPM32 1 0 :1:3 
+`uc 1 CKP2 1 0 :1:4 
+`uc 1 SSPEN2 1 0 :1:5 
+`uc 1 SSPOV2 1 0 :1:6 
+`uc 1 WCOL2 1 0 :1:7 
+]
+[u S180 . 1 `S160 1 . 1 0 `S166 1 . 1 0 `S171 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES180  1 e 1 @410 ]
+[s S205 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"5943
+[s S214 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADMSK 1 0 :5:1 
+]
+[s S217 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADMSK1 1 0 :1:1 
+`uc 1 ADMSK2 1 0 :1:2 
+`uc 1 ADMSK3 1 0 :1:3 
+`uc 1 ADMSK4 1 0 :1:4 
+`uc 1 ADMSK5 1 0 :1:5 
+]
+[s S224 . 1 `uc 1 SEN2 1 0 :1:0 
+`uc 1 ADMSK12 1 0 :1:1 
+`uc 1 ADMSK22 1 0 :1:2 
+`uc 1 ADMSK32 1 0 :1:3 
+`uc 1 ACKEN2 1 0 :1:4 
+`uc 1 ACKDT2 1 0 :1:5 
+`uc 1 ACKSTAT2 1 0 :1:6 
+`uc 1 GCEN2 1 0 :1:7 
+]
+[s S233 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RSEN2 1 0 :1:1 
+`uc 1 PEN2 1 0 :1:2 
+`uc 1 RCEN2 1 0 :1:3 
+`uc 1 ADMSK42 1 0 :1:4 
+`uc 1 ADMSK52 1 0 :1:5 
+]
+[u S240 . 1 `S205 1 . 1 0 `S214 1 . 1 0 `S217 1 . 1 0 `S224 1 . 1 0 `S233 1 . 1 0 ]
+[v _SSP2CON2bits SSP2CON2bits `VES240  1 e 1 @411 ]
+"6082
+[v _SSP2CON3 SSP2CON3 `VEuc  1 e 1 @412 ]
+[s S45 . 1 `uc 1 SSP1IF 1 0 :1:0 
+`uc 1 BCL1IF 1 0 :1:1 
+`uc 1 SSP2IF 1 0 :1:2 
+`uc 1 BCL2IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+"20984
+[u S52 . 1 `S45 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES52  1 e 1 @1807 ]
+[s S143 . 1 `uc 1 SSP1IE 1 0 :1:0 
+`uc 1 BCL1IE 1 0 :1:1 
+`uc 1 SSP2IE 1 0 :1:2 
+`uc 1 BCL2IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+]
+"21397
+[u S150 . 1 `S143 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES150  1 e 1 @1817 ]
+"23022
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"23160
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"23255
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"23305
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"23362
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"29393
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3727 ]
+[s S501 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"29403
+[u S503 . 1 `S501 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES503  1 e 1 @3727 ]
+[s S530 . 1 `uc 1 SSP2CLKPPS0 1 0 :1:0 
+`uc 1 SSP2CLKPPS1 1 0 :1:1 
+`uc 1 SSP2CLKPPS2 1 0 :1:2 
+`uc 1 SSP2CLKPPS3 1 0 :1:3 
+`uc 1 SSP2CLKPPS4 1 0 :1:4 
+]
+"31143
+[s S536 . 1 `uc 1 SSP2CLKPPS 1 0 :5:0 
+]
+[u S538 . 1 `S530 1 . 1 0 `S536 1 . 1 0 ]
+[v _SSP2CLKPPSbits SSP2CLKPPSbits `VES538  1 e 1 @3784 ]
+[s S510 . 1 `uc 1 SSP2DATPPS0 1 0 :1:0 
+`uc 1 SSP2DATPPS1 1 0 :1:1 
+`uc 1 SSP2DATPPS2 1 0 :1:2 
+`uc 1 SSP2DATPPS3 1 0 :1:3 
+`uc 1 SSP2DATPPS4 1 0 :1:4 
+]
+"31194
+[s S516 . 1 `uc 1 SSP2DATPPS 1 0 :5:0 
+]
+[u S518 . 1 `S510 1 . 1 0 `S516 1 . 1 0 ]
+[v _SSP2DATPPSbits SSP2DATPPSbits `VES518  1 e 1 @3785 ]
+"32165
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @3872 ]
+"32312
+[v _RC3PPS RC3PPS `VEuc  1 e 1 @3875 ]
+"32361
+[v _RC4PPS RC4PPS `VEuc  1 e 1 @3876 ]
+"32557
+[v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
+"32618
+[v _WPUA WPUA `VEuc  1 e 1 @3897 ]
+"32679
+[v _ODCONA ODCONA `VEuc  1 e 1 @3898 ]
+"33167
+[v _ANSELB ANSELB `VEuc  1 e 1 @3907 ]
+"33228
+[v _WPUB WPUB `VEuc  1 e 1 @3908 ]
+"33289
+[v _ODCONB ODCONB `VEuc  1 e 1 @3909 ]
+"33777
+[v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
+"33838
+[v _WPUC WPUC `VEuc  1 e 1 @3919 ]
+"33899
+[v _ODCONC ODCONC `VEuc  1 e 1 @3920 ]
+"34387
+[v _WPUE WPUE `VEuc  1 e 1 @3941 ]
+"36278
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"354 /opt/microchip/xc8/v1.41/sources/common/doprnt.c
+[v _dpowers dpowers `DCC[10]ul  1 s 40 dpowers ]
+"362
+[v _hexpowers hexpowers `DCC[8]ul  1 s 32 hexpowers ]
+"7 /opt/microchip/xc8/v1.41/sources/common/powers.c
+[v __powers_ _powers_ `DCC[13]d  1 e 39 0 ]
+"39
+[v __npowers_ _npowers_ `DCC[13]d  1 e 39 0 ]
+[s S87 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+"184 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/i2c2.c
+[s S99 . 3 `uc 1 count 1 0 `*.5S87 1 ptrb_list 1 1 `*.4E14260 1 pTrFlag 1 2 ]
+[v _i2c2_tr_queue i2c2_tr_queue `[1]S99  1 s 3 i2c2_tr_queue ]
+"185
+[s S103 . 1 `uc 1 full 1 0 :1:0 
+`uc 1 empty 1 0 :1:1 
+`uc 1 reserved 1 0 :6:2 
+]
+[u S107 . 1 `S103 1 s 1 0 `uc 1 status 1 0 ]
+[s S110 . 5 `*.4S99 1 pTrTail 1 0 `*.4S99 1 pTrHead 1 1 `S107 1 trStatus 1 2 `uc 1 i2cDoneFlag 1 3 `uc 1 i2cErrors 1 4 ]
+[v _i2c2_object i2c2_object `S110  1 s 5 i2c2_object ]
+"186
+[v _i2c2_state i2c2_state `E14328  1 s 1 i2c2_state ]
+"187
+[v _i2c2_trb_count i2c2_trb_count `uc  1 s 1 i2c2_trb_count ]
+"189
+[v _p_i2c2_trb_current p_i2c2_trb_current `*.5S87  1 s 1 p_i2c2_trb_current ]
+"190
+[v _p_i2c2_current p_i2c2_current `*.4S99  1 s 1 p_i2c2_current ]
+"10 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"51
+} 0
+"8 /opt/microchip/xc8/v1.41/sources/common/puts.c
+[v _puts puts `(i  1 e 2 0 ]
+{
+[v puts@s s `*.25DCCuc  1 p 2 5 ]
+"12
+} 0
+"4 /opt/microchip/xc8/v1.41/sources/common/cputs.c
+[v _cputs cputs `(v  1 e 1 0 ]
+{
+[v cputs@s s `*.25DCCuc  1 p 2 2 ]
+"8
+} 0
+"82 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"89
+} 0
+"51 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"94
+[v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
+"111
+} 0
+"91 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"105
+} 0
+"198 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/i2c2.c
+[v _I2C2_Initialize I2C2_Initialize `(v  1 e 1 0 ]
+{
+"222
+} 0
+"55 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"74
+} 0
+"185 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/EMC1001.c
+[v _EMC1001_THERM2 EMC1001_THERM2 `(uc  1 e 1 0 ]
+{
+[v EMC1001_THERM2@enable enable `uc  1 a 1 wreg ]
+"187
+[v EMC1001_THERM2@data data `uc  1 a 1 17 ]
+"185
+[v EMC1001_THERM2@enable enable `uc  1 a 1 wreg ]
+"188
+[v EMC1001_THERM2@enable enable `uc  1 a 1 16 ]
+"194
+} 0
+"170
+[v _EMC1001_StandbyMode EMC1001_StandbyMode `(uc  1 e 1 0 ]
+{
+[v EMC1001_StandbyMode@enable enable `uc  1 a 1 wreg ]
+"172
+[v EMC1001_StandbyMode@data data `uc  1 a 1 17 ]
+"170
+[v EMC1001_StandbyMode@enable enable `uc  1 a 1 wreg ]
+"173
+[v EMC1001_StandbyMode@enable enable `uc  1 a 1 16 ]
+"179
+} 0
+"117
+[v _EMC1001_SetThermLimit EMC1001_SetThermLimit `(uc  1 e 1 0 ]
+{
+[v EMC1001_SetThermLimit@data data `uc  1 a 1 wreg ]
+[v EMC1001_SetThermLimit@data data `uc  1 a 1 wreg ]
+"119
+[v EMC1001_SetThermLimit@data data `uc  1 a 1 16 ]
+"120
+} 0
+"126
+[v _EMC1001_SetThermHysteresis EMC1001_SetThermHysteresis `(uc  1 e 1 0 ]
+{
+[v EMC1001_SetThermHysteresis@data data `uc  1 a 1 wreg ]
+[v EMC1001_SetThermHysteresis@data data `uc  1 a 1 wreg ]
+"128
+[v EMC1001_SetThermHysteresis@data data `uc  1 a 1 16 ]
+"129
+} 0
+"105
+[v _EMC1001_SetTempLowLimit EMC1001_SetTempLowLimit `(uc  1 e 1 0 ]
+{
+[v EMC1001_SetTempLowLimit@HB HB `uc  1 a 1 wreg ]
+[v EMC1001_SetTempLowLimit@HB HB `uc  1 a 1 wreg ]
+[v EMC1001_SetTempLowLimit@LB LB `uc  1 p 1 16 ]
+"107
+[v EMC1001_SetTempLowLimit@HB HB `uc  1 a 1 21 ]
+"111
+} 0
+"93
+[v _EMC1001_SetTempHighLimit EMC1001_SetTempHighLimit `(uc  1 e 1 0 ]
+{
+[v EMC1001_SetTempHighLimit@HB HB `uc  1 a 1 wreg ]
+[v EMC1001_SetTempHighLimit@HB HB `uc  1 a 1 wreg ]
+[v EMC1001_SetTempHighLimit@LB LB `uc  1 p 1 16 ]
+"95
+[v EMC1001_SetTempHighLimit@HB HB `uc  1 a 1 21 ]
+"99
+} 0
+"81
+[v _EMC1001_SetConversionRate EMC1001_SetConversionRate `(uc  1 e 1 0 ]
+{
+[v EMC1001_SetConversionRate@data data `uc  1 a 1 wreg ]
+[v EMC1001_SetConversionRate@data data `uc  1 a 1 wreg ]
+"83
+[v EMC1001_SetConversionRate@data data `uc  1 a 1 16 ]
+"87
+} 0
+"144
+[v _EMC1001_SMBusTimeout EMC1001_SMBusTimeout `(uc  1 e 1 0 ]
+{
+[v EMC1001_SMBusTimeout@enable enable `uc  1 a 1 wreg ]
+[v EMC1001_SMBusTimeout@enable enable `uc  1 a 1 wreg ]
+"146
+[v EMC1001_SMBusTimeout@enable enable `uc  1 a 1 16 ]
+"150
+} 0
+"233
+[v _EMC1001_PrintTemp EMC1001_PrintTemp `(v  1 e 1 0 ]
+{
+"236
+[v EMC1001_PrintTemp@templo templo `uc  1 a 1 44 ]
+"235
+[v EMC1001_PrintTemp@temp temp `c  1 a 1 43 ]
+"245
+} 0
+"199
+[v _EMC1001_PrintInfo EMC1001_PrintInfo `(v  1 e 1 0 ]
+{
+"202
+[v EMC1001_PrintInfo@cr cr `f  1 a 3 54 ]
+"201
+[v EMC1001_PrintInfo@data data `uc  1 a 1 65 ]
+"204
+[v EMC1001_PrintInfo@templo templo `uc  1 a 1 64 ]
+"203
+[v EMC1001_PrintInfo@temp temp `c  1 a 1 63 ]
+"228
+} 0
+"464 /opt/microchip/xc8/v1.41/sources/common/doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"1500
+[v printf@idx idx `uc  1 a 1 15 ]
+"528
+[v printf@val val `ul  1 a 4 31 ]
+[u S831 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+"526
+[v printf@tmpval tmpval `S831  1 a 4 27 ]
+"516
+[v printf@fval fval `d  1 a 3 35 ]
+"504
+[v printf@prec prec `i  1 a 2 38 ]
+"516
+[v printf@exp exp `i  1 a 2 25 ]
+"508
+[v printf@flag flag `us  1 a 2 23 ]
+"530
+[v printf@cp cp `*.26DCCuc  1 a 2 20 ]
+"529
+[v printf@len len `ui  1 a 2 18 ]
+"499
+[v printf@c c `c  1 a 1 40 ]
+"466
+[v printf@ap ap `[1]*.4v  1 a 1 22 ]
+"464
+[v printf@f f `*.25DCCuc  1 p 2 0 ]
+"1541
+} 0
+"425
+[v _scale scale `(d  1 s 3 scale ]
+{
+[v scale@scl scl `c  1 a 1 wreg ]
+[v scale@scl scl `c  1 a 1 wreg ]
+"428
+[v scale@scl scl `c  1 a 1 46 ]
+"441
+} 0
+"111 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/eusart.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 a 1 wreg ]
+[v putch@txData txData `uc  1 a 1 wreg ]
+"113
+[v putch@txData txData `uc  1 a 1 1 ]
+"114
+} 0
+"97
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"104
+} 0
+"8 /opt/microchip/xc8/v1.41/sources/common/isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"409 /opt/microchip/xc8/v1.41/sources/common/doprnt.c
+[v _fround fround `(d  1 s 3 fround ]
+{
+[v fround@prec prec `uc  1 a 1 wreg ]
+[v fround@prec prec `uc  1 a 1 wreg ]
+"413
+[v fround@prec prec `uc  1 a 1 51 ]
+"418
+} 0
+"15 /opt/microchip/xc8/v1.41/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 20 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 16 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 18 ]
+"53
+} 0
+"62 /opt/microchip/xc8/v1.41/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 33 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 37 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 36 ]
+[v ___ftmul@exp exp `uc  1 a 1 32 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 22 ]
+[v ___ftmul@f2 f2 `f  1 p 3 25 ]
+"157
+} 0
+"6 /opt/microchip/xc8/v1.41/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"6 /opt/microchip/xc8/v1.41/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 14 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 13 ]
+[v ___awdiv@counter counter `uc  1 a 1 12 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 7 ]
+[v ___awdiv@dividend dividend `i  1 p 2 9 ]
+"42
+} 0
+"60 /opt/microchip/xc8/v1.41/sources/common/ftdivl.c
+[v __tdiv_to_l_ _tdiv_to_l_ `(ul  1 e 4 0 ]
+{
+"63
+[v __tdiv_to_l_@quot quot `ul  1 a 4 10 ]
+"62
+[v __tdiv_to_l_@exp1 exp1 `uc  1 a 1 15 ]
+[v __tdiv_to_l_@cntr cntr `uc  1 a 1 14 ]
+"60
+[v __tdiv_to_l_@f1 f1 `f  1 p 3 0 ]
+[v __tdiv_to_l_@f2 f2 `f  1 p 3 3 ]
+"101
+} 0
+"60 /opt/microchip/xc8/v1.41/sources/common/fldivl.c
+[v __div_to_l_ _div_to_l_ `(ul  1 e 4 0 ]
+{
+"63
+[v __div_to_l_@quot quot `ul  1 a 4 14 ]
+"62
+[v __div_to_l_@exp1 exp1 `uc  1 a 1 19 ]
+[v __div_to_l_@cntr cntr `uc  1 a 1 18 ]
+"60
+[v __div_to_l_@f1 f1 `d  1 p 3 0 ]
+[v __div_to_l_@f2 f2 `d  1 p 3 3 ]
+"101
+} 0
+"35 /opt/microchip/xc8/v1.41/sources/common/lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+{
+"37
+[v ___lltoft@exp exp `uc  1 a 1 13 ]
+"35
+[v ___lltoft@c c `ul  1 p 4 8 ]
+"46
+} 0
+"6 /opt/microchip/xc8/v1.41/sources/common/llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 23 ]
+"6
+[v ___llmod@divisor divisor `ul  1 p 4 14 ]
+[v ___llmod@dividend dividend `ul  1 p 4 18 ]
+"26
+} 0
+"6 /opt/microchip/xc8/v1.41/sources/common/lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"31
+} 0
+"44 /opt/microchip/xc8/v1.41/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 56 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 60 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 55 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 47 ]
+"73
+} 0
+"18 /opt/microchip/xc8/v1.41/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f2 f2 `f  1 p 3 65 ]
+[v ___ftsub@f1 f1 `f  1 p 3 68 ]
+"27
+} 0
+"86 /opt/microchip/xc8/v1.41/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 64 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 63 ]
+[v ___ftadd@sign sign `uc  1 a 1 62 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 52 ]
+[v ___ftadd@f2 f2 `f  1 p 3 55 ]
+"148
+} 0
+"15 /opt/microchip/xc8/v1.41/sources/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 0 ]
+"20
+} 0
+"4 /opt/microchip/xc8/v1.41/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"32 /opt/microchip/xc8/v1.41/sources/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 /opt/microchip/xc8/v1.41/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"155 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/EMC1001.c
+[v _EMC1001_MASK1 EMC1001_MASK1 `(uc  1 e 1 0 ]
+{
+[v EMC1001_MASK1@enable enable `uc  1 a 1 wreg ]
+"157
+[v EMC1001_MASK1@data data `uc  1 a 1 17 ]
+"155
+[v EMC1001_MASK1@enable enable `uc  1 a 1 wreg ]
+"158
+[v EMC1001_MASK1@enable enable `uc  1 a 1 16 ]
+"164
+} 0
+"46
+[v _EMC1001_Write EMC1001_Write `(uc  1 e 1 0 ]
+{
+[v EMC1001_Write@reg reg `uc  1 a 1 wreg ]
+"51
+[v EMC1001_Write@buffer buffer `[2]uc  1 a 2 11 ]
+"49
+[v EMC1001_Write@status status `E14267  1 a 1 14 ]
+"50
+[v EMC1001_Write@timeOut timeOut `uc  1 a 1 13 ]
+"46
+[v EMC1001_Write@reg reg `uc  1 a 1 wreg ]
+[v EMC1001_Write@data data `uc  1 p 1 7 ]
+[s S87 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+"48
+[v EMC1001_Write@trb trb `S87  1 s 4 trb ]
+[v EMC1001_Write@reg reg `uc  1 a 1 10 ]
+"73
+} 0
+"13
+[v _EMC1001_Read EMC1001_Read `(uc  1 e 1 0 ]
+{
+[v EMC1001_Read@reg reg `uc  1 a 1 wreg ]
+"17
+[v EMC1001_Read@status status `E14267  1 a 1 12 ]
+"15
+[v EMC1001_Read@timeOut timeOut `uc  1 a 1 10 ]
+"13
+[v EMC1001_Read@reg reg `uc  1 a 1 wreg ]
+[v EMC1001_Read@pData pData `*.4uc  1 p 1 7 ]
+[s S87 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+"18
+[v EMC1001_Read@trb trb `[2]S87  1 s 8 trb ]
+"15
+[v EMC1001_Read@reg reg `uc  1 a 1 11 ]
+"41
+} 0
+"707 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/i2c2.c
+[v _I2C2_MasterWriteTRBBuild I2C2_MasterWriteTRBBuild `(v  1 e 1 0 ]
+{
+[s S87 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+"708
+[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.5S87  1 a 1 wreg ]
+[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.5S87  1 a 1 wreg ]
+"709
+[v I2C2_MasterWriteTRBBuild@pdata pdata `*.4uc  1 p 1 0 ]
+"710
+[v I2C2_MasterWriteTRBBuild@length length `uc  1 p 1 1 ]
+"711
+[v I2C2_MasterWriteTRBBuild@address address `ui  1 p 2 2 ]
+"713
+"708
+[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.5S87  1 a 1 6 ]
+"716
+} 0
+"641
+[v _I2C2_MasterTRBInsert I2C2_MasterTRBInsert `(v  1 e 1 0 ]
+{
+"642
+[v I2C2_MasterTRBInsert@count count `uc  1 a 1 wreg ]
+[v I2C2_MasterTRBInsert@count count `uc  1 a 1 wreg ]
+[s S87 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+"643
+[v I2C2_MasterTRBInsert@ptrb_list ptrb_list `*.5S87  1 p 1 0 ]
+"644
+[v I2C2_MasterTRBInsert@pflag pflag `*.4E14260  1 p 1 1 ]
+"648
+[v I2C2_MasterTRBInsert@count count `uc  1 a 1 3 ]
+"692
+} 0
+"694
+[v _I2C2_MasterReadTRBBuild I2C2_MasterReadTRBBuild `(v  1 e 1 0 ]
+{
+[s S87 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+"695
+[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.5S87  1 a 1 wreg ]
+[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.5S87  1 a 1 wreg ]
+"696
+[v I2C2_MasterReadTRBBuild@pdata pdata `*.4uc  1 p 1 0 ]
+"697
+[v I2C2_MasterReadTRBBuild@length length `uc  1 p 1 1 ]
+"698
+[v I2C2_MasterReadTRBBuild@address address `ui  1 p 2 2 ]
+"700
+"695
+[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.5S87  1 a 1 6 ]
+"705
+} 0
+"51 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"66
+} 0
+"233 /home/mkhuthir/MPLABXpress/EMC1001_Temp_Sensor.X/mcc_generated_files/i2c2.c
+[v _I2C2_ISR I2C2_ISR `(v  1 e 1 0 ]
+{
+"236
+[v I2C2_ISR@pi2c_buf_ptr pi2c_buf_ptr `*.4uc  1 s 1 pi2c_buf_ptr ]
+"237
+[v I2C2_ISR@i2c_address i2c_address `ui  1 s 2 i2c_address ]
+"238
+[v I2C2_ISR@i2c_bytes_left i2c_bytes_left `uc  1 s 1 i2c_bytes_left ]
+"239
+[v I2C2_ISR@i2c_10bit_address_restart i2c_10bit_address_restart `uc  1 s 1 i2c_10bit_address_restart ]
+"561
+} 0
+"581
+[v _I2C2_Stop I2C2_Stop `(v  1 e 1 0 ]
+{
+[v I2C2_Stop@completion_code completion_code `E14260  1 a 1 wreg ]
+[v I2C2_Stop@completion_code completion_code `E14260  1 a 1 wreg ]
+"584
+[v I2C2_Stop@completion_code completion_code `E14260  1 a 1 1 ]
+"596
+} 0
+"563
+[v _I2C2_FunctionComplete I2C2_FunctionComplete `(v  1 e 1 0 ]
+{
+"579
+} 0
+"728
+[v _I2C2_BusCollisionISR I2C2_BusCollisionISR `(v  1 e 1 0 ]
+{
+"731
+} 0
