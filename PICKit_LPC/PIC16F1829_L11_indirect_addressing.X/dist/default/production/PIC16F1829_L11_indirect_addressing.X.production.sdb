@@ -1,0 +1,82 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1829 ]
+[d frameptr 6 ]
+"62 /opt/microchip/xc8/v1.42/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.42/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.42/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"52 /home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L11_indirect_addressing.X/src/indirect_addressing.c
+[v _main main `(v  1 e 1 0 ]
+"74
+[v _average average `(uc  1 e 1 0 ]
+"83
+[v _adc adc `(uc  1 e 1 0 ]
+[s S21 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1198 /opt/microchip/xc8/v1.42/include/pic16f1829.h
+[u S28 . 1 `S21 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES28  1 e 1 @140 ]
+"1272
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1764
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1925
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1945
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+"2025
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"2181
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S38 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ANSA4 1 0 :1:4 
+]
+"2965
+[s S44 . 1 `uc 1 ANSELA 1 0 :5:0 
+]
+[u S46 . 1 `S38 1 . 1 0 `S44 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES46  1 e 1 @396 ]
+"7364
+[v _GO GO `VEb  1 e 0 @1257 ]
+"50 /home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L11_indirect_addressing.X/src/indirect_addressing.c
+[v __sum _sum `ui  1 e 2 0 ]
+"52
+[v _main main `(v  1 e 1 0 ]
+{
+"54
+[v main@queue queue `[8]uc  1 a 8 4 ]
+"55
+[v main@i i `uc  1 a 1 13 ]
+"53
+[v main@ptr_queue ptr_queue `*.1uc  1 a 1 12 ]
+[v main@F2950 F2950 `[8]uc  1 s 8 F2950 ]
+"72
+} 0
+"74
+[v _average average `(uc  1 e 1 0 ]
+{
+[v average@ptr ptr `*.1uc  1 a 1 wreg ]
+[v average@ptr ptr `*.1uc  1 a 1 wreg ]
+"76
+[v average@ptr ptr `*.1uc  1 a 1 2 ]
+"81
+} 0
+"83
+[v _adc adc `(uc  1 e 1 0 ]
+{
+"90
+} 0
