@@ -1,0 +1,189 @@
+Disassembly Listing for interrupt
+Generated From:
+
+---  C:/Users/c14651/Documents/noncustomer_issues/pickit3_starter_kit/pic16/c/10 Interrupt/interrupt.c  -
+1:             /**
+2:              *******************************************************************
+3:              * PICkit 3 Lesson 8 - "Timer0"
+4:              *
+5:              ; This shows how to read the A2D converter and display the
+6:              ; High order parts on the 4 bit LED display.
+7:              ; The pot on the Low Pin Count Demo board varies the voltage
+8:              ; coming in on in A0.
+9:              ;
+10:             ; Also the switch is used to reverse the direction of rotation
+11:             ;
+12:             ; The A2D is referenced to the same Vdd as the device, which
+13:             ; is provided by the USB cable and nominally is 5V.  The A2D
+14:             ; returns the ratio of the voltage on Pin RA0 to 5V.  The A2D
+15:             ; has a resolution of 10 bits, with 1023 representing 5V and
+16:             ; 0 representing 0V.
+17:             *
+18:             * Compiler: HI-TECH 9.83
+19:             * Date: 11.21.2011
+20:             * PIC: 16F1829
+21:             * Board: PICkit 3 Low Pin Count Demo Board
+22:             *
+23:             * *******************************************************************
+24:             * See Low Pin Count Demo Board User's Guide for Lesson Information*
+25:             * ******************************************************************
+26:             */
+27:            
+28:            #include <htc.h> //PIC hardware mapping
+29:            #define _XTAL_FREQ 500000   //Used by the HI-TECH delay_ms(x) macro
+30:            
+31:            #define DOWN        0
+32:            #define UP          1
+33:            
+34:            #define SWITCH      PORTAbits.RA3
+35:            
+36:            #define LED_RIGHT           1
+37:            #define LED_LEFT            0
+38:            
+39:            #define PULL_UPS  //if this is uncommented, JP5 can be pulled out
+40:            
+41:            //config bits that are part-specific for the PIC16F1829
+42:            __CONFIG(FOSC_INTOSC & WDTE_OFF & PWRTE_OFF & MCLRE_OFF & CP_OFF & CPD_OFF & BOREN_ON & CLKOUTEN_OFF & IESO_OFF & FCMEN_OFF);
+43:            __CONFIG(WRT_OFF & PLLEN_OFF & STVREN_OFF & LVP_OFF);
+44:            
+45:            unsigned char _direction;
+46:            
+47:            void main(void) {
+48:                //general init
+49:                OSCCON = 0b00111000; //500KHz clock speed
+0045  3038     MOVLW 0x38
+0046  0021     MOVLB 0x1
+0047  0099     MOVWF T1GCON
+50:                TRISC = 0; //all LED pins are outputs
+0048  018E     CLRF PORTC
+51:                LATC = 0; //init LEDs in OFF state
+0049  0022     MOVLB 0x2
+004A  018E     CLRF PORTC
+52:            
+53:                LATCbits.LATC3 = 1; //init
+004B  158E     BSF PORTC, 0x3
+54:                _direction = LED_LEFT; //start with LEDs to the left
+004C  01F2     CLRF _direction
+55:            
+56:                //by using the internal resistors, you can save cost by eleminating an external pull-up/down resistor
+57:            #ifdef PULL_UPS
+58:                WPUA3 = 1; //enable the weak pull-up for the switch
+004D  0024     MOVLB 0x4
+004E  158C     BSF PORTA, 0x3
+59:                nWPUEN = 0; //enable the global weak pull-up bit
+004F  0021     MOVLB 0x1
+0050  1395     BCF TMR0, 0x7
+60:            #endif
+61:            
+62:                //setup TIMER0 as the delay
+63:                //1:256 prescaler for a delay of: (insruction-cycle * 256-counts)*prescaler = ((8uS * 256)*256) =~ 524mS
+64:                OPTION_REG = 0b00000111; //setup TIMER0
+0051  3007     MOVLW 0x7
+0052  0095     MOVWF TMR0
+65:                INTCONbits.TMR0IE = 1; //enable the TMR0 rollover interrupt
+0053  168B     BSF INTCON, 0x5
+66:            
+67:                //setup interrupt on change for the switch
+68:                INTCONbits.IOCIE = 1; //enable interrupt on change global
+0054  158B     BSF INTCON, 0x3
+69:                IOCANbits.IOCAN3 = 1; //when SW1 is pressed, enter the ISR
+0055  0027     MOVLB 0x7
+0056  1592     BSF PIR2, 0x3
+70:                GIE = 1; //enable global interupts
+0057  178B     BSF INTCON, 0x7
+0058  2859     GOTO 0x59
+71:            
+72:            
+73:                while (1) {
+0059  2859     GOTO 0x59
+74:                    continue; //can spend rest of time doing something critical here
+75:                }
+76:            }
+005A  3180     MOVLP 0x0
+77:            
+78:            void interrupt ISR(void) {
+0004  3180     MOVLP 0x0
+0005  0020     MOVLB 0x0
+0006  087F     MOVF 0x7F, W
+0007  00F1     MOVWF 0x71
+79:            
+80:                if (IOCAF) { //SW1 was just pressed
+0008  0027     MOVLB 0x7
+0009  0813     MOVF PIR3, W
+000A  1D03     BTFSS STATUS, 0x2
+000B  280D     GOTO 0xD
+000C  281D     GOTO 0x1D
+81:                    IOCAF = 0; //must clear the flag in software
+000D  0193     CLRF PIR3
+82:                    __delay_ms(5); //debounce by waiting and seeing if still held down
+000E  30D0     MOVLW 0xD0
+000F  00F0     MOVWF 0x70
+0010  0BF0     DECFSZ 0x70, F
+0011  2810     GOTO 0x10
+83:                    if (SWITCH == DOWN) {
+0012  0020     MOVLB 0x0
+0013  198C     BTFSC PORTA, 0x3
+0014  2816     GOTO 0x16
+0015  2817     GOTO 0x17
+0016  281D     GOTO 0x1D
+84:                        _direction ^= 1; //change directions
+0017  3001     MOVLW 0x1
+0018  00F0     MOVWF 0x70
+0019  0870     MOVF 0x70, W
+001A  06F2     XORWF _direction, F
+001B  281D     GOTO 0x1D
+85:                    }
+001C  281D     GOTO 0x1D
+86:                }
+87:            
+88:                if (INTCONbits.T0IF) {
+001D  1D0B     BTFSS INTCON, 0x2
+001E  2820     GOTO 0x20
+001F  2821     GOTO 0x21
+0020  283E     GOTO 0x3E
+89:                    INTCONbits.T0IF = 0;
+0021  110B     BCF INTCON, 0x2
+90:            
+91:                    if (_direction == LED_LEFT) {
+0022  08F2     MOVF _direction, F
+0023  1D03     BTFSS STATUS, 0x2
+0024  2826     GOTO 0x26
+0025  2827     GOTO 0x27
+0026  2833     GOTO 0x33
+92:                        LATC >> = 1;
+0027  1003     BCF STATUS, 0x0
+0028  0022     MOVLB 0x2
+0029  0C8E     RRF PORTC, F
+93:                        if (STATUSbits.C == 1) //when the last LED is lit, restart the pattern
+002A  0020     MOVLB 0x0
+002B  1C03     BTFSS STATUS, 0x0
+002C  282E     GOTO 0x2E
+002D  282F     GOTO 0x2F
+002E  283E     GOTO 0x3E
+94:                            LATCbits.LATC3 = 1;
+002F  0022     MOVLB 0x2
+0030  158E     BSF PORTC, 0x3
+0031  283E     GOTO 0x3E
+95:                    } else{
+0032  283E     GOTO 0x3E
+96:                        LATC << = 1;
+0033  1003     BCF STATUS, 0x0
+0034  0022     MOVLB 0x2
+0035  0D8E     RLF PORTC, F
+97:                        if (LATCbits.LATC4 == 1) //when the last LED is lit, restart the pattern
+0036  1E0E     BTFSS PORTC, 0x4
+0037  2839     GOTO 0x39
+0038  283A     GOTO 0x3A
+0039  283E     GOTO 0x3E
+98:                            LATCbits.LATC0 = 1;
+003A  140E     BSF PORTC, 0x0
+003B  283E     GOTO 0x3E
+003C  283E     GOTO 0x3E
+99:            
+100:                   }
+003D  283E     GOTO 0x3E
+101:               }
+102:           
+103:           
+104:           }
+003E  0871     MOVF 0x71, W
