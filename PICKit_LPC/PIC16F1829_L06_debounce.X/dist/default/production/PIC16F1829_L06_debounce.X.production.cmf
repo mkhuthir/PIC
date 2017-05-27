@@ -14,7 +14,7 @@
 $dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 cinit CODE 0 7FD 7FD 3 2
 maintext CODE 0 7E3 7E3 1A 2
-$/tmp/xcXBXu4zC.obj
+$/tmp/xcXHE80Wh.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 2 2
@@ -111,24 +111,24 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/PIC16F1829_L06_debounce.X.production.obj
-7FD cinit CODE >395:/tmp/xcXP3YFgN
-7FD cinit CODE >398:/tmp/xcXP3YFgN
-7FD cinit CODE >404:/tmp/xcXP3YFgN
-7FD cinit CODE >406:/tmp/xcXP3YFgN
-7FE cinit CODE >407:/tmp/xcXP3YFgN
-7E3 maintext CODE >49:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7E3 maintext CODE >50:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7E6 maintext CODE >51:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7E7 maintext CODE >52:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7E9 maintext CODE >55:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7EB maintext CODE >56:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7ED maintext CODE >59:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7EE maintext CODE >60:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7F2 maintext CODE >61:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7F5 maintext CODE >62:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7F7 maintext CODE >59:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7FA maintext CODE >66:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
-7FC maintext CODE >58:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7FD cinit CODE >409:/tmp/xcXAD2Wm1
+7FD cinit CODE >412:/tmp/xcXAD2Wm1
+7FD cinit CODE >418:/tmp/xcXAD2Wm1
+7FD cinit CODE >420:/tmp/xcXAD2Wm1
+7FE cinit CODE >421:/tmp/xcXAD2Wm1
+7E3 maintext CODE >66:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7E3 maintext CODE >67:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7E6 maintext CODE >68:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7E7 maintext CODE >69:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7E9 maintext CODE >72:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7EB maintext CODE >73:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7ED maintext CODE >76:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7EE maintext CODE >77:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7F2 maintext CODE >78:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7F5 maintext CODE >79:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7F7 maintext CODE >76:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7FA maintext CODE >83:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
+7FC maintext CODE >75:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L06_debounce.X/src/debounce.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -146,33 +146,30 @@ __Hspace_0 8009 0 ABS 0 - -
 __Hspace_1 0 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
-__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
 _LATC 10E 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXBXu4zC.obj
+___sp 0 0 STACK 2 stack /tmp/xcXHE80Wh.obj
 _main FC6 0 CODE 0 maintext dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
-start 4 0 CODE 0 init /tmp/xcXBXu4zC.obj
+start 4 0 CODE 0 init /tmp/xcXHE80Wh.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 CODE 0 functab /tmp/xcXBXu4zC.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcXBXu4zC.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcXBXu4zC.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcXBXu4zC.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcXBXu4zC.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcXBXu4zC.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXHE80Wh.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXHE80Wh.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXHE80Wh.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXHE80Wh.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXHE80Wh.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXHE80Wh.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
-__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 start_initialization FFA 0 CODE 0 cinit dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 _OSCCON 99 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 _TRISAbits 8C 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
-__CFG_STVREN$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXBXu4zC.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXHE80Wh.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -304,8 +301,10 @@ __S0 8009 0 ABS 0 - -
 __S1 0 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXBXu4zC.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXHE80Wh.obj
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -330,12 +329,15 @@ __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
 __pmaintext FC6 0 CODE 0 maintext dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Lbigram 0 0 ABS 0 bigram -
+__CFG_BORV$LO 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 _LATCbits 10E 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
-stackhi 23EF 0 ABS 0 - /tmp/xcXBXu4zC.obj
-stacklo 2000 0 ABS 0 - /tmp/xcXBXu4zC.obj
+stackhi 23EF 0 ABS 0 - /tmp/xcXHE80Wh.obj
+stacklo 2000 0 ABS 0 - /tmp/xcXHE80Wh.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -345,11 +347,13 @@ __Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Hintentry 4 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Lfunctab 0 0 CODE 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -360,7 +364,10 @@ __end_of_main FFA 0 CODE 0 maintext dist/default/production/PIC16F1829_L06_debou
 _TRISC 8E 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 __initialization FFA 0 CODE 0 cinit dist/default/production/PIC16F1829_L06_debounce.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 _ANSELAbits 18C 0 ABS 0 - dist/default/production/PIC16F1829_L06_debounce.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
