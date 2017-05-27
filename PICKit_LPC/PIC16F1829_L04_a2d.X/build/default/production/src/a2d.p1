@@ -2936,72 +2936,90 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 192: extern unsigned char __resetbits;
 [; ;pic.h: 193: extern __bit __powerdown;
 [; ;pic.h: 194: extern __bit __timeout;
-"35 src/a2d.c
+"37 src/a2d.c
 [p x FOSC=INTOSC ]
+"38
 [p x WDTE=OFF ]
-[p x MCLRE=OFF ]
-[p x IESO=OFF ]
-[p x FCMEN=OFF ]
-"36
+"39
+[p x PWRTE=OFF ]
+"40
+[p x MCLRE=ON ]
+"41
+[p x CP=OFF ]
+"42
+[p x CPD=OFF ]
+"43
+[p x BOREN=ON ]
+"44
+[p x CLKOUTEN=OFF ]
+"45
+[p x IESO=ON ]
+"46
+[p x FCMEN=ON ]
+"49
+[p x WRT=OFF ]
+"50
 [p x PLLEN=OFF ]
-[p x STVREN=OFF ]
+"51
+[p x STVREN=ON ]
+"52
+[p x BORV=LO ]
+"53
 [p x LVP=OFF ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"44
+"62
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;a2d.c: 35: __config("__CONFIG", "pic", "FOSC_INTOSC & WDTE_OFF & PWRTE_OFF & MCLRE_OFF & CP_OFF & CPD_OFF & BOREN_ON & CLKOUTEN_OFF & IESO_OFF & FCMEN_OFF");
-[; ;a2d.c: 36: __config("__CONFIG", "pic", "WRT_OFF & PLLEN_OFF & STVREN_OFF & LVP_OFF");
-[; ;a2d.c: 44: void main(void) {
+[; ;a2d.c: 62: void main(void) {
 [e :U _main ]
 [f ]
-[; ;a2d.c: 45: OSCCON = 0b00111000;
-"45
+[; ;a2d.c: 63: OSCCON = 0b00111000;
+"63
 [e = _OSCCON -> -> 56 `i `uc ]
-[; ;a2d.c: 46: TRISC = 0;
-"46
+[; ;a2d.c: 64: TRISC = 0;
+"64
 [e = _TRISC -> -> 0 `i `uc ]
-[; ;a2d.c: 49: TRISAbits.TRISA4 = 1;
-"49
+[; ;a2d.c: 67: TRISAbits.TRISA4 = 1;
+"67
 [e = . . _TRISAbits 0 4 -> -> 1 `i `uc ]
-[; ;a2d.c: 50: ANSELAbits.ANSA4 = 1;
-"50
+[; ;a2d.c: 68: ANSELAbits.ANSA4 = 1;
+"68
 [e = . . _ANSELAbits 0 4 -> -> 1 `i `uc ]
-[; ;a2d.c: 51: ADCON0 = 0b00001101;
-"51
+[; ;a2d.c: 69: ADCON0 = 0b00001101;
+"69
 [e = _ADCON0 -> -> 13 `i `uc ]
-[; ;a2d.c: 52: ADCON1 = 0b00010000;
-"52
+[; ;a2d.c: 70: ADCON1 = 0b00010000;
+"70
 [e = _ADCON1 -> -> 16 `i `uc ]
-[; ;a2d.c: 54: while (1) {
-"54
+[; ;a2d.c: 72: while (1) {
+"72
 [e :U 369 ]
 {
-[; ;a2d.c: 55: _delay((unsigned long)((5)*(500000/4000000.0)));
-"55
+[; ;a2d.c: 73: _delay((unsigned long)((5)*(500000/4000000.0)));
+"73
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 500000 `l `d .4000000.0 `ul ]
-[; ;a2d.c: 56: GO = 1;
-"56
+[; ;a2d.c: 74: GO = 1;
+"74
 [e = _GO -> -> 1 `i `b ]
-[; ;a2d.c: 57: while (GO) continue;
-"57
+[; ;a2d.c: 75: while (GO) continue;
+"75
 [e $U 371  ]
 [e :U 372 ]
 [e $U 371  ]
 [e :U 371 ]
 [e $ _GO 372  ]
 [e :U 373 ]
-[; ;a2d.c: 58: LATC = (ADRESH >> 4);
-"58
+[; ;a2d.c: 76: LATC = (ADRESH >> 4);
+"76
 [e = _LATC -> >> -> _ADRESH `i -> 4 `i `uc ]
-"59
+"77
 }
 [e :U 368 ]
-"54
+"72
 [e $U 369  ]
 [e :U 370 ]
-[; ;a2d.c: 59: }
-[; ;a2d.c: 63: }
-"63
+[; ;a2d.c: 77: }
+[; ;a2d.c: 81: }
+"81
 [e :UE 367 ]
 }

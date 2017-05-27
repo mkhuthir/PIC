@@ -23,9 +23,9 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
     
-    LED_DS1_SetHigh();
+    LED_DS1_SetLow();
     LED_DS2_SetHigh();
-    LED_DS3_SetHigh();
+    LED_DS3_SetLow();
     LED_DS4_SetHigh();
     
     while (1)

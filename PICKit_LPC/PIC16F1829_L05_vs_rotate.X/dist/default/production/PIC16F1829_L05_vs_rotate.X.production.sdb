@@ -11,9 +11,9 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"38 /home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L05_vs_rotate.X/src/vs_rotate.c
+"54 /home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L05_vs_rotate.X/src/vs_rotate.c
 [v _main main `(v  1 e 1 0 ]
-"65
+"81
 [v _adc adc `(uc  1 e 1 0 ]
 [s S92 . 1 `uc 1 C 1 0 :1:0 
 `uc 1 DC 1 0 :1:1 
@@ -75,15 +75,15 @@
 [v _ANSELAbits ANSELAbits `VES68  1 e 1 @396 ]
 "7364
 [v _GO GO `VEb  1 e 0 @1257 ]
-"38 /home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L05_vs_rotate.X/src/vs_rotate.c
+"54 /home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L05_vs_rotate.X/src/vs_rotate.c
 [v _main main `(v  1 e 1 0 ]
 {
-"39
+"55
 [v main@delay delay `uc  1 a 1 1 ]
-"63
+"79
 } 0
-"65
+"81
 [v _adc adc `(uc  1 e 1 0 ]
 {
-"72
+"88
 } 0

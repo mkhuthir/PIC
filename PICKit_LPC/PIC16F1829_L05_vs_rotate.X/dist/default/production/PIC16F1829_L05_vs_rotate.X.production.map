@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v1.42/dat/en_msgs.txt -cs \
   -h+dist/default/production/PIC16F1829_L05_vs_rotate.X.production.sym \
   --cmf=dist/default/production/PIC16F1829_L05_vs_rotate.X.production.cmf \
-  -z -Q16F1829 -o/tmp/xcXZwX2OH \
+  -z -Q16F1829 -o/tmp/xcXYWDzth \
   -Mdist/default/production/PIC16F1829_L05_vs_rotate.X.production.map -E1 \
   -ver=XC8 -ASTACK=02000h-023efh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -31,7 +31,7 @@ Linker command line:
   -pcinit=CODE -pfunctab=CODE -ACONFIG=08007h-08008h -pconfig=CONFIG \
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
-  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcXN0RXMj.obj \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcX8CxdRU.obj \
   dist/default/production/PIC16F1829_L05_vs_rotate.X.production.obj 
 
 Object code version is 3.11
@@ -41,7 +41,7 @@ Machine type is 16F1829
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXN0RXMj.obj
+/tmp/xcX8CxdRU.obj
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0
@@ -316,14 +316,21 @@ _OSCCON                  (abs)        00099
 _STATUSbits              (abs)        00003
 _TRISAbits               (abs)        0008C
 _TRISC                   (abs)        0008E
-__CFG_FCMEN$OFF          (abs)        00000
+__CFG_BOREN$ON           (abs)        00000
+__CFG_BORV$LO            (abs)        00000
+__CFG_CLKOUTEN$OFF       (abs)        00000
+__CFG_CP$OFF             (abs)        00000
+__CFG_CPD$OFF            (abs)        00000
+__CFG_FCMEN$ON           (abs)        00000
 __CFG_FOSC$INTOSC        (abs)        00000
-__CFG_IESO$OFF           (abs)        00000
+__CFG_IESO$ON            (abs)        00000
 __CFG_LVP$OFF            (abs)        00000
-__CFG_MCLRE$OFF          (abs)        00000
+__CFG_MCLRE$ON           (abs)        00000
 __CFG_PLLEN$OFF          (abs)        00000
-__CFG_STVREN$OFF         (abs)        00000
+__CFG_PWRTE$OFF          (abs)        00000
+__CFG_STVREN$ON          (abs)        00000
 __CFG_WDTE$OFF           (abs)        00000
+__CFG_WRT$OFF            (abs)        00000
 __Habs1                  abs1         00000
 __Hbank0                 bank0        00000
 __Hbank1                 bank1        00000
@@ -541,7 +548,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 38 in file "src/vs_rotate.c"
+		line 54 in file "src/vs_rotate.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -570,7 +577,7 @@ Total ram usage:        2 bytes
 
  *************** function _adc *****************
  Defined at:
-		line 65 in file "src/vs_rotate.c"
+		line 81 in file "src/vs_rotate.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

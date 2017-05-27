@@ -15,7 +15,7 @@ $dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 cinit CODE 0 7FD 7FD 3 2
 maintext CODE 0 7E3 7E3 1A 2
 cstackCOMMON COMMON 1 70 70 1 1
-$/tmp/xcXXKKUvl.obj
+$/tmp/xcXoBpXjq.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 2 2
@@ -112,23 +112,23 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/PIC16F1829_L04_a2d.X.production.obj
-7FD cinit CODE >399:/tmp/xcXH3wGbc
-7FD cinit CODE >402:/tmp/xcXH3wGbc
-7FD cinit CODE >408:/tmp/xcXH3wGbc
-7FD cinit CODE >410:/tmp/xcXH3wGbc
-7FE cinit CODE >411:/tmp/xcXH3wGbc
-7E3 maintext CODE >44:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7E3 maintext CODE >45:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7E6 maintext CODE >46:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7E7 maintext CODE >49:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7E8 maintext CODE >50:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7EA maintext CODE >51:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7ED maintext CODE >52:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7EF maintext CODE >55:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7EF maintext CODE >56:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7F1 maintext CODE >57:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7F3 maintext CODE >58:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
-7FC maintext CODE >54:/home/mkhuthir/microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7FD cinit CODE >413:/tmp/xcXSnKCmn
+7FD cinit CODE >416:/tmp/xcXSnKCmn
+7FD cinit CODE >422:/tmp/xcXSnKCmn
+7FD cinit CODE >424:/tmp/xcXSnKCmn
+7FE cinit CODE >425:/tmp/xcXSnKCmn
+7E3 maintext CODE >62:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7E3 maintext CODE >63:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7E6 maintext CODE >64:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7E7 maintext CODE >67:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7E8 maintext CODE >68:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7EA maintext CODE >69:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7ED maintext CODE >70:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7EF maintext CODE >73:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7EF maintext CODE >74:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7F1 maintext CODE >75:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7F3 maintext CODE >76:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
+7FC maintext CODE >72:/home/mkhuthir/Microchip/PICKit_LPC/PIC16F1829_L04_a2d.X/src/a2d.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -146,23 +146,23 @@ __Hspace_0 8009 0 ABS 0 - -
 __Hspace_1 71 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
-__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 _GO 4E9 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
 _LATC 10E 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXXKKUvl.obj
+___sp 0 0 STACK 2 stack /tmp/xcXoBpXjq.obj
 _main FC6 0 CODE 0 maintext dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
-start 4 0 CODE 0 init /tmp/xcXXKKUvl.obj
+start 4 0 CODE 0 init /tmp/xcXoBpXjq.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 CODE 0 functab /tmp/xcXXKKUvl.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcXXKKUvl.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcXXKKUvl.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcXXKKUvl.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcXXKKUvl.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcXXKKUvl.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXoBpXjq.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXoBpXjq.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXoBpXjq.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXoBpXjq.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXoBpXjq.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXoBpXjq.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
@@ -170,13 +170,10 @@ _ADCON0 9D 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 _ADCON1 9E 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 _ADRESH 9C 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
-__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
-__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 start_initialization FFA 0 CODE 0 cinit dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 _OSCCON 99 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 _TRISAbits 8C 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
-__CFG_STVREN$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXXKKUvl.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXoBpXjq.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -307,8 +304,10 @@ __S0 8009 0 ABS 0 - -
 __S1 71 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXXKKUvl.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXoBpXjq.obj
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -333,11 +332,14 @@ __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
 __pmaintext FC6 0 CODE 0 maintext dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Lbigram 0 0 ABS 0 bigram -
+__CFG_BORV$LO 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
-stackhi 23EF 0 ABS 0 - /tmp/xcXXKKUvl.obj
-stacklo 2000 0 ABS 0 - /tmp/xcXXKKUvl.obj
+stackhi 23EF 0 ABS 0 - /tmp/xcXoBpXjq.obj
+stacklo 2000 0 ABS 0 - /tmp/xcXoBpXjq.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -347,11 +349,13 @@ __Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Hintentry 4 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Lfunctab 0 0 CODE 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -362,7 +366,10 @@ __end_of_main FFA 0 CODE 0 maintext dist/default/production/PIC16F1829_L04_a2d.X
 _TRISC 8E 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 __initialization FFA 0 CODE 0 cinit dist/default/production/PIC16F1829_L04_a2d.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 _ANSELAbits 18C 0 ABS 0 - dist/default/production/PIC16F1829_L04_a2d.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
