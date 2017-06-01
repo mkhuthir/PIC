@@ -1,0 +1,306 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18855 ]
+[d frameptr 6 ]
+"93 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/tmr2.c
+[e E14252 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR2_OS_STARTS_TMRON_ERSHIGH 22
+TMR2_OS_STARTS_TMRON_ERSLOW 23
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"99
+[e E14275 . `uc
+TMR2_T2INPPS 0
+TMR2_RESERVED 1
+TMR2_T4POSTSCALED 2
+TMR2_T6POSTSCALED 3
+TMR2_CCP1_OUT 4
+TMR2_CCP2_OUT 5
+TMR2_CCP3_OUT 6
+TMR2_CCP4_OUT 7
+TMR2_CCP5_OUT 8
+TMR2_PWM6_OUT 9
+TMR2_PWM7_OUT 10
+TMR2_C1_OUT_SYNC 11
+TMR2_C2_OUT_SYNC 12
+TMR2_ZCD_OUTPUT 13
+TMR2_LC1_OUT 14
+TMR2_LC2_OUT 15
+TMR2_LC3_OUT 16
+TMR2_LC4_OUT 17
+]
+"62 /opt/microchip/xc8/v1.42/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.42/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.42/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"4 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"83 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"92
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"51 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"57 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/pwm6.c
+[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
+"63 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"104
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"115
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"126
+[v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
+"140
+[v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
+"151
+[v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
+"589 /opt/microchip/xc8/v1.42/include/pic16f18855.h
+[v _TRISA TRISA `VEuc  1 e 1 @17 ]
+"651
+[v _TRISB TRISB `VEuc  1 e 1 @18 ]
+"713
+[v _TRISC TRISC `VEuc  1 e 1 @19 ]
+"775
+[v _LATA LATA `VEuc  1 e 1 @22 ]
+"837
+[v _LATB LATB `VEuc  1 e 1 @23 ]
+"899
+[v _LATC LATC `VEuc  1 e 1 @24 ]
+[s S99 . 1 `uc 1 C5TSEL 1 0 :2:0 
+`uc 1 P6TSEL 1 0 :2:2 
+`uc 1 P7TSEL 1 0 :2:4 
+]
+"9031
+[s S103 . 1 `uc 1 C5TSEL0 1 0 :1:0 
+`uc 1 C5TSEL1 1 0 :1:1 
+`uc 1 P6TSEL0 1 0 :1:2 
+`uc 1 P6TSEL1 1 0 :1:3 
+`uc 1 P7TSEL0 1 0 :1:4 
+`uc 1 P7TSEL1 1 0 :1:5 
+]
+[u S110 . 1 `S99 1 . 1 0 `S103 1 . 1 0 ]
+[v _CCPTMRS1bits CCPTMRS1bits `VES110  1 e 1 @543 ]
+"9081
+[v _T2TMR T2TMR `VEuc  1 e 1 @652 ]
+"9086
+[v _TMR2 TMR2 `VEuc  1 e 1 @652 ]
+"9119
+[v _T2PR T2PR `VEuc  1 e 1 @653 ]
+"9124
+[v _PR2 PR2 `VEuc  1 e 1 @653 ]
+"9157
+[v _T2CON T2CON `VEuc  1 e 1 @654 ]
+[s S288 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"9193
+[s S292 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+[s S296 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+]
+[s S304 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+[u S313 . 1 `S288 1 . 1 0 `S292 1 . 1 0 `S296 1 . 1 0 `S304 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES313  1 e 1 @654 ]
+"9303
+[v _T2HLT T2HLT `VEuc  1 e 1 @655 ]
+[s S181 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"9336
+[s S186 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S192 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+[s S197 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+[u S203 . 1 `S181 1 . 1 0 `S186 1 . 1 0 `S192 1 . 1 0 `S197 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES203  1 e 1 @655 ]
+"9436
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @656 ]
+"9589
+[v _T2RST T2RST `VEuc  1 e 1 @657 ]
+[s S250 . 1 `uc 1 RSEL 1 0 :5:0 
+]
+"9616
+[s S252 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+`uc 1 RSEL4 1 0 :1:4 
+]
+[s S258 . 1 `uc 1 T2RSEL 1 0 :5:0 
+]
+[s S260 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+`uc 1 T2RSEL4 1 0 :1:4 
+]
+[u S266 . 1 `S250 1 . 1 0 `S252 1 . 1 0 `S258 1 . 1 0 `S260 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES266  1 e 1 @657 ]
+"12171
+[v _PWM6DCL PWM6DCL `VEuc  1 e 1 @908 ]
+"12237
+[v _PWM6DCH PWM6DCH `VEuc  1 e 1 @909 ]
+"12407
+[v _PWM6CON PWM6CON `VEuc  1 e 1 @910 ]
+[s S138 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR3IF 1 0 :1:2 
+`uc 1 TMR4IF 1 0 :1:3 
+`uc 1 TMR5IF 1 0 :1:4 
+`uc 1 TMR6IF 1 0 :1:5 
+]
+"21299
+[u S145 . 1 `S138 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES145  1 e 1 @1808 ]
+"23324
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"23464
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"23561
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"23612
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"23670
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"29763
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3727 ]
+[s S60 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"29773
+[u S62 . 1 `S60 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES62  1 e 1 @3727 ]
+[s S67 . 1 `uc 1 T2AINPPS 1 0 :5:0 
+]
+"30204
+[s S69 . 1 `uc 1 T2AINPPS0 1 0 :1:0 
+`uc 1 T2AINPPS1 1 0 :1:1 
+`uc 1 T2AINPPS2 1 0 :1:2 
+`uc 1 T2AINPPS3 1 0 :1:3 
+`uc 1 T2AINPPS4 1 0 :1:4 
+]
+[u S75 . 1 `S67 1 . 1 0 `S69 1 . 1 0 ]
+[v _T2AINPPSbits T2AINPPSbits `VES75  1 e 1 @3740 ]
+"31791
+[v _RA0PPS RA0PPS `VEuc  1 e 1 @3856 ]
+"31841
+[v _RA1PPS RA1PPS `VEuc  1 e 1 @3857 ]
+"31891
+[v _RA2PPS RA2PPS `VEuc  1 e 1 @3858 ]
+"31941
+[v _RA3PPS RA3PPS `VEuc  1 e 1 @3859 ]
+"32991
+[v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
+"33053
+[v _WPUA WPUA `VEuc  1 e 1 @3897 ]
+"33115
+[v _ODCONA ODCONA `VEuc  1 e 1 @3898 ]
+"33611
+[v _ANSELB ANSELB `VEuc  1 e 1 @3907 ]
+"33673
+[v _WPUB WPUB `VEuc  1 e 1 @3908 ]
+"33735
+[v _ODCONB ODCONB `VEuc  1 e 1 @3909 ]
+"34231
+[v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
+"34293
+[v _WPUC WPUC `VEuc  1 e 1 @3919 ]
+"34355
+[v _ODCONC ODCONC `VEuc  1 e 1 @3920 ]
+"34851
+[v _WPUE WPUE `VEuc  1 e 1 @3941 ]
+"36757
+"36757
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"4 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"14
+} 0
+"83 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"90
+} 0
+"63 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"90
+} 0
+"104
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+{
+"108
+} 0
+"57 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/pwm6.c
+[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"51 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"94
+[v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
+"111
+} 0
+"92 /home/mkhuthir/Microchip/Xpress_PC16F18855/CIP_Blink.X/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"104
+} 0
