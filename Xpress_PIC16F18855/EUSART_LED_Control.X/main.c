@@ -1,7 +1,7 @@
 
 #include "mcc_generated_files/mcc.h"
 
-//stdio is redirected to USART (TX=RC0) baudrate 19200 8N1
+//stdio is redirected to USART (TX=RC0) baud rate 19200 8N1
 
 void main(void)
 {
