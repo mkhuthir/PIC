@@ -15,9 +15,9 @@
 #define Slave_Add           0x74    // Slave device address  (AD connected to GND by default)
 #define RETRY_MAX           100     // Maximum retries before return with a fail status.
 
-// IS31FL3731 registers
-#define Reg_Command         0xFD    // Command Register
 
+
+// IS31FL3731 pages
 #define Page_1              0x00    // Page 1: Frame 1 storage for LED,Blink,PWM
 #define Page_2              0x01    // Page 2: Frame 2 storage for LED,Blink,PWM
 #define Page_3              0x02    // Page 3: Frame 3 storage for LED,Blink,PWM
@@ -28,12 +28,15 @@
 #define Page_8              0x07    // Page 8: Frame 8 storage for LED,Blink,PWM
 #define Page_9              0x0B    // Page 9: Functions Registers
 
-// Frame Registers (Page One to Page Eight)
+// IS31FL3731 registers
+#define Reg_Command         0xFD    // Command Register
+
+// Frame Registers (Applicable to Page One to Page Eight)
 #define Fram_REG_LED        0x00    // RW - 00h ~ 11h - LED Control: Stores ON or OFF state for each LED
 #define Fram_REG_Blink      0x12    // RW - 12h ~ 23h - Blink Control: Controls the blink function for each LED
 #define Fram_REG_PWM        0x24    // RW - 24h ~ B3h - PWM: PWM duty cycle for each LED
 
-// Function Registers (Page Nine)
+// Function Registers (Applicable to Page Nine)
 #define Func_REG_Config     0x00    // RW - Configuration: Configure the operation mode
 #define Func_REG_PicDisp    0x01    // RW - Picture Display: Set the display frame in Picture Mode
 #define Func_REG_AutoPly1   0x02    // RW - Auto Play Control Register 1: Set the way of display in Auto Frame Play Mode 
@@ -51,8 +54,9 @@
 //-------------------------------------------------------------------------------------
 // functions
 //-------------------------------------------------------------------------------------
-bool I2C_ReadByte(uint8_t reg, uint8_t *pData); // Reads 1 byte from IS31FL3731 using SMBus protocol
-bool I2C_WriteByte(uint8_t reg, uint8_t data);  // Writes 1 byte to IS31FL3731 using SMBus protocol
+bool SelectPage(uint8_t page);              // Select one of the nine pages before reading/writing a register in a page.
+bool ReadReg(uint8_t page, uint8_t reg, uint8_t *pData);  // Reads 1 byte from IS31FL3731 using SMBus protocol
+bool WriteReg(uint8_t page, uint8_t reg, uint8_t data);   // Writes 1 byte to IS31FL3731 using SMBus protocol
 
 //-------------------------------------------------------------------------------------
 
