@@ -17,6 +17,15 @@
 
 // IS31FL3731 registers
 
+// Frame Registers (Page One to Page Eight)
+#define Fram_REG_LED        0x00    // R/W - 00h ~ 11h - Store on or off state for each LED
+#define Fram_REG_Blink      0x12    // R/W - 12h ~ 23h - Control the blink function for each LED
+#define Fram_REG_PWM        0x24    // 
+
+// Function Registers (Page Nine)
+#define Func_REG_CONFIG     0x00    //
+
+ 
 //-------------------------------------------------------------------------------------
 // functions
 //-------------------------------------------------------------------------------------
