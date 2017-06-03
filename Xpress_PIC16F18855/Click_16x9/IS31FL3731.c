@@ -10,7 +10,7 @@
 //-------------------------------------------------------------------------------------
 // Reads 1 byte from IS31FL3731 using SMBus protocol
 //-------------------------------------------------------------------------------------
-bool IS31FL3731_Read(uint8_t reg, uint8_t *pData)
+bool I2C_ReadByte(uint8_t reg, uint8_t *pData)
 {
     uint8_t timeOut=0;                                             // will ne used to count retries
 
@@ -42,7 +42,7 @@ bool IS31FL3731_Read(uint8_t reg, uint8_t *pData)
 //-------------------------------------------------------------------------------------
 // Writes 1 byte to IS31FL3731 using SMBus protocol
 //-------------------------------------------------------------------------------------
-bool IS31FL3731_Write(uint8_t reg, uint8_t data)
+bool I2C_WriteByte(uint8_t reg, uint8_t data)
 {
     static I2C1_TRANSACTION_REQUEST_BLOCK trb;                      // TRB
     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;              // initial value of status is pending
