@@ -3,12 +3,38 @@
 // Please feel free to copy and use code.
 // Device datasheet https://download.mikroe.com/documents/datasheets/is31fl3731-datasheet.pdf
 
+// How the Click board is connected to Xpress Board:
+/**
+IS31FL3731      Click       Xpress
+-------------------------------------
+SCL             SCL         RC4     - I2C clock
+SDA             SDA         RC3     - I2C data
+!IN             PWM         RC7     - Audio Input
+INT             INT         RC2     - Interrupt output, active low.
+SDB             CS          RB2     - Shut down the chip when pulled to low.
+GND             GND         GND     - Ground
+VCC             3.3V        3.3V    - Power supply
+R_Ext           18k         -       - Resistance to confirm LED current
+C_Filt          0.1uF       -       - Capacitor used for audio filter
+AD              GND         -       - I2C address setting. AD=GND=00 > adderess is 0x74
+-------------------------------------
+- 4.7K pull up resistors are connected to SCL,SDA, and INT
+- 100K pull down resistor is connected to SDB
+- R_EXT=18K, C_Flit=0.1uF
+- AD jumper is connected to GND
+- Vcc Sel=3.3V
+**/
+
+
 #ifndef _IS31FL3731_H
 #define _IS31FL3731_H
 
 #ifndef MCC_H
 #include "mcc_generated_files/mcc.h"
 #endif
+
+#define Enable  true
+#define Disable false
 
 //-------------------------------------------------------------------------------------
 // IS31FL3731 Address
@@ -51,12 +77,23 @@
 #define Func_REG_AudAGC     0x0B    // RW - AGC Control: Set the AGC function and the audio gain. 
 #define Func_REG_AudADC     0x0C    // RW - Audio ADC Rate: Set the ADC sample rate of the input signal 
  
+
+
+//-------------------------------------------------------------------------------------
+// Function Macros
+//-------------------------------------------------------------------------------------
+#define HWShut()    SDB_Setlow();                           // Hardware shutdown
+#define HWNoShut()    SDB_SetHigh();                          // Hardware no shutdown
+#define SWShut()    WriteReg(Page_9, Func_REG_Shut, 0x00);  // Software shutdown
+#define SWNoShut()  WriteReg(Page_9, Func_REG_Shut, 0x01);  // Software no shutdown
+
 //-------------------------------------------------------------------------------------
 // functions
 //-------------------------------------------------------------------------------------
 bool SelectPage(uint8_t page);              // Select one of the nine pages before reading/writing a register in a page.
 bool ReadReg(uint8_t page, uint8_t reg, uint8_t *pData);  // Reads 1 byte from IS31FL3731 using SMBus protocol
 bool WriteReg(uint8_t page, uint8_t reg, uint8_t data);   // Writes 1 byte to IS31FL3731 using SMBus protocol
+void InitDisp(void);    // initilize display
 
 //-------------------------------------------------------------------------------------
 

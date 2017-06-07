@@ -21,14 +21,13 @@ void main(void)
     LED5_SetHigh();     // Not used
     
     // IS31FL3731 initializations
-       
+    
+    InitDisp();
+    
     // Execution loop
     while (1)
     {
-
-        printf("Hello....\n");  // print some text on UART
         LED2_Toggle();          // Activity indicator
         __delay_ms(1000);       // delay 1000ms
-        
     }
 }

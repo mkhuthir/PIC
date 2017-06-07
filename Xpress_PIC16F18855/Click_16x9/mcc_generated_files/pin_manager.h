@@ -139,29 +139,25 @@
 #define LED5_SetAnalogMode()  do { ANSELAbits.ANSA3 = 1; } while(0)
 #define LED5_SetDigitalMode() do { ANSELAbits.ANSA3 = 0; } while(0)
 
-// get/set RC0 procedures
-#define RC0_SetHigh()    do { LATCbits.LATC0 = 1; } while(0)
-#define RC0_SetLow()   do { LATCbits.LATC0 = 0; } while(0)
-#define RC0_Toggle()   do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
-#define RC0_GetValue()         PORTCbits.RC0
-#define RC0_SetDigitalInput()   do { TRISCbits.TRISC0 = 1; } while(0)
-#define RC0_SetDigitalOutput()  do { TRISCbits.TRISC0 = 0; } while(0)
-#define RC0_SetPullup()     do { WPUCbits.WPUC0 = 1; } while(0)
-#define RC0_ResetPullup()   do { WPUCbits.WPUC0 = 0; } while(0)
-#define RC0_SetAnalogMode() do { ANSELCbits.ANSC0 = 1; } while(0)
-#define RC0_SetDigitalMode()do { ANSELCbits.ANSC0 = 0; } while(0)
-
-// get/set RC1 procedures
-#define RC1_SetHigh()    do { LATCbits.LATC1 = 1; } while(0)
-#define RC1_SetLow()   do { LATCbits.LATC1 = 0; } while(0)
-#define RC1_Toggle()   do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0)
-#define RC1_GetValue()         PORTCbits.RC1
-#define RC1_SetDigitalInput()   do { TRISCbits.TRISC1 = 1; } while(0)
-#define RC1_SetDigitalOutput()  do { TRISCbits.TRISC1 = 0; } while(0)
-#define RC1_SetPullup()     do { WPUCbits.WPUC1 = 1; } while(0)
-#define RC1_ResetPullup()   do { WPUCbits.WPUC1 = 0; } while(0)
-#define RC1_SetAnalogMode() do { ANSELCbits.ANSC1 = 1; } while(0)
-#define RC1_SetDigitalMode()do { ANSELCbits.ANSC1 = 0; } while(0)
+// get/set SDB aliases
+#define SDB_TRIS               TRISBbits.TRISB2
+#define SDB_LAT                LATBbits.LATB2
+#define SDB_PORT               PORTBbits.RB2
+#define SDB_WPU                WPUBbits.WPUB2
+#define SDB_OD                ODCONBbits.ODCB2
+#define SDB_ANS                ANSELBbits.ANSB2
+#define SDB_SetHigh()            do { LATBbits.LATB2 = 1; } while(0)
+#define SDB_SetLow()             do { LATBbits.LATB2 = 0; } while(0)
+#define SDB_Toggle()             do { LATBbits.LATB2 = ~LATBbits.LATB2; } while(0)
+#define SDB_GetValue()           PORTBbits.RB2
+#define SDB_SetDigitalInput()    do { TRISBbits.TRISB2 = 1; } while(0)
+#define SDB_SetDigitalOutput()   do { TRISBbits.TRISB2 = 0; } while(0)
+#define SDB_SetPullup()      do { WPUBbits.WPUB2 = 1; } while(0)
+#define SDB_ResetPullup()    do { WPUBbits.WPUB2 = 0; } while(0)
+#define SDB_SetPushPull()    do { ODCONBbits.ODCB2 = 1; } while(0)
+#define SDB_SetOpenDrain()   do { ODCONBbits.ODCB2 = 0; } while(0)
+#define SDB_SetAnalogMode()  do { ANSELBbits.ANSB2 = 1; } while(0)
+#define SDB_SetDigitalMode() do { ANSELBbits.ANSB2 = 0; } while(0)
 
 // get/set SDA1 aliases
 #define SDA1_TRIS               TRISCbits.TRISC3

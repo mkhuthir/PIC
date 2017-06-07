@@ -3,6 +3,28 @@
 // Please feel free to copy and use code.
 // Device datasheet https://download.mikroe.com/documents/datasheets/is31fl3731-datasheet.pdf 
 
+// How the Click board is connected to Xpress Board:
+/**
+IS31FL3731      Click       Xpress
+-------------------------------------
+SCL             SCL         RC4     - I2C clock
+SDA             SDA         RC3     - I2C data
+!IN             PWM         RC7     - Audio Input
+INT             INT         RC2     - Interrupt output, active low.
+SDB             CS          RB2     - Shut down the chip when pulled to low.
+GND             GND         GND     - Ground
+VCC             3.3V        3.3V    - Power supply
+R_Ext           18k         -       - Resistance to confirm LED current
+C_Filt          0.1uF       -       - Capacitor used for audio filter
+AD              GND         -       - I2C address setting. AD=GND=00 > adderess is 0x74
+-------------------------------------
+- 4.7K pull up resistors are connected to SCL,SDA, and INT
+- 100K pull down resistor is connected to SDB
+- R_EXT=18K, C_Flit=0.1uF
+- AD jumper is connected to GND
+- Vcc Sel=3.3V
+**/
+
 #ifndef _IS31FL3731_H
 #include "IS31FL3731.h"
 #endif
@@ -110,4 +132,13 @@ bool WriteReg(uint8_t page, uint8_t reg, uint8_t data)
 
     return (status == I2C1_MESSAGE_COMPLETE);
 }
+
+
 //-------------------------------------------------------------------------------------
+// initilize display
+//-------------------------------------------------------------------------------------
+void InitDisp(void)
+{
+   HWNoShut();
+   SWNoShut();
+}

@@ -51,7 +51,6 @@
 #include <stdbool.h>
 #include "interrupt_manager.h"
 #include "i2c1.h"
-#include "eusart.h"
 
 #define _XTAL_FREQ  1000000
 
