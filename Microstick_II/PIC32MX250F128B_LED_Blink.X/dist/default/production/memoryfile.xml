@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="dist/default/production/PIC32MX250F128B_LED.X.production.elf">                 
+  <executable name="dist/default/production/PIC32MX250F128B_LED_Blink.X.production.elf">                 
     <memory name="program">                 
       <units>bytes</units>                 
       <length>132240</length>                 
-      <used>2392</used>                     
-      <free>129848</free>                     
+      <used>2436</used>                     
+      <free>129804</free>                     
     </memory>                              
     <memory name="data">              
       <units>bytes</units>                 

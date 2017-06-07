@@ -3,13 +3,20 @@
 
 #include "mcc_generated_files/mcc.h"
 
+ 
 
 int main(void)
 {
   
     SYSTEM_Initialize();
-
-    IO_RA0_SetHigh();
-
-    return 0;
+    int i;
+    
+    while (1)
+    {
+        IO_RA0_Toggle();
+        
+        i=300000;       //delay
+        while(i--){};
+    }
+    
 }

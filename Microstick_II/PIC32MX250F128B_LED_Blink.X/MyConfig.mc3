@@ -26,7 +26,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu32.Mcu32PeripheralLibrary" version="1.25"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu32.Mcu32PeripheralLibrary" version="1.35"/>
    </usedLibraries>
    <tokenMap class="java.util.HashMap">
       <entry>
