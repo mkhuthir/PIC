@@ -83,7 +83,7 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 // Function Macros
 //-------------------------------------------------------------------------------------
 #define HWShut()    SDB_Setlow();                           // Hardware shutdown
-#define HWNoShut()    SDB_SetHigh();                          // Hardware no shutdown
+#define HWNoShut()  SDB_SetHigh();                          // Hardware no shutdown
 #define SWShut()    WriteReg(Page_9, Func_REG_Shut, 0x00);  // Software shutdown
 #define SWNoShut()  WriteReg(Page_9, Func_REG_Shut, 0x01);  // Software no shutdown
 

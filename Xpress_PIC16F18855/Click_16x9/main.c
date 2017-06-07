@@ -21,7 +21,7 @@ void main(void)
     LED5_SetHigh();     // Not used
     
     // IS31FL3731 initializations
-    
+          
     InitDisp();
     
     // Execution loop
