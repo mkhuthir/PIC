@@ -25,9 +25,7 @@ void main(void)
     InitIS31FL3731();
     
     // Execution loop
-    while (1)
-    {
-        LED2_Toggle();          // Activity indicator
-        __delay_ms(1000);       // delay 1000ms
-    }
+            
+    while(1){}
+    
 }

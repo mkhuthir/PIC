@@ -98,11 +98,11 @@ void AutoFramePlayMode(uint8_t FS,uint8_t CNS,uint8_t FNS);         // Select Au
 void AudioFramePlayMode(void);                                      // Select Audio Frame PLay Mode. No parameters
 
 // Display Control Functions
-void SetDisplayOptions(bit IC,bit BE,uint8_t BPT);                  // Set Display Options; IC:Intensity Control,BE:Blink Enable,BPT:Blink Period Time.
-void BreathControl(uint8_t FOT, uint8_t FIT, bit BEN, uint8_t ET);  // Breath Control; FOT:Fade Out Time, FIT:Fade In Time, BEN:Breath Enable, ET:Extingush Time.
+void SetDisplayOptions(uint8_t IC,uint8_t BE,uint8_t BPT);          // Set Display Options; IC:Intensity Control,BE:Blink Enable,BPT:Blink Period Time.
+void BreathControl(uint8_t FOT, uint8_t FIT, uint8_t BEN, uint8_t ET);  // Breath Control; FOT:Fade Out Time, FIT:Fade In Time, BEN:Breath Enable, ET:Extingush Time.
 
 // Audio Mode control Functions
-void SetAudioAGC(bit AGCM, bit AGC, uint8_t AGS);                   // Set Audio Gain Control; AGCM:Slow or Fast Mode, AGC:Enable or Disable, AGS: Audio Gain Selection
+void SetAudioAGC(uint8_t AGCM, uint8_t AGC, uint8_t AGS);           // Set Audio Gain Control; AGCM:Slow or Fast Mode, AGC:Enable or Disable, AGS: Audio Gain Selection
 #define EnableAudioSync() WriteReg(Page_9, Func_REG_AudSync, 0x01); // Enable audio signal to modulate the intensity of the matrix
 #define DisableAudioSync() WriteReg(Page_9, Func_REG_AudSync, 0x00);// Disable audio signal modulation.
 #define AudioADC(A) WriteReg(Page_9, Func_REG_AudADC, A);           // Audio ADC sample rate =A*t. example A=14 ADC=14*46us=644us
