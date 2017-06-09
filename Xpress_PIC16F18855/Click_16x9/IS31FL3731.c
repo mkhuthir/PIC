@@ -139,7 +139,7 @@ bool WriteReg(uint8_t page, uint8_t reg, uint8_t data)
 //-------------------------------------------------------------------------------------
 void InitDisp(void)
 {
-    __delay_ms(1000);
     HWNoShut();
+    DisableAudioSync();
     SWNoShut();
 }

@@ -84,17 +84,28 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 //-------------------------------------------------------------------------------------
 #define HWShut()    SDB_Setlow();                           // Hardware shutdown
 #define HWNoShut()  SDB_SetHigh();                          // Hardware no shutdown
+
 #define SWShut()    WriteReg(Page_9, Func_REG_Shut, 0x00);  // Software shutdown
 #define SWNoShut()  WriteReg(Page_9, Func_REG_Shut, 0x01);  // Software no shutdown
 
+#define EnableAudioSync()   WriteReg(Page_9, Func_REG_AudSync, 0x01);   // Enable audio signal to modulate the intensity of the matrix
+#define DisableAudioSync()  WriteReg(Page_9, Func_REG_AudSync, 0x00);   // Disable audio signal modulation.
+#define AudioADC(A) WriteReg(Page_9, Func_REG_AudADC, A);               // Audio ADC sample rate =A*t. example A=14 ADC=14*46us=644us
 //-------------------------------------------------------------------------------------
 // functions
 //-------------------------------------------------------------------------------------
-bool SelectPage(uint8_t page);              // Select one of the nine pages before reading/writing a register in a page.
-bool ReadReg(uint8_t page, uint8_t reg, uint8_t *pData);  // Reads 1 byte from IS31FL3731 using SMBus protocol
-bool WriteReg(uint8_t page, uint8_t reg, uint8_t data);   // Writes 1 byte to IS31FL3731 using SMBus protocol
-void InitDisp(void);    // initilize display
+bool SelectPage(uint8_t page);                              // Select one of the nine pages before reading/writing a register in a page.
+bool ReadReg(uint8_t page, uint8_t reg, uint8_t *pData);    // Reads 1 byte from IS31FL3731 using SMBus protocol
+bool WriteReg(uint8_t page, uint8_t reg, uint8_t data);     // Writes 1 byte to IS31FL3731 using SMBus protocol
+void InitDisp(void);                                        // initilize display
 
+void PictureMode(uint8_t PFS);                              // Select Picture Mode, PFS: Picture frame to display.
+void AutoFramePlayMode(uint8_t FS,uint8_t CNS,uint8_t FNS); // Select Auto Frame Play mode, FS:Frame Start, CNS:Number of loops, FNS:Number of frames to play.
+void AudioFramePlayMode(void);                              // Select Audio Frame PLay Mode. No parameters
+
+void SetDisplayOptions(bit IC,bit BE,uint8_t A);            //
+void SetAudioAGC(bit AGCM, bit AGC);
+void BreathControl(uint8_t FOT, uint8_t FIT, bit BEN, uint8_t ET);
 //-------------------------------------------------------------------------------------
 
 #endif
