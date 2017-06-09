@@ -22,7 +22,7 @@ void main(void)
     
     // IS31FL3731 initializations
           
-    InitDisp();
+    InitIS31FL3731();
     
     // Execution loop
     while (1)

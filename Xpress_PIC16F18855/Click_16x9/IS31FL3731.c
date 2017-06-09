@@ -137,7 +137,7 @@ bool WriteReg(uint8_t page, uint8_t reg, uint8_t data)
 //-------------------------------------------------------------------------------------
 // initilize display
 //-------------------------------------------------------------------------------------
-void InitDisp(void)
+void InitIS31FL3731(void)
 {
     HWNoShut();
     DisableAudioSync();
