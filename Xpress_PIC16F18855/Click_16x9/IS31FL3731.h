@@ -25,7 +25,6 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 - Vcc Sel=3.3V
 **/
 
-
 #ifndef _IS31FL3731_H
 #define _IS31FL3731_H
 
@@ -38,10 +37,8 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 
 //-------------------------------------------------------------------------------------
 // IS31FL3731 Address
-#define Slave_Add           0x74    // Slave device address  (AD connected to GND by default)
+#define Slave_Add           0x74    // Slave device address  (AD is connected to GND)
 #define RETRY_MAX           100     // Maximum retries before return with a fail status.
-
-
 
 // IS31FL3731 pages
 #define Page_1              0x00    // Page 1: Frame 1 storage for LED,Blink,PWM
@@ -83,33 +80,35 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 // Functions
 //-------------------------------------------------------------------------------------
 
-// Device Communication
+// Device Communication Functions
 bool SelectPage(uint8_t page);                                      // Select one of the nine pages before reading/writing a register in a page.
 bool ReadReg(uint8_t page, uint8_t reg, uint8_t *pData);            // Reads 1 byte from IS31FL3731 using SMBus protocol
 bool WriteReg(uint8_t page, uint8_t reg, uint8_t data);             // Writes 1 byte to IS31FL3731 using SMBus protocol
 
-// Device Control
-#define HWShut()    SDB_Setlow();                                   // Hardware shutdown
-#define HWNoShut()  SDB_SetHigh();                                  // Hardware no shutdown
-#define SWShut()    WriteReg(Page_9, Func_REG_Shut, 0x00);          // Software shutdown
-#define SWNoShut()  WriteReg(Page_9, Func_REG_Shut, 0x01);          // Software no shutdown
+// Device Control Functions
 void InitIS31FL3731(void);                                          // initilize device
+#define HWShut() SDB_Setlow();                                      // Hardware shutdown
+#define HWNoShut() SDB_SetHigh();                                   // Hardware no shutdown
+#define SWShut() WriteReg(Page_9, Func_REG_Shut, 0x00);             // Software shutdown
+#define SWNoShut() WriteReg(Page_9, Func_REG_Shut, 0x01);           // Software no shutdown
 
-// Model Selection
+// Display Mode Selection Functions
 void PictureMode(uint8_t PFS);                                      // Select Picture Mode, PFS: Picture frame to display.
 void AutoFramePlayMode(uint8_t FS,uint8_t CNS,uint8_t FNS);         // Select Auto Frame Play mode, FS:Frame Start, CNS:Number of loops, FNS:Number of frames to play.
 void AudioFramePlayMode(void);                                      // Select Audio Frame PLay Mode. No parameters
 
-//Display Control
+// Display Control Functions
 void SetDisplayOptions(bit IC,bit BE,uint8_t BPT);                  // Set Display Options; IC:Intensity Control,BE:Blink Enable,BPT:Blink Period Time.
 void BreathControl(uint8_t FOT, uint8_t FIT, bit BEN, uint8_t ET);  // Breath Control; FOT:Fade Out Time, FIT:Fade In Time, BEN:Breath Enable, ET:Extingush Time.
 
-//Audio Mode control
+// Audio Mode control Functions
 void SetAudioAGC(bit AGCM, bit AGC, uint8_t AGS);                   // Set Audio Gain Control; AGCM:Slow or Fast Mode, AGC:Enable or Disable, AGS: Audio Gain Selection
 #define EnableAudioSync() WriteReg(Page_9, Func_REG_AudSync, 0x01); // Enable audio signal to modulate the intensity of the matrix
 #define DisableAudioSync() WriteReg(Page_9, Func_REG_AudSync, 0x00);// Disable audio signal modulation.
 #define AudioADC(A) WriteReg(Page_9, Func_REG_AudADC, A);           // Audio ADC sample rate =A*t. example A=14 ADC=14*46us=644us
 
+// Frame Control Functions
+uint8_t GetFrameState(void);                                        // Read frame state register.
 //-------------------------------------------------------------------------------------
 
 #endif
