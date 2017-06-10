@@ -13,7 +13,7 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 4.15
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15.1
         Device            :  PIC16F18875
         Driver Version    :  1.02
     The generated drivers are tested against the following:
@@ -47,7 +47,7 @@
 
 // CONFIG1
 #pragma config FEXTOSC = OFF    // External Oscillator mode selection bits->Oscillator not enabled
-#pragma config RSTOSC = HFINT1    // Power-up default value for COSC bits->HFINTOSC
+#pragma config RSTOSC = HFINT1    // Power-up default value for COSC bits->HFINTOSC (1MHz)
 #pragma config CLKOUTEN = OFF    // Clock Out Enable bit->CLKOUT function is disabled; i/o or oscillator function on OSC2
 #pragma config CSWEN = ON    // Clock Switch Enable bit->Writing to NOSC and NDIV is allowed
 #pragma config FCMEN = ON    // Fail-Safe Clock Monitor Enable bit->FSCM timer enabled
@@ -59,12 +59,13 @@
 #pragma config BOREN = ON    // Brown-out reset enable bits->Brown-out Reset Enabled, SBOREN bit is ignored
 #pragma config BORV = LO    // Brown-out Reset Voltage Selection->Brown-out Reset Voltage (VBOR) set to 1.9V on LF, and 2.45V on F Devices
 #if (__XC8_VERSION < 1360)
-#pragma config ZCDDIS = ON    // Zero-cross detect disable->Zero-cross detect circuit is disabled at POR.
+#pragma config ZCDDIS = ON    // Zero-cross detect disable->Zero-cross detect circuit is always enabled
 #else // __XC8_VERSION
-#pragma config ZCD = ON    // Zero-cross detect disable->Zero-cross detect circuit is disabled at POR.
+#pragma config ZCD = ON    // Zero-cross detect disable->Zero-cross detect circuit is always enabled
 #endif // __XC8_VERSION
 #pragma config PPS1WAY = ON    // Peripheral Pin Select one-way control->The PPSLOCK bit can be cleared and set only once in software
 #pragma config STVREN = ON    // Stack Overflow/Underflow Reset Enable bit->Stack Overflow or Underflow will cause a reset
+#pragma config DEBUG = OFF    // Background Debugger->Background Debugger disabled
 
 // CONFIG3
 #pragma config WDTCPS = WDTCPS_31    // WDT Period Select bits->Divider ratio 1:65536; software control of WDTPS
@@ -78,8 +79,8 @@
 #pragma config LVP = ON    // Low Voltage Programming Enable bit->Low Voltage programming enabled. MCLR/Vpp pin function is MCLR.
 
 // CONFIG5
-#pragma config CP = OFF    // UserNVM Program memory code protection bit->UserNVM code protection disabled
-#pragma config CPD = OFF    // DataNVM code protection bit->DataNVM code protection disabled
+#pragma config CP = OFF    // UserNVM Program memory code protection bit->Program Memory code protection disabled
+#pragma config CPD = OFF    // DataNVM code protection bit->Data EEPROM code protection disabled
 
 #include "mcc.h"
 
@@ -88,6 +89,7 @@ void SYSTEM_Initialize(void)
 
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
+    I2C1_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
@@ -102,8 +104,6 @@ void OSCILLATOR_Initialize(void)
     OSCFRQ = 0x02;
     // HFTUN 0; 
     OSCTUNE = 0x00;
-    // Set the secondary oscillator
-    
 }
 
 

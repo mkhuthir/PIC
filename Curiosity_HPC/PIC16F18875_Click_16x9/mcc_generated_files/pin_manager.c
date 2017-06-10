@@ -13,7 +13,7 @@
   Description:
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 4.15
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15.1
         Device            :  PIC16F18875
         Driver Version    :  1.02
     The generated drivers are tested against the following:
@@ -63,7 +63,7 @@ void PIN_MANAGER_Initialize(void)
     TRISx registers
     */    
     TRISE = 0x07;
-    TRISA = 0x0F;
+    TRISA = 0x07;
     TRISB = 0xFF;
     TRISC = 0xFF;
     TRISD = 0xFF;
@@ -71,8 +71,8 @@ void PIN_MANAGER_Initialize(void)
     /**
     ANSELx registers
     */   
-    ANSELC = 0xFF;
-    ANSELB = 0xFF;
+    ANSELC = 0xC7;
+    ANSELB = 0xEF;
     ANSELD = 0xFF;
     ANSELE = 0x07;
     ANSELA = 0xFF;
@@ -99,6 +99,23 @@ void PIN_MANAGER_Initialize(void)
 
    
     
+    
+    bool state = GIE;
+    GIE = 0;
+    PPSLOCK = 0x55;
+    PPSLOCK = 0xAA;
+    PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
+
+    SSP1CLKPPSbits.SSP1CLKPPS = 0x13;   //RC3->MSSP1:SCL1;
+    SSP1DATPPSbits.SSP1DATPPS = 0x14;   //RC4->MSSP1:SDA1;
+    RC3PPS = 0x14;   //RC3->MSSP1:SCL1;
+    RC4PPS = 0x15;   //RC4->MSSP1:SDA1;
+
+    PPSLOCK = 0x55;
+    PPSLOCK = 0xAA;
+    PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
+
+    GIE = state;
 }       
 
 void PIN_MANAGER_IOC(void)
