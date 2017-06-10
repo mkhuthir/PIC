@@ -13,7 +13,7 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 4.15.1
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15
         Device            :  PIC16F18875
         Version           :  1.02
     The generated drivers are tested against the following:
@@ -49,8 +49,6 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
-#include "spi1_master.h"
-#include "FLASH2Drivers/FLASH2_driver.h"
 
 #define _XTAL_FREQ  1000000
 

@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>PIC16F18875_Click_Flash2</name>
+            <name>PIC16F18875_Click_16x9</name>
             <creation-uuid>88c5fc14-5ced-4b04-886a-afa0b512743f</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>

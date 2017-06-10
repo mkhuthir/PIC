@@ -13,7 +13,7 @@
   Description:
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 4.15.1
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15
         Device            :  PIC16F18875
         Driver Version    :  1.02
     The generated drivers are tested against the following:
@@ -63,19 +63,19 @@ void PIN_MANAGER_Initialize(void)
     TRISx registers
     */    
     TRISE = 0x07;
-    TRISA = 0x07;
-    TRISB = 0xF9;
-    TRISC = 0xFB;
-    TRISD = 0xFE;
+    TRISA = 0x0F;
+    TRISB = 0xFF;
+    TRISC = 0xFF;
+    TRISD = 0xFF;
 
     /**
     ANSELx registers
     */   
-    ANSELC = 0xFB;
-    ANSELB = 0xF5;
-    ANSELD = 0xFE;
+    ANSELC = 0xFF;
+    ANSELB = 0xFF;
+    ANSELD = 0xFF;
     ANSELE = 0x07;
-    ANSELA = 0xF7;
+    ANSELA = 0xFF;
 
     /**
     WPUx registers
@@ -99,23 +99,6 @@ void PIN_MANAGER_Initialize(void)
 
    
     
-    
-    bool state = GIE;
-    GIE = 0;
-    PPSLOCK = 0x55;
-    PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
-
-    SSP1CLKPPSbits.SSP1CLKPPS = 0x09;   //RB1->MSSP1:SCK1;
-    SSP1DATPPSbits.SSP1DATPPS = 0x0B;   //RB3->MSSP1:SDI1;
-    RB1PPS = 0x14;   //RB1->MSSP1:SCK1;
-    RB2PPS = 0x15;   //RB2->MSSP1:SDO1;
-
-    PPSLOCK = 0x55;
-    PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
-
-    GIE = state;
 }       
 
 void PIN_MANAGER_IOC(void)

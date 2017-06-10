@@ -9,12 +9,10 @@ void main(void)
 
     SYSTEM_Initialize();
                  
-    IO_RA4_SetLow();
-    IO_RA5_SetHigh();
+    IO_RA4_SetHigh();
+    IO_RA5_SetLow();
     IO_RA6_SetLow();
     IO_RA7_SetHigh();
-    
-    
     
     while (1){
                
@@ -22,7 +20,6 @@ void main(void)
         IO_RA5_Toggle();
         IO_RA6_Toggle();
         IO_RA7_Toggle();
-        
         __delay_ms(500);
     }
 
