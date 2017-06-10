@@ -1475,7 +1475,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="MCLRE"/>
-         <value>OFF</value>
+         <value>ON</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="LATA" settingAlias="LATA4"/>
@@ -1927,7 +1927,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA5"/>
-         <value/>
+         <value>SW2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA6"/>
@@ -3515,7 +3515,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="System Module" registerAlias="CONFIG2"/>
-         <value>15074</value>
+         <value>15075</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG2" settingAlias="PPS1WAY" alias="OFF"/>
@@ -4523,7 +4523,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA5"/>
-         <value>analog</value>
+         <value>digital</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON1" settingAlias="NOSC" alias="EXTOSC   with 4x PLL"/>
@@ -4639,7 +4639,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA5"/>
-         <value>disabled</value>
+         <value>input</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA4"/>
@@ -4983,7 +4983,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA5"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA6"/>
@@ -5147,7 +5147,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSELA"/>
-         <value>255</value>
+         <value>223</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RC6PPS" settingAlias="RC6PPS"/>
@@ -5164,12 +5164,12 @@
          <hash>ecbe706b585b58b8165ec3df2597b5aa66fff70bed6a55286fc3a18c10ae09ed</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/i2c1.h</file>
-         <hash>5ee5120817a9887ab020e38159c89953b647c63ee83ccadfb2cc8820a50f45d2</hash>
+         <file>mcc_generated_files/pin_manager.h</file>
+         <hash>7cded56d7498e3038125cdc8ecfe351cf6df448252f6306a4fa7ed9e7fbb6d10</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/pin_manager.h</file>
-         <hash>ca52664c792b833eabfa7e3c4b84598f1366630d25cbaee939eb4e1d265fc67f</hash>
+         <file>mcc_generated_files/i2c1.h</file>
+         <hash>5ee5120817a9887ab020e38159c89953b647c63ee83ccadfb2cc8820a50f45d2</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.h</file>
@@ -5184,12 +5184,12 @@
          <hash>baf7e30b0b5dc69d41dd1cf4f30c364baa033eaa66478a6075dd564b7949c293</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/i2c1.c</file>
-         <hash>6751c87686ec61764e08643b2eb0ef40a67161d292fa1163f9619c5cabdbf1c5</hash>
+         <file>mcc_generated_files/pin_manager.c</file>
+         <hash>e780dcd9bad5e8115402e1d776b6dea05672a093e3de95e64d1e2d5e7655a57b</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/pin_manager.c</file>
-         <hash>a920effb26b4809177b462d66eb7c6c9fe8936f1b6d34a0c668be34fe4683f18</hash>
+         <file>mcc_generated_files/i2c1.c</file>
+         <hash>6751c87686ec61764e08643b2eb0ef40a67161d292fa1163f9619c5cabdbf1c5</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

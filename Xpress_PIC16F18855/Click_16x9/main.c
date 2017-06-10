@@ -22,10 +22,14 @@ void main(void)
     
     // IS31FL3731 initializations
           
-    InitIS31FL3731();
+   //InitIS31FL3731();
     
     // Execution loop
             
-    while(1){}
-    
+    while(1){
+        LED2_Toggle();
+        if (SW2_GetValue()==0) InitIS31FL3731();
+        __delay_ms(500);
+    }
+        
 }

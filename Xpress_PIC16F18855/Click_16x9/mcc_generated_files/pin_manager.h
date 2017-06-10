@@ -139,6 +139,26 @@
 #define LED5_SetAnalogMode()  do { ANSELAbits.ANSA3 = 1; } while(0)
 #define LED5_SetDigitalMode() do { ANSELAbits.ANSA3 = 0; } while(0)
 
+// get/set SW2 aliases
+#define SW2_TRIS               TRISAbits.TRISA5
+#define SW2_LAT                LATAbits.LATA5
+#define SW2_PORT               PORTAbits.RA5
+#define SW2_WPU                WPUAbits.WPUA5
+#define SW2_OD                ODCONAbits.ODCA5
+#define SW2_ANS                ANSELAbits.ANSA5
+#define SW2_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
+#define SW2_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
+#define SW2_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
+#define SW2_GetValue()           PORTAbits.RA5
+#define SW2_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
+#define SW2_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
+#define SW2_SetPullup()      do { WPUAbits.WPUA5 = 1; } while(0)
+#define SW2_ResetPullup()    do { WPUAbits.WPUA5 = 0; } while(0)
+#define SW2_SetPushPull()    do { ODCONAbits.ODCA5 = 1; } while(0)
+#define SW2_SetOpenDrain()   do { ODCONAbits.ODCA5 = 0; } while(0)
+#define SW2_SetAnalogMode()  do { ANSELAbits.ANSA5 = 1; } while(0)
+#define SW2_SetDigitalMode() do { ANSELAbits.ANSA5 = 0; } while(0)
+
 // get/set SDB aliases
 #define SDB_TRIS               TRISBbits.TRISB2
 #define SDB_LAT                LATBbits.LATB2

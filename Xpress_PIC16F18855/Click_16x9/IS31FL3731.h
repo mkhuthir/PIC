@@ -40,26 +40,26 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 #define Slave_Add           0x74    // Slave device address  (AD is connected to GND)
 #define RETRY_MAX           100     // Maximum retries before return with a fail status.
 
-// IS31FL3731 pages
-#define Page_1              0x00    // Page 1: Frame 1 storage for LED,Blink,PWM
-#define Page_2              0x01    // Page 2: Frame 2 storage for LED,Blink,PWM
-#define Page_3              0x02    // Page 3: Frame 3 storage for LED,Blink,PWM
-#define Page_4              0x03    // Page 4: Frame 4 storage for LED,Blink,PWM
-#define Page_5              0x04    // Page 5: Frame 5 storage for LED,Blink,PWM
-#define Page_6              0x05    // Page 6: Frame 6 storage for LED,Blink,PWM
-#define Page_7              0x06    // Page 7: Frame 7 storage for LED,Blink,PWM
-#define Page_8              0x07    // Page 8: Frame 8 storage for LED,Blink,PWM
-#define Page_9              0x0B    // Page 9: Functions Registers
+// IS31FL3731 Frames
+#define Frame_1              0x00    // Frame 1: Frame 1 storage for LED,Blink,PWM
+#define Frame_2              0x01    // Frame 2: Frame 2 storage for LED,Blink,PWM
+#define Frame_3              0x02    // Frame 3: Frame 3 storage for LED,Blink,PWM
+#define Frame_4              0x03    // Frame 4: Frame 4 storage for LED,Blink,PWM
+#define Frame_5              0x04    // Frame 5: Frame 5 storage for LED,Blink,PWM
+#define Frame_6              0x05    // Frame 6: Frame 6 storage for LED,Blink,PWM
+#define Frame_7              0x06    // Frame 7: Frame 7 storage for LED,Blink,PWM
+#define Frame_8              0x07    // Frame 8: Frame 8 storage for LED,Blink,PWM
+#define Frame_9              0x0B    // Frame 9: Functions Registers
 
 // IS31FL3731 registers
 #define Reg_Command         0xFD    // Command Register
 
-// Frame Registers (Applicable to Page One to Page Eight)
+// Frame Registers (Applicable to Frame One to Frame Eight)
 #define Fram_REG_LED        0x00    // RW - 00h ~ 11h - LED Control: Stores ON or OFF state for each LED
 #define Fram_REG_Blink      0x12    // RW - 12h ~ 23h - Blink Control: Controls the blink function for each LED
 #define Fram_REG_PWM        0x24    // RW - 24h ~ B3h - PWM: PWM duty cycle for each LED
 
-// Function Registers (Applicable to Page Nine)
+// Function Registers (Applicable to Frame Nine)
 #define Func_REG_Config     0x00    // RW - Configuration: Configure the operation mode
 #define Func_REG_PicDisp    0x01    // RW - Picture Display: Set the display frame in Picture Mode
 #define Func_REG_AutoPly1   0x02    // RW - Auto Play Control Register 1: Set the way of display in Auto Frame Play Mode 
@@ -74,23 +74,21 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 #define Func_REG_AudAGC     0x0B    // RW - AGC Control: Set the AGC function and the audio gain. 
 #define Func_REG_AudADC     0x0C    // RW - Audio ADC Rate: Set the ADC sample rate of the input signal 
  
-
-
 //-------------------------------------------------------------------------------------
 // Functions
 //-------------------------------------------------------------------------------------
 
 // Device Communication Functions
-bool SelectPage(uint8_t page);                                      // Select one of the nine pages before reading/writing a register in a page.
-bool ReadReg(uint8_t page, uint8_t reg, uint8_t *pData);            // Reads 1 byte from IS31FL3731 using SMBus protocol
-bool WriteReg(uint8_t page, uint8_t reg, uint8_t data);             // Writes 1 byte to IS31FL3731 using SMBus protocol
+bool SelectFrame(uint8_t Frame);                                     // Select one of the nine Frames before reading/writing a register in a Frame.
+bool WriteReg(uint8_t Frame, uint8_t reg, uint8_t data);             // Writes 1 byte to IS31FL3731 using SMBus protocol
+bool ReadReg(uint8_t Frame, uint8_t reg, uint8_t *pData);            // Reads 1 byte from IS31FL3731 using SMBus protocol
 
 // Device Control Functions
 void InitIS31FL3731(void);                                          // initilize device
 #define HWShut() SDB_Setlow();                                      // Hardware shutdown
 #define HWNoShut() SDB_SetHigh();                                   // Hardware no shutdown
-#define SWShut() WriteReg(Page_9, Func_REG_Shut, 0x00);             // Software shutdown
-#define SWNoShut() WriteReg(Page_9, Func_REG_Shut, 0x01);           // Software no shutdown
+#define SWShut() WriteReg(Frame_9, Func_REG_Shut, 0x00);             // Software shutdown
+#define SWNoShut() WriteReg(Frame_9, Func_REG_Shut, 0x01);           // Software no shutdown
 
 // Display Mode Selection Functions
 void PictureMode(uint8_t PFS);                                      // Select Picture Mode, PFS: Picture frame to display.
@@ -103,12 +101,12 @@ void BreathControl(uint8_t FOT, uint8_t FIT, uint8_t BEN, uint8_t ET);  // Breat
 
 // Audio Mode control Functions
 void SetAudioAGC(uint8_t AGCM, uint8_t AGC, uint8_t AGS);           // Set Audio Gain Control; AGCM:Slow or Fast Mode, AGC:Enable or Disable, AGS: Audio Gain Selection
-#define EnableAudioSync() WriteReg(Page_9, Func_REG_AudSync, 0x01); // Enable audio signal to modulate the intensity of the matrix
-#define DisableAudioSync() WriteReg(Page_9, Func_REG_AudSync, 0x00);// Disable audio signal modulation.
-#define AudioADC(A) WriteReg(Page_9, Func_REG_AudADC, A);           // Audio ADC sample rate =A*t. example A=14 ADC=14*46us=644us
+#define EnableAudioSync() WriteReg(Frame_9, Func_REG_AudSync, 0x01); // Enable audio signal to modulate the intensity of the matrix
+#define DisableAudioSync() WriteReg(Frame_9, Func_REG_AudSync, 0x00);// Disable audio signal modulation.
+#define AudioADC(A) WriteReg(Frame_9, Func_REG_AudADC, A);           // Audio ADC sample rate =A*t. example A=14 ADC=14*46us=644us
 
 // Frame Control Functions
-uint8_t GetFrameState(void);                                        // Read frame state register.
+uint8_t FillFrame(uint8_t Frame);                                       // fill frame
 //-------------------------------------------------------------------------------------
 
 #endif

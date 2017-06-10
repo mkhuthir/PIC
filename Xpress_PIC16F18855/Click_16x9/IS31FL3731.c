@@ -34,20 +34,21 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 //*************************************************************************************
 
 //-------------------------------------------------------------------------------------
-// Select one of the nine pages before reading/writing a register in a page.
+// Select one of the nine Frames before reading/writing a register in a Frame.
 //-------------------------------------------------------------------------------------
 
-bool SelectPage(uint8_t page)
+bool SelectFrame(uint8_t Frame)
 {
+    uint8_t buffer[2];          // buffer to store data
+    
+    buffer[0] = Reg_Command;    // 0xFD
+    buffer[1] = Frame;          // Frame no.
+
     static I2C1_TRANSACTION_REQUEST_BLOCK trb;                      // TRB
     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;              // initial value of status is pending
     uint8_t timeOut=0;                                              // will be used to count retries
-    uint8_t buffer[2];                                              // buffer to store TRB
 
-    buffer[0] = Reg_Command;                                        // TRB=RegAddress,DataByte
-    buffer[1] = page;                                               
-
-    I2C1_MasterWriteTRBBuild(&trb, buffer, 2, Slave_Add);           // build a Write TRB 2 bytes. Address (paramters: TRB, data, length, address)
+    I2C1_MasterWriteTRBBuild(&trb, buffer, 2, Slave_Add);      // build a Write TRB 2 bytes. Address (paramters: TRB, data, length, address)
 
     while(status != I2C1_MESSAGE_FAIL)
     {
@@ -66,18 +67,58 @@ bool SelectPage(uint8_t page)
     }
 
     return (status == I2C1_MESSAGE_COMPLETE);
+    
 }
+//-------------------------------------------------------------------------------------
+// Writes 1 byte to IS31FL3731 using SMBus protocol
+//-------------------------------------------------------------------------------------
+bool WriteReg(uint8_t Frame, uint8_t reg, uint8_t data)
+{
+    
+    uint8_t buffer[2];          // buffer to store data
+    
+    SelectFrame(Frame);         // Select one of the 8 Frames
+
+    buffer[0] = reg;            // register number in the selected frame
+    buffer[1] = data;           // data to be written to register
+
+    static I2C1_TRANSACTION_REQUEST_BLOCK trb;                      // TRB
+    I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;              // initial value of status is pending
+    uint8_t timeOut=0;                                              // will be used to count retries
+
+    I2C1_MasterWriteTRBBuild(&trb, buffer, 2, Slave_Add);      // build a Write TRB 2 bytes. Address (paramters: TRB, data, length, address)
+
+    while(status != I2C1_MESSAGE_FAIL)
+    {
+        I2C1_MasterTRBInsert(1, &trb, &status);                     // send the full TRB paramters>(length, data, status)
+        while(status == I2C1_MESSAGE_PENDING);                      // wait for the message to be sent or status has changed.
+
+        if (status == I2C1_MESSAGE_COMPLETE) break;                 //exit loop if status is complete
+
+        // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK, or I2C1_DATA_NO_ACK, The device may be busy and needs more time for the last write
+        // so we can retry writing the data, this is why we use a while loop here
+
+        if (timeOut == RETRY_MAX)   // check for max retry
+            break;
+        else
+            timeOut++;
+    }
+
+    return (status == I2C1_MESSAGE_COMPLETE);
+
+}
+
 //-------------------------------------------------------------------------------------
 // Reads 1 byte from IS31FL3731 using SMBus protocol
 //-------------------------------------------------------------------------------------
-bool ReadReg(uint8_t page, uint8_t reg, uint8_t *pData)
+bool ReadReg(uint8_t Frame, uint8_t reg, uint8_t *pData)
 {
     uint8_t timeOut=0;                                          // will ne used to count retries
 
     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;          // initial value of status is pending
     static I2C1_TRANSACTION_REQUEST_BLOCK trb[2];               // TRB is 2 bytes
 
-    SelectPage(page);
+    SelectFrame(Frame);
 
     I2C1_MasterWriteTRBBuild(&trb[0], &reg, 1, Slave_Add);      // build a Write TRB byte to send Reg. Address (paramters: TRB, data, length, address)
     I2C1_MasterReadTRBBuild(&trb[1], pData, 1, Slave_Add);      // build a Read TRB byte to read data from Reg.(paramters: TRB, data, length, address)
@@ -101,40 +142,7 @@ bool ReadReg(uint8_t page, uint8_t reg, uint8_t *pData)
     return (status == I2C1_MESSAGE_COMPLETE);
 }
 
-//-------------------------------------------------------------------------------------
-// Writes 1 byte to IS31FL3731 using SMBus protocol
-//-------------------------------------------------------------------------------------
-bool WriteReg(uint8_t page, uint8_t reg, uint8_t data)
-{
-    uint8_t timeOut=0;                                          // will be used to count retries
-    uint8_t buffer[2];                                          // buffer to store TRB
-    buffer[0] = reg; buffer[1] = data;                          // TRB=RegAddress,DataByte
 
-    I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;          // initial value of status is pending
-    static I2C1_TRANSACTION_REQUEST_BLOCK trb;                  // TRB
-
-    SelectPage(page);                                           // Select one of the 8 pages
-
-    I2C1_MasterWriteTRBBuild(&trb, buffer, 2, Slave_Add);       // build a Write TRB 2 bytes. Address (paramters: TRB, data, length, address)
-
-    while(status != I2C1_MESSAGE_FAIL)
-    {
-        I2C1_MasterTRBInsert(1, &trb, &status);                 // send the full TRB paramters>(length, data, status)
-        while(status == I2C1_MESSAGE_PENDING);                  // wait for the message to be sent or status has changed.
-
-        if (status == I2C1_MESSAGE_COMPLETE) break;             //exit loop if status is complete
-
-        // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK, or I2C1_DATA_NO_ACK, The device may be busy and needs more time for the last write
-        // so we can retry writing the data, this is why we use a while loop here
-
-        if (timeOut == RETRY_MAX)                               // check for max retry
-            break;
-        else
-            timeOut++;
-    }
-
-    return (status == I2C1_MESSAGE_COMPLETE);
-}
 
 //*************************************************************************************
 // Device Control Functions
@@ -146,9 +154,7 @@ bool WriteReg(uint8_t page, uint8_t reg, uint8_t data)
 void InitIS31FL3731(void)
 {
     HWNoShut();             // Hardware no shut
-    //PictureMode(Page_2);   // Set to Picture Mode and display Frame_1
-    DisableAudioSync();     // Disable Audio Sync
-    SWNoShut();             // Software no shut
+    
 }
 
 //*************************************************************************************
@@ -161,8 +167,8 @@ void InitIS31FL3731(void)
 void PictureMode(uint8_t PFS)
 {
     
-    WriteReg(Page_9, Func_REG_Config, 0x00);    // MODE=00 FS=000
-    WriteReg(Page_9, Func_REG_PicDisp, PFS);    // Select Frame to display (000=Frame_1 to 111=Frame_8)
+    WriteReg(Frame_9, Func_REG_Config, 0x00);    // MODE=00 FS=000
+    WriteReg(Frame_9, Func_REG_PicDisp, PFS);    // Select Frame to display (000=Frame_1 to 111=Frame_8)
 }                                      
 
 //-------------------------------------------------------------------------------------
@@ -218,10 +224,41 @@ void SetAudioAGC(uint8_t AGCM, uint8_t AGC, uint8_t AGS)
 //*************************************************************************************
 
 //-------------------------------------------------------------------------------------
-// Read frame state register.
+// 
 //-------------------------------------------------------------------------------------
-uint8_t GetFrameState(void)
+uint8_t FillFrame(uint8_t Frame)
 {
+    uint8_t buffer[19];          // buffer to store data
+    
+    SelectFrame(Frame);         // Select one of the 8 Frames
+
+    buffer[0] = Fram_REG_LED;            // register number in the selected frame
+
+    for (int i=1;i<19;i++) buffer[i] =0xFF;           // data to be written to register
+
+    static I2C1_TRANSACTION_REQUEST_BLOCK trb;                      // TRB
+    I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;              // initial value of status is pending
+    uint8_t timeOut=0;                                              // will be used to count retries
+
+    I2C1_MasterWriteTRBBuild(&trb, buffer, 19, Slave_Add);      // build a Write TRB 2 bytes. Address (paramters: TRB, data, length, address)
+
+    while(status != I2C1_MESSAGE_FAIL)
+    {
+        I2C1_MasterTRBInsert(1, &trb, &status);                     // send the full TRB paramters>(length, data, status)
+        while(status == I2C1_MESSAGE_PENDING);                      // wait for the message to be sent or status has changed.
+
+        if (status == I2C1_MESSAGE_COMPLETE) break;                 //exit loop if status is complete
+
+        // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK, or I2C1_DATA_NO_ACK, The device may be busy and needs more time for the last write
+        // so we can retry writing the data, this is why we use a while loop here
+
+        if (timeOut == RETRY_MAX)   // check for max retry
+            break;
+        else
+            timeOut++;
+    }
+
+    return (status == I2C1_MESSAGE_COMPLETE);
+
 
 }
-
