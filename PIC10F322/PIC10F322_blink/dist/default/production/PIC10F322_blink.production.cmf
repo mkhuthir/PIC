@@ -11,15 +11,14 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$/tmp/xcXyGzNJP.obj
+end_init CODE 0 0 0 2 2
 $dist/default/production/PIC10F322_blink.production.obj
 cinit CODE 0 1FE 1FE 2 2
-text1 CODE 0 1D6 1D6 2 2
-text2 CODE 0 1D8 1D8 3 2
-maintext CODE 0 1DB 1DB 23 2
+text1 CODE 0 1DC 1DC 3 2
+text2 CODE 0 1D9 1D9 3 2
+maintext CODE 0 1DF 1DF 1F 2
 cstackBANK0 BANK0 1 40 40 3 1
-$/tmp/xcXkOmt9r.obj
-end_init CODE 0 0 0 1 2
-config CONFIG 0 2007 2007 1 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -28,14 +27,14 @@ config CONFIG 0 2007 2007 1 2
 %UNUSED
 RAM 43-7D 1
 BANK0 43-7D 1
-CONST 1-1D5 2
-ENTRY 1-1D5 2
+CONST 2-1D8 2
+ENTRY 2-1D8 2
 IDLOC 2000-2003 2
-STACK 43-7D 1
-CODE 1-1D5 2
+CODE 2-1D8 2
 SFR0 0-3F 1
-STRCODE 1-1D5 2
-STRING 1-1D5 2
+CONFIG 2007-2007 2
+STRCODE 2-1D8 2
+STRING 2-1D8 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -50,27 +49,24 @@ STRING 1-1D5 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/PIC10F322_blink.production.obj
-1FE cinit CODE >335:/tmp/xcXm0RvCl
-1FE cinit CODE >338:/tmp/xcXm0RvCl
-1FE cinit CODE >344:/tmp/xcXm0RvCl
-1FE cinit CODE >346:/tmp/xcXm0RvCl
-1FF cinit CODE >347:/tmp/xcXm0RvCl
-1D8 text2 CODE >21:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/device_initialize.c
-1D8 text2 CODE >24:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/device_initialize.c
-1DA text2 CODE >25:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/device_initialize.c
-1D6 text1 CODE >16:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/device_initialize.c
-1D6 text1 CODE >18:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/device_initialize.c
-1D7 text1 CODE >19:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/device_initialize.c
-1DB maintext CODE >5:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
-1DB maintext CODE >7:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
-1DC maintext CODE >9:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
-1DD maintext CODE >10:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
-1DE maintext CODE >12:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
-1DF maintext CODE >13:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
-1E0 maintext CODE >17:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
-1E8 maintext CODE >18:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
-1F0 maintext CODE >19:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
-1FD maintext CODE >15:/home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
+1FE cinit CODE >480:/tmp/xcXQtvR3J
+1FE cinit CODE >483:/tmp/xcXQtvR3J
+1FE cinit CODE >489:/tmp/xcXQtvR3J
+1FE cinit CODE >491:/tmp/xcXQtvR3J
+1FF cinit CODE >492:/tmp/xcXQtvR3J
+1D9 text2 CODE >23:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/device_initialize.c
+1D9 text2 CODE >26:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/device_initialize.c
+1DB text2 CODE >27:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/device_initialize.c
+1DC text1 CODE >16:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/device_initialize.c
+1DC text1 CODE >18:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/device_initialize.c
+1DD text1 CODE >19:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/device_initialize.c
+1DE text1 CODE >21:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/device_initialize.c
+1DF maintext CODE >5:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/main.c
+1DF maintext CODE >7:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/main.c
+1E0 maintext CODE >12:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/main.c
+1E8 maintext CODE >13:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/main.c
+1F0 maintext CODE >14:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/main.c
+1FD maintext CODE >10:/home/mkhuthir/Microchip/PIC10F322/PIC10F322_blink/main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -84,37 +80,39 @@ $dist/default/production/PIC10F322_blink.production.obj
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
-__Hspace_0 2008 0 ABS 0 - -
+__Hspace_0 200 0 ABS 0 - -
 __Hspace_1 43 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack /tmp/xcXkOmt9r.obj
-_main 3B6 0 CODE 0 maintext dist/default/production/PIC10F322_blink.production.obj
+_LATA 7 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
+_WPUA 9 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
+___sp 0 0 STACK 2 stack /tmp/xcXyGzNJP.obj
+_main 3BE 0 CODE 0 maintext dist/default/production/PIC10F322_blink.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
-start 0 0 CODE 0 init /tmp/xcXkOmt9r.obj
+start 0 0 CODE 0 init /tmp/xcXyGzNJP.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
-intlevel0 0 0 CODE 0 functab /tmp/xcXkOmt9r.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcXkOmt9r.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcXkOmt9r.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcXkOmt9r.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcXkOmt9r.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcXkOmt9r.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXyGzNJP.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXyGzNJP.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXyGzNJP.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXyGzNJP.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXyGzNJP.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXyGzNJP.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
+_ANSELA 8 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 start_initialization 3FC 0 CODE 0 cinit dist/default/production/PIC10F322_blink.production.obj
 _OSCCON 10 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
-_TRISAbits 6 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
-__end_of_SYSTEM_Initialize 3B0 0 CODE 0 text1 dist/default/production/PIC10F322_blink.production.obj
+__end_of_SYSTEM_Initialize 3BE 0 CODE 0 text1 dist/default/production/PIC10F322_blink.production.obj
 __pcstackBANK0 40 0 BANK0 1 cstackBANK0 dist/default/production/PIC10F322_blink.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXkOmt9r.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXyGzNJP.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hcinit 400 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
@@ -123,7 +121,7 @@ __Hstack 0 0 STACK 2 stack -
 __Hmaintext 0 0 ABS 0 maintext -
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __Hcommon 0 0 ABS 0 common -
-__Hconfig 4010 0 CONFIG 0 config -
+__Hconfig 0 0 CONFIG 0 config -
 __Lbank0 0 0 ABS 0 bank0 -
 __Lcinit 3FC 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
@@ -140,25 +138,25 @@ __Lsfr0 0 0 ABS 0 sfr0 -
 __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 2008 0 ABS 0 - -
+__S0 200 0 ABS 0 - -
 __S1 43 0 ABS 0 - -
-__S2 0 0 ABS 0 - -
-_SYSTEM_Initialize 3AC 0 CODE 0 text1 dist/default/production/PIC10F322_blink.production.obj
+_SYSTEM_Initialize 3B8 0 CODE 0 text1 dist/default/production/PIC10F322_blink.production.obj
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXkOmt9r.obj
-__pmaintext 3B6 0 CODE 0 maintext dist/default/production/PIC10F322_blink.production.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXyGzNJP.obj
+__pmaintext 3BE 0 CODE 0 maintext dist/default/production/PIC10F322_blink.production.obj
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __Lcommon 0 0 ABS 0 common -
-__Lconfig 400E 0 CONFIG 0 config -
+__Lconfig 0 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 _LATAbits 7 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
-stackhi 0 0 ABS 0 - /tmp/xcXkOmt9r.obj
-stacklo 0 0 ABS 0 - /tmp/xcXkOmt9r.obj
+stackhi 0 0 ABS 0 - /tmp/xcXyGzNJP.obj
+stacklo 0 0 ABS 0 - /tmp/xcXyGzNJP.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
+_PINS_Initialize 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __Lend_init 0 0 CODE 0 end_init -
 __CFG_LVP$ON 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
@@ -167,8 +165,8 @@ end_of_initialization 3FC 0 CODE 0 cinit dist/default/production/PIC10F322_blink
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
-__ptext1 3AC 0 CODE 0 text1 dist/default/production/PIC10F322_blink.production.obj
-__ptext2 3B0 0 CODE 0 text2 dist/default/production/PIC10F322_blink.production.obj
+__ptext1 3B8 0 CODE 0 text1 dist/default/production/PIC10F322_blink.production.obj
+__ptext2 3B2 0 CODE 0 text2 dist/default/production/PIC10F322_blink.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -177,15 +175,16 @@ __end_of__initialization 3FC 0 CODE 0 cinit dist/default/production/PIC10F322_bl
 __Lfunctab 0 0 CODE 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production/PIC10F322_blink.production.obj
-__Hend_init 2 0 CODE 0 end_init -
+__Hend_init 4 0 CODE 0 end_init -
 __end_of_main 3FC 0 CODE 0 maintext dist/default/production/PIC10F322_blink.production.obj
+_TRISA 6 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__end_of_OSCILLATOR_Initialize 3B6 0 CODE 0 text2 dist/default/production/PIC10F322_blink.production.obj
+__end_of_OSCILLATOR_Initialize 3B8 0 CODE 0 text2 dist/default/production/PIC10F322_blink.production.obj
 __initialization 3FC 0 CODE 0 cinit dist/default/production/PIC10F322_blink.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/PIC10F322_blink.production.obj
-_OSCILLATOR_Initialize 3B0 0 CODE 0 text2 dist/default/production/PIC10F322_blink.production.obj
+_OSCILLATOR_Initialize 3B2 0 CODE 0 text2 dist/default/production/PIC10F322_blink.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -212,9 +211,8 @@ _OSCILLATOR_Initialize 3B0 0 CODE 0 text2 dist/default/production/PIC10F322_blin
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 1FE 3FC 2 2
-text1 0 1D6 3AC 2 2
-text2 0 1D8 3B0 3 2
-maintext 0 1DB 3B6 23 2
+text1 0 1DC 3B8 3 2
+text2 0 1D9 3B2 3 2
+maintext 0 1DF 3BE 1F 2
 cstackBANK0 1 40 40 3 1
-reset_vec 0 0 0 1 2
-config 0 2007 400E 1 2
+reset_vec 0 0 0 2 2

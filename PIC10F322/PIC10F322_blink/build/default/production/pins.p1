@@ -1,32 +1,12 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"14 device_initialize.h
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"39 pins.h
-[v _PINS_Initialize `(v ~T0 @X0 0 ef ]
-"587 /opt/microchip/xc8/v1.42/include/pic10f322.h
-[v _OSCCON `Vuc ~T0 @X0 0 e@16 ]
-"3 device_initialize.c
-[p x FOSC=INTOSC ]
-"4
-[p x BOREN=OFF ]
-"5
-[p x WDTE=OFF ]
-"6
-[p x PWRTE=OFF ]
-"7
-[p x MCLRE=ON ]
-"8
-[p x CP=OFF ]
-"9
-[p x LVP=ON ]
-"10
-[p x LPBOR=OFF ]
-"11
-[p x BORV=LO ]
-"12
-[p x WRT=OFF ]
-[; ;pins.h: 39: void PINS_Initialize (void);
-[; ;pins.h: 42: void PINS_IOC(void);
+"225 /opt/microchip/xc8/v1.42/include/pic10f322.h
+[v _LATA `Vuc ~T0 @X0 0 e@7 ]
+"193
+[v _TRISA `Vuc ~T0 @X0 0 e@6 ]
+"257
+[v _ANSELA `Vuc ~T0 @X0 0 e@8 ]
+"289
+[v _WPUA `Vuc ~T0 @X0 0 e@9 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1361,61 +1341,42 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 192: extern unsigned char __resetbits;
 [; ;pic.h: 193: extern __bit __powerdown;
 [; ;pic.h: 194: extern __bit __timeout;
-[; ;stdint.h: 13: typedef signed char int8_t;
-[; ;stdint.h: 20: typedef signed int int16_t;
-[; ;stdint.h: 38: typedef signed long int int32_t;
-[; ;stdint.h: 45: typedef unsigned char uint8_t;
-[; ;stdint.h: 51: typedef unsigned int uint16_t;
-[; ;stdint.h: 67: typedef unsigned long int uint32_t;
-[; ;stdint.h: 75: typedef signed char int_least8_t;
-[; ;stdint.h: 82: typedef signed int int_least16_t;
-[; ;stdint.h: 104: typedef signed long int int_least32_t;
-[; ;stdint.h: 111: typedef unsigned char uint_least8_t;
-[; ;stdint.h: 117: typedef unsigned int uint_least16_t;
-[; ;stdint.h: 136: typedef unsigned long int uint_least32_t;
-[; ;stdint.h: 145: typedef signed char int_fast8_t;
-[; ;stdint.h: 152: typedef signed int int_fast16_t;
-[; ;stdint.h: 174: typedef signed long int int_fast32_t;
-[; ;stdint.h: 181: typedef unsigned char uint_fast8_t;
-[; ;stdint.h: 187: typedef unsigned int uint_fast16_t;
-[; ;stdint.h: 206: typedef unsigned long int uint_fast32_t;
-[; ;stdint.h: 212: typedef int32_t intmax_t;
-[; ;stdint.h: 217: typedef uint32_t uintmax_t;
-[; ;stdint.h: 222: typedef int16_t intptr_t;
-[; ;stdint.h: 227: typedef uint16_t uintptr_t;
+[; ;pins.h: 39: void PINS_Initialize (void);
+[; ;pins.h: 42: void PINS_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;device_initialize.h: 13: void SYSTEM_Initialize(void);
-[; ;device_initialize.h: 14: void OSCILLATOR_Initialize(void);
-"16 device_initialize.c
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
-"17
+"7 pins.c
+[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
+"8
 {
-[; ;device_initialize.c: 16: void SYSTEM_Initialize(void)
-[; ;device_initialize.c: 17: {
-[e :U _SYSTEM_Initialize ]
+[; ;pins.c: 7: void PIN_MANAGER_Initialize(void)
+[; ;pins.c: 8: {
+[e :U _PIN_MANAGER_Initialize ]
 [f ]
-[; ;device_initialize.c: 18: OSCILLATOR_Initialize();
-"18
-[e ( _OSCILLATOR_Initialize ..  ]
-[; ;device_initialize.c: 19: PINS_Initialize();
-"19
-[e ( _PINS_Initialize ..  ]
-[; ;device_initialize.c: 21: }
-"21
+[; ;pins.c: 10: LATA = 0x00;
+"10
+[e = _LATA -> -> 0 `i `uc ]
+[; ;pins.c: 11: TRISA = 0x0F;
+"11
+[e = _TRISA -> -> 15 `i `uc ]
+[; ;pins.c: 12: ANSELA = 0xFF;
+"12
+[e = _ANSELA -> -> 255 `i `uc ]
+[; ;pins.c: 13: WPUA = 0x00;
+"13
+[e = _WPUA -> -> 0 `i `uc ]
+[; ;pins.c: 14: }
+"14
 [e :UE 143 ]
 }
-"23
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"24
+"16
+[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
+"17
 {
-[; ;device_initialize.c: 23: void OSCILLATOR_Initialize(void)
-[; ;device_initialize.c: 24: {
-[e :U _OSCILLATOR_Initialize ]
+[; ;pins.c: 16: void PIN_MANAGER_IOC(void)
+[; ;pins.c: 17: {
+[e :U _PIN_MANAGER_IOC ]
 [f ]
-[; ;device_initialize.c: 26: OSCCON = 0x60;
-"26
-[e = _OSCCON -> -> 96 `i `uc ]
-[; ;device_initialize.c: 27: }
-"27
+[; ;pins.c: 19: }
+"19
 [e :UE 144 ]
 }

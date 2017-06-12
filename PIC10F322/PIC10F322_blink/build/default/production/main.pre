@@ -1,6 +1,12 @@
 
 # 1 "main.c"
 
+# 39 "pins.h"
+void PINS_Initialize (void);
+
+
+void PINS_IOC(void);
+
 # 26 "/opt/microchip/xc8/v1.42/include/htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -1943,38 +1949,7 @@ typedef uint16_t uintptr_t;
 # 12 "/opt/microchip/xc8/v1.42/include/stdbool.h"
 typedef unsigned char bool;
 
-# 31 "adc.h"
-typedef uint8_t adc_result_t;
-
-# 45
-typedef enum
-{
-channel_FVR = 0b111,
-channel_TEMP = 0b110,
-channel_AN2 = 0b010,
-channel_AN1 = 0b001,
-channel_AN0 = 0b000
-} adc_channel_t;
-
-# 67
-void ADC_Initialize(void);
-
-# 90
-adc_result_t ADC_GetConversion(adc_channel_t channel);
-
-# 59 "pwm.h"
-void PWM_Initialize(void);
-
-# 87
-void PWM_LoadDutyValue(uint16_t dutyValue);
-
-# 69 "tmr2.h"
-void TMR2_Initialize(void);
-
-# 98
-void TMR2_StartTimer(void);
-
-# 14 "device_initialize.h"
+# 13 "device_initialize.h"
 void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 
@@ -1983,11 +1958,6 @@ void main(void)
 {
 SYSTEM_Initialize();
 
-TRISAbits.TRISA0 = 0;
-TRISAbits.TRISA1 = 0;
-
-LATAbits.LATA0 = 1;
-LATAbits.LATA1 = 0;
 
 while (1)
 {

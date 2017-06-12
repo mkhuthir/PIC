@@ -1,16 +1,8 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"14 device_initialize.h
+"13 device_initialize.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"199 /opt/microchip/xc8/v1.42/include/pic10f322.h
-[s S7 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S7 . TRISA0 TRISA1 TRISA2 ]
-"198
-[u S6 `S7 1 ]
-[n S6 . . ]
-"205
-[v _TRISAbits `VS6 ~T0 @X0 0 e@6 ]
-"231
+"231 /opt/microchip/xc8/v1.42/include/pic10f322.h
 [s S9 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S9 . LATA0 LATA1 LATA2 ]
 "230
@@ -18,10 +10,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S8 . . ]
 "237
 [v _LATAbits `VS8 ~T0 @X0 0 e@7 ]
-[v F1432 `(v ~T0 @X0 1 tf1`ul ]
+[v F1436 `(v ~T0 @X0 1 tf1`ul ]
 "152 /opt/microchip/xc8/v1.42/include/pic.h
-[v __delay `JF1432 ~T0 @X0 0 e ]
+[v __delay `JF1436 ~T0 @X0 0 e ]
 [p i __delay ]
+[; ;pins.h: 39: void PINS_Initialize (void);
+[; ;pins.h: 42: void PINS_IOC(void);
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1379,23 +1373,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 222: typedef int16_t intptr_t;
 [; ;stdint.h: 227: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;adc.h: 31: typedef uint8_t adc_result_t;
-[; ;adc.h: 45: typedef enum
-[; ;adc.h: 46: {
-[; ;adc.h: 47: channel_FVR = 0b111,
-[; ;adc.h: 48: channel_TEMP = 0b110,
-[; ;adc.h: 49: channel_AN2 = 0b010,
-[; ;adc.h: 50: channel_AN1 = 0b001,
-[; ;adc.h: 51: channel_AN0 = 0b000
-[; ;adc.h: 52: } adc_channel_t;
-[; ;adc.h: 67: void ADC_Initialize(void);
-[; ;adc.h: 90: adc_result_t ADC_GetConversion(adc_channel_t channel);
-[; ;pwm.h: 59: void PWM_Initialize(void);
-[; ;pwm.h: 87: void PWM_LoadDutyValue(uint16_t dutyValue);
-[; ;tmr2.h: 69: void TMR2_Initialize(void);
-[; ;tmr2.h: 98: void TMR2_StartTimer(void);
-[; ;device_initialize.h: 14: void SYSTEM_Initialize(void);
-[; ;device_initialize.h: 15: void OSCILLATOR_Initialize(void);
+[; ;device_initialize.h: 13: void SYSTEM_Initialize(void);
+[; ;device_initialize.h: 14: void OSCILLATOR_Initialize(void);
 [v $root$_main `(v ~T0 @X0 0 e ]
 "5 main.c
 [v _main `(v ~T0 @X0 1 ef ]
@@ -1408,41 +1387,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 7: SYSTEM_Initialize();
 "7
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 9: TRISAbits.TRISA0 = 0;
-"9
-[e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 10: TRISAbits.TRISA1 = 0;
+[; ;main.c: 10: while (1)
 "10
-[e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 12: LATAbits.LATA0 = 1;
-"12
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 13: LATAbits.LATA1 = 0;
-"13
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 15: while (1)
-"15
 [e :U 145 ]
-[; ;main.c: 16: {
-"16
+[; ;main.c: 11: {
+"11
 {
-[; ;main.c: 17: LATAbits.LATA0 = ~LATAbits.LATA0;
-"17
+[; ;main.c: 12: LATAbits.LATA0 = ~LATAbits.LATA0;
+"12
 [e = . . _LATAbits 0 0 -> ~ -> . . _LATAbits 0 0 `i `uc ]
-[; ;main.c: 18: LATAbits.LATA1 = ~LATAbits.LATA1;
-"18
+[; ;main.c: 13: LATAbits.LATA1 = ~LATAbits.LATA1;
+"13
 [e = . . _LATAbits 0 1 -> ~ -> . . _LATAbits 0 1 `i `uc ]
-[; ;main.c: 19: _delay((unsigned long)((100)*(8000000/4000.0)));
-"19
+[; ;main.c: 14: _delay((unsigned long)((100)*(8000000/4000.0)));
+"14
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"21
+"16
 }
 [e :U 144 ]
-"15
+"10
 [e $U 145  ]
 [e :U 146 ]
-[; ;main.c: 21: }
-[; ;main.c: 22: }
-"22
+[; ;main.c: 16: }
+[; ;main.c: 17: }
+"17
 [e :UE 143 ]
 }
