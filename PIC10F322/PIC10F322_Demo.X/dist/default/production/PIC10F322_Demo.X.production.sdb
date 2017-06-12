@@ -1,0 +1,176 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 10F322 ]
+[d frameptr 6 ]
+"37 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/adc.c
+[e E1463 . `uc
+channel_FVR 7
+channel_TEMP 6
+channel_AN2 2
+channel_AN1 1
+channel_AN0 0
+]
+"64 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/main.c
+[e E1463 . `uc
+channel_FVR 7
+channel_TEMP 6
+channel_AN2 2
+channel_AN1 1
+channel_AN0 0
+]
+"62 /opt/microchip/xc8/v1.42/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.42/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"26 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"36
+[v _ADC_GetConversion ADC_GetConversion `(uc  1 e 1 0 ]
+"33 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/device_initialize.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"41
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"49 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"26 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/pwm.c
+[v _PWM_Initialize PWM_Initialize `(v  1 e 1 0 ]
+"32
+[v _PWM_LoadDutyValue PWM_LoadDutyValue `(v  1 e 1 0 ]
+"24 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"39
+[v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+[s S20 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+]
+"205 /opt/microchip/xc8/v1.42/include/pic10f322.h
+[u S24 . 1 `S20 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES24  1 e 1 @6 ]
+[s S185 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+]
+"237
+[u S189 . 1 `S185 1 . 1 0 ]
+[v _LATAbits LATAbits `VES189  1 e 1 @7 ]
+[s S31 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+]
+"269
+[u S35 . 1 `S31 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES35  1 e 1 @8 ]
+[s S118 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 CLC1IF 1 0 :1:3 
+`uc 1 NCO1IF 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"425
+[u S126 . 1 `S118 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES126  1 e 1 @12 ]
+"587
+[v _OSCCON OSCCON `VEuc  1 e 1 @16 ]
+"647
+[v _TMR2 TMR2 `VEuc  1 e 1 @17 ]
+"654
+[v _PR2 PR2 `VEuc  1 e 1 @18 ]
+"661
+[v _T2CON T2CON `VEuc  1 e 1 @19 ]
+[s S137 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 TOUTPS 1 0 :4:3 
+]
+"682
+[s S141 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 TOUTPS0 1 0 :1:3 
+`uc 1 TOUTPS1 1 0 :1:4 
+`uc 1 TOUTPS2 1 0 :1:5 
+`uc 1 TOUTPS3 1 0 :1:6 
+]
+[u S149 . 1 `S137 1 . 1 0 `S141 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES149  1 e 1 @19 ]
+"732
+[v _PWM1DCL PWM1DCL `VEuc  1 e 1 @20 ]
+"768
+[v _PWM1DCH PWM1DCH `VEuc  1 e 1 @21 ]
+"838
+[v _PWM1CON PWM1CON `VEuc  1 e 1 @22 ]
+"1269
+[v _ADRES ADRES `VEuc  1 e 1 @30 ]
+"1276
+[v _ADCON ADCON `VEuc  1 e 1 @31 ]
+[s S48 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :3:2 
+`uc 1 ADCS 1 0 :3:5 
+]
+"1298
+[s S53 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 ADCS0 1 0 :1:5 
+`uc 1 ADCS1 1 0 :1:6 
+`uc 1 ADCS2 1 0 :1:7 
+]
+[u S61 . 1 `S48 1 . 1 0 `S53 1 . 1 0 ]
+[v _ADCONbits ADCONbits `VES61  1 e 1 @31 ]
+"46 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/main.c
+[v _dutycycle dutycycle `ui  1 e 2 0 ]
+"49
+[v _main main `(v  1 e 1 0 ]
+{
+"68
+} 0
+"39 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/tmr2.c
+[v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+{
+"43
+} 0
+"33 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/device_initialize.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"39
+} 0
+"24 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"37
+} 0
+"26 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/pwm.c
+[v _PWM_Initialize PWM_Initialize `(v  1 e 1 0 ]
+{
+"30
+} 0
+"41 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/device_initialize.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"45
+} 0
+"26 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"33
+} 0
+"32 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/pwm.c
+[v _PWM_LoadDutyValue PWM_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v PWM_LoadDutyValue@dutyValue dutyValue `ui  1 p 2 0 ]
+"39
+} 0
+"36 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_Demo.X/adc.c
+[v _ADC_GetConversion ADC_GetConversion `(uc  1 e 1 0 ]
+{
+[v ADC_GetConversion@channel channel `E1463  1 a 1 wreg ]
+[v ADC_GetConversion@channel channel `E1463  1 a 1 wreg ]
+"39
+[v ADC_GetConversion@channel channel `E1463  1 a 1 1 ]
+"52
+} 0

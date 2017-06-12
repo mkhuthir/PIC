@@ -1,0 +1,46 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 10F322 ]
+[d frameptr 6 ]
+"62 /opt/microchip/xc8/v1.42/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.42/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"16 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/device_initialize.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"21
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"5 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
+[v _main main `(v  1 e 1 0 ]
+[s S27 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+]
+"205 /opt/microchip/xc8/v1.42/include/pic10f322.h
+[u S31 . 1 `S27 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES31  1 e 1 @6 ]
+[s S38 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+]
+"237
+[u S42 . 1 `S38 1 . 1 0 ]
+[v _LATAbits LATAbits `VES42  1 e 1 @7 ]
+"587
+[v _OSCCON OSCCON `VEuc  1 e 1 @16 ]
+"5 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"22
+} 0
+"16 /home/mkhuthir/Microchip/PIC10F32x/PIC10F322_blink/device_initialize.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"19
+} 0
+"21
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"25
+} 0
