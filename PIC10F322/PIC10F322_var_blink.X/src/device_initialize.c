@@ -17,6 +17,7 @@ void SYSTEM_Initialize(void)
 {
     OSCILLATOR_Initialize();
     PINS_Initialize();
+    ADC_Initialize();
 
 }
 

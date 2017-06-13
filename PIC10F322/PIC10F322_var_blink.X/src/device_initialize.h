@@ -3,6 +3,7 @@
 #define	DEVICE_INITIALIZE_H
 
 #include "pins.h"
+#include "adc.h"
 #include <xc.h>
 #include <stdint.h>
 #include <stdbool.h>
