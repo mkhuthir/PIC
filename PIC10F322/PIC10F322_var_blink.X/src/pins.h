@@ -1,3 +1,6 @@
+// Muthanna A. Attyah (June 2017)
+// Please feel free to copy and use code.
+
 #ifndef PINS_H
 #define PINS_H
 

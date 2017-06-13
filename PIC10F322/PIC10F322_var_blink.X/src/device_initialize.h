@@ -1,3 +1,5 @@
+// Muthanna A. Attyah (June 2017)
+// Please feel free to copy and use code.
 
 #ifndef DEVICE_INITIALIZE_H
 #define	DEVICE_INITIALIZE_H

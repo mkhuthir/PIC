@@ -1,4 +1,5 @@
-
+// Muthanna A. Attyah (June 2017)
+// Please feel free to copy and use code.
 
 #ifndef _ADC_H
 #define _ADC_H

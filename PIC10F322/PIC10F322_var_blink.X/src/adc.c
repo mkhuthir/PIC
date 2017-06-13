@@ -1,3 +1,5 @@
+// Muthanna A. Attyah (June 2017)
+// Please feel free to copy and use code.
 
 //Section: Included Files
 

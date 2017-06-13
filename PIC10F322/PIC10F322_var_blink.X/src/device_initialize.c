@@ -1,3 +1,5 @@
+// Muthanna A. Attyah (June 2017)
+// Please feel free to copy and use code.
 
 // Configuration Bits
 #pragma config FOSC = INTOSC    // Oscillator Selection bits (INTOSC oscillator: CLKIN function disabled)
