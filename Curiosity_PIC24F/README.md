@@ -1,5 +1,5 @@
 
-![Curiosity PIC24F Board](images/CuriosityPIC24F.png)<br>
+![Curiosity PIC24F Board](images/Curiosity_PIC24F.png)<br>
 # Curiosity PIC24F Board (16-bits)
 
 The PIC24F Curiosity Development Board (Part Number: **DM240004**) is a low-cost platform with an integrated programmer and debugger and easy expandability with a mikroBUS™ interface to utilize click boards for customizing your application.
