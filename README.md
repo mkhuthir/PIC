@@ -6,6 +6,6 @@ Folders are arranged based on the model of the demo or development boards from M
 
 All projects are done using Microchip MPLAB X IDE.
 
-# Enjoy !
+Enjoy !
 
 Muthanna A. Attyah
