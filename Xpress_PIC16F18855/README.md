@@ -1,6 +1,6 @@
 
 # MPLAB Xpress board:
-![MPLAB Xpress board](../images/mplabxpress.png)<br>
+![MPLAB Xpress board](../images/Xpress_PIC16F18855/mplabxpress.png)<br>
 # PIC16F18855 application circuit
 ![PIC16F18855 application](https://s3-eu-west-1.amazonaws.com/microchip/application.png)<br>
 # EMC1001 temperature sensor circuit
