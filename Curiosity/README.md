@@ -1,6 +1,6 @@
 
 ![Curiosity Board](images/Curiosity.jpg)<br>
-# Curiosity Board
+# Curiosity Board (8-bits)
 
 The original Curiosity Development Board (Part Number: **DM164137**) is designed to support 8-, 14-, and 20-pin 8-bit PIC MCUs with low voltage programming capability.
 
