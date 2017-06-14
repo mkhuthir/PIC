@@ -11,7 +11,7 @@ The Curiosity PIC32 MZ EF Development Board (Part Number: **DM320104**) is a ful
 2. X32 header for audio I/O using Microchip audio daughter boards 
     * PIC32 Audio Codec Daughter Card - AK4642EN (AC320100)
 
-3.On Board WI-FI N Module, MRF24WN0MA, 2.4 GHz IEEE 802.11n compliant wireless module 
+3. On Board WI-FI N Module, MRF24WN0MA, 2.4 GHz IEEE 802.11n compliant wireless module 
 
 4. Header for flexible Ethernet PHY 
     * Compatible with ETHERNET PHY DAUGHTER BOARD AC320004-3
