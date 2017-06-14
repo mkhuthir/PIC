@@ -8,14 +8,14 @@ The Curiosity PIC32MM Development Board (Part Number: **DM320101**) features the
 # Features
 
 * Features the eXtreme low power PIC32MM0064GPL036 general purpose, 32-bit microcontroller
- * Low Voltage Sleep Mode with RAM retention < 500nA 
+    * Low Voltage Sleep Mode with RAM retention < 500nA 
 * Integrated PICkit™ On-Board (PKOB) circuit that enables programming/debugging capability
 * Functionality expansion support with mikroBUS™ interface for click boards™
 * Wireless connectivity provision with Microchip’s BM71 Bluetooth LE module footprint
 * Various user interface options
- * MCLR reset button + two general purpose push buttons
- * Red/Green/Blue (RGB) LED + two general purpose indicator LEDs
- * Analog potentiometer
+    * MCLR reset button + two general purpose push buttons
+    * Red/Green/Blue (RGB) LED + two general purpose indicator LEDs
+    * Analog potentiometer
 * Female headers for access to microcontroller I/O pins
 * Small prototyping area for the user to add additional components
 * Full compatibility with MPLAB X IDE, XC32 Compiler and MPLAB Code Configurator
