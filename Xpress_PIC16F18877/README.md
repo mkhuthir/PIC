@@ -1,6 +1,4 @@
 
-![Board](images/Xpress_PIC16F18877.png)<br>
-
 <p align="center"> 
 <img src="images/Xpress_PIC16F18877.png">
 </p>
