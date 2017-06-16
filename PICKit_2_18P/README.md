@@ -1,6 +1,12 @@
+<p align="center"> 
+<img src="images/18-pin_PCB_front.jpg">
+</p>
 
-![Board](images/)<br>
-# Board (8-bits)
+<p align="center"> 
+<img src="images/18-pin_PCB_back.jpg">
+</p>
+
+# PICKit 2 18pin Demo Board (8-bits)
 
 
 
