@@ -1,5 +1,5 @@
 <p align="center"> 
-<img src="images/Microstick_II.jpg">
+<img src="images/Microstick_II.png">
 </p>
 
 # Microstick II Board (16 & 32-bits)
