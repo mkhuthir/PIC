@@ -1,5 +1,5 @@
 <p align="center"> 
-<img src="images/Xpress_PIC10F322.png">
+<img src="images/PIC10F322.jpg">
 </p>
 
 # PIC10F322 Board (8-bits)
