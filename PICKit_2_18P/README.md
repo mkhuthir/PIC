@@ -1,4 +1,8 @@
 <p align="center"> 
+<img src="images/PICKit_2_18P.jpg">
+</p>
+
+<p align="center"> 
 <img src="images/18-pin_PCB_front.jpg">
 </p>
 
