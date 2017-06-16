@@ -52,7 +52,7 @@
 #include "interrupt_manager.h"
 #include "i2c1.h"
 
-#define _XTAL_FREQ  1000000
+#define _XTAL_FREQ  8000000
 
 
 /**

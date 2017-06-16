@@ -20,8 +20,10 @@ void main(void)
     LED_D3_SetHigh();     // Not used
     LED_D4_SetHigh();     // Not used
     LED_D5_SetHigh();     // Not used
-    
-    
+   
+            
+    StopScript();
+        
     // Execution loop
     while(1){
         LED_D2_Toggle();

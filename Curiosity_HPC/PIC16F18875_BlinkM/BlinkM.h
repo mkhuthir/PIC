@@ -7,8 +7,8 @@
 /**
 BlankM  Click   Curiosity HPC
 -------------------------------------
-I2C C   SCL     RC4     - I2C clock
-I2C D   SDA     RC3     - I2C data
+I2C C   SCL     RC3     - I2C clock
+I2C D   SDA     RC4     - I2C data
 PWR-    GND     GND     - Ground
 PWR+    +5V     +5V     - Power supply
 -------------------------------------
@@ -25,10 +25,11 @@ PWR+    +5V     +5V     - Power supply
 
 
 // BlinkM I2C Address
-#define Slave_Adr           0x74    // Slave device I2C address
+#define Slave_Adr           0x09            // Slave device I2C address
 
- 
+bool I2C_Write(uint8_t *pData, uint8_t len);
 
-bool WriteReg( uint8_t reg, uint8_t data);            
+void StopScript();
+
 
 #endif
