@@ -23,6 +23,7 @@ void main(void)
    
             
     StopScript();
+    GoToRGB(0x00,0x00,0xFF);
         
     // Execution loop
     while(1){
