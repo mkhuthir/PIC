@@ -28,16 +28,18 @@
 // BlinkM I2C Address
 #define Slave_Adr           0x09            // Slave device I2C address
 
+// Macros
+
 // I2C Functions
 bool I2C_Write(char *pData, char len);
 
 // BlinkM Functions
-void GoToRGB(char R, char G, char B);
-void FadeToRGB(char R, char G, char B);
-void FadeToHSB(char H, char S, char B);
-void FadeToRndRGB(char R, char G, char B);
-void FadeToRndHSB(char H, char S, char B);
-void PlayLightScript(char n, char r, char p);
+void GoToRGB(char R, char G, char B);           // sets the BlinkM to a particular RGB color immediately.
+void FadeToRGB(char R, char G, char B);         // fade from the current color to the specified RGB color.
+void FadeToHSB(char H, char S, char B);         // fade from the current color to the specified HSB color.
+void FadeToRndRGB(char R, char G, char B);      //
+void FadeToRndHSB(char H, char S, char B);      //
+void PlayLightScript(char n, char r, char p);   //
 void StopScript();
 void SetFadeSpeed();
 void SetTimeAdjust();

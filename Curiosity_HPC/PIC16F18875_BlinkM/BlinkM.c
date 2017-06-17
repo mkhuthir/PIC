@@ -45,6 +45,7 @@ bool I2C_Write(char *pData, char len)
 }
 
 //---------------------------------------------------------------------------------------------
+// sets the BlinkM to a particular RGB color immediately.
 
 void GoToRGB(char R, char G, char B)
 {
@@ -56,6 +57,7 @@ void GoToRGB(char R, char G, char B)
 };
 
 //---------------------------------------------------------------------------------------------
+// fade from the current color to the specified RGB color.
 
 void FadeToRGB(char R, char G, char B)
 {
@@ -67,6 +69,7 @@ void FadeToRGB(char R, char G, char B)
 }
 
 //---------------------------------------------------------------------------------------------
+// fade from the current color to the specified HSB color.
 
 void FadeToHSB(char H, char S, char B)
 {

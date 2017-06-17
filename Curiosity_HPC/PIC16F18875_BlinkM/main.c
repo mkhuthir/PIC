@@ -6,6 +6,11 @@
 #include "mcc_generated_files/mcc.h"
 #include "BlinkM.h"
 
+void WaitKeyPress()
+{
+    while(S1_GetValue());         // Wait until S1 key is pressed
+    while(!S1_GetValue());        // Wait until S1 key is released
+}
 
 // Main code
 void main(void)
@@ -15,20 +20,46 @@ void main(void)
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
 
-    // LEDs initializations
-    LED_D2_SetHigh();     // Not Used
-    LED_D3_SetHigh();     // Not used
-    LED_D4_SetHigh();     // Not used
-    LED_D5_SetHigh();     // Not used
    
-            
-    StopScript();
-    GoToRGB(0x00,0x00,0xFF);
-        
+    // Testing all functions..
+
     // Execution loop
     while(1){
-        LED_D2_Toggle();
-        __delay_ms(500);
+        
+        GoToRGB(0x00, 0x00, 0x00); // off
+        WaitKeyPress();
+
+        GoToRGB(0xFF, 0x00, 0x00); // Red
+        WaitKeyPress();
+
+        GoToRGB(0x00, 0xFF, 0x00); // Green
+        WaitKeyPress();
+
+        GoToRGB(0x00, 0x00, 0xFF); // Blue
+        WaitKeyPress();
+
+        GoToRGB(0xFF, 0xFF, 0xFF); // White
+        WaitKeyPress();
+    
+        /*
+        FadeToRGB(R, G, B);
+        FadeToHSB(H, S, B);
+        FadeToRndRGB(R, G, B);
+        FadeToRndHSB(H, S, B);
+        PlayLightScript(n, r, p);
+        */
+        
+        
+        //That's All...Blink all LEDs and wait for a key press to start another cycle.
+        GoToRGB(0x00, 0x00, 0x00);  // off
+        while(S1_GetValue())
+        {
+            LED_D2_Toggle();
+            LED_D3_Toggle();
+            LED_D4_Toggle();
+            LED_D5_Toggle();
+            __delay_ms(100);
+        }
     }
         
 }
