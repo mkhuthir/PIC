@@ -24,14 +24,15 @@
 #endif
 
 //---------------------------------------------------------------------------------------------
+// Reads n number of bytes from I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
 
-bool I2C_Write(char *pData, char len)
+bool I2C_Write(char *pData, char n)
 {    
     static I2C1_TRANSACTION_REQUEST_BLOCK trb;              // TRB
     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;      // initial status is pending
     uint8_t timeOut=0;                                      // used to count retries
 
-    I2C1_MasterWriteTRBBuild(&trb, pData, len, Slave_Adr);  // build a Write TRB parameters > (TRB, data, length, address)
+    I2C1_MasterWriteTRBBuild(&trb, pData, n, Slave_Adr);  // build a Write TRB parameters > (TRB, data, length, address)
 
     while(status != I2C1_MESSAGE_FAIL)                      // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK, or I2C1_DATA_NO_ACK,
     {                                                       // The device may be busy and needs more time for the last write.
@@ -45,7 +46,10 @@ bool I2C_Write(char *pData, char len)
 }
 
 //---------------------------------------------------------------------------------------------
-// sets the BlinkM to a particular RGB color immediately.
+// Sets the BlinkM to a particular RGB color immediately.The command takes
+// three argument bytes, one each for setting the levels of the red, green, and blue channels.
+// Each value ranges from 0-255 (0x00-0xFF in hexadecimal), with 0 being off and 255 being
+// maximum brightness.
 
 void GoToRGB(char R, char G, char B)
 {
@@ -57,7 +61,11 @@ void GoToRGB(char R, char G, char B)
 };
 
 //---------------------------------------------------------------------------------------------
-// fade from the current color to the specified RGB color.
+// Fades from the current color to the specified RGB color.The command takes
+// three argument bytes, one each for setting the levels of the red, green, and blue channels.
+// Each value ranges from 0-255 (0x00-0xFF in hexadecimal), with 0 being off and 255 being
+// maximum brightness.
+// The rate at which the fading occurs is controlled by the ?Set Fade Speed? (?f?) command. 
 
 void FadeToRGB(char R, char G, char B)
 {
@@ -69,7 +77,12 @@ void FadeToRGB(char R, char G, char B)
 }
 
 //---------------------------------------------------------------------------------------------
-// fade from the current color to the specified HSB color.
+// Fades from the current color to the specified HSB color.The command takes
+// three bytes as arguments. The first argument byte is the hue (or raw color), with mapping from 0-255.
+// The second argument is the saturation, or vividness, of the color. A saturation of 0 means a
+// very light/white color and a saturation of 255 means a very vivid color. The third argument is
+// the brightness of the resulting color, where 0 is totally dark and 255 means maximally bright. 
+// The rate at which the fading occurs is controlled by the ?Set Fade Speed? (?f?) command. 
 
 void FadeToHSB(char H, char S, char B)
 {
@@ -81,6 +94,10 @@ void FadeToHSB(char H, char S, char B)
 }
 
 //---------------------------------------------------------------------------------------------
+// Fades from the current color to a random color. It takes 3 bytes as arguments,
+// one for each R,G,B channel. Each argument is the range or amount of randomness for each
+// of the R,G,B channels from which to deviate from the current color.
+// A setting of 0 for a channel means to not change it at all.
 
 void FadeToRndRGB(char R, char G, char B)
 {
@@ -92,6 +109,12 @@ void FadeToRndRGB(char R, char G, char B)
 }
 
 //---------------------------------------------------------------------------------------------
+// Fades from the current color to a random color. It takes 3 bytes as arguments,
+// one for each H,S, B value. Each argument is the range or ?degree? of randomness to deviate
+// from the current H,S,B color.
+// A setting of 0 for a channel means to not change it at all.
+// *Note* that this command only works after a previous ?h? command has been used to set an
+// initial hue.
 
 void FadeToRndHSB(char H, char S, char B)
 {
@@ -103,6 +126,14 @@ void FadeToRndHSB(char H, char S, char B)
 }
 
 //---------------------------------------------------------------------------------------------
+// Plays the specified light script immediately, stopping any currently playing script. 
+// The command takes three bytes as arguments. The first byte is the script id of the script
+// to play. The second argument is the number of repeats to play the script.
+// A repeats value of 0 means play the script forever. The last argument is the script line
+// number to start playing from. A value of 0 means play the script from the start.
+// To adjust the playback speed of a script that?s running, adjust the fade speed (?Set Fade
+// Speed?, ?f?) and time adjust (?Set Time Adjust?, ?t?) to taste. Altering these values can
+// greatly alter the lighting effect for the built-in light scripts.
 
 void PlayLightScript(char n, char r, char p)
 {

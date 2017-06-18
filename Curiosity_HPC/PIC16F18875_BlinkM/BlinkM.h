@@ -40,7 +40,7 @@ void FadeToHSB(char H, char S, char B);         // fade from the current color t
 void FadeToRndRGB(char R, char G, char B);      //
 void FadeToRndHSB(char H, char S, char B);      //
 void PlayLightScript(char n, char r, char p);   //
-void StopScript();
+void StopScript();                              //
 void SetFadeSpeed();
 void SetTimeAdjust();
 void GetCurrentRGB();
