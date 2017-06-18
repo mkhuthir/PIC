@@ -28,19 +28,42 @@
 // BlinkM I2C Address
 #define Slave_Adr           0x09            // Slave device I2C address
 
-// Macros
+// BlinkM ROM light scripts
+enum script_id 
+{
+    eeprom_def         =0, // default startup white?red?green?blue?off (can be reprogrammed)
+    RGB                ,   // red?green?blue
+    white_flash        ,   // white?off
+    red_flash          ,   // red?off
+    green_flash        ,   // green?off
+    blue_flash         ,   // blue?off
+    cyan_flash         ,   // cyan?off
+    magenta_flash      ,   // magenta?off
+    yellow_flash       ,   // yellow?off
+    black              ,   // off
+    hue_cycle          ,   // red?yellow?green?cyan?blue?purple
+    mood_light_random  ,   // hue?random hue
+    virtual_candle     ,   // random yellows
+    water_reflections  ,   // random blues
+    old_neon           ,   // random orangeish reds
+    the_seasons_spring ,   // colors?summer?fall?winter
+    thunderstorm_random,   // blues & purples?white flashes
+    stop_light         ,   // red?green?yellow
+    morse_code_SOS         // S.O.S morse in white
+
+};
 
 // I2C Functions
 bool I2C_Write(char *pData, char len);
 
 // BlinkM Functions
-void GoToRGB(char R, char G, char B);           // sets the BlinkM to a particular RGB color immediately.
-void FadeToRGB(char R, char G, char B);         // fade from the current color to the specified RGB color.
-void FadeToHSB(char H, char S, char B);         // fade from the current color to the specified HSB color.
-void FadeToRndRGB(char R, char G, char B);      //
-void FadeToRndHSB(char H, char S, char B);      //
-void PlayLightScript(char n, char r, char p);   //
-void StopScript();                              //
+void GoToRGB(char R, char G, char B);               // sets the BlinkM to a particular RGB color immediately.
+void FadeToRGB(char R, char G, char B);             // Fades from the current color to the specified RGB color.
+void FadeToHSB(char H, char S, char B);             // Fades from the current color to the specified HSB color.
+void FadeToRndRGB(char R, char G, char B);          // Fades from the current color to a random RGB color
+void FadeToRndHSB(char H, char S, char B);          // Fades from the current color to a random HSB color
+void PlayLightScript(char n, char r, char p);       // Plays the specified light script immediately, stopping any currently playing script.
+void StopScript();                                  // Stops any currently playing script.
 void SetFadeSpeed();
 void SetTimeAdjust();
 void GetCurrentRGB();

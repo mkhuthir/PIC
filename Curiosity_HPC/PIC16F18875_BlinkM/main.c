@@ -41,42 +41,73 @@ void main(void)
     while(1){
         
         GoToRGB(0xFF, 0xFF, 0xFF);  // Start with White
-        StopScript();               // Stop Script
+        StopScript();               // Stop Scripts
         LED_D2_SetHigh();           // All Dx LEDs On.
         LED_D3_SetHigh();
         LED_D4_SetHigh();
         LED_D5_SetHigh();
-        WaitKeyPress();             //Wait
-        
-        GoToRGB(0x00, 0x00, 0x00);  // Off
+        //Wait
         WaitKeyPress();
         
-        GoToRGB(0xFF, 0x00, 0x00);  // Red
-        WaitKeyPress();
-
-        GoToRGB(0x00, 0xFF, 0x00);  // Green
-        WaitKeyPress();
-
-        GoToRGB(0x00, 0x00, 0xFF);  // Blue
-        WaitKeyPress();
-
-        GoToRGB(0xFF, 0xFF, 0x00);  // Yellow
+        // Off
+        GoToRGB(0x00, 0x00, 0x00);  
         WaitKeyPress();
         
-        GoToRGB(0x00, 0xFF, 0xFF);  // Cyan
+        // Red
+        GoToRGB(0xFF, 0x00, 0x00);  
         WaitKeyPress();
         
-        GoToRGB(0xFF, 0x00, 0xFF);  // Magenta
+        // Green
+        GoToRGB(0x00, 0xFF, 0x00);  
         WaitKeyPress();
-    
-        /*
-        FadeToRGB(R, G, B);
-        FadeToHSB(H, S, B);
-        FadeToRndRGB(R, G, B);
-        FadeToRndHSB(H, S, B);
-        PlayLightScript(n, r, p);
-        */
         
+        // Blue
+        GoToRGB(0x00, 0x00, 0xFF);
+        WaitKeyPress();
+        
+        // Yellow
+        GoToRGB(0xFF, 0xFF, 0x00);
+        WaitKeyPress();
+        
+        // Cyan
+        GoToRGB(0x00, 0xFF, 0xFF);
+        WaitKeyPress();
+        
+        // Magenta
+        GoToRGB(0xFF, 0x00, 0xFF);
+        WaitKeyPress();
+        
+        // Fade to Red 
+        FadeToRGB(0xFF, 0x00, 0x00);
+        WaitKeyPress();
+        
+        // Fade to Random RGB
+        FadeToRndRGB(0xFF, 0xFF, 0xFF);
+        WaitKeyPress();
+        
+        // Fade to 0x60 HSB
+        FadeToHSB(0x60, 0xFF, 0xFF);
+        WaitKeyPress();
+        
+        // Fade to Random HSB
+        FadeToRndHSB(0xFF, 0xFF, 0xFF);
+        WaitKeyPress();
+        
+        // Play script 'RGB' 3 times start from first line
+        PlayLightScript(RGB, 3, 0);
+        WaitKeyPress();
+        
+        // Play script 'blue_flash' 3 times start from first line
+        PlayLightScript(blue_flash, 3, 0);
+        WaitKeyPress();
+        
+        // Play script 'virtual_candle' 3 times start from first line
+        PlayLightScript(virtual_candle, 3, 0);
+        WaitKeyPress();
+        
+        // Play script 'morse_code_SOS' 3 times start from first line
+        PlayLightScript(morse_code_SOS, 3, 0);
+        WaitKeyPress();
         
         //Demo is done...Blink all LEDs and wait for a key press to start another demo cycle.
         while(S1_GetValue())            // wait for key press

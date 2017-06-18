@@ -61,11 +61,10 @@ void GoToRGB(char R, char G, char B)
 };
 
 //---------------------------------------------------------------------------------------------
-// Fades from the current color to the specified RGB color.The command takes
-// three argument bytes, one each for setting the levels of the red, green, and blue channels.
-// Each value ranges from 0-255 (0x00-0xFF in hexadecimal), with 0 being off and 255 being
-// maximum brightness.
-// The rate at which the fading occurs is controlled by the ?Set Fade Speed? (?f?) command. 
+// Fades from the current color to the specified RGB color.The command takes three argument
+// bytes, one each for setting the levels of the red, green, and blue channels. Each value 
+// ranges from 0-255 (0x00-0xFF in hexadecimal), with 0 being off and 255 being maximum brightness.
+// The rate at which the fading occurs is controlled by the SetFadeSpeed() command. 
 
 void FadeToRGB(char R, char G, char B)
 {
@@ -82,7 +81,7 @@ void FadeToRGB(char R, char G, char B)
 // The second argument is the saturation, or vividness, of the color. A saturation of 0 means a
 // very light/white color and a saturation of 255 means a very vivid color. The third argument is
 // the brightness of the resulting color, where 0 is totally dark and 255 means maximally bright. 
-// The rate at which the fading occurs is controlled by the ?Set Fade Speed? (?f?) command. 
+// The rate at which the fading occurs is controlled by the SetFadeSpeed() command. 
 
 void FadeToHSB(char H, char S, char B)
 {
@@ -110,10 +109,9 @@ void FadeToRndRGB(char R, char G, char B)
 
 //---------------------------------------------------------------------------------------------
 // Fades from the current color to a random color. It takes 3 bytes as arguments,
-// one for each H,S, B value. Each argument is the range or ?degree? of randomness to deviate
-// from the current H,S,B color.
-// A setting of 0 for a channel means to not change it at all.
-// *Note* that this command only works after a previous ?h? command has been used to set an
+// one for each H,S, B value. Each argument is the range or degree of randomness to deviate
+// from the current H,S,B color. A setting of 0 for a channel means to not change it at all.
+// *Note* that this command only works after a previous FadeToHSB() command has been used to set an
 // initial hue.
 
 void FadeToRndHSB(char H, char S, char B)
@@ -131,9 +129,9 @@ void FadeToRndHSB(char H, char S, char B)
 // to play. The second argument is the number of repeats to play the script.
 // A repeats value of 0 means play the script forever. The last argument is the script line
 // number to start playing from. A value of 0 means play the script from the start.
-// To adjust the playback speed of a script that?s running, adjust the fade speed (?Set Fade
-// Speed?, ?f?) and time adjust (?Set Time Adjust?, ?t?) to taste. Altering these values can
-// greatly alter the lighting effect for the built-in light scripts.
+// To adjust the playback speed of a script that is running, adjust the fade speed (SetFadeSpeed()
+// and time adjust (SetTimeAdjust() to taste. Altering these values can greatly alter the lighting
+// effect for the built-in light scripts. See data sheet for list of scripts IDs.
 
 void PlayLightScript(char n, char r, char p)
 {
@@ -145,6 +143,8 @@ void PlayLightScript(char n, char r, char p)
 }
 
 //---------------------------------------------------------------------------------------------
+// Stops any currently playing script. If no script is playing, this command has no
+// effect. It takes no arguments and returns no value.
 
 void StopScript()
 {
