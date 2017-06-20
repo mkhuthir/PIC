@@ -24,7 +24,7 @@
 #endif
 
 //---------------------------------------------------------------------------------------------
-// Reads n number of bytes from I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
+// Writes n number of bytes to I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
 
 bool I2C_Write(char *pData, char n)
 {    
@@ -43,6 +43,14 @@ bool I2C_Write(char *pData, char n)
         else timeOut++;                                     // try again
     }
     return (status == I2C1_MESSAGE_COMPLETE);               // return the status
+}
+
+//---------------------------------------------------------------------------------------------
+// Reads n number of bytes from I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
+
+bool I2C_Read(char *pData, char n)
+{    
+
 }
 
 //---------------------------------------------------------------------------------------------
@@ -150,6 +158,129 @@ void StopScript()
 {
     char buffer[1]={'o'};
     I2C_Write(buffer,1);
+}
+
+//---------------------------------------------------------------------------------------------
+// Sets the rate at which color fading happens. It takes one argument that is the
+// fade speed from 1-255. The slowest fading occurs when the fade speed is 1. To change
+// colors instantly, set the fade speed to 255. A value of 0 is invalid and is reserved for a future
+// ?Smart Fade? feature.
+
+void SetFadeSpeed(char f)
+{
+    char buffer[2]={'f',0};
+    buffer[1]=f;
+    I2C_Write(buffer,2);
+}
+
+//---------------------------------------------------------------------------------------------
+// Adjusts the playback speed of a light script. It takes one byte as an argument,
+// a signed number between -128 and 127. The argument is treated as an additive adjustment to
+// all durations of the script being played. A value of 0 resets the playback speed to the default.
+// This command does not return a value.
+
+void SetTimeAdjust(char ti)
+{
+    char buffer[2]={'t',0};
+    buffer[1]=t;
+    I2C_Write(buffer,2);
+}
+
+//---------------------------------------------------------------------------------------------
+// Returns the current color in RGB format. The command takes no argument bytes but returns
+// 3 bytes representing the current values of the red, green and blue channels.
+// *Note* If the BlinkM is currently fading between colors, this command returns the instantaneous
+// current color value, not the destination color.
+
+void GetCurrentRGB()
+{
+    char buffer[4]={'g',0,0,0};
+    I2C_Read(buffer,4);
+}
+
+//---------------------------------------------------------------------------------------------
+// This command writes a light script line. The first argument is which script id to write to.
+// Currently, only script id 0 can be written to. The second argument is which line in the script to
+// change, and can range from 0-49. The third argument is the duration in ticks for that
+// command to last. The next four arguments are the BlinkM command and its arguments. Any
+// command with less than 3 arguments should fill out the remaining arguments slots with zeros.
+// This command takes approximately 20 milliseconds to complete, due to EEPROM write time.
+// Once all the lines of the desired script are written, set the script length with the ?Set Script
+// Length? (?L?) command. This command does not return a value.
+
+void WriteScriptLine(char n, char p, char d, char c, char a1, char a2, char a3)
+{
+    char buffer[8]={'W',0,0,0,0,0,0,0};
+    buffer[1]=n;
+    buffer[2]=p;
+    buffer[3]=d;
+    buffer[4]=c;
+    buffer[5]=a1;
+    buffer[6]=a2;
+    buffer[7]=a3;
+    I2C_Write(buffer,8);
+    __delay_ms(20);         //wait for EEPROM to finish write
+}
+
+//---------------------------------------------------------------------------------------------
+// Sets the length of a written script. The first argument is the script id to set,
+// currently only script id of 0 is valid. The second argument is the length of the script, and the 
+// third argument is the number of repeats for the script. This command takes approximately 15
+// milliseconds to complete, due to EEPROM write times.
+// This command does not return a value.
+void ReadScriptLine(char n, char l, char r)
+{
+    char buffer[4]={'L',0,0,0};
+    buffer[1]=n;
+    buffer[2]=l;
+    buffer[3]=r;
+    I2C_Write(buffer,4);
+    __delay_ms(15);         //wait for EEPROM to finish write
+}
+
+//---------------------------------------------------------------------------------------------
+
+void SetScriptLine()
+{
+    char buffer[2]={'f',0};
+    buffer[1]=f;
+    I2C_Write(buffer,2);
+}
+
+//---------------------------------------------------------------------------------------------
+
+void SetBlinkMAdr()
+{
+    char buffer[2]={'f',0};
+    buffer[1]=f;
+    I2C_Write(buffer,2);
+}
+
+//---------------------------------------------------------------------------------------------
+
+void GetBlinkMAdr()
+{
+    char buffer[2]={'f',0};
+    buffer[1]=f;
+    I2C_Write(buffer,2);
+}
+
+//---------------------------------------------------------------------------------------------
+
+void GetBlinkMVer()
+{
+    char buffer[2]={'f',0};
+    buffer[1]=f;
+    I2C_Write(buffer,2);
+}
+
+//---------------------------------------------------------------------------------------------
+
+void SetStartup()
+{
+    char buffer[2]={'f',0};
+    buffer[1]=f;
+    I2C_Write(buffer,2);
 }
 
 //---------------------------------------------------------------------------------------------

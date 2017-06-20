@@ -54,21 +54,24 @@ enum script_id
 };
 
 // I2C Functions
-bool I2C_Write(char *pData, char len);
+bool I2C_Write(char *pData, char n);
+bool I2C_Read(char *pData, char n);
 
 // BlinkM Functions
-void GoToRGB(char R, char G, char B);               // sets the BlinkM to a particular RGB color immediately.
-void FadeToRGB(char R, char G, char B);             // Fades from the current color to the specified RGB color.
-void FadeToHSB(char H, char S, char B);             // Fades from the current color to the specified HSB color.
-void FadeToRndRGB(char R, char G, char B);          // Fades from the current color to a random RGB color
-void FadeToRndHSB(char H, char S, char B);          // Fades from the current color to a random HSB color
-void PlayLightScript(char n, char r, char p);       // Plays the specified light script immediately, stopping any currently playing script.
-void StopScript();                                  // Stops any currently playing script.
-void SetFadeSpeed();
-void SetTimeAdjust();
-void GetCurrentRGB();
-void WriteScriptLine();
-void ReadScriptLine();
+void GoToRGB(char R, char G, char B);           // sets the BlinkM to a particular RGB color immediately.
+void FadeToRGB(char R, char G, char B);         // Fades from the current color to the specified RGB color.
+void FadeToHSB(char H, char S, char B);         // Fades from the current color to the specified HSB color.
+void FadeToRndRGB(char R, char G, char B);      // Fades from the current color to a random RGB color
+void FadeToRndHSB(char H, char S, char B);      // Fades from the current color to a random HSB color
+void PlayLightScript(char n, char r, char p);   // Plays the specified light script immediately, stopping any currently playing script.
+void StopScript();                              // Stops any currently playing script.
+void SetFadeSpeed(char f);                      // Sets the rate at which color fading happens.
+void SetTimeAdjust(char t);                     // Adjusts the playback speed of a light script.
+void GetCurrentRGB();                           // Returns the current color in RGB format.
+void WriteScriptLine(char n, char p, char d,    // This command writes a light script line.
+                     char c, 
+                     char a1, char a2, char a3);                   
+void ReadScriptLine(char n, char l, char r);    // Sets the length of a written script.
 void SetScriptLine();
 void SetBlinkMAdr();
 void GetBlinkMAdr();
