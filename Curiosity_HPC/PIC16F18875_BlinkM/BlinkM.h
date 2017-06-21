@@ -74,25 +74,25 @@ bool I2C_Write(char *pData, char nD);
 bool I2C_Read(char *pCmd, char nC, char*pData, char nD);
 
 // BlinkM Functions
-void  GoToRGB(char R, char G, char B);          // 'n' Sets the BlinkM to a particular RGB color immediately.
-void  FadeToRGB(char R, char G, char B);        // 'c' Fades from the current color to the specified RGB color.
-void  FadeToHSB(char H, char S, char B);        // 'h' Fades from the current color to the specified HSB color.
-void  FadeToRndRGB(char R, char G, char B);     // 'C' Fades from the current color to a random RGB color
-void  FadeToRndHSB(char H, char S, char B);     // 'H' Fades from the current color to a random HSB color
-void  PlayLightScript(char n, char r, char p);  // 'p' Plays the specified light script immediately, stopping any currently playing script.
-void  StopScript();                             // 'o' Stops any currently playing script.
-void  SetFadeSpeed(char f);                     // 'f' Sets the rate at which color fading happens.
-void  SetTimeAdjust(char t);                    // 't' Adjusts the playback speed of a light script.
-char* GetCurrentRGB();                          // 'g' Returns the current color in RGB format.
-void  WriteScriptLine(char n, char p, char d,   // 'W' This command writes a light script line.
+void GoToRGB(char R, char G, char B);           // 'n' Sets the BlinkM to a particular RGB color immediately.
+void FadeToRGB(char R, char G, char B);         // 'c' Fades from the current color to the specified RGB color.
+void FadeToHSB(char H, char S, char B);         // 'h' Fades from the current color to the specified HSB color.
+void FadeToRndRGB(char R, char G, char B);      // 'C' Fades from the current color to a random RGB color
+void FadeToRndHSB(char H, char S, char B);      // 'H' Fades from the current color to a random HSB color
+void PlayLightScript(char n, char r, char p);   // 'p' Plays the specified light script immediately, stopping any currently playing script.
+void StopScript();                              // 'o' Stops any currently playing script.
+void SetFadeSpeed(char f);                      // 'f' Sets the rate at which color fading happens.
+void SetTimeAdjust(char t);                     // 't' Adjusts the playback speed of a light script.
+void GetCurrentRGB(char* data);                 // 'g' Returns the current color in RGB format.
+void WriteScriptLine(char n, char p, char d,    // 'W' This command writes a light script line.
                      char c, 
                      char a1, char a2, char a3);                   
-char* ReadScriptLine(char n, char p);           // 'R' Reads a script line and returns the script line?s values.
-void  SetScriptLength(char n, char l, char r);  // 'L' Sets the length of a written script. 
-void  SetBlinkMAdr(char a);                     // 'A' Sets the I2C address of a BlinkM.
-char* GetBlinkMAdr();                           // 'a' Returns the I2C address.
-char* GetBlinkMVer();                           // 'Z' Returns the BlinkM firmware version.
-void  SetStartup(char m, char n,                // 'B' Sets the startup (or ?boot?) action for BlinkM.
+void ReadScriptLine(char n, char p, char* data);// 'R' Reads a script line and returns the script line?s values.
+void SetScriptLength(char n, char l, char r);   // 'L' Sets the length of a written script. 
+void SetBlinkMAdr(char a);                      // 'A' Sets the I2C address of a BlinkM.
+void GetBlinkMAdr(char* data);                  // 'a' Returns the I2C address.
+void GetBlinkMVer(char* data);                  // 'Z' Returns the BlinkM firmware version.
+void SetStartup(char m, char n,                 // 'B' Sets the startup (or ?boot?) action for BlinkM.
                 char r, char f, char t);
 
 

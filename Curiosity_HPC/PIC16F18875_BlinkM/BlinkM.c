@@ -51,7 +51,7 @@ bool I2C_Write(char *pData, char nD)
 
 bool I2C_Read(char *pCmd, char nC, char*pData, char nD)
 {    
-
+    return 0;
 }
 
 //---------------------------------------------------------------------------------------------
@@ -193,12 +193,10 @@ void SetTimeAdjust(char t)
 // *Note* If the BlinkM is currently fading between colors, this command returns the instantaneous
 // current color value, not the destination color.
 
-char* GetCurrentRGB()
+void GetCurrentRGB(char *data)
 {
     char cmnd[1]={'g'};
-    char data[3]={0,0,0};
-    
-    return data;
+    I2C_Read(cmnd,1,data,3);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -232,14 +230,12 @@ void WriteScriptLine(char n, char p, char d, char c, char a1, char a2, char a3)
 // There are 5 bytes of return values: d = duration in ticks, c = command, a1,2,3 = arguments for
 // command. If an invalid script id or script line number is given, all return values are zeros.
         
-char* ReadScriptLine(char n, char p)
+void ReadScriptLine(char n, char p, char* data)
 {
     char cmnd[3]={'R',0,0};
     cmnd[1]=n;
     cmnd[2]=p;
-    char data[5]={0,0,0,0,0};
-    
-    return data;
+    I2C_Read(cmnd,3,data,5);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -284,24 +280,20 @@ void SetBlinkMAdr(char a)
 //---------------------------------------------------------------------------------------------
 // Returns the I2C address.
 
-char* GetBlinkMAdr()
+void GetBlinkMAdr(char* data)
 {
     char cmnd[1]={'a'};
-    char data[1]={0};
-    
-    return data;
+    I2C_Read(cmnd,1,data,1);
 }
 
 //---------------------------------------------------------------------------------------------
 // Returns the BlinkM firmware version. The first byte is the major version, the second byte is the
 // minor version.
 
-char* GetBlinkMVer()
+void GetBlinkMVer(char* data)
 {
     char cmnd[1]={'Z'};
-    char data[2]={0,0};
-    
-    return data;
+    I2C_Read(cmnd,1,data,2);
     
 }
 
