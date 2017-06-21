@@ -17,12 +17,12 @@ bool EMC1001_Read(uint8_t reg, uint8_t *pData)
     I2C2_MESSAGE_STATUS status = I2C2_MESSAGE_PENDING;              // initial value of status is pending
     static I2C2_TRANSACTION_REQUEST_BLOCK trb[2];                   // TRB is 2 bytes
 
-    I2C2_MasterWriteTRBBuild(&trb[0], &reg, 1, EMC1001_ADDRESS);    // build a Write TRB byte to send Reg. Address (paramters: TRB, data, length, address)
-    I2C2_MasterReadTRBBuild(&trb[1], pData, 1, EMC1001_ADDRESS);    // build a Read TRB byte to read data from Reg.(paramters: TRB, data, length, address)
+    I2C2_MasterWriteTRBBuild(&trb[0], &reg, 1, EMC1001_ADDRESS);    // build a Write TRB byte to send Reg. Address (parameters: TRB, data, length, address)
+    I2C2_MasterReadTRBBuild(&trb[1], pData, 1, EMC1001_ADDRESS);    // build a Read TRB byte to read data from Reg.(parameters: TRB, data, length, address)
 
     while(status != I2C2_MESSAGE_FAIL)
     {
-        I2C2_MasterTRBInsert(2, &trb[0], &status);                  // send the full TRB paramters>(length, data, status)
+        I2C2_MasterTRBInsert(2, &trb[0], &status);                  // send the full TRB parameters>(length, data, status)
 
         while(status == I2C2_MESSAGE_PENDING);                      // wait for the message to be sent or status has changed.
 
@@ -51,11 +51,11 @@ bool EMC1001_Write(uint8_t reg, uint8_t data)
     uint8_t buffer[2];                                              // buffer to store TRB
     buffer[0] = reg; buffer[1] = data;                              // TRB=RegAddress,DataByte
 
-    I2C2_MasterWriteTRBBuild(&trb, buffer, 2, EMC1001_ADDRESS);     // build a Write TRB 2 bytes. Address (paramters: TRB, data, length, address)
+    I2C2_MasterWriteTRBBuild(&trb, buffer, 2, EMC1001_ADDRESS);     // build a Write TRB 2 bytes. Address (parameters: TRB, data, length, address)
 
     while(status != I2C2_MESSAGE_FAIL)
     {
-        I2C2_MasterTRBInsert(1, &trb, &status);                     // send the full TRB paramters>(length, data, status)
+        I2C2_MasterTRBInsert(1, &trb, &status);                     // send the full TRB parameters>(length, data, status)
         while(status == I2C2_MESSAGE_PENDING);                      // wait for the message to be sent or status has changed.
 
         if (status == I2C2_MESSAGE_COMPLETE) break;                 //exit loop if status is complete

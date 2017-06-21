@@ -27,7 +27,7 @@
 
 // BlinkM I2C Address
 
-#define Slave_Adr           0x09            // Slave device I2C address
+#define Slave_Adr 0x09      // Slave device I2C address
 
 // BlinkM ships with a default I2C address of 0x09. Feel free to change this address so it doesn?t
 // collide with any other I2C devices present on the I2C bus.
@@ -70,8 +70,9 @@ enum script_id
 };
 
 // I2C Functions
-bool I2C_Write(char *pData, char nD);
-bool I2C_Read(char *pCmd, char nC, char*pData, char nD);
+bool I2C_Write(char *pData, char nD);           // Writes nD bytes
+bool I2C_Read (char *pCmnd, char nC,            // Writes nC bytes then reads nD bytes
+               char *pData, char nD);  
 
 // BlinkM Functions
 void GoToRGB(char R, char G, char B);           // 'n' Sets the BlinkM to a particular RGB color immediately.
