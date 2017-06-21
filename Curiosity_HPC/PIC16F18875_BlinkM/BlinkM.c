@@ -24,15 +24,15 @@
 #endif
 
 //---------------------------------------------------------------------------------------------
-// Writes n number of bytes to I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
+// Writes nD number of bytes to I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
 
-bool I2C_Write(char *pData, char n)
+bool I2C_Write(char *pData, char nD)
 {    
     static I2C1_TRANSACTION_REQUEST_BLOCK trb;              // TRB
     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;      // initial status is pending
     uint8_t timeOut=0;                                      // used to count retries
 
-    I2C1_MasterWriteTRBBuild(&trb, pData, n, Slave_Adr);  // build a Write TRB parameters > (TRB, data, length, address)
+    I2C1_MasterWriteTRBBuild(&trb, pData, nD, Slave_Adr);   // build a Write TRB parameters > (TRB, data, length, address)
 
     while(status != I2C1_MESSAGE_FAIL)                      // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK, or I2C1_DATA_NO_ACK,
     {                                                       // The device may be busy and needs more time for the last write.
@@ -46,9 +46,10 @@ bool I2C_Write(char *pData, char n)
 }
 
 //---------------------------------------------------------------------------------------------
-// Reads n number of bytes from I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
+// Sends nC bytes command and Reads nD number of bytes from I2C device with
+// I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
 
-bool I2C_Read(char *pData, char n)
+bool I2C_Read(char *pCmd, char nC, char*pData, char nD)
 {    
 
 }
@@ -61,11 +62,11 @@ bool I2C_Read(char *pData, char n)
 
 void GoToRGB(char R, char G, char B)
 {
-    char buffer[4]={'n',0,0,0};
-    buffer[1]=R;
-    buffer[2]=G;
-    buffer[3]=B;
-    I2C_Write(buffer,4);
+    char data[4]={'n',0,0,0};
+    data[1]=R;
+    data[2]=G;
+    data[3]=B;
+    I2C_Write(data,4);
 };
 
 //---------------------------------------------------------------------------------------------
@@ -76,11 +77,11 @@ void GoToRGB(char R, char G, char B)
 
 void FadeToRGB(char R, char G, char B)
 {
-    char buffer[4]={'c',0,0,0};
-    buffer[1]=R;
-    buffer[2]=G;
-    buffer[3]=B;
-    I2C_Write(buffer,4);
+    char data[4]={'c',0,0,0};
+    data[1]=R;
+    data[2]=G;
+    data[3]=B;
+    I2C_Write(data,4);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -93,11 +94,11 @@ void FadeToRGB(char R, char G, char B)
 
 void FadeToHSB(char H, char S, char B)
 {
-    char buffer[4]={'h',0,0,0};
-    buffer[1]=H;
-    buffer[2]=S;
-    buffer[3]=B;
-    I2C_Write(buffer,4);
+    char data[4]={'h',0,0,0};
+    data[1]=H;
+    data[2]=S;
+    data[3]=B;
+    I2C_Write(data,4);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -108,11 +109,11 @@ void FadeToHSB(char H, char S, char B)
 
 void FadeToRndRGB(char R, char G, char B)
 {
-    char buffer[4]={'C',0,0,0};
-    buffer[1]=R;
-    buffer[2]=G;
-    buffer[3]=B;
-    I2C_Write(buffer,4);
+    char data[4]={'C',0,0,0};
+    data[1]=R;
+    data[2]=G;
+    data[3]=B;
+    I2C_Write(data,4);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -124,11 +125,11 @@ void FadeToRndRGB(char R, char G, char B)
 
 void FadeToRndHSB(char H, char S, char B)
 {
-    char buffer[4]={'H',0,0,0};
-    buffer[1]=H;
-    buffer[2]=S;
-    buffer[3]=B;
-    I2C_Write(buffer,4);
+    char data[4]={'H',0,0,0};
+    data[1]=H;
+    data[2]=S;
+    data[3]=B;
+    I2C_Write(data,4);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -143,11 +144,11 @@ void FadeToRndHSB(char H, char S, char B)
 
 void PlayLightScript(char n, char r, char p)
 {
-    char buffer[4]={'p',0,0,0};
-    buffer[1]=n;
-    buffer[2]=r;
-    buffer[3]=p;
-    I2C_Write(buffer,4);
+    char data[4]={'p',0,0,0};
+    data[1]=n;
+    data[2]=r;
+    data[3]=p;
+    I2C_Write(data,4);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -156,8 +157,8 @@ void PlayLightScript(char n, char r, char p)
 
 void StopScript()
 {
-    char buffer[1]={'o'};
-    I2C_Write(buffer,1);
+    char data[1]={'o'};
+    I2C_Write(data,1);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -168,9 +169,9 @@ void StopScript()
 
 void SetFadeSpeed(char f)
 {
-    char buffer[2]={'f',0};
-    buffer[1]=f;
-    I2C_Write(buffer,2);
+    char data[2]={'f',0};
+    data[1]=f;
+    I2C_Write(data,2);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -179,11 +180,11 @@ void SetFadeSpeed(char f)
 // all durations of the script being played. A value of 0 resets the playback speed to the default.
 // This command does not return a value.
 
-void SetTimeAdjust(char ti)
+void SetTimeAdjust(char t)
 {
-    char buffer[2]={'t',0};
-    buffer[1]=t;
-    I2C_Write(buffer,2);
+    char data[2]={'t',0};
+    data[1]=t;
+    I2C_Write(data,2);
 }
 
 //---------------------------------------------------------------------------------------------
@@ -192,10 +193,12 @@ void SetTimeAdjust(char ti)
 // *Note* If the BlinkM is currently fading between colors, this command returns the instantaneous
 // current color value, not the destination color.
 
-void GetCurrentRGB()
+char* GetCurrentRGB()
 {
-    char buffer[4]={'g',0,0,0};
-    I2C_Read(buffer,4);
+    char cmnd[1]={'g'};
+    char data[3]={0,0,0};
+    
+    return data;
 }
 
 //---------------------------------------------------------------------------------------------
@@ -205,82 +208,126 @@ void GetCurrentRGB()
 // command to last. The next four arguments are the BlinkM command and its arguments. Any
 // command with less than 3 arguments should fill out the remaining arguments slots with zeros.
 // This command takes approximately 20 milliseconds to complete, due to EEPROM write time.
-// Once all the lines of the desired script are written, set the script length with the ?Set Script
-// Length? (?L?) command. This command does not return a value.
+// Once all the lines of the desired script are written, set the script length with the SetScriptLength
+// command. This command does not return a value.
 
 void WriteScriptLine(char n, char p, char d, char c, char a1, char a2, char a3)
 {
-    char buffer[8]={'W',0,0,0,0,0,0,0};
-    buffer[1]=n;
-    buffer[2]=p;
-    buffer[3]=d;
-    buffer[4]=c;
-    buffer[5]=a1;
-    buffer[6]=a2;
-    buffer[7]=a3;
-    I2C_Write(buffer,8);
+    char data[8]={'W',0,0,0,0,0,0,0};
+    data[1]=n;
+    data[2]=p;
+    data[3]=d;
+    data[4]=c;
+    data[5]=a1;
+    data[6]=a2;
+    data[7]=a3;
+    I2C_Write(data,8);
     __delay_ms(20);         //wait for EEPROM to finish write
 }
 
 //---------------------------------------------------------------------------------------------
+// Reads a script line and returns the script line?s values. The first argument is the
+// script id to read from. Script id 0 is the EEPROM script that can be written to, Script ids >0 refer
+// to the built-in ROM scripts. The second argument is the number of the script line to read back.
+// There are 5 bytes of return values: d = duration in ticks, c = command, a1,2,3 = arguments for
+// command. If an invalid script id or script line number is given, all return values are zeros.
+        
+char* ReadScriptLine(char n, char p)
+{
+    char cmnd[3]={'R',0,0};
+    cmnd[1]=n;
+    cmnd[2]=p;
+    char data[5]={0,0,0,0,0};
+    
+    return data;
+}
+
+//---------------------------------------------------------------------------------------------
 // Sets the length of a written script. The first argument is the script id to set,
-// currently only script id of 0 is valid. The second argument is the length of the script, and the 
+// currently only script id of 0 is valid. The second argument is the length of the script, and the
 // third argument is the number of repeats for the script. This command takes approximately 15
 // milliseconds to complete, due to EEPROM write times.
 // This command does not return a value.
-void ReadScriptLine(char n, char l, char r)
+    
+void SetScriptLength(char n, char l, char r)
 {
-    char buffer[4]={'L',0,0,0};
-    buffer[1]=n;
-    buffer[2]=l;
-    buffer[3]=r;
-    I2C_Write(buffer,4);
+    char data[4]={'L',0,0,0};
+    data[1]=n;
+    data[1]=l;
+    data[1]=r;
+    I2C_Write(data,4);
     __delay_ms(15);         //wait for EEPROM to finish write
+
 }
 
 //---------------------------------------------------------------------------------------------
-
-void SetScriptLine()
+// Sets the I2C address of a BlinkM. It takes four arguments. The first and last
+// argument are the new address, and the second and third arguments are {0xd0,0x0d}. These
+// two arguments are used as a check against inadvertent address changing. This command can
+// be used with the I2C ?general call? broadcast address to change the address of a BlinkM if the
+// previous address is not known. When using general call, only have one BlinkM powered up on
+// the bus at a time or they will all change their address. This command takes approximately 15
+// milliseconds to complete, due to EEPROM write time and I2C stack reset.
+// See data sheet for more details about how BlinkM handles I2C addresses.
+// This command does not return a value.
+        
+void SetBlinkMAdr(char a)
 {
-    char buffer[2]={'f',0};
-    buffer[1]=f;
-    I2C_Write(buffer,2);
+    char data[5]={'A',0,0xD0,0x0D,0};
+    data[1]=a;
+    data[4]=a;
+    I2C_Write(data,5);
+    __delay_ms(15);         //wait for EEPROM to finish write
+
 }
 
 //---------------------------------------------------------------------------------------------
+// Returns the I2C address.
 
-void SetBlinkMAdr()
+char* GetBlinkMAdr()
 {
-    char buffer[2]={'f',0};
-    buffer[1]=f;
-    I2C_Write(buffer,2);
+    char cmnd[1]={'a'};
+    char data[1]={0};
+    
+    return data;
 }
 
 //---------------------------------------------------------------------------------------------
+// Returns the BlinkM firmware version. The first byte is the major version, the second byte is the
+// minor version.
 
-void GetBlinkMAdr()
+char* GetBlinkMVer()
 {
-    char buffer[2]={'f',0};
-    buffer[1]=f;
-    I2C_Write(buffer,2);
+    char cmnd[1]={'Z'};
+    char data[2]={0,0};
+    
+    return data;
+    
 }
 
 //---------------------------------------------------------------------------------------------
-
-void GetBlinkMVer()
+// Sets the startup (or ?boot?) action for BlinkM. The command takes four
+// arguments. The first argument ?m? is the startup mode: 0 means do nothing, 1 means play a
+// script. The second argument ?n? is which script id to play. The third argument ?f? is the number
+// of repetitions to play that script id. The fourth (?f?) and fifth (?t?) arguments are the fade speed
+// and time adjust, respectively, to use with the script. This command takes about 20
+// milliseconds to complete, due to EEPROM write time.
+// Note: when turning off playing a script by setting the first argument ?m? to 0, the other
+// arguments are saved but not loaded on startup and instead set to zero. This is most
+// noticeable with the fade speed value. Thus if a ?{?B?,0,...}? is issued to disable startup script
+// playing, be sure to issue a ?{?f?, 20}? command after BlinkM startup or color fading will not
+// work.
+// This command does not return a value.
+        
+void SetStartup(char m, char n, char r, char f, char t)
 {
-    char buffer[2]={'f',0};
-    buffer[1]=f;
-    I2C_Write(buffer,2);
-}
-
-//---------------------------------------------------------------------------------------------
-
-void SetStartup()
-{
-    char buffer[2]={'f',0};
-    buffer[1]=f;
-    I2C_Write(buffer,2);
+    char data[6]={'B',0,0,0,0,0};
+    data[1]=m;
+    data[2]=n;
+    data[3]=r;
+    data[4]=f;
+    data[5]=t;
+    I2C_Write(data,6);
 }
 
 //---------------------------------------------------------------------------------------------

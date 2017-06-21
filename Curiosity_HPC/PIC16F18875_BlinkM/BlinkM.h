@@ -26,7 +26,23 @@
 #endif
 
 // BlinkM I2C Address
+
 #define Slave_Adr           0x09            // Slave device I2C address
+
+// BlinkM ships with a default I2C address of 0x09. Feel free to change this address so it doesn?t
+// collide with any other I2C devices present on the I2C bus.
+// The BlinkM address can be changed if the current address is unknown. The ?Set BlinkM
+// Address? (?A?) command can be sent to the I2C ?general call? (i.e. broadcast) address. The
+// general call address is 0x00. This allows changing of a BlinkM?s address without knowledge
+// of its prior address. Be sure to only have one BlinkM powered up on the I2C bus when using
+// general call.
+// Note: While I2C addresses are 7-bits long and thus can range from 0 to 127, some
+// environments use a "left-shifted" display of I2C addresses. These shifted addresses range
+// from 0-254, but only exist for even address values (0,2,4,6,...). The left-shifted version came
+// about because the address gets shift left by one bit upon transmission. (Left-shifting by one
+// bit is the same as multiplying by 2)   Like Arduino, BlinkM uses the non-shifted 0-127 format of
+// I2C addresses. The default BlinkM address of 9 (0x09) looks like address 18 (0x12) when used
+// with the left-shifted style of addressing.
 
 // BlinkM ROM light scripts
 enum script_id 
@@ -54,30 +70,30 @@ enum script_id
 };
 
 // I2C Functions
-bool I2C_Write(char *pData, char n);
-bool I2C_Read(char *pData, char n);
+bool I2C_Write(char *pData, char nD);
+bool I2C_Read(char *pCmd, char nC, char*pData, char nD);
 
 // BlinkM Functions
-void GoToRGB(char R, char G, char B);           // sets the BlinkM to a particular RGB color immediately.
-void FadeToRGB(char R, char G, char B);         // Fades from the current color to the specified RGB color.
-void FadeToHSB(char H, char S, char B);         // Fades from the current color to the specified HSB color.
-void FadeToRndRGB(char R, char G, char B);      // Fades from the current color to a random RGB color
-void FadeToRndHSB(char H, char S, char B);      // Fades from the current color to a random HSB color
-void PlayLightScript(char n, char r, char p);   // Plays the specified light script immediately, stopping any currently playing script.
-void StopScript();                              // Stops any currently playing script.
-void SetFadeSpeed(char f);                      // Sets the rate at which color fading happens.
-void SetTimeAdjust(char t);                     // Adjusts the playback speed of a light script.
-void GetCurrentRGB();                           // Returns the current color in RGB format.
-void WriteScriptLine(char n, char p, char d,    // This command writes a light script line.
+void  GoToRGB(char R, char G, char B);          // 'n' Sets the BlinkM to a particular RGB color immediately.
+void  FadeToRGB(char R, char G, char B);        // 'c' Fades from the current color to the specified RGB color.
+void  FadeToHSB(char H, char S, char B);        // 'h' Fades from the current color to the specified HSB color.
+void  FadeToRndRGB(char R, char G, char B);     // 'C' Fades from the current color to a random RGB color
+void  FadeToRndHSB(char H, char S, char B);     // 'H' Fades from the current color to a random HSB color
+void  PlayLightScript(char n, char r, char p);  // 'p' Plays the specified light script immediately, stopping any currently playing script.
+void  StopScript();                             // 'o' Stops any currently playing script.
+void  SetFadeSpeed(char f);                     // 'f' Sets the rate at which color fading happens.
+void  SetTimeAdjust(char t);                    // 't' Adjusts the playback speed of a light script.
+char* GetCurrentRGB();                          // 'g' Returns the current color in RGB format.
+void  WriteScriptLine(char n, char p, char d,   // 'W' This command writes a light script line.
                      char c, 
                      char a1, char a2, char a3);                   
-void ReadScriptLine(char n, char l, char r);    // Sets the length of a written script.
-void SetScriptLine();
-void SetBlinkMAdr();
-void GetBlinkMAdr();
-void GetBlinkMVer();
-void SetStartup();
-
+char* ReadScriptLine(char n, char p);           // 'R' Reads a script line and returns the script line?s values.
+void  SetScriptLength(char n, char l, char r);  // 'L' Sets the length of a written script. 
+void  SetBlinkMAdr(char a);                     // 'A' Sets the I2C address of a BlinkM.
+char* GetBlinkMAdr();                           // 'a' Returns the I2C address.
+char* GetBlinkMVer();                           // 'Z' Returns the BlinkM firmware version.
+void  SetStartup(char m, char n,                // 'B' Sets the startup (or ?boot?) action for BlinkM.
+                char r, char f, char t);
 
 
 #endif
