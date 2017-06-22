@@ -29,11 +29,11 @@
 
 #define Slave_Adr 0x09      // Slave device I2C address
 
-// BlinkM ships with a default I2C address of 0x09. Feel free to change this address so it doesn?t
+// BlinkM ships with a default I2C address of 0x09. Feel free to change this address so it doesnt
 // collide with any other I2C devices present on the I2C bus.
-// The BlinkM address can be changed if the current address is unknown. The ?Set BlinkM
-// Address? (?A?) command can be sent to the I2C ?general call? (i.e. broadcast) address. The
-// general call address is 0x00. This allows changing of a BlinkM?s address without knowledge
+// The BlinkM address can be changed if the current address is unknown. The Set BlinkM
+// Address (A) command can be sent to the I2C general call (i.e. broadcast) address. The
+// general call address is 0x00. This allows changing of a BlinkMs address without knowledge
 // of its prior address. Be sure to only have one BlinkM powered up on the I2C bus when using
 // general call.
 // Note: While I2C addresses are 7-bits long and thus can range from 0 to 127, some
@@ -47,24 +47,24 @@
 // BlinkM ROM light scripts
 enum script_id 
 {
-    eeprom_def         =0, // default startup white?red?green?blue?off (can be reprogrammed)
-    RGB                ,   // red?green?blue
-    white_flash        ,   // white?off
-    red_flash          ,   // red?off
-    green_flash        ,   // green?off
-    blue_flash         ,   // blue?off
-    cyan_flash         ,   // cyan?off
-    magenta_flash      ,   // magenta?off
-    yellow_flash       ,   // yellow?off
+    eeprom_def         =0, // default startup white-red-green-blue-off (can be reprogrammed)
+    RGB                ,   // red-green-blue
+    white_flash        ,   // white-off
+    red_flash          ,   // red-off
+    green_flash        ,   // green-off
+    blue_flash         ,   // blue-off
+    cyan_flash         ,   // cyan-off
+    magenta_flash      ,   // magenta-off
+    yellow_flash       ,   // yellow-off
     black              ,   // off
-    hue_cycle          ,   // red?yellow?green?cyan?blue?purple
-    mood_light_random  ,   // hue?random hue
+    hue_cycle          ,   // red-yellow-green-cyan-blue-purple
+    mood_light_random  ,   // hue-random hue
     virtual_candle     ,   // random yellows
     water_reflections  ,   // random blues
     old_neon           ,   // random orangeish reds
-    the_seasons_spring ,   // colors?summer?fall?winter
-    thunderstorm_random,   // blues & purples?white flashes
-    stop_light         ,   // red?green?yellow
+    the_seasons_spring ,   // colors-summer-fall-winter
+    thunderstorm_random,   // blues & purples-white flashes
+    stop_light         ,   // red-green-yellow
     morse_code_SOS         // S.O.S morse in white
 
 };
@@ -88,12 +88,12 @@ void GetCurrentRGB(char* data);                 // 'g' Returns the current color
 void WriteScriptLine(char n, char p, char d,    // 'W' This command writes a light script line.
                      char c, 
                      char a1, char a2, char a3);                   
-void ReadScriptLine(char n, char p, char* data);// 'R' Reads a script line and returns the script line?s values.
+void ReadScriptLine(char n, char p, char* data);// 'R' Reads a script line and returns the script lines values.
 void SetScriptLength(char n, char l, char r);   // 'L' Sets the length of a written script. 
 void SetBlinkMAdr(char a);                      // 'A' Sets the I2C address of a BlinkM.
 void GetBlinkMAdr(char* data);                  // 'a' Returns the I2C address.
 void GetBlinkMVer(char* data);                  // 'Z' Returns the BlinkM firmware version.
-void SetStartup(char m, char n,                 // 'B' Sets the startup (or ?boot?) action for BlinkM.
+void SetStartup(char m, char n,                 // 'B' Sets the startup (or boot) action for BlinkM.
                 char r, char f, char t);
 
 

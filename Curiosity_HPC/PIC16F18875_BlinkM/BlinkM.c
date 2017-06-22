@@ -180,7 +180,7 @@ void StopScript()
 // Sets the rate at which color fading happens. It takes one argument that is the
 // fade speed from 1-255. The slowest fading occurs when the fade speed is 1. To change
 // colors instantly, set the fade speed to 255. A value of 0 is invalid and is reserved for a future
-// ?Smart Fade? feature.
+// Smart Fade feature.
 
 void SetFadeSpeed(char f)
 {
@@ -239,7 +239,7 @@ void WriteScriptLine(char n, char p, char d, char c, char a1, char a2, char a3)
 }
 
 //---------------------------------------------------------------------------------------------
-// Reads a script line and returns the script line?s values. The first argument is the
+// Reads a script line and returns the script lines values. The first argument is the
 // script id to read from. Script id 0 is the EEPROM script that can be written to, Script ids >0 refer
 // to the built-in ROM scripts. The second argument is the number of the script line to read back.
 // There are 5 bytes of return values: d = duration in ticks, c = command, a1,2,3 = arguments for
@@ -275,7 +275,7 @@ void SetScriptLength(char n, char l, char r)
 // Sets the I2C address of a BlinkM. It takes four arguments. The first and last
 // argument are the new address, and the second and third arguments are {0xd0,0x0d}. These
 // two arguments are used as a check against inadvertent address changing. This command can
-// be used with the I2C ?general call? broadcast address to change the address of a BlinkM if the
+// be used with the I2C general call broadcast address to change the address of a BlinkM if the
 // previous address is not known. When using general call, only have one BlinkM powered up on
 // the bus at a time or they will all change their address. This command takes approximately 15
 // milliseconds to complete, due to EEPROM write time and I2C stack reset.
@@ -313,16 +313,16 @@ void GetBlinkMVer(char* data)
 }
 
 //---------------------------------------------------------------------------------------------
-// Sets the startup (or ?boot?) action for BlinkM. The command takes four
-// arguments. The first argument ?m? is the startup mode: 0 means do nothing, 1 means play a
-// script. The second argument ?n? is which script id to play. The third argument ?f? is the number
-// of repetitions to play that script id. The fourth (?f?) and fifth (?t?) arguments are the fade speed
+// Sets the startup (or boot) action for BlinkM. The command takes four
+// arguments. The first argument m is the startup mode: 0 means do nothing, 1 means play a
+// script. The second argument n is which script id to play. The third argument f is the number
+// of repetitions to play that script id. The fourth (f) and fifth (t) arguments are the fade speed
 // and time adjust, respectively, to use with the script. This command takes about 20
 // milliseconds to complete, due to EEPROM write time.
-// Note: when turning off playing a script by setting the first argument ?m? to 0, the other
+// Note: when turning off playing a script by setting the first argument m to 0, the other
 // arguments are saved but not loaded on startup and instead set to zero. This is most
-// noticeable with the fade speed value. Thus if a ?{?B?,0,...}? is issued to disable startup script
-// playing, be sure to issue a ?{?f?, 20}? command after BlinkM startup or color fading will not
+// noticeable with the fade speed value. Thus if a {B,0,...} is issued to disable startup script
+// playing, be sure to issue a {f, 20} command after BlinkM startup or color fading will not
 // work.
 // This command does not return a value.
         
@@ -335,6 +335,7 @@ void SetStartup(char m, char n, char r, char f, char t)
     data[4]=f;
     data[5]=t;
     I2C_Write(data,6);
+    __delay_ms(20);         //wait for EEPROM to finish write
 }
 
 //---------------------------------------------------------------------------------------------
