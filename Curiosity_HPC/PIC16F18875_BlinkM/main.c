@@ -46,7 +46,9 @@ void main(void)
         // Print current BlinkM I2C Address and Firmware Version.
         char Adr[1]={0x9F};
         char Ver[2]={0xA1,0x1E};
-        //GetBlinkMAdr(Adr);
+        //GetBlinkMAdr(Adr[0]);
+        //GetBlinkMVer(Ver[0]);
+        
         printf("BlinkM info:\n\nI2C Address\t:%X\nFirmware Ver.\t:%X%X\n\n",Adr[0],Ver[0],Ver[1]);
 
         printf("Setting the startup to play the green_flash script..\n\n");
@@ -132,11 +134,11 @@ void main(void)
         
         // Default Fade and Fast time
         printf("Setting fast time\n");
-        SetTimeAdjust(-5);
+        SetTimeAdjust(-2);
 
-        // Play script 'blue_flash' 2 times start from first line fast time speed
+        // Play script 'blue_flash' 5 times start from first line fast time speed
         printf("Play blue_flash script...press S1.\n");
-        PlayLightScript(blue_flash, 2, 0);
+        PlayLightScript(blue_flash, 5, 0);
         WaitKeyPress();
         
         // Put back the default speed.
@@ -157,13 +159,13 @@ void main(void)
         // Build a new script
         printf("Building a new script\n");
         SetScriptLength(0,7,3);                     // Script 0 is 7 lines, repeat it 3 times
-        WriteScriptLine(0,0,8,'n',0xFF,0x00,0x00);  // Line 1
-        WriteScriptLine(0,1,8,'n',0x00,0xFF,0x00);  // Line 2
-        WriteScriptLine(0,2,8,'n',0x00,0x00,0xFF);  // Line 3
-        WriteScriptLine(0,3,8,'n',0xFF,0xFF,0x00);  // Line 4
-        WriteScriptLine(0,4,8,'n',0xFF,0x00,0xFF);  // Line 5
-        WriteScriptLine(0,5,8,'n',0x00,0xFF,0xFF);  // Line 6
-        WriteScriptLine(0,6,8,'n',0xFF,0xFF,0xFF);  // Line 7
+        WriteScriptLine(0,0,15,'n',0xFF,0x00,0x00);  // Line 1
+        WriteScriptLine(0,1,15,'n',0x00,0xFF,0x00);  // Line 2
+        WriteScriptLine(0,2,15,'n',0x00,0x00,0xFF);  // Line 3
+        WriteScriptLine(0,3,15,'n',0xFF,0xFF,0x00);  // Line 4
+        WriteScriptLine(0,4,15,'n',0xFF,0x00,0xFF);  // Line 5
+        WriteScriptLine(0,5,15,'n',0x00,0xFF,0xFF);  // Line 6
+        WriteScriptLine(0,6,15,'n',0xFF,0xFF,0xFF);  // Line 7
         
         // Play the new script one time
         printf("Play the new script...press S1.\n");
@@ -171,19 +173,10 @@ void main(void)
         WaitKeyPress();
         
         //Demo is done...Blink all LEDs and wait for a key press to start another demo cycle.
-        printf("\n\nDemo is Done...Thanks for watching...press S1 to start another one!\n");
-        while(S1_GetValue())            // wait for key press
-        {
-            GoToRGB(0x00, 0x00, 0x00);  // off
-            LED_D2_Toggle();
-            LED_D3_Toggle();
-            LED_D4_Toggle();
-            LED_D5_Toggle();
-            __delay_ms(300);
-            GoToRGB(0xFF, 0x00, 0x00);  // Red
-            __delay_ms(300);
-        }
-        while(!S1_GetValue());          // wait for key release
+        printf("Play hue_cycle Script...\n");
+        printf("\n\nDemo is Done...Thanks for watching...\npress S1 to start another one!\n");
+        PlayLightScript(hue_cycle,0,0);
+        WaitKeyPress();
     }
         
 }
