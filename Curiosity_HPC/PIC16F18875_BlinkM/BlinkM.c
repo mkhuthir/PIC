@@ -51,12 +51,13 @@ bool I2C_Write(char *pData, char nD)
 
 bool I2C_Read(char *pCmnd, char nC, char*pData, char nD)
 {    
+    
     static I2C1_TRANSACTION_REQUEST_BLOCK trb[2];           // TRB
     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;      // initial status is pending
     uint8_t timeOut=0;                                      // used to count retries
 
-    I2C1_MasterWriteTRBBuild(&trb[0], pCmnd, nC, Slave_Adr); // build a Write TRB
-    I2C1_MasterReadTRBBuild (&trb[1], pData, nD, Slave_Adr); // build a Read TRB
+    I2C1_MasterWriteTRBBuild(&trb[0], pCmnd, nC, Slave_Adr);// build a Write TRB
+    I2C1_MasterReadTRBBuild (&trb[1], pData, nD, Slave_Adr);// build a Read TRB
     
     while(status != I2C1_MESSAGE_FAIL)                      // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK, or I2C1_DATA_NO_ACK,
     {                                                       // The device may be busy and needs more time for the last write.

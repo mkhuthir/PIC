@@ -23,6 +23,7 @@
 void WaitKeyPress()
 {
     while(S1_GetValue());         // Wait until S1 key is pressed
+    __delay_ms(100);
     while(!S1_GetValue());        // Wait until S1 key is released
     __delay_ms(100);
 }
@@ -51,21 +52,23 @@ void main(void)
         
         printf("BlinkM info:\n\nI2C Address\t:%X\nFirmware Ver.\t:%X%X\n\n",Adr[0],Ver[0],Ver[1]);
 
-        printf("Setting the startup to play the green_flash script..\n\n");
+        printf("Setting the startup to play the green_flash script..\n");
         SetStartup(1,4,5,255,-15);          // Set the Startup to play 4th script
         
+        printf("Turn LED off and stop script...\n\n");
+        GoToRGB(0x00, 0x00, 0x00);
+        StopScript();
+        
         printf("Ready to start the Demo...press S1 to start.\n");
-        LED_D2_SetHigh();           // All Dx LEDs On.
+        LED_D2_SetHigh();               // All Dx LEDs On.
         LED_D3_SetHigh();
         LED_D4_SetHigh();
         LED_D5_SetHigh();
-        //Wait
         WaitKeyPress();
         
-        // Off
+        // White
         printf("White...press S1.\n");
-        StopScript();               // Stop Scripts
-        GoToRGB(0xFF, 0xFF, 0xFF);  // Turn LED On
+        GoToRGB(0xFF, 0xFF, 0xFF);      // Turn LED On
         WaitKeyPress();
         
         // Red
@@ -158,14 +161,14 @@ void main(void)
         
         // Build a new script
         printf("Building a new script\n");
-        SetScriptLength(0,7,3);                     // Script 0 is 7 lines, repeat it 3 times
-        WriteScriptLine(0,0,15,'n',0xFF,0x00,0x00);  // Line 1
-        WriteScriptLine(0,1,15,'n',0x00,0xFF,0x00);  // Line 2
-        WriteScriptLine(0,2,15,'n',0x00,0x00,0xFF);  // Line 3
-        WriteScriptLine(0,3,15,'n',0xFF,0xFF,0x00);  // Line 4
-        WriteScriptLine(0,4,15,'n',0xFF,0x00,0xFF);  // Line 5
-        WriteScriptLine(0,5,15,'n',0x00,0xFF,0xFF);  // Line 6
-        WriteScriptLine(0,6,15,'n',0xFF,0xFF,0xFF);  // Line 7
+        SetScriptLength(0,7,3);                         // Script 0 is 7 lines, repeat it 3 times
+        WriteScriptLine(0,0,15,'n',0xFF,0x00,0x00);     // Line 1
+        WriteScriptLine(0,1,15,'n',0x00,0xFF,0x00);     // Line 2
+        WriteScriptLine(0,2,15,'n',0x00,0x00,0xFF);     // Line 3
+        WriteScriptLine(0,3,15,'n',0xFF,0xFF,0x00);     // Line 4
+        WriteScriptLine(0,4,15,'n',0xFF,0x00,0xFF);     // Line 5
+        WriteScriptLine(0,5,15,'n',0x00,0xFF,0xFF);     // Line 6
+        WriteScriptLine(0,6,15,'n',0xFF,0xFF,0xFF);     // Line 7
         
         // Play the new script one time
         printf("Play the new script...press S1.\n");
@@ -174,8 +177,12 @@ void main(void)
         
         //Demo is done...Blink all LEDs and wait for a key press to start another demo cycle.
         printf("Play hue_cycle Script...\n");
-        printf("\n\nDemo is Done...Thanks for watching...\npress S1 to start another one!\n");
+        printf("\n\nDemo is Done...Thanks for watching\npress S1 to start another one!\n");
         PlayLightScript(hue_cycle,0,0);
+        LED_D2_SetLow();                                // All Dx LEDs Off.
+        LED_D3_SetLow();
+        LED_D4_SetLow();
+        LED_D5_SetLow();
         WaitKeyPress();
     }
         
