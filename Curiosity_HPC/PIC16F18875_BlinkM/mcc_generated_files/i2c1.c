@@ -204,14 +204,14 @@ void I2C1_Initialize(void)
 
     i2c1_object.i2cErrors = 0;
 
-    // SMP High Speed; CKE enabled; 
-    SSP1STAT = 0x40;
+    // SMP Standard Speed; CKE disabled; 
+    SSP1STAT = 0x80;
     // SSPEN enabled; CKP Idle:Low, Active:High; SSPM FOSC/4_SSPxADD_I2C; 
     SSP1CON1 = 0x28;
     // SBCDE disabled; BOEN disabled; SCIE disabled; PCIE disabled; DHEN disabled; SDAHT 100ns; AHEN disabled; 
     SSP1CON3 = 0x00;
-    // Baud Rate Generator Value: SSPADD 19;   
-    SSP1ADD = 0x13;
+    // Baud Rate Generator Value: SSPADD 4;   
+    SSP1ADD = 0x04;
 
    
     // clear the master interrupt flag
