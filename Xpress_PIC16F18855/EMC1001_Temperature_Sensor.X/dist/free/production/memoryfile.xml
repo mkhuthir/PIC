@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/free/production/EMC1001_Temp_Sensor.X.production.hex">
+  <executable name="dist/free/production/EMC1001_Temperature_Sensor.X.production.hex">
     <memory name="program">
       <units>words</units>
       <length>8192</length>
