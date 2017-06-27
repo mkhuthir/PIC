@@ -9,5 +9,5 @@ A simple library to read EMC1001 sensor using I2C bus and print output on serial
 
 # Console Output
 <p align="center"> 
-<img src="images/1.jpg">
+<img src="images/1.png">
 </p>
