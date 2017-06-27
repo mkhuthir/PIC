@@ -13,7 +13,9 @@ the BlinkM is connected to Curiosity HPC Board as following:
     PWR-    GND         GND             Ground
     PWR+    +5V         +5V             Power supply
 -------------------------------------------------------------------
- 
+
+ * S1 switch is used to step through the demo code (main.c)
+ * Serial to USB console cable is used to receive printf output connected to RC6 (MCU TX) & GND.
  * RC3 & RC4 must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
  * Device data sheet https://thingm.com/fileadmin/thingm/downloads/BlinkM_datasheet.pdf
  * Please feel free to copy and use code.
