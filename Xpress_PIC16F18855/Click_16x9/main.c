@@ -1,7 +1,7 @@
 // IS31FL3731 Library
-// Muthanna A. Attyah (May 2017)
+// Muthanna A. Attyah (July 2017)
 // Please feel free to copy and use code.
-// Device datasheet https://download.mikroe.com/documents/datasheets/is31fl3731-datasheet.pdf
+// Device data sheet https://download.mikroe.com/documents/datasheets/is31fl3731-datasheet.pdf
 
 #include "mcc_generated_files/mcc.h"
 #include "IS31FL3731.h"
@@ -13,6 +13,11 @@ void main(void)
     SYSTEM_Initialize();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
+    
+    //Print
+    
+    printf("IS31FL3731 Library \n");
+    printf("Muthanna A. Attyah (July 2017)\n\n");
 
     // LEDs initializations
     LED2_SetHigh();     // Not Used
@@ -28,7 +33,7 @@ void main(void)
             
     while(1){
         LED2_Toggle();
-        if (SW2_GetValue()==0) InitIS31FL3731();
+        if (S2_GetValue()==0) InitIS31FL3731();
         __delay_ms(500);
     }
         

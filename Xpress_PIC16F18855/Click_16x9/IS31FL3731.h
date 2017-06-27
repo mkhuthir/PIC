@@ -1,10 +1,10 @@
 // IS31FL3731 Library
-// Muthanna A. Attyah (May 2017)
+// Muthanna A. Attyah (July 2017)
 // Please feel free to copy and use code.
-// Device datasheet https://download.mikroe.com/documents/datasheets/is31fl3731-datasheet.pdf
+// Device data sheet https://download.mikroe.com/documents/datasheets/is31fl3731-datasheet.pdf
 
-// How the Click board is connected to Xpress Board:
-/**
+/** How the Click board is connected to Xpress Board:
+
 IS31FL3731      Click       Xpress
 -------------------------------------
 SCL             SCL         RC4     - I2C clock
@@ -23,6 +23,7 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 - R_EXT=18K, C_Flit=0.1uF
 - AD jumper is connected to GND
 - Vcc Sel=3.3V
+
 **/
 
 #ifndef _IS31FL3731_H
@@ -37,8 +38,8 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 
 //-------------------------------------------------------------------------------------
 // IS31FL3731 Address
-#define Slave_Add           0x74    // Slave device address  (AD is connected to GND)
-#define RETRY_MAX           100     // Maximum retries before return with a fail status.
+#define Slave_Adr           0x74    // Slave device address  (AD is connected to GND)
+#define RETRY_MAX           30      // Maximum retries before return with a fail status.
 
 // IS31FL3731 Frames
 #define Frame_1              0x00    // Frame 1: Frame 1 storage for LED,Blink,PWM
@@ -78,17 +79,18 @@ AD              GND         -       - I2C address setting. AD=GND=00 > adderess 
 // Functions
 //-------------------------------------------------------------------------------------
 
-// Device Communication Functions
-bool SelectFrame(uint8_t Frame);                                     // Select one of the nine Frames before reading/writing a register in a Frame.
-bool WriteReg(uint8_t Frame, uint8_t reg, uint8_t data);             // Writes 1 byte to IS31FL3731 using SMBus protocol
-bool ReadReg(uint8_t Frame, uint8_t reg, uint8_t *pData);            // Reads 1 byte from IS31FL3731 using SMBus protocol
+// I2C Communication Functions
+bool I2C_Write(uint8_t Frame, uint8_t reg, uint8_t data);             // Writes 1 byte to IS31FL3731 using SMBus protocol
+bool I2C_Read(uint8_t Frame, uint8_t reg, uint8_t *pData);            // Reads 1 byte from IS31FL3731 using SMBus protocol
 
 // Device Control Functions
 void InitIS31FL3731(void);                                          // initilize device
+bool SelectFrame(uint8_t Frame);                                     // Select one of the nine Frames before reading/writing a register in a Frame.
+
 #define HWShut() SDB_Setlow();                                      // Hardware shutdown
 #define HWNoShut() SDB_SetHigh();                                   // Hardware no shutdown
-#define SWShut() WriteReg(Frame_9, Func_REG_Shut, 0x00);             // Software shutdown
-#define SWNoShut() WriteReg(Frame_9, Func_REG_Shut, 0x01);           // Software no shutdown
+#define SWShut() I2C_Write(Frame_9, Func_REG_Shut, 0x00);             // Software shutdown
+#define SWNoShut() I2C_Write(Frame_9, Func_REG_Shut, 0x01);           // Software no shutdown
 
 // Display Mode Selection Functions
 void PictureMode(uint8_t PFS);                                      // Select Picture Mode, PFS: Picture frame to display.
@@ -101,9 +103,9 @@ void BreathControl(uint8_t FOT, uint8_t FIT, uint8_t BEN, uint8_t ET);  // Breat
 
 // Audio Mode control Functions
 void SetAudioAGC(uint8_t AGCM, uint8_t AGC, uint8_t AGS);           // Set Audio Gain Control; AGCM:Slow or Fast Mode, AGC:Enable or Disable, AGS: Audio Gain Selection
-#define EnableAudioSync() WriteReg(Frame_9, Func_REG_AudSync, 0x01); // Enable audio signal to modulate the intensity of the matrix
-#define DisableAudioSync() WriteReg(Frame_9, Func_REG_AudSync, 0x00);// Disable audio signal modulation.
-#define AudioADC(A) WriteReg(Frame_9, Func_REG_AudADC, A);           // Audio ADC sample rate =A*t. example A=14 ADC=14*46us=644us
+#define EnableAudioSync() I2C_Write(Frame_9, Func_REG_AudSync, 0x01); // Enable audio signal to modulate the intensity of the matrix
+#define DisableAudioSync() I2C_Write(Frame_9, Func_REG_AudSync, 0x00);// Disable audio signal modulation.
+#define AudioADC(A) I2C_Write(Frame_9, Func_REG_AudADC, A);           // Audio ADC sample rate =A*t. example A=14 ADC=14*46us=644us
 
 // Frame Control Functions
 uint8_t FillFrame(uint8_t Frame);                                       // fill frame
