@@ -1,10 +1,10 @@
 
 # BlinkM Library
-# By Muthanna A. Attyah (June 2017)
+
 
 A simple library to control BlinkM module using I2C bus on Microchip Curiosity Board with PIC16F18875 MCU.
 
-How the BlinkM is connected to Curiosity HPC Board:
+the BlinkM is connected to Curiosity HPC Board as following:
  
     BlankM  MikroBus    Curiosity HPC   Remarks
 -------------------------------------------------------------------
@@ -16,16 +16,16 @@ How the BlinkM is connected to Curiosity HPC Board:
  
  * RC3 & RC4 must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
  * Device data sheet https://thingm.com/fileadmin/thingm/downloads/BlinkM_datasheet.pdf
- * ** Please feel free to copy and use code.**
+ * Please feel free to copy and use code.
 
-
+**By Muthanna A. Attyah (June 2017)**
 
 # BlinkM connected to mikroBUS slot 1
 <p align="center"> 
 <img src="images/1.jpg">
 </p>
 
-# UART Cable connected to GND & RC6 on Microchip Curiosity HPC board
+# UART Cable connected to GND & RC6
 <p align="center"> 
 <img src="images/2.jpg">
 </p>
