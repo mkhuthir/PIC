@@ -44,16 +44,23 @@ void main(void)
         printf("\x0C");                             // Terminal Form Feed to erase screen
         printf("\n\nWelcome to BlinkM Demo..\n");
 
-        // Print current BlinkM I2C Address and Firmware Version.
-        char Adr[1]={0};
-        char Ver[2]={0,0};
-        char RGB[3]={0,0,0};
+        // Print current BlinkM I2C Address, Firmware Version, and one selected script line from EEPROM.
+        
+        char Adr[1]={0};        // to read I2C address
+        char Ver[2]={0,0};      // to read firmware version major and minor numbers
+        char RGB[3]={0,0,0};    // to read the current RGB values
+        char SL[5]={0,0,0,0,0}; // to read one script line
+        
         GetBlinkMAdr(&Adr[0]);
         GetBlinkMVer(&Ver[0]);
         
         printf("BlinkM info:\n\n");
-        printf("I2C Address\t:0x%X\n",Adr[0]);
-        printf("Firmware Ver.\t:0x%X - 0x%X\n\n",Ver[0],Ver[1]);
+        printf("I2C Address\t:0x%02X\n",Adr[0]);
+        printf("Firmware Ver.\t:0x%02X - 0x%02X\n\n",Ver[0],Ver[1]);
+        
+        printf("Reading Script Line #0 from EEPROM Script #0:\n");
+        ReadScriptLine(0,0,&SL[0]);
+        printf("Line 0: Duration=0x%02X, Command=0x%02X, R=0x%02X, G=0x%02X, B=0x%02X\n\n",SL[0],SL[1],SL[2],SL[3],SL[4]);
 
         printf("Setting the startup to play the green_flash script..\n");
         SetStartup(1,4,5,255,-15);          // Set the Startup to play 4th script
@@ -74,7 +81,7 @@ void main(void)
         GoToRGB(0xFF, 0xFF, 0xFF);      // Turn LED On
                 
         GetCurrentRGB(&RGB[0]);
-        printf("\tRGB value (0x%X,0x%X,0x%X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
+        printf("\tRGB value (0x%02X,0x%02X,0x%02X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
         
         WaitKeyPress();
         
@@ -82,42 +89,42 @@ void main(void)
         printf("Red");
         GoToRGB(0xFF, 0x00, 0x00);
         GetCurrentRGB(&RGB[0]);
-        printf("\tRGB value (0x%X,0x%X,0x%X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
+        printf("\tRGB value (0x%02X,0x%02X,0x%02X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
         WaitKeyPress();
         
         // Green
         printf("Green");
         GoToRGB(0x00, 0xFF, 0x00);  
         GetCurrentRGB(&RGB[0]);
-        printf("\tRGB value (0x%X,0x%X,0x%X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
+        printf("\tRGB value (0x%02X,0x%02X,0x%02X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
         WaitKeyPress();
         
         // Blue
         printf("Blue");
         GoToRGB(0x00, 0x00, 0xFF);
         GetCurrentRGB(&RGB[0]);
-        printf("\tRGB value (0x%X,0x%X,0x%X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
+        printf("\tRGB value (0x%02X,0x%02X,0x%02X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
         WaitKeyPress();
         
         // Yellow
         printf("Yellow");
         GoToRGB(0xFF, 0xFF, 0x00);
         GetCurrentRGB(&RGB[0]);
-        printf("\tRGB value (0x%X,0x%X,0x%X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
+        printf("\tRGB value (0x%02X,0x%02X,0x%02X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
         WaitKeyPress();
         
         // Cyan
         printf("Cyan");
         GoToRGB(0x00, 0xFF, 0xFF);
         GetCurrentRGB(&RGB[0]);
-        printf("\tRGB value (0x%X,0x%X,0x%X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
+        printf("\tRGB value (0x%02X,0x%02X,0x%02X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
         WaitKeyPress();
         
         // Magenta
         printf("Magenta");
         GoToRGB(0xFF, 0x00, 0xFF);
         GetCurrentRGB(&RGB[0]);
-        printf("\tRGB value (0x%X,0x%X,0x%X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
+        printf("\tRGB value (0x%02X,0x%02X,0x%02X)...press S1.\n",RGB[0],RGB[1],RGB[2]);
         WaitKeyPress();
         
         // Slow Fade
