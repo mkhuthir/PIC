@@ -1,7 +1,8 @@
 
 
 <p align="center"><img src="images/microchip_logo.png"></p>
-![Curiosity HPC Board](images/Curiosity_HPC.jpg)<br>
+
+<p align="center"><img src="images/Curiosity_HPC.png"></p>
 
 # MCU Code Examples
 
