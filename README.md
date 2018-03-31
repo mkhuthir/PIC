@@ -2,7 +2,7 @@
 
 <p align="center"><img src="images/microchip_logo.png"></p>
 
-<p align="center"><img src="images/Curiosity_HPC/Curiosity_HPC.png"></p>
+<p align="center"><img src="./Curiosity_HPC/images/Curiosity_HPC.png"></p>
 
 # MCU Code Examples
 
