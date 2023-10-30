@@ -1,60 +1,60 @@
-[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
 [d version 1.1 ]
 [d edition pro ]
 [d chip 16F18345 ]
 [d frameptr 6 ]
-"62 /opt/microchip/xc8/v1.42/sources/common/float.c
-[v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 /opt/microchip/xc8/v1.42/sources/common/ftadd.c
-[v ___ftadd __ftadd `(f  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.42/sources/pic/eeprom.c
-[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"10 /opt/microchip/xc8/v2.45/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v2.45/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v2.45/pic/sources/c99/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
-[v _memcpyee memcpyee `(v  1 e 1 0 ]
-"4 /home/mkhuthir/Microchip/Xpress_PIC16F18345/Blink.X/main.c
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"4 /home/mkhuthir/ws/PIC/Xpress_PIC16F18345/Blink.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"76 /home/mkhuthir/Microchip/Xpress_PIC16F18345/Blink.X/mcc_generated_files/mcc.c
+"76 /home/mkhuthir/ws/PIC/Xpress_PIC16F18345/Blink.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "84
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "98
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"51 /home/mkhuthir/Microchip/Xpress_PIC16F18345/Blink.X/mcc_generated_files/pin_manager.c
+"51 /home/mkhuthir/ws/PIC/Xpress_PIC16F18345/Blink.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"1548 /opt/microchip/xc8/v1.42/include/pic16f18345.h
+"1550 /opt/microchip/mplabx/v6.15/packs/Microchip/PIC16F1xxxx_DFP/1.19.363/xc8/pic/include/proc/pic16f18345.h
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-"1593
+"1595
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
-"1632
+"1634
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-"1975
+"1977
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
-"2291
+"2293
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S56 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S59 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 LATA4 1 0 :1:4 
 `uc 1 LATA5 1 0 :1:5 
 ]
-"2306
-[u S63 . 1 `S56 1 . 1 0 ]
-[v _LATAbits LATAbits `VES63  1 e 1 @268 ]
-"2336
+"2308
+[u S66 . 1 `S59 1 . 1 0 ]
+[v _LATAbits LATAbits `VES66  1 e 1 @268 ]
+"2338
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S73 . 1 `uc 1 . 1 0 :4:0 
+[s S76 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LATB4 1 0 :1:4 
 `uc 1 LATB5 1 0 :1:5 
 `uc 1 LATB6 1 0 :1:6 
 `uc 1 LATB7 1 0 :1:7 
 ]
-"2350
-[u S79 . 1 `S73 1 . 1 0 ]
-[v _LATBbits LATBbits `VES79  1 e 1 @269 ]
-"2375
+"2352
+[u S82 . 1 `S76 1 . 1 0 ]
+[v _LATBbits LATBbits `VES82  1 e 1 @269 ]
+"2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S88 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S91 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -63,43 +63,43 @@
 `uc 1 LATC6 1 0 :1:6 
 `uc 1 LATC7 1 0 :1:7 
 ]
-"2392
-[u S97 . 1 `S88 1 . 1 0 ]
-[v _LATCbits LATCbits `VES97  1 e 1 @270 ]
-"2930
+"2394
+[u S100 . 1 `S91 1 . 1 0 ]
+[v _LATCbits LATCbits `VES100  1 e 1 @270 ]
+"2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
-"2975
+"2977
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
-"3014
+"3016
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
-"3942
+"3944
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
-"3992
+"3994
 [v _WPUB WPUB `VEuc  1 e 1 @525 ]
-"4031
+"4033
 [v _WPUC WPUC `VEuc  1 e 1 @526 ]
-"6199
+"6201
 [v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
-"6244
+"6246
 [v _ODCONB ODCONB `VEuc  1 e 1 @653 ]
-"6283
+"6285
 [v _ODCONC ODCONC `VEuc  1 e 1 @654 ]
-"12486
+"12488
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2329 ]
-"12626
+"12628
 [v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2331 ]
-"12723
+"12725
 [v _OSCEN OSCEN `VEuc  1 e 1 @2333 ]
-"12769
+"12771
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2334 ]
-"12827
+"12829
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
-"4 /home/mkhuthir/Microchip/Xpress_PIC16F18345/Blink.X/main.c
+"4 /home/mkhuthir/ws/PIC/Xpress_PIC16F18345/Blink.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "38
 } 0
-"76 /home/mkhuthir/Microchip/Xpress_PIC16F18345/Blink.X/mcc_generated_files/mcc.c
+"76 /home/mkhuthir/ws/PIC/Xpress_PIC16F18345/Blink.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "82
@@ -109,12 +109,12 @@
 {
 "102
 } 0
-"51 /home/mkhuthir/Microchip/Xpress_PIC16F18345/Blink.X/mcc_generated_files/pin_manager.c
+"51 /home/mkhuthir/ws/PIC/Xpress_PIC16F18345/Blink.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "92
 } 0
-"84 /home/mkhuthir/Microchip/Xpress_PIC16F18345/Blink.X/mcc_generated_files/mcc.c
+"84 /home/mkhuthir/ws/PIC/Xpress_PIC16F18345/Blink.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "96
