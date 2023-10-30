@@ -3,11 +3,11 @@ Microchip MPLAB XC8 Compiler V2.45
 Linker command line:
 
 -W-3 --edf=/opt/microchip/xc8/v2.45/pic/dat/20230818022343_en.msgs -cn \
-  -h+dist/default/debug/Blink.X.debug.sym \
-  --cmf=dist/default/debug/Blink.X.debug.cmf -z -Q16F18345 \
-  -o/tmp/xcXfaCjme/driver_tmp_3.o --defsym=__MPLAB_BUILD=1 \
-  --fixupoverflow=error -Mdist/default/debug/Blink.X.debug.map \
-  --md=/tmp/xcXfaCjme/driver_tmp_0.dat -E1 -ver=XC8 Compiler --acfsm=1493 \
+  -h+dist/default/debug/PIC16F1619_Blink.X.debug.sym \
+  --cmf=dist/default/debug/PIC16F1619_Blink.X.debug.cmf -z -Q16F1619 \
+  -o/tmp/xcXmmGbHf/driver_tmp_3.o --defsym=__MPLAB_BUILD=1 \
+  --fixupoverflow=error -Mdist/default/debug/PIC16F1619_Blink.X.debug.map \
+  --md=/tmp/xcXmmGbHf/driver_tmp_0.dat -E1 -ver=XC8 Compiler --acfsm=1493 \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
   -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
@@ -27,46 +27,43 @@ Linker command line:
   -ASFR22=0B00h-0B6Fh -ASFR23=0B80h-0BEFh -ASFR24=0C00h-0C6Fh \
   -ASFR25=0C80h-0CEFh -ASFR26=0D00h-0D6Fh -ASFR27=0D80h-0DEFh \
   -ASFR28=0E00h-0E6Fh -ASFR29=0E80h-0EEFh -ASFR30=0F00h-0F6Fh \
-  -ASFR31=0F80h-0FEFh -ACONFIG=08007h-0800Ah -DCONFIG=2 \
-  -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
-  -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+  -ASFR31=0F80h-0FEFh -ACONFIG=08007h-08009h -DCONFIG=2 \
+  -AIDLOC=08000h-08003h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry,init,end_init -ppowerup=CODE \
-  -pcinit=CODE -pfunctab=ENTRY -k /tmp/xcXfaCjme/driver_tmp_15.o \
-  dist/default/debug/Blink.X.debug.o 
+  -pcinit=CODE -pfunctab=ENTRY -k /tmp/xcXmmGbHf/driver_tmp_12.o \
+  dist/default/debug/PIC16F1619_Blink.X.debug.o 
 
 Object code version is 3.11
 
-Machine type is 16F18345
+Machine type is 16F1619
 
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXfaCjme/driver_tmp_15.o
+/tmp/xcXmmGbHf/driver_tmp_12.o
                 end_init                              3        3        2        0       0
                 reset_vec                             0        0        3        0       0
-                config                             8007     8007        4        0       4
+                config                             8007     8007        3        0       4
                 idloc                              8000     8000        4        0       5
-dist/default/debug/Blink.X.debug.o
+dist/default/debug/PIC16F1619_Blink.X.debug.o
                 cinit                               7FD      7FD        3      FFA       0
-                config                             8007     8007        4        0       4
+                config                             8007     8007        3        0       4
                 idloc                              8000     8000        4        0       5
-                text4                               750      750        9      EA0       0
-                text3                               763      763       1B      EC6       0
-                text2                               74C      74C        4      E98       0
-                text1                               759      759        A      EB2       0
-                maintext                            77E      77E       7F      EFC       0
-                cstackCOMMON                         70       70        2       70       1
+                text3                               781      781        5      F02       0
+                text2                               78D      78D       20      F1A       0
+                text1                               786      786        7      F0C       0
+                maintext                            7AD      7AD       50      F5A       0
+                cstackCOMMON                         70       70        1       70       1
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 end_init                              3        3        2         0
                 cinit                               7FD      7FD        3         0
                 reset_vec                             0        0        3         0
-                text4                               750      750        9         0
-                text3                               763      763       1B         0
-                text2                               74C      74C        4         0
-                text1                               759      759        A         0
-                maintext                            77E      77E       7F         0
+                text3                               781      781        5         0
+                text2                               78D      78D       20         0
+                text1                               786      786        7         0
+                maintext                            7AD      7AD       50         0
 
         CLASS   STRCODE        
 
@@ -77,7 +74,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   COMMON         
-                cstackCOMMON                         70       70        2         1
+                cstackCOMMON                         70       70        1         1
 
         CLASS   BANK0          
 
@@ -177,12 +174,10 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   SFR31          
 
         CLASS   CONFIG         
-                config                             8007     8007        4         4
+                config                             8007     8007        3         4
 
         CLASS   IDLOC          
                 idloc                              8000     8000        4         5
-
-        CLASS   EEDATA         
 
         CLASS   BANK31         
 
@@ -226,18 +221,19 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   STACK          
 
+        CLASS   EEDATA         
+
 
 
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
-                text1                          000759  00000A  000763       EB2       0  CODE        2
                 reset_vec                      000000  000005  000005         0       0  CODE        2
-                maintext                       00077E  00007F  0007FD       EFC       0  CODE        2
-                text3                          000763  00001B  00077E       EC6       0  CODE        2
-                text2                          00074C  000004  000750       E98       0  CODE        2
-                text4                          000750  000009  000759       EA0       0  CODE        2
+                text2                          00078D  000020  0007AD       F1A       0  CODE        2
+                maintext                       0007AD  000050  0007FD       F5A       0  CODE        2
+                text1                          000786  000007  00078D       F0C       0  CODE        2
+                text3                          000781  000005  000786       F02       0  CODE        2
+                cstackCOMMON                   000070  000001  000071        70       1  COMMON      1
                 cinit                          0007FD  000003  000800       FFA       0  CODE        2
-                cstackCOMMON                   000070  000002  000072        70       1  COMMON      1
 
 
 UNUSED ADDRESS RANGES
@@ -257,13 +253,12 @@ UNUSED ADDRESS RANGES
         BANK8            00420-0046F              50           1
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
-        CODE             00005-0074B             747           2
+        CODE             00005-00780             77C           2
                          00800-01FFF             800
-        COMMON           00072-0007D               C           1
-        CONST            00005-0074B             100           2
+        COMMON           00071-0007D               D           1
+        CONST            00005-00780             100           2
                          00800-01FFF             100
-        EEDATA           0F000-0F0FF             100           2
-        ENTRY            00005-0074B             100           2
+        ENTRY            00005-00780             100           2
                          00800-01FFF             100
         RAM              00020-0006F              50           1
                          000A0-000EF              50
@@ -310,9 +305,9 @@ UNUSED ADDRESS RANGES
         SFR7             00380-0039F              20           1
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
-        STRCODE          00005-0074B             747           2
+        STRCODE          00005-00780             77C           2
                          00800-01FFF            1800
-        STRING           00005-0074B             100           2
+        STRING           00005-00780             100           2
                          00800-01FFF             100
 
                                   Symbol Table
@@ -323,25 +318,21 @@ _ANSELC                         (abs)        0018E
 _LATA                           (abs)        0010C
 _LATAbits                       (abs)        0010C
 _LATB                           (abs)        0010D
-_LATBbits                       (abs)        0010D
 _LATC                           (abs)        0010E
 _LATCbits                       (abs)        0010E
 _ODCONA                         (abs)        0028C
 _ODCONB                         (abs)        0028D
 _ODCONC                         (abs)        0028E
-_OSCCON1                        (abs)        00919
-_OSCCON3                        (abs)        0091B
-_OSCEN                          (abs)        0091D
-_OSCFRQ                         (abs)        0091F
-_OSCILLATOR_Initialize          text4        00750
-_OSCTUNE                        (abs)        0091E
-_PIN_MANAGER_Initialize         text3        00763
-_SYSTEM_Initialize              text1        00759
+_OPTION_REGbits                 (abs)        00095
+_OSCCON                         (abs)        00099
+_OSCILLATOR_Initialize          text3        00781
+_OSCTUNE                        (abs)        00098
+_PIN_MANAGER_Initialize         text2        0078D
+_PORTCbits                      (abs)        0000E
+_SYSTEM_Initialize              text1        00786
 _TRISA                          (abs)        0008C
 _TRISB                          (abs)        0008D
 _TRISC                          (abs)        0008E
-_WDTCON                         (abs)        00097
-_WDT_Initialize                 text2        0074C
 _WPUA                           (abs)        0020C
 _WPUB                           (abs)        0020D
 _WPUC                           (abs)        0020E
@@ -384,7 +375,7 @@ __Hcinit                        cinit        00800
 __Hclrtext                      clrtext      00000
 __Hcode                         code         00000
 __Hcommon                       common       00000
-__Hconfig                       config       0800B
+__Hconfig                       config       0800A
 __HcstackCOMMON                 cstackCOMMON 00000
 __Heeprom_data                  eeprom_data  00000
 __Hend_init                     end_init     00005
@@ -430,10 +421,10 @@ __Hsfr7                         sfr7         00000
 __Hsfr8                         sfr8         00000
 __Hsfr9                         sfr9         00000
 __Hspace_0                      (abs)        00800
-__Hspace_1                      (abs)        00072
+__Hspace_1                      (abs)        00071
 __Hspace_2                      (abs)        00000
 __Hspace_3                      (abs)        00000
-__Hspace_4                      (abs)        10012
+__Hspace_4                      (abs)        10011
 __Hstack                        stack        00000
 __Hstrings                      strings      00000
 __Htext                         text         00000
@@ -530,8 +521,7 @@ __Lstack                        stack        00000
 __Lstrings                      strings      00000
 __Ltext                         text         00000
 __S0                            (abs)        00800
-__S1                            (abs)        00072
-__S3                            (abs)        00000
+__S1                            (abs)        00071
 ___heap_hi                      (abs)        00000
 ___heap_lo                      (abs)        00000
 ___int_sp                       stack        00000
@@ -543,20 +533,18 @@ ___stack_hi                     stack        00000
 ___stack_lo                     stack        00000
 ___stackhi                      (abs)        00000
 ___stacklo                      (abs)        00000
-__end_of_OSCILLATOR_Initialize  text4        00759
-__end_of_PIN_MANAGER_Initialize text3        0077E
-__end_of_SYSTEM_Initialize      text1        00763
-__end_of_WDT_Initialize         text2        00750
+__end_of_OSCILLATOR_Initialize  text3        00786
+__end_of_PIN_MANAGER_Initialize text2        007AD
+__end_of_SYSTEM_Initialize      text1        0078D
 __end_of__initialization        cinit        007FD
 __end_of_main                   maintext     007FD
 __initialization                cinit        007FD
 __pcstackCOMMON                 cstackCOMMON 00070
-__pmaintext                     maintext     0077E
-__ptext1                        text1        00759
-__ptext2                        text2        0074C
-__ptext3                        text3        00763
-__ptext4                        text4        00750
-_main                           maintext     0077E
+__pmaintext                     maintext     007AD
+__ptext1                        text1        00786
+__ptext2                        text2        0078D
+__ptext3                        text3        00781
+_main                           maintext     007AD
 btemp                           (abs)        0007E
 end_of_initialization           cinit        007FD
 intlevel0                       functab      00000
@@ -575,9 +563,9 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 mcc_generated_files/pin_manager.c
-		_PIN_MANAGER_Initialize		CODE           	0763	0000	27
+		_PIN_MANAGER_Initialize		CODE           	078D	0000	32
 
-mcc_generated_files/pin_manager.c estimated size: 27
+mcc_generated_files/pin_manager.c estimated size: 32
 
 shared
 		__initialization		CODE           	07FD	0000	1
@@ -585,14 +573,13 @@ shared
 shared estimated size: 1
 
 mcc_generated_files/mcc.c
-		_WDT_Initialize		CODE           	074C	0000	4
-		_OSCILLATOR_Initialize		CODE           	0750	0000	9
-		_SYSTEM_Initialize		CODE           	0759	0000	10
+		_OSCILLATOR_Initialize		CODE           	0781	0000	5
+		_SYSTEM_Initialize		CODE           	0786	0000	7
 
-mcc_generated_files/mcc.c estimated size: 23
+mcc_generated_files/mcc.c estimated size: 12
 
 main.c
-		_main          		CODE           	077E	0000	127
+		_main          		CODE           	07AD	0000	80
 
-main.c estimated size: 127
+main.c estimated size: 80
 
