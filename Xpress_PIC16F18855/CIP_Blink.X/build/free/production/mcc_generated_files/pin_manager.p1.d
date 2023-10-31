@@ -1,4 +1,3 @@
- build/free/production/mcc_generated_files/pin_manager.d  \
- build/free/production/mcc_generated_files/pin_manager.p1:  \
- mcc_generated_files/pin_manager.c  \
+build/free/production/mcc_generated_files/pin_manager.p1:  \
+mcc_generated_files/pin_manager.c  \
 mcc_generated_files/pin_manager.h 
