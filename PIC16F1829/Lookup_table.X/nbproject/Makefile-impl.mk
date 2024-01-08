@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PIC16F1829_L12_lookup_table.X
+PROJECTNAME=Lookup_table.X
 
 # Active Configuration
 DEFAULTCONF=default

@@ -45,13 +45,13 @@
         <targetDevice>PIC16F18855</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PICkit3PlatformTool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.45</languageToolchainVersion>
         <platform>2</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.22.376"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.23.382"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

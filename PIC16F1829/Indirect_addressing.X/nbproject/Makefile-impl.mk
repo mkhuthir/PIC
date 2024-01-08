@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PIC16F1829_L11_indirect_addressing.X
+PROJECTNAME=Indirect_addressing.X
 
 # Active Configuration
 DEFAULTCONF=default

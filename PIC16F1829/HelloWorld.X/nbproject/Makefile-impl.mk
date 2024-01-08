@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PIC16F1829_L01_hello_world.X
+PROJECTNAME=HelloWorld.X
 
 # Active Configuration
 DEFAULTCONF=default

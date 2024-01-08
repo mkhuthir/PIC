@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PIC16F1829_L05_vs_rotate.X
+PROJECTNAME=vs_rotate.X
 
 # Active Configuration
 DEFAULTCONF=default
