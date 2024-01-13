@@ -15,7 +15,7 @@ int main(void)
     {
         IO_RA0_Toggle();
         
-        i=300000;       //delay
+        i=50000;       //delay
         while(i--){};
     }
     
