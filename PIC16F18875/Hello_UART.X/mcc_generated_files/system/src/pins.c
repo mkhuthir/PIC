@@ -29,7 +29,7 @@ void PIN_MANAGER_Initialize(void)
     */
     ANSELA = 0xF;
     ANSELB = 0xFF;
-    ANSELC = 0xFF;
+    ANSELC = 0x7F;
     ANSELD = 0xFF;
     ANSELE = 0x7;
 
@@ -71,6 +71,7 @@ void PIN_MANAGER_Initialize(void)
     /**
     PPS registers
     */
+    RXPPS = 0x17; //RC7->EUSART:RX;
 
     /**
     APFCON registers

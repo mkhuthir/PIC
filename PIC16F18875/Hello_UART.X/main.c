@@ -18,7 +18,7 @@ int main(void)
         IO_RA5_Toggle();
         IO_RA6_Toggle();
         IO_RA7_Toggle();
-        
+        printf("hello");
         __delay_ms(40);
     }    
 }
