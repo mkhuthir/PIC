@@ -3,7 +3,7 @@
   <projectmakefile>Makefile</projectmakefile>
   <defaultConf>0</defaultConf>
   <confs>
-    <conf name="default" type="2">
+    <conf name="PKOB" type="2">
       <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>8107:=&lt;rev>0002:=&lt;man>Microchip Technology Incorporated:=&lt;prod>Curiosity:=&lt;sn>BUR164030582:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
       <languageToolchainDir>/opt/microchip/xc8/v2.45/bin</languageToolchainDir>
       <mdbdebugger version="1">

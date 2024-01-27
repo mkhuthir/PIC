@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Hello_UART</name>
+            <name>UART_Hello</name>
             <creation-uuid>4d06212b-707f-4ab5-8fe7-40bb9da62ae9</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
@@ -11,7 +11,7 @@
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>default</name>
+                    <name>PKOB</name>
                     <type>2</type>
                 </confElem>
             </confList>

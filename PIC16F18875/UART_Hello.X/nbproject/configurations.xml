@@ -57,7 +57,7 @@
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="default" type="2">
+    <conf name="PKOB" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC16F18875</targetDevice>

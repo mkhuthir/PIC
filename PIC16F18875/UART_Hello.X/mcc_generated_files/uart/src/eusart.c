@@ -5,40 +5,33 @@
 #include "../eusart.h"
 
 const uart_drv_interface_t UART1 = {
-    .Initialize = &EUSART_Initialize,
-    .Deinitialize = &EUSART_Deinitialize,
-    .Read = &EUSART_Read,
-    .Write = &EUSART_Write,
-    .IsRxReady = &EUSART_IsRxReady,
-    .IsTxReady = &EUSART_IsTxReady,
-    .IsTxDone = &EUSART_IsTxDone,
+    .Initialize     = &EUSART_Initialize,
+    .Deinitialize   = &EUSART_Deinitialize,
+    .Read           = &EUSART_Read,
+    .Write          = &EUSART_Write,
+    .IsRxReady      = &EUSART_IsRxReady,
+    .IsTxReady      = &EUSART_IsTxReady,
+    .IsTxDone       = &EUSART_IsTxDone,
     .TransmitEnable = &EUSART_TransmitEnable,
-    .TransmitDisable = &EUSART_TransmitDisable,
-    .AutoBaudSet = &EUSART_AutoBaudSet,
-    .AutoBaudQuery = &EUSART_AutoBaudQuery,
-    .BRGCountSet = NULL,
-    .BRGCountGet = NULL,
-    .BaudRateSet = NULL,
-    .BaudRateGet = NULL,
-    .AutoBaudEventEnableGet = NULL,
-    .ErrorGet = &EUSART_ErrorGet,
-    .TxCompleteCallbackRegister = NULL,
-    .RxCompleteCallbackRegister = NULL,
-    .TxCollisionCallbackRegister = NULL,
-    .FramingErrorCallbackRegister = &EUSART_FramingErrorCallbackRegister,
-    .OverrunErrorCallbackRegister = &EUSART_OverrunErrorCallbackRegister,
-    .ParityErrorCallbackRegister = NULL,
-    .EventCallbackRegister = NULL,
+    .TransmitDisable= &EUSART_TransmitDisable,
+    .AutoBaudSet    = &EUSART_AutoBaudSet,
+    .AutoBaudQuery  = &EUSART_AutoBaudQuery,
+    .BRGCountSet    = NULL,
+    .BRGCountGet    = NULL,
+    .BaudRateSet    = NULL,
+    .BaudRateGet    = NULL,
+    .ErrorGet       = &EUSART_ErrorGet,
+    .AutoBaudEventEnableGet         = NULL,
+    .TxCompleteCallbackRegister     = NULL,
+    .RxCompleteCallbackRegister     = NULL,
+    .TxCollisionCallbackRegister    = NULL,
+    .FramingErrorCallbackRegister   = &EUSART_FramingErrorCallbackRegister,
+    .OverrunErrorCallbackRegister   = &EUSART_OverrunErrorCallbackRegister,
+    .ParityErrorCallbackRegister    = NULL,
+    .EventCallbackRegister          = NULL
 };
 
-/**
-  Section: EUSART variables
-*/
 volatile eusart_status_t eusartRxLastError;
-
-/**
-  Section: EUSART APIs
-*/
 
 void (*EUSART_FramingErrorHandler)(void);
 void (*EUSART_OverrunErrorHandler)(void);
@@ -46,45 +39,31 @@ void (*EUSART_OverrunErrorHandler)(void);
 static void EUSART_DefaultFramingErrorCallback(void);
 static void EUSART_DefaultOverrunErrorCallback(void);
 
-
-/**
-  Section: EUSART  APIs
-*/
-
 void EUSART_Initialize(void)
 {
-    // Set the EUSART module to the options selected in the user interface.
-
-    //ABDEN disabled; WUE disabled; BRG16 16bit_generator; SCKP Non-Inverted; 
-    BAUD1CON = 0x48; 
-    //ADDEN disabled; CREN enabled; SREN disabled; RX9 8-bit; SPEN enabled; 
-    RC1STA = 0x90; 
-    //TX9D 0x0; BRGH hi_speed; SENDB sync_break_complete; SYNC asynchronous; TXEN enabled; TX9 8-bit; CSRC client; 
-    TX1STA = 0x26; 
-    //SPBRGL 103; 
-    SP1BRGL = 0x67; 
-    //SPBRGH 0; 
-    SP1BRGH = 0x0; 
-
+    // Set the EUSART module
+    BAUD1CON    = 0x48; //ABDEN disabled; WUE disabled; BRG16 16bit_generator; SCKP Non-Inverted; 
+    RC1STA      = 0x90; //ADDEN disabled; CREN enabled; SREN disabled; RX9 8-bit; SPEN enabled; 
+    TX1STA      = 0x26; //TX9D 0x0; BRGH hi_speed; SENDB sync_break_complete; SYNC asynchronous; TXEN enabled; TX9 8-bit; CSRC client; 
+    SP1BRGL     = 0x67; //SPBRGL 103; 
+    SP1BRGH     = 0x0;  //SPBRGH 0; 
     EUSART_FramingErrorCallbackRegister(EUSART_DefaultFramingErrorCallback);
     EUSART_OverrunErrorCallbackRegister(EUSART_DefaultOverrunErrorCallback);
     eusartRxLastError.status = 0;  
-
 }
 
 void EUSART_Deinitialize(void)
 {
-    BAUD1CON = 0x00;
-    RC1STA = 0x00;
-    TX1STA = 0x00;
-    SP1BRGL = 0x00;
-    SP1BRGH = 0x00;
+    BAUD1CON    = 0x00;
+    RC1STA      = 0x00;
+    TX1STA      = 0x00;
+    SP1BRGL     = 0x00;
+    SP1BRGH     = 0x00;
 }
 
 inline void EUSART_Enable(void)
 {
     RC1STAbits.SPEN = 1;
-
 }
 
 inline void EUSART_Disable(void)
@@ -137,7 +116,7 @@ inline void EUSART_AutoBaudSet(bool enable)
 
 inline bool EUSART_AutoBaudQuery(void)
 {
-return (bool)(!BAUD1CONbits.ABDEN);
+    return (bool)(!BAUD1CONbits.ABDEN);
 }
 
 inline bool EUSART_IsAutoBaudDetectOverflow(void)
@@ -224,4 +203,3 @@ void EUSART_OverrunErrorCallbackRegister(void (* callbackHandler)(void))
         EUSART_OverrunErrorHandler = callbackHandler;
     }    
 }
-
