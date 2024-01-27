@@ -16,10 +16,9 @@
  * RC3 & RC4 must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
  
 **/
+
 #include "../mcc_generated_files/system/system.h"
 #include "BlinkM.h"
-
-
 
 //---------------------------------------------------------------------------------------------
 // Writes nD number of bytes to I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
@@ -194,7 +193,7 @@ void SetFadeSpeed(char f)
 // all durations of the script being played. A value of 0 resets the playback speed to the default.
 // This command does not return a value.
 
-void SetTimeAdjust(char t)
+void SetTimeAdjust(signed char t)
 {
     char data[2]={'t',0};
     data[1]=t;
@@ -325,7 +324,7 @@ void GetBlinkMVer(char* data)
 // work.
 // This command does not return a value.
         
-void SetStartup(char m, char n, char r, char f, char t)
+void SetStartup(char m, char n, char r, char f, signed char t)
 {
     char data[6]={'B',0,0,0,0,0};
     data[1]=m;

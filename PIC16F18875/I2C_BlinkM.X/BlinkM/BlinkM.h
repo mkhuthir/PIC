@@ -36,7 +36,7 @@
 // environments use a "left-shifted" display of I2C addresses. These shifted addresses range
 // from 0-254, but only exist for even address values (0,2,4,6,...). The left-shifted version came
 // about because the address gets shift left by one bit upon transmission. (Left-shifting by one
-// bit is the same as multiplying by 2)   Like Arduino, BlinkM uses the non-shifted 0-127 format of
+// bit is the same as multiplying by 2) ï¿½ï¿½Like Arduino, BlinkM uses the non-shifted 0-127 format of
 // I2C addresses. The default BlinkM address of 9 (0x09) looks like address 18 (0x12) when used
 // with the left-shifted style of addressing.
 
@@ -44,7 +44,7 @@
 enum script_id 
 {
     eeprom_def         =0, // default startup white-red-green-blue-off (can be reprogrammed)
-    RGB                ,   // red-green-blue
+    RGB_seq            ,   // red-green-blue
     white_flash        ,   // white-off
     red_flash          ,   // red-off
     green_flash        ,   // green-off
@@ -79,7 +79,7 @@ void FadeToRndHSB(char H, char S, char B);      // 'H' Fades from the current co
 void PlayLightScript(char n, char r, char p);   // 'p' Plays the specified light script immediately, stopping any currently playing script.
 void StopScript();                              // 'o' Stops any currently playing script.
 void SetFadeSpeed(char f);                      // 'f' Sets the rate at which color fading happens.
-void SetTimeAdjust(char t);                     // 't' Adjusts the playback speed of a light script.
+void SetTimeAdjust(signed char t);                     // 't' Adjusts the playback speed of a light script.
 void GetCurrentRGB(char* data);                 // 'g' Returns the current color in RGB format.
 void WriteScriptLine(char n, char p, char d,    // 'W' This command writes a light script line.
                      char c, 
@@ -90,7 +90,7 @@ void SetBlinkMAdr(char a);                      // 'A' Sets the I2C address of a
 void GetBlinkMAdr(char* data);                  // 'a' Returns the I2C address.
 void GetBlinkMVer(char* data);                  // 'Z' Returns the BlinkM firmware version.
 void SetStartup(char m, char n,                 // 'B' Sets the startup (or boot) action for BlinkM.
-                char r, char f, char t);
+                char r, char f, signed char t);
 
 
 #endif

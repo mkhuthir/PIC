@@ -23,9 +23,9 @@
 
 void WaitKeyPress()
 {
-    while(S1_GetValue());         // Wait until S1 key is pressed
+    //while(S1_GetValue());         // Wait until S1 key is pressed
     __delay_ms(100);
-    while(!S1_GetValue());        // Wait until S1 key is released
+    //while(!S1_GetValue());        // Wait until S1 key is released
     __delay_ms(100);
 }
 
@@ -71,10 +71,12 @@ void main(void)
         StopScript();
         
         printf("Ready to start the Demo...press S1 to start.\n");
-        LED_D2_SetHigh();               // All Dx LEDs On.
-        LED_D3_SetHigh();
-        LED_D4_SetHigh();
-        LED_D5_SetHigh();
+        
+        //LED_D2_SetHigh();               // All Dx LEDs On.
+        //LED_D3_SetHigh();
+        //LED_D4_SetHigh();
+        //LED_D5_SetHigh();
+        
         WaitKeyPress();
         
         // White
@@ -159,7 +161,7 @@ void main(void)
         
         // Play script 'RGB' 2 times start from first line default time speed
         printf("Play RGB script...press S1.\n");
-        PlayLightScript(RGB, 2, 0);
+        PlayLightScript(RGB_seq, 2, 0);
         WaitKeyPress();
         
         // Default Fade and Fast time
@@ -206,10 +208,12 @@ void main(void)
         printf("Play hue_cycle Script...\n");
         printf("\n\nDemo is Done...Thanks for watching\npress S1 to start another one!\n");
         PlayLightScript(hue_cycle,0,0);
-        LED_D2_SetLow();                                // All Dx LEDs Off.
-        LED_D3_SetLow();
-        LED_D4_SetLow();
-        LED_D5_SetLow();
+        
+        //LED_D2_SetLow();                                // All Dx LEDs Off.
+        //LED_D3_SetLow();
+        //LED_D4_SetLow();
+        //LED_D5_SetLow();
+        
         WaitKeyPress();
     }
         
