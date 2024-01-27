@@ -18,6 +18,7 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+//------------------------------------------------------------------------------------
 // get/set IO_RA4 aliases
 #define IO_RA4_TRIS                 TRISAbits.TRISA4
 #define IO_RA4_LAT                  LATAbits.LATA4
@@ -37,6 +38,8 @@
 #define IO_RA4_SetOpenDrain()       do { ODCONAbits.ODCA4 = 1; } while(0)
 #define IO_RA4_SetAnalogMode()      do { ANSELAbits.ANSA4 = 1; } while(0)
 #define IO_RA4_SetDigitalMode()     do { ANSELAbits.ANSA4 = 0; } while(0)
+
+//------------------------------------------------------------------------------------
 // get/set IO_RA5 aliases
 #define IO_RA5_TRIS                 TRISAbits.TRISA5
 #define IO_RA5_LAT                  LATAbits.LATA5
@@ -56,6 +59,8 @@
 #define IO_RA5_SetOpenDrain()       do { ODCONAbits.ODCA5 = 1; } while(0)
 #define IO_RA5_SetAnalogMode()      do { ANSELAbits.ANSA5 = 1; } while(0)
 #define IO_RA5_SetDigitalMode()     do { ANSELAbits.ANSA5 = 0; } while(0)
+
+//------------------------------------------------------------------------------------
 // get/set IO_RA6 aliases
 #define IO_RA6_TRIS                 TRISAbits.TRISA6
 #define IO_RA6_LAT                  LATAbits.LATA6
@@ -75,6 +80,8 @@
 #define IO_RA6_SetOpenDrain()       do { ODCONAbits.ODCA6 = 1; } while(0)
 #define IO_RA6_SetAnalogMode()      do { ANSELAbits.ANSA6 = 1; } while(0)
 #define IO_RA6_SetDigitalMode()     do { ANSELAbits.ANSA6 = 0; } while(0)
+
+//------------------------------------------------------------------------------------
 // get/set IO_RA7 aliases
 #define IO_RA7_TRIS                 TRISAbits.TRISA7
 #define IO_RA7_LAT                  LATAbits.LATA7
@@ -94,6 +101,29 @@
 #define IO_RA7_SetOpenDrain()       do { ODCONAbits.ODCA7 = 1; } while(0)
 #define IO_RA7_SetAnalogMode()      do { ANSELAbits.ANSA7 = 1; } while(0)
 #define IO_RA7_SetDigitalMode()     do { ANSELAbits.ANSA7 = 0; } while(0)
+
+//------------------------------------------------------------------------------------
+// get/set IO_RC5 aliases
+#define IO_RC5_TRIS                 TRISCbits.TRISC5
+#define IO_RC5_LAT                  LATCbits.LATC5
+#define IO_RC5_PORT                 PORTCbits.RC5
+#define IO_RC5_WPU                  WPUCbits.WPUC5
+#define IO_RC5_OD                   ODCONCbits.ODCC5
+#define IO_RC5_ANS                  ANSELCbits.ANSC5
+#define IO_RC5_SetHigh()            do { LATCbits.LATC5 = 1; } while(0)
+#define IO_RC5_SetLow()             do { LATCbits.LATC5 = 0; } while(0)
+#define IO_RC5_Toggle()             do { LATCbits.LATC5 = ~LATCbits.LATC5; } while(0)
+#define IO_RC5_GetValue()           PORTCbits.RC5
+#define IO_RC5_SetDigitalInput()    do { TRISCbits.TRISC5 = 1; } while(0)
+#define IO_RC5_SetDigitalOutput()   do { TRISCbits.TRISC5 = 0; } while(0)
+#define IO_RC5_SetPullup()          do { WPUCbits.WPUC5 = 1; } while(0)
+#define IO_RC5_ResetPullup()        do { WPUCbits.WPUC5 = 0; } while(0)
+#define IO_RC5_SetPushPull()        do { ODCONCbits.ODCC5 = 0; } while(0)
+#define IO_RC5_SetOpenDrain()       do { ODCONCbits.ODCC5 = 1; } while(0)
+#define IO_RC5_SetAnalogMode()      do { ANSELCbits.ANSC5 = 1; } while(0)
+#define IO_RC5_SetDigitalMode()     do { ANSELCbits.ANSC5 = 0; } while(0)
+
+//------------------------------------------------------------------------------------
 // get/set IO_RC7 aliases
 #define IO_RC7_TRIS                 TRISCbits.TRISC7
 #define IO_RC7_LAT                  LATCbits.LATC7
@@ -113,6 +143,8 @@
 #define IO_RC7_SetOpenDrain()       do { ODCONCbits.ODCC7 = 1; } while(0)
 #define IO_RC7_SetAnalogMode()      do { ANSELCbits.ANSC7 = 1; } while(0)
 #define IO_RC7_SetDigitalMode()     do { ANSELCbits.ANSC7 = 0; } while(0)
+
+
 /**
  * @ingroup  pinsdriver
  * @brief GPIO and peripheral I/O initialization

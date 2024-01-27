@@ -13,22 +13,22 @@ const uart_drv_interface_t UART1 = {
     .IsTxReady      = &EUSART_IsTxReady,
     .IsTxDone       = &EUSART_IsTxDone,
     .TransmitEnable = &EUSART_TransmitEnable,
-    .TransmitDisable= &EUSART_TransmitDisable,
-    .AutoBaudSet    = &EUSART_AutoBaudSet,
-    .AutoBaudQuery  = &EUSART_AutoBaudQuery,
-    .BRGCountSet    = NULL,
-    .BRGCountGet    = NULL,
-    .BaudRateSet    = NULL,
-    .BaudRateGet    = NULL,
-    .ErrorGet       = &EUSART_ErrorGet,
-    .AutoBaudEventEnableGet         = NULL,
-    .TxCompleteCallbackRegister     = NULL,
-    .RxCompleteCallbackRegister     = NULL,
-    .TxCollisionCallbackRegister    = NULL,
-    .FramingErrorCallbackRegister   = &EUSART_FramingErrorCallbackRegister,
-    .OverrunErrorCallbackRegister   = &EUSART_OverrunErrorCallbackRegister,
-    .ParityErrorCallbackRegister    = NULL,
-    .EventCallbackRegister          = NULL
+    .TransmitDisable = &EUSART_TransmitDisable,
+    .AutoBaudSet = &EUSART_AutoBaudSet,
+    .AutoBaudQuery = &EUSART_AutoBaudQuery,
+    .BRGCountSet = NULL,
+    .BRGCountGet = NULL,
+    .BaudRateSet = NULL,
+    .BaudRateGet = NULL,
+    .AutoBaudEventEnableGet = NULL,
+    .ErrorGet = &EUSART_ErrorGet,
+    .TxCompleteCallbackRegister = NULL,
+    .RxCompleteCallbackRegister = NULL,
+    .TxCollisionCallbackRegister = NULL,
+    .FramingErrorCallbackRegister = &EUSART_FramingErrorCallbackRegister,
+    .OverrunErrorCallbackRegister = &EUSART_OverrunErrorCallbackRegister,
+    .ParityErrorCallbackRegister = NULL,
+    .EventCallbackRegister = NULL,
 };
 
 volatile eusart_status_t eusartRxLastError;
@@ -174,6 +174,18 @@ uint8_t EUSART_Read(void)
 void EUSART_Write(uint8_t txData)
 {
     TX1REG = txData;
+}
+
+int getch(void)
+{
+    while(!(EUSART_IsRxReady()));
+    return EUSART_Read();
+}
+
+void putch(char txData)
+{
+    while(!(EUSART_IsTxReady()));
+    return EUSART_Write(txData);   
 }
 
 static void EUSART_DefaultFramingErrorCallback(void)
