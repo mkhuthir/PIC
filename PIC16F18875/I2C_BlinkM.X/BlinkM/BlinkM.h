@@ -25,7 +25,7 @@
 
 #define Slave_Adr 0x09      // Slave device I2C address
 
-// BlinkM ships with a default I2C address of 0x09. Feel free to change this address so it doesnt
+// BlinkM ships with a default I2C address of 0x09. Feel free to change this address so it doesn't
 // collide with any other I2C devices present on the I2C bus.
 // The BlinkM address can be changed if the current address is unknown. The Set BlinkM
 // Address (A) command can be sent to the I2C general call (i.e. broadcast) address. The
@@ -36,7 +36,7 @@
 // environments use a "left-shifted" display of I2C addresses. These shifted addresses range
 // from 0-254, but only exist for even address values (0,2,4,6,...). The left-shifted version came
 // about because the address gets shift left by one bit upon transmission. (Left-shifting by one
-// bit is the same as multiplying by 2) ��Like Arduino, BlinkM uses the non-shifted 0-127 format of
+// bit is the same as multiplying by 2) Like Arduino, BlinkM uses the non-shifted 0-127 format of
 // I2C addresses. The default BlinkM address of 9 (0x09) looks like address 18 (0x12) when used
 // with the left-shifted style of addressing.
 
