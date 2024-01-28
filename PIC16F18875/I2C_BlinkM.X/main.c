@@ -47,10 +47,10 @@ void main(void)
 
         // Print current BlinkM I2C Address, Firmware Version, and one selected script line from EEPROM.
         
-        char Adr[1]={0};        // to read I2C address
-        char Ver[2]={0,0};      // to read firmware version major and minor numbers
-        char RGB[3]={0,0,0};    // to read the current RGB values
-        char SL[5]={0,0,0,0,0}; // to read one script line
+        uint8_t Adr[1]={0};        // to read I2C address
+        uint8_t Ver[2]={0,0};      // to read firmware version major and minor numbers
+        uint8_t RGB[3]={0,0,0};    // to read the current RGB values
+        uint8_t SL[5]={0,0,0,0,0}; // to read one script line
         
         GetBlinkMAdr(&Adr[0]);
         GetBlinkMVer(&Ver[0]);
