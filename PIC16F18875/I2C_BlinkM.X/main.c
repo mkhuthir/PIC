@@ -1,5 +1,5 @@
 // BlinkM Library
-// Muthanna A. Attyah (June 2017-2024)
+// Muthanna Alwahash (June 2017-2024)
 // Please feel free to copy and use code.
 // Device data sheet https://thingm.com/fileadmin/thingm/downloads/BlinkM_datasheet.pdf
 
@@ -13,7 +13,12 @@
     PWR+    +5V         +5V             Power supply
 -------------------------------------------------------------------
  
- * RC3 & RC4 must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
+ * Used Pins:
+-------------------------------------------------------------------
+ * RC3  >   I2C SCL :must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
+ * RC4  >   I2C SDA :must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
+ * RC6  >   UART TX :enable getch/putch/printf redirect
+ * RC7  >   UART RX :enable getch/putch/printf redirect
  
 **/
 
@@ -47,10 +52,10 @@ void main(void)
 
         // Print current BlinkM I2C Address, Firmware Version, and one selected script line from EEPROM.
         
-        uint8_t Adr[1]={0};        // to read I2C address
-        uint8_t Ver[2]={0,0};      // to read firmware version major and minor numbers
-        uint8_t RGB[3]={0,0,0};    // to read the current RGB values
-        uint8_t SL[5]={0,0,0,0,0}; // to read one script line
+        uint8_t Adr[1]  ={0};           // to read I2C address
+        uint8_t Ver[2]  ={0,0};         // to read firmware version major and minor numbers
+        uint8_t RGB[3]  ={0,0,0};       // to read the current RGB values
+        uint8_t SL[5]   ={0,0,0,0,0};   // to read one script line
         
         GetBlinkMAdr(&Adr[0]);
         GetBlinkMVer(&Ver[0]);
