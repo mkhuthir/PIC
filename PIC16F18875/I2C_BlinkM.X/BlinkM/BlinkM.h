@@ -1,5 +1,5 @@
 // BlinkM Library
-// Muthanna A. Attyah (June 2017)
+// Muthanna Alwahash (June 2017-Jan 2024)
 // Please feel free to copy and use code.
 // Device data sheet https://thingm.com/fileadmin/thingm/downloads/BlinkM_datasheet.pdf
 

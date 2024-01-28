@@ -28,9 +28,9 @@
 
 void WaitKeyPress()
 {
-    //while(S1_GetValue());         // Wait until S1 key is pressed
+    while(S1_GetValue());         // Wait until S1 key is pressed
     __delay_ms(100);
-    //while(!S1_GetValue());        // Wait until S1 key is released
+    while(!S1_GetValue());        // Wait until S1 key is released
     __delay_ms(100);
 }
 
