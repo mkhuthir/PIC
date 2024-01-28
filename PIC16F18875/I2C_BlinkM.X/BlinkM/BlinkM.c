@@ -13,7 +13,7 @@
     PWR+    +5V         +5V             Power supply
 -------------------------------------------------------------------
  
- * RC3 & RC4 must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
+* RC3 & RC4 must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
  
 **/
 
@@ -75,10 +75,7 @@ bool I2C_Read(uint8_t *pCmnd, uint8_t nC, uint8_t*pData, uint8_t nD)
 
 void GoToRGB(uint8_t R, uint8_t G, uint8_t B)
 {
-    uint8_t data[4]={'n',0,0,0};
-    data[1]=R;
-    data[2]=G;
-    data[3]=B;
+    uint8_t data[4]={'n',R,G,B};
     I2C_Write(data,4);
 };
 
@@ -90,10 +87,7 @@ void GoToRGB(uint8_t R, uint8_t G, uint8_t B)
 
 void FadeToRGB(uint8_t R, uint8_t G, uint8_t B)
 {
-    uint8_t data[4]={'c',0,0,0};
-    data[1]=R;
-    data[2]=G;
-    data[3]=B;
+    uint8_t data[4]={'c',R,G,B};
     I2C_Write(data,4);
 }
 
@@ -122,10 +116,7 @@ void FadeToHSB(uint8_t H, uint8_t S, uint8_t B)
 
 void FadeToRndRGB(uint8_t R, uint8_t G, uint8_t B)
 {
-    uint8_t data[4]={'C',0,0,0};
-    data[1]=R;
-    data[2]=G;
-    data[3]=B;
+    uint8_t data[4]={'C',R,G,B};
     I2C_Write(data,4);
 }
 
@@ -138,10 +129,7 @@ void FadeToRndRGB(uint8_t R, uint8_t G, uint8_t B)
 
 void FadeToRndHSB(uint8_t H, uint8_t S, uint8_t B)
 {
-    uint8_t data[4]={'H',0,0,0};
-    data[1]=H;
-    data[2]=S;
-    data[3]=B;
+    uint8_t data[4]={'H',H,S,B};
     I2C_Write(data,4);
 }
 
@@ -157,10 +145,7 @@ void FadeToRndHSB(uint8_t H, uint8_t S, uint8_t B)
 
 void PlayLightScript(uint8_t n, uint8_t r, uint8_t p)
 {
-    uint8_t data[4]={'p',0,0,0};
-    data[1]=n;
-    data[2]=r;
-    data[3]=p;
+    uint8_t data[4]={'p',n,r,p};
     I2C_Write(data,4);
 }
 
@@ -182,8 +167,7 @@ void StopScript()
 
 void SetFadeSpeed(uint8_t f)
 {
-    uint8_t data[2]={'f',0};
-    data[1]=f;
+    uint8_t data[2]={'f',f};
     I2C_Write(data,2);
 }
 
@@ -223,14 +207,7 @@ void GetCurrentRGB(uint8_t *data)
 
 void WriteScriptLine(uint8_t n, uint8_t p, uint8_t d, uint8_t c, uint8_t a1, uint8_t a2, uint8_t a3)
 {
-    uint8_t data[8]={'W',0,0,0,0,0,0,0};
-    data[1]=n;
-    data[2]=p;
-    data[3]=d;
-    data[4]=c;
-    data[5]=a1;
-    data[6]=a2;
-    data[7]=a3;
+    uint8_t data[8]={'W',n,p,d,c,a1,a2,a3};
     I2C_Write(data,8);
     __delay_ms(20);         //wait for EEPROM to finish write
 }
@@ -244,9 +221,7 @@ void WriteScriptLine(uint8_t n, uint8_t p, uint8_t d, uint8_t c, uint8_t a1, uin
         
 void ReadScriptLine(uint8_t n, uint8_t p, uint8_t* data)
 {
-    uint8_t cmnd[3]={'R',0,0};
-    cmnd[1]=n;
-    cmnd[2]=p;
+    uint8_t cmnd[3]={'R',n,p};
     I2C_Read(cmnd,3,data,5);
 }
 
@@ -259,10 +234,7 @@ void ReadScriptLine(uint8_t n, uint8_t p, uint8_t* data)
     
 void SetScriptLength(uint8_t n, uint8_t l, uint8_t r)
 {
-    uint8_t data[4]={'L',0,0,0};
-    data[1]=n;
-    data[1]=l;
-    data[1]=r;
+    uint8_t data[4]={'L',n,l,r};
     I2C_Write(data,4);
     __delay_ms(15);         //wait for EEPROM to finish write
 
@@ -281,9 +253,7 @@ void SetScriptLength(uint8_t n, uint8_t l, uint8_t r)
         
 void SetBlinkMAdr(uint8_t a)
 {
-    uint8_t data[5]={'A',0,0xD0,0x0D,0};
-    data[1]=a;
-    data[4]=a;
+    uint8_t data[5]={'A',a,0xD0,0x0D,a};
     I2C_Write(data,5);
     __delay_ms(15);         //wait for EEPROM to finish write
 
@@ -306,7 +276,6 @@ void GetBlinkMVer(uint8_t* data)
 {
     uint8_t cmnd[1]={'Z'};
     I2C_Read(cmnd,1,data,2);
-    
 }
 
 //---------------------------------------------------------------------------------------------
