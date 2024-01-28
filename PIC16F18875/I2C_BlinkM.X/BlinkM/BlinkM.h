@@ -66,31 +66,31 @@ enum script_id
 };
 
 // I2C Functions
-bool I2C_Write(char *pData, char nD);           // Writes nD bytes
-bool I2C_Read (char *pCmnd, char nC,            // Writes nC bytes then reads nD bytes
-               char *pData, char nD);  
+bool I2C_Write(uint8_t *pData, uint8_t nD);           // Writes nD bytes
+bool I2C_Read (uint8_t *pCmnd, uint8_t nC,            // Writes nC bytes then reads nD bytes
+               uint8_t *pData, uint8_t nD);  
 
 // BlinkM Functions
-void GoToRGB(char R, char G, char B);           // 'n' Sets the BlinkM to a particular RGB color immediately.
-void FadeToRGB(char R, char G, char B);         // 'c' Fades from the current color to the specified RGB color.
-void FadeToHSB(char H, char S, char B);         // 'h' Fades from the current color to the specified HSB color.
-void FadeToRndRGB(char R, char G, char B);      // 'C' Fades from the current color to a random RGB color
-void FadeToRndHSB(char H, char S, char B);      // 'H' Fades from the current color to a random HSB color
-void PlayLightScript(char n, char r, char p);   // 'p' Plays the specified light script immediately, stopping any currently playing script.
+void GoToRGB(uint8_t R, uint8_t G, uint8_t B);           // 'n' Sets the BlinkM to a particular RGB color immediately.
+void FadeToRGB(uint8_t R, uint8_t G, uint8_t B);         // 'c' Fades from the current color to the specified RGB color.
+void FadeToHSB(uint8_t H, uint8_t S, uint8_t B);         // 'h' Fades from the current color to the specified HSB color.
+void FadeToRndRGB(uint8_t R, uint8_t G, uint8_t B);      // 'C' Fades from the current color to a random RGB color
+void FadeToRndHSB(uint8_t H, uint8_t S, uint8_t B);      // 'H' Fades from the current color to a random HSB color
+void PlayLightScript(uint8_t n, uint8_t r, uint8_t p);   // 'p' Plays the specified light script immediately, stopping any currently playing script.
 void StopScript();                              // 'o' Stops any currently playing script.
-void SetFadeSpeed(char f);                      // 'f' Sets the rate at which color fading happens.
-void SetTimeAdjust(signed char t);                     // 't' Adjusts the playback speed of a light script.
-void GetCurrentRGB(char* data);                 // 'g' Returns the current color in RGB format.
-void WriteScriptLine(char n, char p, char d,    // 'W' This command writes a light script line.
-                     char c, 
-                     char a1, char a2, char a3);                   
-void ReadScriptLine(char n, char p, char* data);// 'R' Reads a script line and returns the script lines values.
-void SetScriptLength(char n, char l, char r);   // 'L' Sets the length of a written script. 
-void SetBlinkMAdr(char a);                      // 'A' Sets the I2C address of a BlinkM.
-void GetBlinkMAdr(char* data);                  // 'a' Returns the I2C address.
-void GetBlinkMVer(char* data);                  // 'Z' Returns the BlinkM firmware version.
-void SetStartup(char m, char n,                 // 'B' Sets the startup (or boot) action for BlinkM.
-                char r, char f, signed char t);
+void SetFadeSpeed(uint8_t f);                      // 'f' Sets the rate at which color fading happens.
+void SetTimeAdjust(int8_t t);                     // 't' Adjusts the playback speed of a light script.
+void GetCurrentRGB(uint8_t* data);                 // 'g' Returns the current color in RGB format.
+void WriteScriptLine(uint8_t n, uint8_t p, uint8_t d,    // 'W' This command writes a light script line.
+                     uint8_t c, 
+                     uint8_t a1, uint8_t a2, uint8_t a3);                   
+void ReadScriptLine(uint8_t n, uint8_t p, uint8_t* data);// 'R' Reads a script line and returns the script lines values.
+void SetScriptLength(uint8_t n, uint8_t l, uint8_t r);   // 'L' Sets the length of a written script. 
+void SetBlinkMAdr(uint8_t a);                      // 'A' Sets the I2C address of a BlinkM.
+void GetBlinkMAdr(uint8_t* data);                  // 'a' Returns the I2C address.
+void GetBlinkMVer(uint8_t* data);                  // 'Z' Returns the BlinkM firmware version.
+void SetStartup(uint8_t m, uint8_t n,                 // 'B' Sets the startup (or boot) action for BlinkM.
+                uint8_t r, uint8_t f, int8_t t);
 
 
 #endif

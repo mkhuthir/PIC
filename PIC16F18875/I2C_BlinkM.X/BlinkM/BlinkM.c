@@ -23,7 +23,7 @@
 //---------------------------------------------------------------------------------------------
 // Writes nD number of bytes to I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
 
-bool I2C_Write(char *pData, char nD)
+bool I2C_Write(uint8_t *pData, uint8_t nD)
 {    
     static I2C1_TRANSACTION_REQUEST_BLOCK trb;              // TRB
     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;      // initial status is pending
@@ -46,7 +46,7 @@ bool I2C_Write(char *pData, char nD)
 // Sends nC bytes command and Reads nD number of bytes from I2C device with
 // I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
 
-bool I2C_Read(char *pCmnd, char nC, char*pData, char nD)
+bool I2C_Read(uint8_t *pCmnd, uint8_t nC, uint8_t*pData, uint8_t nD)
 {    
     
     static I2C1_TRANSACTION_REQUEST_BLOCK trb[2];           // TRB
@@ -73,9 +73,9 @@ bool I2C_Read(char *pCmnd, char nC, char*pData, char nD)
 // Each value ranges from 0-255 (0x00-0xFF in hexadecimal), with 0 being off and 255 being
 // maximum brightness.
 
-void GoToRGB(char R, char G, char B)
+void GoToRGB(uint8_t R, uint8_t G, uint8_t B)
 {
-    char data[4]={'n',0,0,0};
+    uint8_t data[4]={'n',0,0,0};
     data[1]=R;
     data[2]=G;
     data[3]=B;
@@ -88,9 +88,9 @@ void GoToRGB(char R, char G, char B)
 // ranges from 0-255 (0x00-0xFF in hexadecimal), with 0 being off and 255 being maximum brightness.
 // The rate at which the fading occurs is controlled by the SetFadeSpeed() command. 
 
-void FadeToRGB(char R, char G, char B)
+void FadeToRGB(uint8_t R, uint8_t G, uint8_t B)
 {
-    char data[4]={'c',0,0,0};
+    uint8_t data[4]={'c',0,0,0};
     data[1]=R;
     data[2]=G;
     data[3]=B;
@@ -105,9 +105,9 @@ void FadeToRGB(char R, char G, char B)
 // the brightness of the resulting color, where 0 is totally dark and 255 means maximally bright. 
 // The rate at which the fading occurs is controlled by the SetFadeSpeed() command. 
 
-void FadeToHSB(char H, char S, char B)
+void FadeToHSB(uint8_t H, uint8_t S, uint8_t B)
 {
-    char data[4]={'h',0,0,0};
+    uint8_t data[4]={'h',0,0,0};
     data[1]=H;
     data[2]=S;
     data[3]=B;
@@ -120,9 +120,9 @@ void FadeToHSB(char H, char S, char B)
 // of the R,G,B channels from which to deviate from the current color.
 // A setting of 0 for a channel means to not change it at all.
 
-void FadeToRndRGB(char R, char G, char B)
+void FadeToRndRGB(uint8_t R, uint8_t G, uint8_t B)
 {
-    char data[4]={'C',0,0,0};
+    uint8_t data[4]={'C',0,0,0};
     data[1]=R;
     data[2]=G;
     data[3]=B;
@@ -136,9 +136,9 @@ void FadeToRndRGB(char R, char G, char B)
 // *Note* that this command only works after a previous FadeToHSB() command has been used to set an
 // initial hue.
 
-void FadeToRndHSB(char H, char S, char B)
+void FadeToRndHSB(uint8_t H, uint8_t S, uint8_t B)
 {
-    char data[4]={'H',0,0,0};
+    uint8_t data[4]={'H',0,0,0};
     data[1]=H;
     data[2]=S;
     data[3]=B;
@@ -155,9 +155,9 @@ void FadeToRndHSB(char H, char S, char B)
 // and time adjust (SetTimeAdjust() to taste. Altering these values can greatly alter the lighting
 // effect for the built-in light scripts. See data sheet for list of scripts IDs.
 
-void PlayLightScript(char n, char r, char p)
+void PlayLightScript(uint8_t n, uint8_t r, uint8_t p)
 {
-    char data[4]={'p',0,0,0};
+    uint8_t data[4]={'p',0,0,0};
     data[1]=n;
     data[2]=r;
     data[3]=p;
@@ -170,7 +170,7 @@ void PlayLightScript(char n, char r, char p)
 
 void StopScript()
 {
-    char data[1]={'o'};
+    uint8_t data[1]={'o'};
     I2C_Write(data,1);
 }
 
@@ -180,9 +180,9 @@ void StopScript()
 // colors instantly, set the fade speed to 255. A value of 0 is invalid and is reserved for a future
 // Smart Fade feature.
 
-void SetFadeSpeed(char f)
+void SetFadeSpeed(uint8_t f)
 {
-    char data[2]={'f',0};
+    uint8_t data[2]={'f',0};
     data[1]=f;
     I2C_Write(data,2);
 }
@@ -193,9 +193,9 @@ void SetFadeSpeed(char f)
 // all durations of the script being played. A value of 0 resets the playback speed to the default.
 // This command does not return a value.
 
-void SetTimeAdjust(signed char t)
+void SetTimeAdjust(int8_t t)
 {
-    char data[2]={'t',0};
+    uint8_t data[2]={'t',0};
     data[1]=t;
     I2C_Write(data,2);
 }
@@ -206,9 +206,9 @@ void SetTimeAdjust(signed char t)
 // *Note* If the BlinkM is currently fading between colors, this command returns the instantaneous
 // current color value, not the destination color.
 
-void GetCurrentRGB(char *data)
+void GetCurrentRGB(uint8_t *data)
 {
-    char cmnd[1]={'g'};
+    uint8_t cmnd[1]={'g'};
     I2C_Read(cmnd,1,data,3);
 }
 
@@ -222,9 +222,9 @@ void GetCurrentRGB(char *data)
 // Once all the lines of the desired script are written, set the script length with the SetScriptLength
 // command. This command does not return a value.
 
-void WriteScriptLine(char n, char p, char d, char c, char a1, char a2, char a3)
+void WriteScriptLine(uint8_t n, uint8_t p, uint8_t d, uint8_t c, uint8_t a1, uint8_t a2, uint8_t a3)
 {
-    char data[8]={'W',0,0,0,0,0,0,0};
+    uint8_t data[8]={'W',0,0,0,0,0,0,0};
     data[1]=n;
     data[2]=p;
     data[3]=d;
@@ -243,9 +243,9 @@ void WriteScriptLine(char n, char p, char d, char c, char a1, char a2, char a3)
 // There are 5 bytes of return values: d = duration in ticks, c = command, a1,2,3 = arguments for
 // command. If an invalid script id or script line number is given, all return values are zeros.
         
-void ReadScriptLine(char n, char p, char* data)
+void ReadScriptLine(uint8_t n, uint8_t p, uint8_t* data)
 {
-    char cmnd[3]={'R',0,0};
+    uint8_t cmnd[3]={'R',0,0};
     cmnd[1]=n;
     cmnd[2]=p;
     I2C_Read(cmnd,3,data,5);
@@ -258,9 +258,9 @@ void ReadScriptLine(char n, char p, char* data)
 // milliseconds to complete, due to EEPROM write times.
 // This command does not return a value.
     
-void SetScriptLength(char n, char l, char r)
+void SetScriptLength(uint8_t n, uint8_t l, uint8_t r)
 {
-    char data[4]={'L',0,0,0};
+    uint8_t data[4]={'L',0,0,0};
     data[1]=n;
     data[1]=l;
     data[1]=r;
@@ -280,9 +280,9 @@ void SetScriptLength(char n, char l, char r)
 // See data sheet for more details about how BlinkM handles I2C addresses.
 // This command does not return a value.
         
-void SetBlinkMAdr(char a)
+void SetBlinkMAdr(uint8_t a)
 {
-    char data[5]={'A',0,0xD0,0x0D,0};
+    uint8_t data[5]={'A',0,0xD0,0x0D,0};
     data[1]=a;
     data[4]=a;
     I2C_Write(data,5);
@@ -293,9 +293,9 @@ void SetBlinkMAdr(char a)
 //---------------------------------------------------------------------------------------------
 // Returns the I2C address.
 
-void GetBlinkMAdr(char* data)
+void GetBlinkMAdr(uint8_t* data)
 {
-    char cmnd[1]={'a'};
+    uint8_t cmnd[1]={'a'};
     I2C_Read(cmnd,1,data,1);
 }
 
@@ -303,9 +303,9 @@ void GetBlinkMAdr(char* data)
 // Returns the BlinkM firmware version. The first byte is the major version, the second byte is the
 // minor version.
 
-void GetBlinkMVer(char* data)
+void GetBlinkMVer(uint8_t* data)
 {
-    char cmnd[1]={'Z'};
+    uint8_t cmnd[1]={'Z'};
     I2C_Read(cmnd,1,data,2);
     
 }
@@ -324,9 +324,9 @@ void GetBlinkMVer(char* data)
 // work.
 // This command does not return a value.
         
-void SetStartup(char m, char n, char r, char f, signed char t)
+void SetStartup(uint8_t m, uint8_t n, uint8_t r, uint8_t f, int8_t t)
 {
-    char data[6]={'B',0,0,0,0,0};
+    uint8_t data[6]={'B',0,0,0,0,0};
     data[1]=m;
     data[2]=n;
     data[3]=r;
