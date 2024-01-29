@@ -17,8 +17,8 @@
 -------------------------------------------------------------------
  * RC3  >   I2C SCL :must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
  * RC4  >   I2C SDA :must have pull-up resistors enabled since BlinkM does not have pull-up resistors on its module.
- * RC6  >   UART TX :enable getch/putch/printf redirect
- * RC7  >   UART RX :enable getch/putch/printf redirect
+ * RC7  >   UART TX :enable printf redirect
+ * RB4  >   S1 :must have pull-up enabled.
  
 **/
 
