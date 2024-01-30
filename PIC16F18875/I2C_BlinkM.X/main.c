@@ -81,10 +81,10 @@ void main(void)
         
         printf("Ready to start the Demo...press S1 to start.\n\r");
         
-        //LED_D2_SetHigh();               // All Dx LEDs On.
-        //LED_D3_SetHigh();
-        //LED_D4_SetHigh();
-        //LED_D5_SetHigh();
+        D2_SetHigh();               // All Dx LEDs On.
+        D3_SetHigh();
+        D4_SetHigh();
+        D5_SetHigh();
         
         WaitKeyPress();
         
@@ -218,10 +218,10 @@ void main(void)
         printf("\n\r\n\rDemo is Done...Thanks for watching\n\rpress S1 to start another one!\n\r");
         PlayLightScript(hue_cycle,0,0);
         
-        //LED_D2_SetLow();                                // All Dx LEDs Off.
-        //LED_D3_SetLow();
-        //LED_D4_SetLow();
-        //LED_D5_SetLow();
+        D2_SetLow();                                // All Dx LEDs Off.
+        D3_SetLow();
+        D4_SetLow();
+        D5_SetLow();
         
         WaitKeyPress();
     }
