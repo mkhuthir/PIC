@@ -39,8 +39,8 @@ void main(void)
 {
     // Setup and initializations
     SYSTEM_Initialize();
-    INTERRUPT_GlobalInterruptEnable();
-    INTERRUPT_PeripheralInterruptEnable();
+    //INTERRUPT_GlobalInterruptEnable();
+    //INTERRUPT_PeripheralInterruptEnable();
     
    
     // Testing all functions..
