@@ -66,9 +66,9 @@ enum script_id
 };
 
 // I2C Functions
-bool I2C_Write(uint8_t *pData, uint8_t nD);                 // Writes nD bytes
-bool I2C_Read (uint8_t *pCmnd, uint8_t nC,                  // Writes nC bytes then reads nD bytes
-               uint8_t *pData, uint8_t nD);  
+bool I2C_Write(uint8_t *Data, uint8_t DataLen);             // Writes nD bytes
+bool I2C_Read (uint8_t *Cmnd, uint8_t CmndLen,              // Writes nC bytes then reads nD bytes
+               uint8_t *Data, uint8_t DataLen);  
 
 // BlinkM Functions
 void GoToRGB(uint8_t R, uint8_t G, uint8_t B);              // 'n' Sets the BlinkM to a particular RGB color immediately.
@@ -77,7 +77,7 @@ void FadeToHSB(uint8_t H, uint8_t S, uint8_t B);            // 'h' Fades from th
 void FadeToRndRGB(uint8_t R, uint8_t G, uint8_t B);         // 'C' Fades from the current color to a random RGB color
 void FadeToRndHSB(uint8_t H, uint8_t S, uint8_t B);         // 'H' Fades from the current color to a random HSB color
 void PlayLightScript(uint8_t n, uint8_t r, uint8_t p);      // 'p' Plays the specified light script immediately, stopping any currently playing script.
-void StopScript();                                          // 'o' Stops any currently playing script.
+void StopScript(void);                                      // 'o' Stops any currently playing script.
 void SetFadeSpeed(uint8_t f);                               // 'f' Sets the rate at which color fading happens.
 void SetTimeAdjust(int8_t t);                               // 't' Adjusts the playback speed of a light script.
 void GetCurrentRGB(uint8_t* data);                          // 'g' Returns the current color in RGB format.

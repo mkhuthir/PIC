@@ -26,6 +26,10 @@
 #include "mcc_generated_files/system/system.h"
 #include "BlinkM.h"
 
+// disable warnings about unused functions
+#pragma warning disable 520
+#pragma warning disable 2053
+
 void WaitKeyPress()
 {
     while(S1_GetValue());         // Wait until S1 key is pressed
@@ -39,8 +43,8 @@ void main(void)
 {
     // Setup and initializations
     SYSTEM_Initialize();
-    //INTERRUPT_GlobalInterruptEnable();
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
     
    
     // Testing all functions..

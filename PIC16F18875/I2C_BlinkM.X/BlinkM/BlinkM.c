@@ -23,18 +23,23 @@
 //---------------------------------------------------------------------------------------------
 // Writes nD number of bytes to I2C device with I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
 
-bool I2C_Write(uint8_t *pData, uint8_t nD)
+bool I2C_Write(uint8_t *Data, uint8_t DataLen)
 {    
-    return false;
+    
+    while (!I2C1_Write(Slave_Adr, Data, DataLen));
+    __delay_ms(500);
+    return true;
 }
 
 //---------------------------------------------------------------------------------------------
 // Sends nC bytes command and Reads nD number of bytes from I2C device with
 // I2C address=Slave_Adr using Microchip MSSP I2C1 driver.
 
-bool I2C_Read(uint8_t *pCmnd, uint8_t nC, uint8_t*pData, uint8_t nD)
+bool I2C_Read(uint8_t *Cmnd, uint8_t CmndLen, uint8_t*Data, uint8_t DataLen)
 {    
-    return false;
+    while (!I2C1_WriteRead(Slave_Adr, Cmnd, CmndLen, Data, DataLen));
+    __delay_ms(500);
+    return true;
 }
 
 //---------------------------------------------------------------------------------------------
@@ -123,7 +128,7 @@ void PlayLightScript(uint8_t n, uint8_t r, uint8_t p)
 // Stops any currently playing script. If no script is playing, this command has no
 // effect. It takes no arguments and returns no value.
 
-void StopScript()
+void StopScript(void)
 {
     uint8_t data[1]={'o'};
     I2C_Write(data,1);
