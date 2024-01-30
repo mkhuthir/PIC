@@ -25,21 +25,7 @@
 
 bool I2C_Write(uint8_t *pData, uint8_t nD)
 {    
-//    static I2C1_TRANSACTION_REQUEST_BLOCK trb;              // TRB
-//    I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;      // initial status is pending
-    uint8_t timeOut=0;                                      // used to count retries
-
-//    I2C1_MasterWriteTRBBuild(&trb, pData, nD, Slave_Adr);   // build a Write TRB
-
-//    while(status != I2C1_MESSAGE_FAIL)                      // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK, or I2C1_DATA_NO_ACK,
-//    {                                                       // The device may be busy and needs more time for the last write.
-//        I2C1_MasterTRBInsert(1, &trb, &status);             // send the full TRB parameters > (length, data, status)
-//        while(status == I2C1_MESSAGE_PENDING);              // wait for the message to be sent or status has changed.
-//        if (status == I2C1_MESSAGE_COMPLETE) break;         // exit loop if status is complete
-//        if (timeOut == 30) break;                           // check if max retry=30 is reached
-//        else timeOut++;                                     // try again
-//    }
-//    return (status == I2C1_MESSAGE_COMPLETE);               // return the status
+    return false;
 }
 
 //---------------------------------------------------------------------------------------------
@@ -48,23 +34,7 @@ bool I2C_Write(uint8_t *pData, uint8_t nD)
 
 bool I2C_Read(uint8_t *pCmnd, uint8_t nC, uint8_t*pData, uint8_t nD)
 {    
-    
-//    static I2C1_TRANSACTION_REQUEST_BLOCK trb[2];           // TRB
-//    I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;      // initial status is pending
-    uint8_t timeOut=0;                                      // used to count retries
-
- //   I2C1_MasterWriteTRBBuild(&trb[0], pCmnd, nC, Slave_Adr);// build a Write TRB
- //   I2C1_MasterReadTRBBuild (&trb[1], pData, nD, Slave_Adr);// build a Read TRB
-    
-//    while(status != I2C1_MESSAGE_FAIL)                      // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK, or I2C1_DATA_NO_ACK,
-//    {                                                       // The device may be busy and needs more time for the last write.
-//        I2C1_MasterTRBInsert(2, &trb[0], &status);          // send the full TRB parameters > (length, data, status)
-//        while(status == I2C1_MESSAGE_PENDING);              // wait for the message to be sent or status has changed.
-//        if (status == I2C1_MESSAGE_COMPLETE) break;         // exit loop if status is complete
-//        if (timeOut == 30) break;                           // check if max retry=30 is reached
- //       else timeOut++;                                     // try again
- //   }
-//    return (status == I2C1_MESSAGE_COMPLETE);               // return the status
+    return false;
 }
 
 //---------------------------------------------------------------------------------------------
