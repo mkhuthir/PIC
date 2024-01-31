@@ -33,9 +33,9 @@
 void WaitKeyPress()
 {
     while(S1_GetValue());         // Wait until S1 key is pressed
-    __delay_ms(100);
+    __delay_ms(50);
     while(!S1_GetValue());        // Wait until S1 key is released
-    __delay_ms(100);
+    __delay_ms(50);
 }
 
 // Main code

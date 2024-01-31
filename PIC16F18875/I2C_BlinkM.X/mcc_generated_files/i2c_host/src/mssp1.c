@@ -103,8 +103,8 @@ void I2C1_Initialize(void)
     SSP1CON2 = 0x0;
     /* DHEN disabled; AHEN disabled; SBCDE disabled; SDAHT 100ns; BOEN disabled; SCIE disabled; PCIE disabled;  */
     SSP1CON3 = 0x0;
-    /* SSPADD 9;  */
-    SSP1ADD = 0x9;
+    /* SSPADD 19;  */
+    SSP1ADD = 0x13;
     I2C1_InterruptsEnable();
     I2C1_CallbackRegister(I2C1_DefaultCallback);
     SSP1CON1bits.SSPEN = 1;
