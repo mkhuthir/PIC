@@ -26,7 +26,6 @@
           <itemPath>mcc_generated_files/uart/eusart.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>BlinkM/BlinkM.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -59,7 +58,6 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
-      <itemPath>BlinkM/BlinkM.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
