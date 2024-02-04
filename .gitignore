@@ -197,3 +197,5 @@
 /PIC16F18855/Blink.X/build/
 /PIC16F18855/EUSART_LED.X/build/
 /PIC16F18855/EUSART_LED.X/dist/
+/UART_Hello.X/dist/
+/UART_Hello.X/build/
