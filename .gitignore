@@ -199,3 +199,5 @@
 /PIC16F18855/EUSART_LED.X/dist/
 /UART_Hello.X/dist/
 /UART_Hello.X/build/
+/ADC0_Light.X/build/
+/ADC0_Light.X/dist/
